@@ -13,8 +13,16 @@ module.exports = {
     theme: {
         extend: {
             fontFamily: {
-                sans: ['Nunito', ...defaultTheme.fontFamily.sans],
+                sans: ['Poppins', ...defaultTheme.fontFamily.sans],
             },
+            colors: {
+                blue: {
+                    presta3: '#3f8596',
+                    presta2: '#489AAB',
+                    presta1: '#52B9CE',
+                    presta0: '#829DA9'
+                }
+            }
         },
     },
 
