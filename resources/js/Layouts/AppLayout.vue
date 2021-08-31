@@ -13,7 +13,7 @@
                             <!-- Logo -->
                             <div class="flex-shrink-0 flex items-center">
                                 <Link :href="route('dashboard')">
-                                    <jet-application-mark class="block h-9 w-auto" />
+                                    <jet-application-mark class="text-blue-presta2 hover:text-blue-presta3 block h-9 w-auto" />
                                 </Link>
                             </div>
 

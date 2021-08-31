@@ -17,12 +17,18 @@ module.exports = {
             },
             colors: {
                 blue: {
+                    presta4: '#27627E',
                     presta3: '#3f8596',
                     presta2: '#489AAB',
                     presta1: '#52B9CE',
-                    presta0: '#829DA9'
+                    presta0: '#00ffff',
+                    lightLink: '#faebd7'
                 }
-            }
+            },
+            backgroundImage: theme => ({
+                'footer-texture': "url('/images/Mask Group 7.png')",
+                'banner-texture': "url('/images/Mask Group 3.png')",
+            })
         },
     },
 

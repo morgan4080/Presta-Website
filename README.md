@@ -1,3 +1,4 @@
+
 <p align="center">
 <a href="https://presta.co.ke" target="_blank">
 <svg xmlns="http://www.w3.org/2000/svg" width="202.103" height="58.056" viewBox="0 0 202.103 58.056">
@@ -74,7 +75,7 @@
 
 A fintech company offering microfinancing services to microfinancing institutions. This is Presta's Website.
 
-### How it was scaffolded
+### Scaffolding
 
 ```bash
 laravel new PrestaTDD
@@ -88,3 +89,20 @@ php artisan migrate
 yarn install
 yarn dev
 ```
+
+### What should be build first
+
+- Create Categories (Main Content Pages)
+- Create Sub Categories (Page Sections/ Blog Categories)
+- Create Posts (Fine grained content)
+- Attribute Posts to authors
+- Publishing Post Comments
+
+### What to test first
+
+- Publish Categories
+    + Create single category
+    + List all categories
+    + Edit single category
+    + Cascade delete category tree
+

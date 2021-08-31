@@ -1,0 +1,29 @@
+/* NProgress, (c) 2013, 2014 Rico Sta. Cruz - http://ricostacruz.com/nprogress
+ * @license MIT */
+
+/*!
+ * Chart.js v2.9.3
+ * https://www.chartjs.org
+ * (c) 2019 Chart.js Contributors
+ * Released under the MIT License
+ */
+
+/*!
+ * GSAP 3.3.4
+ * https://greensock.com
+ *
+ * @license Copyright 2008-2020, GreenSock. All rights reserved.
+ * Subject to the terms at https://greensock.com/standard-license or for
+ * Club GreenSock members, the agreement issued with that membership.
+ * @author: Jack Doyle, jack@greensock.com
+*/
+
+/*!
+ * vuex v4.0.2
+ * (c) 2021 Evan You
+ * @license MIT
+ */
+
+//! moment.js
+
+//! moment.js locale configuration

@@ -25,21 +25,21 @@
                 </div>
                 <div class="flex justify-between items-center px-4 py-6 sm:px-6 md:justify-start md:space-x-10">
                     <div class="flex justify-start lg:w-0 lg:flex-1">
-                        <a href="#">
+                        <Link :href="route('homepage')">
                             <span class="sr-only">Presta Capital</span>
-                            <img class="h-8 w-auto sm:h-10" src="/images/logos/Group 18.svg" alt="" />
-                        </a>
+                            <img class="h-8 w-auto md:ml-4 lg:ml-6 sm:h-12" src="/images/logos/Group 18.svg" alt="" />
+                        </Link>
                     </div>
                     <div class="-mr-2 -my-2 md:hidden">
-                        <PopoverButton class="rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-presta0-500">
+                        <PopoverButton class="rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-presta4">
                             <span class="sr-only">Open menu</span>
                             <MenuIcon class="h-6 w-6" aria-hidden="true" />
                         </PopoverButton>
                     </div>
                     <PopoverGroup as="nav" class="hidden md:flex space-x-10">
-                        <a href="#" class="text-base font-medium text-white hover:text-gray-200">
+                        <Link :href="route('homepage')" class="text-base font-medium text-white hover:text-gray-200">
                             Home
-                        </a>
+                        </Link>
                         <Popover class="relative" v-slot="{ open }">
                             <PopoverButton :class="[open ? 'text-white' : 'text-white', 'group bg-transparent rounded-md inline-flex items-center text-base font-medium hover:text-gray-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-presta0-500']">
                                 <span>Solutions</span>
@@ -51,14 +51,14 @@
                                     <div class="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 overflow-hidden">
                                         <div class="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8 lg:grid-cols-2">
                                             <a v-for="item in solutions" :key="item.name" :href="item.href" class="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-50">
-                                                <div class="flex-shrink-0 flex items-center justify-center h-10 w-10 rounded-md bg-indigo-500 text-white sm:h-12 sm:w-12">
+                                                <div class="flex-shrink-0 flex items-center justify-center h-10 w-10 rounded-md bg-blue-presta2 text-white sm:h-12 sm:w-12">
                                                     <component :is="item.icon" class="h-6 w-6" aria-hidden="true" />
                                                 </div>
                                                 <div class="ml-4">
                                                     <p class="text-base font-medium text-gray-900">
                                                         {{ item.name }}
                                                     </p>
-                                                    <p class="mt-1 text-sm text-white">
+                                                    <p class="mt-1 text-sm text-gray-500">
                                                         {{ item.description }}
                                                     </p>
                                                 </div>
@@ -74,7 +74,7 @@
                                                 New
                                             </span>
                                                 </div>
-                                                <p class="mt-1 text-sm text-white">
+                                                <p class="mt-1 text-sm text-gray-500">
                                                     Empower your entire team with even more advanced tools.
                                                 </p>
                                             </a>
@@ -105,7 +105,7 @@
                                                 <p class="text-base font-medium text-gray-900">
                                                     {{ item.name }}
                                                 </p>
-                                                <p class="mt-1 text-sm text-white">
+                                                <p class="mt-1 text-sm text-gray-500">
                                                     {{ item.description }}
                                                 </p>
                                             </a>
@@ -120,7 +120,7 @@
                         </a>
                     </PopoverGroup>
                     <div class="hidden md:flex items-center justify-end md:flex-1 lg:w-0">
-                        <a href="#" class="ml-8 whitespace-nowrap inline-flex items-center justify-center px-4 py-2 border border-white rounded-md shadow-sm text-base font-medium text-white bg-transparent hover:bg-blue-presta1">
+                        <a href="#" class="ml-8 mr-4 whitespace-nowrap inline-flex items-center justify-center px-4 py-2 border border-white rounded-md shadow-sm text-base font-medium text-white bg-opacity-25 bg-gray-900 backdrop-filter backdrop-blur hover:bg-blue-presta1">
                             <chat-alt2-icon class="flex-none w-5 h-5 text-white mr-1" aria-hidden="true" />
                             Chat with Sales
                         </a>
@@ -133,10 +133,10 @@
                             <div class="pt-5 pb-6 px-5">
                                 <div class="flex items-center justify-between">
                                     <div>
-                                        <img class="h-8 w-auto" src="https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg" alt="Workflow" />
+                                        <img class="h-8 w-auto" src="/images/logos/blue logo.svg" alt="Presta Capital" />
                                     </div>
                                     <div class="-mr-2">
-                                        <PopoverButton class="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
+                                        <PopoverButton class="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-presta4">
                                             <span class="sr-only">Close menu</span>
                                             <XIcon class="h-6 w-6" aria-hidden="true" />
                                         </PopoverButton>
@@ -145,7 +145,7 @@
                                 <div class="mt-6">
                                     <nav class="grid grid-cols-1 gap-7">
                                         <a v-for="item in solutions" :key="item.name" :href="item.href" class="-m-3 p-3 flex items-center rounded-lg hover:bg-gray-50">
-                                            <div class="flex-shrink-0 flex items-center justify-center h-10 w-10 rounded-md bg-indigo-500 text-white">
+                                            <div class="flex-shrink-0 flex items-center justify-center h-10 w-10 rounded-md bg-blue-presta2 text-white">
                                                 <component :is="item.icon" class="h-6 w-6" aria-hidden="true" />
                                             </div>
                                             <div class="ml-4 text-base font-medium text-gray-900">
@@ -179,7 +179,7 @@
                                     <p class="mt-6 text-center text-base font-medium text-gray-500">
                                         Existing customer?
                                         <!-- space -->
-                                        <a href="#" class="text-indigo-600 hover:text-indigo-500">
+                                        <a href="#" class="text-blue-presta4 hover:text-blue-presta3">
                                             Sign in
                                         </a>
                                     </p>
@@ -209,6 +209,7 @@ import {
     MailIcon
 } from '@heroicons/vue/outline'
 import { ChevronDownIcon } from '@heroicons/vue/solid'
+import { Link } from '@inertiajs/inertia-vue3'
 
 const solutions = [
     {
@@ -265,7 +266,8 @@ export default {
         XIcon,
         ChatAlt2Icon,
         PhoneIcon,
-        MailIcon
+        MailIcon,
+        Link
     },
     setup() {
         return {
