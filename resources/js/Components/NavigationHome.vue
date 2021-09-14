@@ -23,7 +23,7 @@
                         </a>
                     </div>
                 </div>
-                <div class="flex justify-between items-center px-4 py-6 sm:px-6 md:justify-start md:space-x-10">
+                <div class="max-w-7xl flex justify-between items-center px-4 py-6 sm:px-6 md:justify-start md:space-x-10">
                     <div class="flex justify-start lg:w-0 lg:flex-1">
                         <Link :href="route('homepage')">
                             <span class="sr-only">Presta Capital</span>
