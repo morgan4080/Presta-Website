@@ -4,8 +4,8 @@ set -e
 (git push) || true
 
 git checkout production
-git merge main
+git merge master
 
 git push origin production
 
-git checkout main
+git checkout master
