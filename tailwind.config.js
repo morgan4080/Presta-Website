@@ -17,11 +17,18 @@ module.exports = {
             },
             colors: {
                 blue: {
+                    presta5: '#1b4d65',
                     presta4: '#27627E',
                     presta3: '#3f8596',
                     presta2: '#489AAB',
                     presta1: '#52B9CE',
                     presta0: '#00ffff',
+                    prestaR: '#3B86A4',
+                    prestaS: '#CCE5F8',
+                    prestaT: '#819CA8',
+                    prestaW: '#4799AA',
+                    prestaX: '#E0ECF1',
+                    prestaY: '#00ced1',
                     lightLink: '#faebd7'
                 }
             },
@@ -32,5 +39,5 @@ module.exports = {
         },
     },
 
-    plugins: [require('@tailwindcss/forms'), require('@tailwindcss/typography')],
+    plugins: [require('@tailwindcss/forms'), require('@tailwindcss/typography'), require('@tailwindcss/aspect-ratio'), require('@tailwindcss/line-clamp')],
 };

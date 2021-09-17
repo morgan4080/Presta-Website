@@ -1,12 +1,12 @@
 <template>
-    <div class="bg-white">
+    <div v-if="showDemo" class="bg-white">
         <div class="max-w-7xl mx-auto pt-12 pb-12 px-4 sm:px-6 lg:pt-12 lg:pb-16 lg:px-8">
             <div class="py-8 lg:flex lg:items-center lg:justify-between xl:mt-0">
                 <div class="flex items-center text-blue-presta4 lg:ml-16 pb-4 md:pb-0">
                     <p class="font-semibold text-2xl">
                         Request A Demo
                     </p>
-                    <ArrowCircleRightIcon class="h-12 w-12 fill-current ml-8" aria-hidden="true" />
+                    <ArrowCircleRightIcon class="h-12 w-12 fill-current cursor-pointer ml-8 transform transition ease-in-out duration-150 hover:translate-x-2" aria-hidden="true" />
                 </div>
                 <div class="mt-4 sm:flex sm:flex-col sm:justify-start sm:max-w-md lg:mt-0">
                     <h3 class="text-sm font-semibold text-blue-presta4 tracking-wider">
@@ -16,7 +16,7 @@
                         <label for="email-address" class="sr-only">Email address</label>
                         <input type="email" name="email-address" id="email-address" autocomplete="email" required="" class="appearance-none border-2 border-blue-presta4 min-w-0 w-full bg-white border border-transparent rounded-md py-2 px-4 text-base text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white focus:border-white focus:placeholder-gray-400 sm:max-w-xs" placeholder="Enter your email" />
                         <div class="mt-3 rounded-md sm:mt-0 sm:ml-3 sm:flex-shrink-0">
-                            <button type="submit" class="w-full bg-blue-presta4 border border-transparent rounded-md py-2 px-4 flex items-center justify-center text-base font-medium text-white hover:bg-blue-presta3 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-indigo-500">
+                            <button type="submit" class="w-full bg-blue-presta4 border border-transparent rounded-md py-2 px-4 flex items-center justify-center text-base font-medium text-white hover:bg-blue-presta3 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-blue-800 focus:ring-indigo-500">
                                 Subscribe
                             </button>
                         </div>
@@ -25,7 +25,7 @@
             </div>
         </div>
     </div>
-    <footer class="bg-blue-presta4" aria-labelledby="footer-heading">
+    <footer class="bg-gradient-to-l from-blue-presta4 via-blue-presta4 to-blue-presta4" aria-labelledby="footer-heading">
         <div class="bg-footer-texture">
             <h2 id="footer-heading" class="sr-only">Footer</h2>
             <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:py-16 lg:px-8">
@@ -33,24 +33,24 @@
                     <div class="grid grid-cols-2 gap-8 xl:col-span-4">
                         <div class="md:grid md:grid-cols-2 md:gap-8">
                             <div>
-                                <h3 class="text-sm font-semibold text-gray-400 tracking-wider uppercase">
+                                <h3 class="text-sm font-semibold text-white tracking-wider uppercase">
                                     Solutions
                                 </h3>
                                 <ul role="list" class="mt-4 space-y-4">
                                     <li v-for="item in navigation.solutions" :key="item.name">
-                                        <a :href="item.href" class="text-base text-gray-200 hover:text-white">
+                                        <a :href="item.href" class="text-base text-blue-200 hover:text-white">
                                             {{ item.name }}
                                         </a>
                                     </li>
                                 </ul>
                             </div>
                             <div class="mt-12 md:mt-0">
-                                <h3 class="text-sm font-semibold text-gray-400 tracking-wider uppercase">
+                                <h3 class="text-sm font-semibold text-white tracking-wider uppercase">
                                     Company
                                 </h3>
                                 <ul role="list" class="mt-4 space-y-4">
                                     <li v-for="item in navigation.company" :key="item.name">
-                                        <a :href="item.href" class="text-base text-gray-200 hover:text-white">
+                                        <a :href="item.href" class="text-base text-blue-200 hover:text-white">
                                             {{ item.name }}
                                         </a>
                                     </li>
@@ -59,24 +59,24 @@
                         </div>
                         <div class="md:grid md:grid-cols-2 md:gap-8">
                             <div>
-                                <h3 class="text-sm font-semibold text-gray-400 tracking-wider uppercase">
+                                <h3 class="text-sm font-semibold text-white tracking-wider uppercase">
                                     Legal
                                 </h3>
                                 <ul role="list" class="mt-4 space-y-4">
                                     <li v-for="item in navigation.legal" :key="item.name">
-                                        <a :href="item.href" class="text-base text-gray-200 hover:text-white">
+                                        <a :href="item.href" class="text-base text-blue-200 hover:text-white">
                                             {{ item.name }}
                                         </a>
                                     </li>
                                 </ul>
                             </div>
                             <div class="mt-12 md:mt-0">
-                                <h3 class="text-sm font-semibold text-gray-400 tracking-wider uppercase">
+                                <h3 class="text-sm font-semibold text-white tracking-wider uppercase">
                                     Contact Us
                                 </h3>
                                 <ul role="list" class="mt-4 space-y-4">
                                     <li v-for="item in navigation.contact" :key="item.name">
-                                        <a :href="item.href" class="text-base text-gray-200 hover:text-white">
+                                        <a :href="item.href" class="text-base text-blue-200 hover:text-white">
                                             {{ item.name }}
                                         </a>
                                     </li>
@@ -85,26 +85,26 @@
                         </div>
                     </div>
                     <div class="mt-12 xl:mt-0">
-                        <h3 class="text-sm font-semibold text-gray-400 tracking-wider uppercase">
+                        <h3 class="text-sm font-semibold text-white tracking-wider uppercase">
                             Presta Capital
                         </h3>
                         <ul role="list" class="mt-4 space-y-4">
                             <li>
-                                <div class="text-base text-gray-200 hover:text-white">
+                                <div class="text-base text-blue-200 hover:text-white">
                                     <jet-application-logo class="block w-auto" />
                                 </div>
                             </li>
                         </ul>
                     </div>
                 </div>
-                <div class="mt-8 border-t border-gray-400 pt-8 md:flex md:items-center md:justify-between">
+                <div class="mt-8 border-t border-blue-200 pt-8 md:flex md:items-center md:justify-between">
                     <div class="flex space-x-6 md:order-2">
-                        <a v-for="item in navigation.social" :key="item.name" :href="item.href" class="text-gray-400 hover:text-gray-300">
+                        <a v-for="item in navigation.social" :key="item.name" :href="item.href" class="text-blue-200 hover:text-blue-300">
                             <span class="sr-only">{{ item.name }}</span>
                             <component :is="item.icon" class="h-6 w-6" aria-hidden="true" />
                         </a>
                     </div>
-                    <p class="mt-8 text-base text-gray-200 hover:text-white md:mt-0 md:order-1">
+                    <p class="mt-8 text-base text-blue-200 hover:text-white md:mt-0 md:order-1">
                         &copy; 2021 Presta Capital, Ltd. All rights reserved.
                     </p>
                 </div>
@@ -234,6 +234,14 @@ const navigation = {
 }
 
 export default {
+    props: {
+      showDemo: {
+          type: Boolean,
+          default() {
+              return true
+          }
+      }
+    },
     components: {
         ArrowCircleRightIcon,
         JetApplicationLogo,

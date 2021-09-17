@@ -28,7 +28,7 @@
                                 <p class="text-xl font-semibold text-gray-900">
                                     {{ post.title }}
                                 </p>
-                                <p class="mt-3 text-base text-gray-500">
+                                <p class="mt-3 text-base text-gray-500 line-clamp-4">
                                     {{ post.description }}
                                 </p>
                             </a>
@@ -51,9 +51,8 @@
                                         {{ post.date }}
                                     </time>
                                     <span aria-hidden="true">
-                    &middot;
-                  </span>
-
+                                        &middot;
+                                    </span>
                                 </div>
                             </div>
                         </div>

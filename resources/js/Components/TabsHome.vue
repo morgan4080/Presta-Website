@@ -92,7 +92,7 @@ export default {
                     excerpt: '',
                     description: '',
                     featured_link: null,
-                    featured_image: '/images/USSD and App.svg',
+                    featured_image: '/images/ussdandapp.png',
                     featured_points: ['USSD / App Access to your loan facilities.', 'Realtime disbursement to Mpesa or Bank.', '24/7 access to your services.'],
                     created_at: new Date().toISOString()
                 }
@@ -104,7 +104,7 @@ export default {
                     excerpt: '',
                     description: '',
                     featured_link: null,
-                    featured_image: '/images/PHONE 2.svg',
+                    featured_image: '/images/PHONE 2.png',
                     featured_points: ['Digital Signatures.', 'Real-time loan approvals.', 'Tracking of guarantors approvals.', 'Realtime acknowledgement of \n approvals via SMS & Email.'],
                     created_at: new Date().toISOString()
                 }
@@ -116,7 +116,7 @@ export default {
                     excerpt: '',
                     description: '',
                     featured_link: null,
-                    featured_image: '/images/CollectionsSVG.svg',
+                    featured_image: '/images/Group 7421.png',
                     featured_points: ['Payment of savings, shares, registration fees & loans via Mpesa.', 'Realtime acknowledgement of payments via SMS.', 'Support for Check-off.'],
                     created_at: new Date().toISOString()
                 }
@@ -128,7 +128,7 @@ export default {
                     excerpt: '',
                     description: '',
                     featured_link: null,
-                    featured_image: '/images/MonitoringSVG.svg',
+                    featured_image: '/images/Layer 4.png',
                     featured_points: ['Tracking of member contributions.', 'Loan payments scheduling and tracking.', 'Automatic reminders for due payments.','Member statements.', 'Advanced analysis and reporting.'],
                     created_at: new Date().toISOString()
                 }
@@ -140,7 +140,7 @@ export default {
                     excerpt: '',
                     description: '',
                     featured_link: null,
-                    featured_image: '/images/AppraisalSVG.svg',
+                    featured_image: '/images/Group 7732.png',
                     featured_points: ['Group loaning with group voting.', 'Review & Approval of each loan by\n' +
                     'back-office staff\n.', 'M-PESA statements importation & analysis\n' +
                     'Savings Based (automatic) approval\n.', 'Approval limit matrix (Graduated borrowing\n' + 'limit based on customer behavior and\n' + ' number of loans)',
@@ -155,7 +155,7 @@ export default {
                     excerpt: '',
                     description: '',
                     featured_link: null,
-                    featured_image: '/images/DisbursementSVG.svg',
+                    featured_image: '/images/Group 7687.png',
                     featured_points: ['Real-time disbursements to Mpesa.', 'Real-time disbursements to Bank\n' +
                     '(via M-PESA/ PesaLink).'],
                     created_at: new Date().toISOString()
@@ -168,7 +168,7 @@ export default {
                     excerpt: 'new',
                     description: 'Work with superlenders to fund customers when cash runs out.',
                     featured_link: '#',
-                    featured_image: '/images/SuperlenderSVG.svg',
+                    featured_image: '/images/Group 55.png',
                     featured_points: null,
                     created_at: new Date().toISOString()
                 }

@@ -116,8 +116,28 @@
                 </div>
 
                 <!-- The Platform -->
-                <div class="bg-gray-100">
-                    <div class="bg-banner-texture">
+                <div class="bg-gray-100 overflow-hidden">
+                    <div class="relative">
+                        <div class="absolute inset-y-0 h-full w-full" aria-hidden="true">
+                            <div class="relative h-full">
+                                <svg class="absolute right-full transform translate-y-1/3 translate-x-1/4 md:translate-y-1/2 sm:translate-x-1/2 lg:translate-x-full" width="404" height="784" fill="none" viewBox="0 0 404 784">
+                                    <defs>
+                                        <pattern id="e229dbec-10e9-49ee-8ec3-0286ca089edf" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
+                                            <rect x="0" y="0" width="4" height="4" class="text-gray-200" fill="currentColor" />
+                                        </pattern>
+                                    </defs>
+                                    <rect width="404" height="784" fill="url(#e229dbec-10e9-49ee-8ec3-0286ca089edf)" />
+                                </svg>
+                                <svg class="absolute left-full transform -translate-y-3/4 -translate-x-1/4 sm:-translate-x-1/2 md:-translate-y-1/2 lg:-translate-x-3/4" width="404" height="784" fill="none" viewBox="0 0 404 784">
+                                    <defs>
+                                        <pattern id="d2a68204-c383-44b1-b99f-42ccff4e5365" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
+                                            <rect x="0" y="0" width="4" height="4" class="text-gray-200" fill="currentColor" />
+                                        </pattern>
+                                    </defs>
+                                    <rect width="404" height="784" fill="url(#d2a68204-c383-44b1-b99f-42ccff4e5365)" />
+                                </svg>
+                            </div>
+                        </div>
                         <div class="relative max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:px-8">
                             <h3 class="mt-2 text-center text-3xl leading-8 font-extrabold tracking-tight text-blue-presta3 sm:text-4xl">
                                 The Presta Platform
@@ -167,8 +187,8 @@
                                 <p class="mt-3 max-w-3xl text-lg text-white text-center">
                                     Asset finance
                                 </p>
-                                <a href="#" class="text-sm font-medium py-3 text-center text-blue-lightLink">
-                                    See more →
+                                <a href="#" class="text-sm font-medium py-3 text-center text-blue-prestaS">
+                                    See more <span class="inline-block transform transition ease-in-out duration-150 hover:translate-x-2">→</span>
                                 </a>
                             </div>
                             <div class="col-span-1 flex flex-col justify-center py-8 px-8 bg-blue-presta3">
@@ -176,8 +196,8 @@
                                 <p class="mt-3 max-w-3xl text-lg text-white text-center">
                                     Emergency loans
                                 </p>
-                                <a href="#" class="text-sm font-medium py-3 text-center text-blue-lightLink">
-                                    See more →
+                                <a href="#" class="text-sm font-medium py-3 text-center text-blue-prestaS">
+                                    See more <span class="inline-block transform transition ease-in-out duration-150 hover:translate-x-2">→</span>
                                 </a>
                             </div>
                             <div class="col-span-1 flex flex-col justify-center py-8 px-8 bg-blue-presta3">
@@ -185,8 +205,8 @@
                                 <p class="mt-3 max-w-3xl text-lg text-white text-center">
                                     Group loans
                                 </p>
-                                <a href="#" class="text-sm font-medium py-3 text-center text-blue-lightLink">
-                                    See more →
+                                <a href="#" class="text-sm font-medium py-3 text-center text-blue-prestaS">
+                                    See more <span class="inline-block transform transition ease-in-out duration-150 hover:translate-x-2">→</span>
                                 </a>
                             </div>
                             <div class="col-span-1 flex flex-col justify-center py-8 px-8 bg-blue-presta3">
@@ -194,8 +214,8 @@
                                 <p class="mt-3 max-w-3xl text-lg text-white text-center">
                                     Higher purchase loans
                                 </p>
-                                <a href="#" class="text-sm font-medium py-3 text-center text-blue-lightLink">
-                                    See more →
+                                <a href="#" class="text-sm font-medium py-3 text-center text-blue-prestaS">
+                                    See more <span class="inline-block transform transition ease-in-out duration-150 hover:translate-x-2">→</span>
                                 </a>
                             </div>
                             <div class="col-span-1 flex flex-col justify-center py-8 px-8 bg-blue-presta3">
@@ -203,8 +223,8 @@
                                 <p class="mt-3 max-w-3xl text-lg text-white text-center">
                                     Logbook loans
                                 </p>
-                                <a href="#" class="text-sm font-medium py-3 text-center text-blue-lightLink">
-                                    See more →
+                                <a href="#" class="text-sm font-medium py-3 text-center text-blue-prestaS">
+                                    See more <span class="inline-block transform transition ease-in-out duration-150 hover:translate-x-2">→</span>
                                 </a>
                             </div>
                             <div class="col-span-1 flex flex-col justify-center py-8 px-8 bg-blue-presta3">
@@ -212,8 +232,8 @@
                                 <p class="mt-3 max-w-3xl text-lg text-white text-center">
                                     Payroll loans
                                 </p>
-                                <a href="#" class="text-sm font-medium py-3 text-center text-blue-lightLink">
-                                    See more →
+                                <a href="#" class="text-sm font-medium py-3 text-center text-blue-prestaS">
+                                    See more <span class="inline-block transform transition ease-in-out duration-150 hover:translate-x-2">→</span>
                                 </a>
                             </div>
                         </div>
@@ -318,15 +338,14 @@ import Blog from '@/Components/Blog.vue';
 import TabsHome from '@/Components/TabsHome.vue';
 import HomeDialogue from '@/Components/HomeDialogue.vue';
 import { gsap } from 'gsap'
-import { ref } from 'vue'
 
 const posts = [
     {
-        title: 'Boost your conversion rate',
+        title: 'Penniah Wahu: Swipe Capital',
         href: '#',
         category: { name: 'Article', href: '#' },
         description:
-            'Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto accusantium praesentium eius, ut atque fuga culpa, similique sequi cum eos quis dolorum.',
+            'Using Presta for our Lending Business has been a game changer, we have been able to scale up, find new investors because our daily operational elements are sorted. Presta offers an unparalleled experience.',
         date: 'Mar 16, 2020',
         datetime: '2020-03-16',
         imageUrl:
@@ -339,11 +358,11 @@ const posts = [
         },
     },
     {
-        title: 'How to use search engine optimization to drive sales',
+        title: 'Bernard Rono: Ketepa SACCO ',
         href: '#',
         category: { name: 'Video', href: '#' },
         description:
-            'Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit facilis asperiores porro quaerat doloribus, eveniet dolore. Adipisci tempora aut inventore optio animi., tempore temporibus quo laudantium.',
+            'As the Chairman of the sacco, I have seen and felt the impact this product has made to our organization since our partnership. We have been able to increase our loan book over a remarkable period of time, improved our efficiency and scale to greater heights. One of the things that attracted us to this platform is the fact that it is very easy to use and straightforward to both us the administration and the users. Considering the type of customers we handle where some are unable to access smart phones, or apps, the system has made it very simple for everyone to use. Using this platform has enabled us to digitize all our operations making it easier for our  members to access their loans without any paperwork. This has made a huge difference in how we do reconciliation and most importantly how we serve our members. The support we get from their support team is extremely commendable, we always feel free and at home whenever we are in communication with them. There is constant effort to ensure that we are comfortable and content. We are happy to be working together and I look forward to what the future holds.',
         date: 'Mar 10, 2020',
         datetime: '2020-03-10',
         imageUrl:
@@ -356,15 +375,15 @@ const posts = [
         },
     },
     {
-        title: 'Improve your customer experience',
+        title: 'Quentin: Feezy Mobile Credit',
         href: '#',
         category: { name: 'Case Study', href: '#' },
         description:
-            'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint harum rerum voluptatem quo recusandae magni placeat saepe molestiae, sed excepturi cumque corporis perferendis hic.',
+            'My experience interacting with the Presta Platform and working with the team has been a fulfilling journey. While sourcing for a digital platform to aid in running our business, they stood out as being committed and flexible in meeting their clients’ needs, offering solutions on every turn of our business growth. They have lived up to their brand promise and the platform compliments our business needs, giving us the flexibility and functionalities required to achieve our vision. Their affordable and bundled pricing has been ideal for each growth stage and it has allowed us to scale up at the right cost. With an interactive interface, the platform allows us to have a broad range of products for our different categories of clients and the various accounting and statistical tools allow us to confidently monitor our business performance, all this under one roof. The end user experience has also been rewarding to us as our clients of different capabilities are able to easily interact and navigate on the platform giving them confidence in our service delivery.The entire Presta team and help desk has consistently been proactive and exemplary in their service delivery and issue resolution, giving us the peace of mind that we have the right partner who treats our customers as their own. As we look into building and growing our relationship further, it is our hope that through Presta’s outreach and advancement, we will be able to have more financial partners come on board and offer liquidity and equity solutions through the platform which will go a long way into aiding different players’ contribute to the financial sector deepening agenda. We are proud to be your partner and are excited with what the future holds for this relationship. Keep doing what you are doing.',
         date: 'Feb 12, 2020',
         datetime: '2020-02-12',
         imageUrl:
-            '/images/Penniah Wahu.jpg',
+            '/images/Quentin-Feezy.png',
         author: {
             name: 'Michael Maweu',
             href: '#',

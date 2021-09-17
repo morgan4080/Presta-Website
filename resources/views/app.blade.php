@@ -37,6 +37,37 @@
         <meta name="msapplication-TileColor" content="#da532c">
         <meta name="msapplication-config" content="/images/icons/browserconfig.xml">
         <meta name="theme-color" content="#ffffff">
+
+        <style>
+            html {
+                scroll-behavior: smooth;
+            }
+            html {
+                scroll-behavior: smooth;
+            }
+
+            /* width */
+            ::-webkit-scrollbar {
+                width: 14px;
+            }
+
+            /* Track */
+            ::-webkit-scrollbar-track {
+                background: #cccccc;
+            }
+
+            /* Handle */
+            ::-webkit-scrollbar-thumb {
+                background: #52596d;
+                border: 2px #fcf9ed solid;
+                border-radius: 25px;
+            }
+
+            /* Handle on hover */
+            ::-webkit-scrollbar-thumb:hover {
+                background: linear-gradient(to bottom, #27627e, #3b86a4, #4799aa, #819ca8);
+            }
+        </style>
     </head>
     <body class="font-sans antialiased">
         @inertia
