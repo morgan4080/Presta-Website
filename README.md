@@ -98,11 +98,3 @@ yarn dev
 - Attribute Posts to authors
 - Publishing Post Comments
 
-### What to test first
-
-- Publish Categories
-    + Create single category
-    + List all categories
-    + Edit single category
-    + Cascade delete category tree
-
