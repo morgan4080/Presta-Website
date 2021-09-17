@@ -90,19 +90,19 @@ yarn install
 yarn dev
 ```
 
-### What should be build first
+### Yet to complete CMS
 
-- Create Categories (Main Content Pages)
-- Create Sub Categories (Page Sections/ Blog Categories)
-- Create Posts (Fine grained content)
-- Attribute Posts to authors
-- Publishing Post Comments
+- Create PostCategories with migration/controller & model
+- Create PostSubCategories with migration/controller & model
+- Create Posts with migration/controller & model
+- Attribute Posts to users user_id
+- Publishing Post Comments attributed to post_id
 
-### What to test first
+### Deploy to production
 
-- Publish Categories
-    + Create single category
-    + List all categories
-    + Edit single category
-    + Cascade delete category tree
+```bash
+git add .
+git commit -m "task:comments"
+.\deploy.sh
+```
 
