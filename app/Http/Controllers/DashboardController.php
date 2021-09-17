@@ -111,7 +111,7 @@ class DashboardController extends Controller
 
         $topBrowsers = $this->topBrowsers;
 
-        return Inertia::render('Dashboard',
+        return Inertia::render('Dashboard/Index',
             [
                 'analytics' => [
                     'visitorsPerPage' => $visitorsAndPageViews,

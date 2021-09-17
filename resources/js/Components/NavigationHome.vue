@@ -15,11 +15,11 @@
                         </a>
                     </div>
                     <div class="hidden md:flex items-center justify-end flex-1 lg:w-0">
-                        <a href="#" class="whitespace-nowrap text-base font-medium text-white hover:text-gray-200">
+                        <a href="#" class="whitespace-nowrap hidden hidden text-base font-medium text-white hover:text-gray-200">
                             Sign in
                         </a>
-                        <a href="#" class="ml-8 whitespace-nowrap inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base text-blue-presta2 hover:bg-blue-presta1 font-medium hover:text-white bg-white">
-                            Sign up
+                        <a rel="noopener noreferrer" target="_blank" href="https://app.presta.co.ke/kopesha/login.html" class="ml-8 whitespace-nowrap inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base text-blue-presta2 hover:bg-blue-presta1 font-medium hover:text-white bg-white">
+                            Sign In
                         </a>
                     </div>
                 </div>
@@ -50,7 +50,7 @@
                                 <PopoverPanel class="absolute z-10 -ml-4 mt-3 transform w-screen max-w-md lg:max-w-2xl lg:ml-0 lg:left-1/2 lg:-translate-x-1/2">
                                     <div class="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 overflow-hidden">
                                         <div class="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8 lg:grid-cols-2">
-                                            <Link v-for="item in solutions" :key="item.name" :href="item.href" class="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-50">
+                                            <Link v-for="item in solutions" :key="item.name" :href="route('solutions.show', item.href)" class="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-50">
                                                 <div class="flex-shrink-0 flex items-center justify-center h-10 w-10 rounded-md bg-blue-presta2 text-white sm:h-12 sm:w-12">
                                                     <component :is="item.icon" class="h-6 w-6" aria-hidden="true" />
                                                 </div>
@@ -64,21 +64,6 @@
                                                 </div>
                                             </Link>
                                         </div>
-                                        <div class="p-5 bg-gray-50 sm:p-8">
-                                            <Link href="#" class="-m-3 p-3 flow-root rounded-md hover:bg-gray-100">
-                                                <div class="flex items-center">
-                                                    <div class="text-base font-medium text-gray-900">
-                                                        Enterprise
-                                                    </div>
-                                                    <span class="ml-3 inline-flex items-center px-3 py-0.5 rounded-full text-xs font-medium leading-5 bg-blue-prestaT text-white">
-                                                        New
-                                                    </span>
-                                                </div>
-                                                <p class="mt-1 text-sm text-gray-500">
-                                                    Empower your entire team with advanced platform tools.
-                                                </p>
-                                            </Link>
-                                        </div>
                                     </div>
                                 </PopoverPanel>
                             </transition>
@@ -87,7 +72,7 @@
                         <Link :href="route('pricing')" class="text-base font-medium text-white hover:text-gray-200">
                             Pricing
                         </Link>
-                        <Link href="#" class="text-base font-medium text-white hover:text-gray-200">
+                        <Link href="#" class="text-base font-medium text-white hover:text-gray-200 hidden">
                             Customers
                         </Link>
 
@@ -115,14 +100,14 @@
                             </transition>
                         </Popover>
 
-                        <Link href="/contact-us" class="text-base font-medium text-white hover:text-gray-200">
+                        <Link :href="route('contact')" class="text-base font-medium text-white hover:text-gray-200">
                             Contact Us
                         </Link>
                     </PopoverGroup>
                     <div class="hidden md:flex items-center justify-end md:flex-1 lg:w-0">
-                        <Link href="#" class="ml-8 mr-4 whitespace-nowrap inline-flex items-center justify-center px-4 py-2 border border-white rounded-md shadow-sm text-base font-medium text-white bg-opacity-25 bg-gray-900 backdrop-filter backdrop-blur hover:bg-blue-presta1">
-                            <chat-alt2-icon class="flex-none w-5 h-5 text-white mr-1" aria-hidden="true" />
-                            Chat with Sales
+                        <Link :href="route('demo')" class="ml-8 mr-4 whitespace-nowrap inline-flex items-center justify-center px-4 py-2 border border-white rounded-md shadow-sm text-base font-medium text-white bg-opacity-25 bg-gray-900 backdrop-filter backdrop-blur hover:bg-blue-presta1">
+<!--                            <chat-alt2-icon class="flex-none w-5 h-5 text-white mr-1" aria-hidden="true" />-->
+                            Explore Demo
                         </Link>
                     </div>
                 </div>
@@ -132,9 +117,9 @@
                         <div class="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 bg-white divide-y-2 divide-gray-50">
                             <div class="pt-5 pb-6 px-5">
                                 <div class="flex items-center justify-between">
-                                    <div>
+                                    <Link :href="route('homepage')">
                                         <img class="h-8 w-auto" src="/images/logos/blue logo.svg" alt="Presta Capital" />
-                                    </div>
+                                    </Link>
                                     <div class="-mr-2">
                                         <PopoverButton class="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-presta4">
                                             <span class="sr-only">Close menu</span>
@@ -161,27 +146,20 @@
                                         Pricing
                                     </Link>
 
-                                    <Link href="#" class="text-base font-medium text-gray-900 hover:text-gray-700">
-                                        Docs
-                                    </Link>
-
-                                    <Link href="#" class="text-base font-medium text-gray-900 hover:text-gray-700">
-                                        Enterprise
-                                    </Link>
                                     <Link v-for="item in resources" :key="resources.name" :href="item.href" class="text-base font-medium text-gray-900 hover:text-gray-700">
                                         {{ item.name }}
                                     </Link>
                                 </div>
                                 <div class="mt-6">
-                                    <Link href="#" class="w-full flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-blue-presta1 hover:bg-blue-presta2">
+                                    <Link href="#" class="w-full hidden flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-blue-presta1 hover:bg-blue-presta2">
                                         Sign up
                                     </Link>
                                     <p class="mt-6 text-center text-base font-medium text-gray-500">
                                         Existing customer?
                                         <!-- space -->
-                                        <Link href="#" class="text-blue-presta4 hover:text-blue-presta3">
+                                        <a href="https://presta.co.ke/kopesha" class="text-blue-presta4 hover:text-blue-presta3">
                                             Sign in
-                                        </Link>
+                                        </a>
                                     </p>
                                 </div>
                             </div>
@@ -215,35 +193,23 @@ const solutions = [
     {
         name: 'Microfinance',
         description: 'Get a better understanding of your customers financial needs.',
-        href: '#',
+        href: 'micro-finance',
         icon: ChartBarIcon,
     },
     {
         name: 'Saccos',
         description: 'Speak directly to your customers in a more meaningful way.',
-        href: '#',
+        href: 'saccos',
         icon: CursorClickIcon,
     },
-    { name: 'Investment Groups', description: "Your customers' data will be safe and secure.", href: '#', icon: ShieldCheckIcon },
-    /*{
-        name: 'Integrations',
-        description: "Connect with third-party tools that you're already using.",
-        href: '#',
-        icon: ViewGridIcon,
-    },
     {
-        name: 'Automations',
-        description: 'Build strategic funnels that will drive your customers to convert',
-        href: '#',
-        icon: RefreshIcon,
+        name: 'Investment Groups',
+        description: "Your customers' data will be safe and secure.",
+        href: 'investment-groups',
+        icon: ShieldCheckIcon
     },
-    {
-        name: 'Reporting',
-        description: 'Get detailed reports that will help you make more informed decisions ',
-        href: '#',
-        icon: DocumentReportIcon,
-    },*/
-]
+];
+
 const resources = [
     { name: 'About Presta', description: 'Learn how to maximize our platform to get the most out of it.', href: '/about-us' },
     { name: 'Blogs', description: 'Understand how we work to streamline credit services.', href: '#' },
@@ -253,7 +219,7 @@ const resources = [
         description: 'Get all of your questions answered in our forums or contact support.',
         href: '#',
     },
-]
+];
 
 export default {
     components: {

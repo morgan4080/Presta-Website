@@ -52,7 +52,7 @@
         </main>
     </div>
 
-    <MainFooter :showDemo="false" />
+    <MainFooter :showDemo="true" />
 
 </template>
 

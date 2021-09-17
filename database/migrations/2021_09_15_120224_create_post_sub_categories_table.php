@@ -16,6 +16,9 @@ class CreatePostSubCategoriesTable extends Migration
         Schema::create('post_sub_categories', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('post_category_id');
+            $table->text('name');
+            $table->char('slug', 200)->unique();
+            $table->longText('description');
             $table->timestamps();
             $table->softDeletes();
 

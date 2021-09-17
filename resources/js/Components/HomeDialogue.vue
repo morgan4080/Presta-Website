@@ -1,9 +1,9 @@
 <template>
     <div class="space-y-4 sm:space-y-0 sm:mr-auto sm:inline-grid sm:grid-cols-2 sm:gap-5">
-        <button @click="openModal('demo')" type="button" class="flex items-center justify-center px-4 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-blue-presta2 bg-white hover:bg-indigo-50 sm:px-8">
+        <Link :href="route('demo')" :class="{'text-blue-presta2 bg-white hover:bg-indigo-50' : context === 'homepage', 'text-white bg-blue-presta4 hover:bg-blue-presta3' : context !== 'homepage'}" class="flex items-center justify-center px-4 py-3 border border-transparent text-base font-medium rounded-md shadow-sm sm:px-8">
             Request demo
-        </button>
-        <button @click="openModal('video')" type="button" class="flex items-center justify-center px-4 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-blue-presta1 bg-opacity-60 hover:bg-opacity-70 sm:px-8">
+        </Link>
+        <button v-show="context === 'homepage'" @click="openModal('video')" type="button" class="flex items-center justify-center px-4 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-blue-presta1 bg-opacity-60 hover:bg-opacity-70 sm:px-8">
             <PlayIcon class="flex-none w-5 h-5 text-white mr-1" aria-hidden="true" />
             Watch video
         </button>
@@ -38,11 +38,11 @@
                         leave-to="opacity-0 scale-95"
                     >
                         <div
-                            :class="{'rounded-2xl max-w-md' : context && context === 'demo', 'max-w-2xl' : context && context === 'video'}"
+                            :class="{'rounded-2xl max-w-md' : context0 && context0 === 'demo', 'max-w-2xl' : context0 && context0 === 'video'}"
                             class="inline-block w-full max-w-2xl p-6 my-8 overflow-hidden text-left align-middle transition-all transform bg-white shadow-xl"
                         >
 
-                            <div v-if="context && context ==='demo'" class="pt-2 pb-4 space-y-2">
+                            <div v-if="context0 && context0 ==='demo'" class="pt-2 pb-4 space-y-2">
                                 <label class="block text-sm">
                                     <span class="text-gray-700">Organisation</span>
                                     <input type="text" class="form-input mt-1 block w-full rounded-md bg-gray-100 border-transparent focus:border-gray-500 focus:bg-white focus:ring-0" placeholder="">
@@ -57,7 +57,7 @@
                                 </label>
                             </div>
 
-                            <iframe v-if="context && context ==='video'" id="existing-iframe-example"
+                            <iframe v-if="context0 && context0 ==='video'" id="existing-iframe-example"
                                     class="w-full h-96"
                                     :src="`https://www.youtube.com/embed/${videoId}?enablejsapi=1`"
                                     frameborder="0"
@@ -73,7 +73,7 @@
                                     Got it, thanks!
                                 </button>
                                 <button
-                                    v-if="context && context ==='demo'"
+                                    v-if="context0 && context0 ==='demo'"
                                     type="button"
                                     class="inline-flex justify-center px-4 py-2 text-sm font-medium text-blue-900 bg-blue-100 border border-transparent rounded-md hover:bg-blue-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-blue-500"
                                     @click="closeModal"
@@ -91,6 +91,7 @@
 </template>
 
 <script>
+import { Link } from '@inertiajs/inertia-vue3';
 import { ref, toRefs } from 'vue'
 
 import {
@@ -112,20 +113,22 @@ export default {
         Dialog,
         DialogOverlay,
         DialogTitle,
-        PlayIcon
+        PlayIcon,
+        Link
     },
 
     props: {
         videoId: {
             type: String,
             default: null
-        }
+        },
+        context: String,
     },
 
     setup(props) {
         const isOpen = ref(false)
 
-        const context = ref(null)
+        const context0 = ref(null)
 
         const { videoId } = toRefs(props)
 
@@ -135,7 +138,7 @@ export default {
             switch (type) {
                 case 'video':
 
-                    context.value = type
+                    context0.value = type
 
                     var tag = document.createElement('script');
                     tag.id = 'iframe-demo';
@@ -181,7 +184,7 @@ export default {
                     break
                 case 'demo':
                     // setup quote
-                    context.value = type
+                    context0.value = type
                     break
             }
             isOpen.value = true
@@ -192,7 +195,7 @@ export default {
         }
 
         return {
-            context,
+            context0,
             isOpen,
             closeModal,
             openModal

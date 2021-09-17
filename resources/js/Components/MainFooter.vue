@@ -2,12 +2,12 @@
     <div v-if="showDemo" class="bg-white">
         <div class="max-w-7xl mx-auto pt-12 pb-12 px-4 sm:px-6 lg:pt-12 lg:pb-16 lg:px-8">
             <div class="py-8 lg:flex lg:items-center lg:justify-between xl:mt-0">
-                <div class="flex items-center text-blue-presta4 lg:ml-16 pb-4 md:pb-0">
-                    <p class="font-semibold text-2xl">
+                <Link :href="route('demo')" class="flex items-center text-blue-presta4 lg:ml-16 pb-4 md:pb-0">
+                    <span class="font-semibold text-2xl">
                         Request A Demo
-                    </p>
+                    </span>
                     <ArrowCircleRightIcon class="h-12 w-12 fill-current cursor-pointer ml-8 transform transition ease-in-out duration-150 hover:translate-x-2" aria-hidden="true" />
-                </div>
+                </Link>
                 <div class="mt-4 sm:flex sm:flex-col sm:justify-start sm:max-w-md lg:mt-0">
                     <h3 class="text-sm font-semibold text-blue-presta4 tracking-wider">
                         Subscribe to our newsletter
@@ -25,8 +25,9 @@
             </div>
         </div>
     </div>
-    <footer class="bg-gradient-to-l from-blue-presta4 via-blue-presta4 to-blue-presta4" aria-labelledby="footer-heading">
-        <div class="bg-footer-texture">
+    <footer class="bg-blue-presta4" aria-labelledby="footer-heading">
+<!--        class="bg-footer-texture"-->
+        <div>
             <h2 id="footer-heading" class="sr-only">Footer</h2>
             <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:py-16 lg:px-8">
                 <div class="pb-8 xl:grid xl:grid-cols-5 xl:gap-8">
@@ -114,9 +115,10 @@
 </template>
 
 <script>
-import { defineComponent, h } from 'vue'
-import { ArrowCircleRightIcon } from '@heroicons/vue/solid'
-import JetApplicationLogo from '@/Jetstream/ApplicationLogo.vue'
+import { defineComponent, h } from 'vue';
+import { ArrowCircleRightIcon } from '@heroicons/vue/solid';
+import JetApplicationLogo from '@/Jetstream/ApplicationLogo.vue';
+import { Link } from '@inertiajs/inertia-vue3';
 
 const navigation = {
     solutions: [
@@ -245,6 +247,7 @@ export default {
     components: {
         ArrowCircleRightIcon,
         JetApplicationLogo,
+        Link
     },
     setup() {
         return {

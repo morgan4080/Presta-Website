@@ -2,72 +2,34 @@
     <div class="carousel relative">
         <div class="carousel-inner">
             <!-- Hero card -->
-            <input @click="showTarget($event.target)" class="carousel-open hidden" type="radio" id="carousel-2" name="carousel" aria-hidden="true" hidden="" checked="checked">
-            <div id="slider-2" class="relative carousel-item">
-                <div class="absolute inset-x-0 bottom-0 h-1/2 bg-white" />
-                <div class="w-full mx-auto">
-                    <div class="relative min-h-screen sm:overflow-hidden">
-                        <div class="absolute inset-0">
-                            <img class="min-h-screen w-full object-cover" src="/images/slider2.jpg" alt="Show Casing Presta Capital" />
+            <div v-for="(slider, index) of slider_images" :key="slider.id">
+                <input @click="showTarget($event.target)" class="carousel-open hidden" type="radio" :id="'carousel-'+ (index + 1)" name="carousel" aria-hidden="true" hidden="" checked="checked">
+                <div :id="'slider-'+ (index + 1)" class="relative carousel-item">
+                    <div class="absolute inset-x-0 bottom-0 h-1/2 bg-white" />
+                    <div class="w-full mx-auto">
+                        <div class="relative min-h-screen sm:overflow-hidden">
                             <div class="absolute inset-0">
-                                <img class="min-h-screen w-full object-cover" src="/images/Path 34.png" alt="Show Casing Presta Capital" />
+                                <img :class="{ 'min-h-screen object-cover' : context === 'homepage', 'min-h-screen lg:min-h-0 object-cover object-right-bottom lg:object-center lg:object-fit lg:pt-40' : context !== 'homepage'}" class="w-full" :src="slider.image" alt="Show Casing Presta Capital" />
+                                <div v-if="context === 'homepage'" class="fixed inset-0">
+                                    <img class="min-h-screen w-full object-cover" src="/images/Path 33.png" alt="Show Casing Presta Capital" />
+                                </div>
                             </div>
-                        </div>
-                        <div class="relative max-w-7xl mx-auto px-4 py-16 sm:px-6 sm:py-24 lg:py-32 lg:px-8">
-                            <h1 class="text-left mt-32 text-4xl font-extrabold tracking-tight sm:text-5xl lg:text-6xl">
-                                <span class="block text-white">Simple & Secure</span>
-                                <span class="block text-blue-presta1">Lending Platform</span>
-                            </h1>
-                            <p class="text-left mt-6 max-w-lg text-xl text-blue-presta1 sm:max-w-3xl">
-                                Suitable for Microfinance & Saccos.
-                            </p>
-                            <div class="mt-10 max-w-sm sm:max-w-none sm:flex sm:justify-start relative">
-                                <ol class="carousel-indicators absolute top-0 left-0 -mt-12">
-                                    <li>
-                                        <label for="carousel-1" class="carousel-bullet font-bold text-gray-200 text-opacity-50">&#8213;</label>
-                                    </li>
-                                    <li>
-                                        <label for="carousel-2" class="carousel-bullet font-bold text-white">&#8213;</label>
-                                    </li>
-                                </ol>
-                                <home-dialogue :video-id="'0gvPT1SAGko'">
-                                </home-dialogue>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <input @click="showTarget($event.target)" class="carousel-open hidden" type="radio" id="carousel-1" name="carousel" aria-hidden="true" hidden="" checked="checked">
-            <div id="slider-1" class="relative carousel-item">
-                <div class="absolute inset-x-0 bottom-0 h-1/2 bg-white" />
-                <div class="w-full mx-auto">
-                    <div class="relative min-h-screen sm:overflow-hidden">
-                        <div class="absolute inset-0">
-                            <img class="min-h-screen w-full object-cover" src="/images/scroll-image-2.jpg" alt="Show Casing Presta Capital" />
-                            <div class="absolute inset-0">
-                                <img class="min-h-screen w-full object-cover" src="/images/Path 33.png" alt="Show Casing Presta Capital" />
-                            </div>
-                        </div>
-                        <div class="relative max-w-7xl mx-auto px-4 py-16 sm:px-6 sm:py-24 lg:py-32 lg:px-8">
-                            <h1 class="text-left mt-32 text-4xl font-extrabold tracking-tight sm:text-5xl lg:text-6xl">
-                                <span class="block text-white">Digital Guarantorship</span>
-                                <span class="block text-blue-presta1">For SACCOs</span>
-                            </h1>
-                            <p class="text-left mt-6 max-w-lg text-xl text-blue-presta1 sm:max-w-3xl">
-                                Booting customer experience with digital signatures.
-                            </p>
-                            <div class="mt-10 max-w-sm sm:max-w-none sm:flex sm:justify-start relative">
-                                <ol class="carousel-indicators absolute top-0 left-0 -mt-12">
-                                    <li>
-                                        <label for="carousel-1" class="carousel-bullet font-bold text-white">&#8213;</label>
-                                    </li>
-                                    <li>
-                                        <label for="carousel-2" class="carousel-bullet font-bold text-gray-200 text-opacity-50">&#8213;</label>
-                                    </li>
-                                </ol>
-                                <home-dialogue :video-id="'0gvPT1SAGko'">
-                                </home-dialogue>
+                            <div :class="{ 'lg:py-32' : context === 'homepage', 'lg:pb-32 lg:pt-40' : context !== 'homepage'}" class="relative max-w-7xl mx-auto px-4 py-16 sm:px-6 sm:py-24 lg:px-8">
+                                <h1 class="text-left mt-48 lg:mt-32 text-4xl font-extrabold tracking-tight sm:text-5xl lg:text-6xl">
+                                    <span :class="{ 'text-white' : context === 'homepage', 'text-blue-presta4' : context !== 'homepage'}" class="block text-white">{{ slider.title }}</span>
+                                    <span :class="{ 'text-blue-presta1' : context === 'homepage', 'text-blue-presta4' : context !== 'homepage'}" class="block">{{ slider.sub_title }}</span>
+                                </h1>
+                                <p :class="{ 'text-blue-presta1' : context === 'homepage', 'text-blue-presta4' : context !== 'homepage'}" class="text-left mt-6 max-w-lg text-xl sm:max-w-3xl">
+                                    {{ slider.excerpt }}
+                                </p>
+                                <div class="mt-10 max-w-sm sm:max-w-none sm:flex sm:justify-start relative">
+                                    <ol class="carousel-indicators absolute top-0 left-0 -mt-12">
+                                        <li v-for="(slide, x) of slider_images" :key="slide.id">
+                                            <label :for="'carousel-'+ (x + 1)" :class="{ 'text-white' : x === index && context === 'homepage', 'text-gray-200 text-opacity-50' : x !== index && context === 'homepage', 'text-blue-presta4' : x === index && context !== 'homepage', 'text-blue-presta4 text-opacity-50' : x !== index && context !== 'homepage' }" class="carousel-bullet font-bold" v-html="giveIndicator(x, index)"></label>
+                                        </li>
+                                    </ol>
+                                    <home-dialogue :context="context" :video-id="slider.videoId" />
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -80,7 +42,13 @@
 <script>
 import { gsap } from 'gsap';
 import HomeDialogue from '@/Components/HomeDialogue.vue';
+import { reactive } from 'vue'
+
 export default {
+    props: {
+        sliders: Array,
+        context: String
+    },
     components: {
         HomeDialogue
     },
@@ -88,14 +56,6 @@ export default {
         this.timeline.kill();
     },
     created() {
-        this.slider_images = [
-            {
-                image: '/images/scroll-image-2.jpg',
-            },
-            {
-                image: '/images/scroll-image-2.jpg',
-            }
-        ]
         setTimeout(() => this.doAnimate(), 100)
     },
     methods: {
@@ -226,13 +186,84 @@ export default {
         return {
             timeline: null,
             time_out: null,
-            slider_images: [],
             openVideoDialogue: false
         }
     },
+
+    setup(props) {
+        const slider_images = reactive(props.sliders);
+
+        function giveIndicator(i, index) {
+            return ['&#8213;', '&#8213;'].filter((ic, i) => i === index)
+        }
+
+        return {
+            slider_images,
+            giveIndicator
+        }
+    }
 }
 </script>
 
 <style scoped>
 
+.carousel-inner {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+}
+
+.carousel-open:checked + .carousel-item {
+    position: static;
+    opacity: 100;
+}
+
+.carousel-item {
+    position: absolute;
+    opacity: 0;
+    -webkit-transition: opacity 0.6s ease-out;
+    transition: opacity 0.6s ease-out;
+}
+
+.carousel-indicators {
+    list-style: none;
+    text-align: center;
+    z-index: 10;
+}
+
+.carousel-indicators li {
+    display: inline-block;
+    margin: 0 5px;
+}
+
+.carousel-bullet {
+    cursor: pointer;
+    display: block;
+    font-size: 35px;
+}
+
+.carousel-bullet:hover {
+    color: #aaaaaa;
+}
+
+.html5-video-container {
+    z-index: 10;
+    position: relative;
+}
+
+.html5-main-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    outline: 0;
+}
+
+.html5-video-player .video-click-tracking, .html5-video-player .video-stream {
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
 </style>

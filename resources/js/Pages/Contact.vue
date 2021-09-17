@@ -153,6 +153,7 @@
 </template>
 
 <script>
+import { Head, Link } from '@inertiajs/inertia-vue3';
 import { MailIcon, PhoneIcon } from '@heroicons/vue/outline'
 import NavigationHome from '@/Components/NavigationHome.vue';
 import MainFooter from '@/Components/MainFooter.vue';
@@ -161,7 +162,9 @@ export default {
         MailIcon,
         PhoneIcon,
         NavigationHome,
-        MainFooter
+        MainFooter,
+        Head,
+        Link
     },
 }
 </script>

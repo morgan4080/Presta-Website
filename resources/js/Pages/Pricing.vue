@@ -85,7 +85,7 @@
                                     </div>
                                     <div class="mt-12 mx-auto sm:max-w-lg sm:flex justify-center">
                                         <div class="mt-4 sm:mt-0 sm:ml-3">
-                                            <button type="button" class="block w-full rounded-md border border-transparent px-5 py-3 bg-blue-prestaW text-base font-medium text-white shadow hover:bg-blue-prestaS focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-blue-600 sm:px-10">Get Presta Now</button>
+                                            <button type="button" class="block w-full rounded-md border border-transparent px-5 py-3 bg-blue-prestaW text-base font-medium text-white shadow hover:bg-blue-presta3 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-blue-600 sm:px-10">Get Presta Now</button>
                                         </div>
                                     </div>
                                 </div>
@@ -198,9 +198,9 @@
                             <span class="block">Ready to get started?</span>
                         </h2>
                         <p class="mt-4 text-lg leading-6 text-gray-500">A better experience for your customers, fewer headaches for your team.</p>
-                        <a href="#" class="mt-8 w-full inline-flex items-center justify-center px-5 py-3 bg-blue-50 text-blue-presta3 hover:bg-indigo-100 border border-transparent rounded-md text-center font-medium sm:w-auto">
+                        <Link :href="route('demo')" class="mt-8 w-full inline-flex items-center justify-center px-5 py-3 bg-blue-50 text-blue-presta3 hover:bg-indigo-100 border border-transparent rounded-md text-center font-medium sm:w-auto">
                             Request Plan
-                        </a>
+                        </Link>
                     </div>
                 </div>
             </div>

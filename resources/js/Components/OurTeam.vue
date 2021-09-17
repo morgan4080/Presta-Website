@@ -24,11 +24,11 @@
                             </div>
 
                             <div class="space-y-2">
-                                <div class="text-lg leading-6 font-medium space-y-1">
+                                <div class="text-lg leading-6 font-medium space-y-1 relative">
                                     <h3>{{ person.name }}</h3>
                                     <p class="text-blue-prestaW">{{ person.role }}</p>
                                 </div>
-                                <ul role="list" class="flex space-x-5 hidden">
+                                <ul role="list" class="flex space-x-5">
                                     <li>
                                         <a :href="person.twitterUrl" class="text-gray-400 hover:text-gray-500">
                                             <span class="sr-only">Twitter</span>
