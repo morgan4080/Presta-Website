@@ -11,7 +11,7 @@ set -e
 echo "Deploying application ..."
 
 # Enter maintenance mode
-(php artisan down --render="errors::503" || true
+(php artisan down --render="errors::503") || true
 # Update codebase
 git fetch origin deploy
 
