@@ -1,4 +1,14 @@
 #!/bin/sh
+sudo find /usr/share/laravel/ -type f -exec chmod 644 {} \;
+
+sudo find /usr/share/laravel/ -type d -exec chmod 755 {} \;
+
+sudo chown -R www-data:www-data /usr/share/laravel/
+
+sudo chgrp -R www-data storage bootstrap/cache
+
+sudo chmod -R ug+rwx storage bootstrap/cache
+
 set -e
 
 echo "Deploying application ..."
@@ -17,8 +27,8 @@ composer install --no-interaction --prefer-dist --optimize-autoloader
 php artisan optimize
 # Reload PHP to update opcache
 echo "" | sudo -S service php7.4-fpm reload
-# Link Storage
-php artisan storage:link
 # Exit maintenance mode
 php artisan up
+# Link Storage
+php artisan storage:link
 echo "Application deployed!"
