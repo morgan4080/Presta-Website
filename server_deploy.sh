@@ -1,12 +1,10 @@
 #!/bin/sh
 
-sudo usermod -a -G www-data $USER
+sudo chmod -R 777 ./
 
-sudo chgrp -R www-data /usr/share/laravel
+sudo chown -R www-data:www-data ./
 
-sudo chmod -R 775 /usr/share/laravel/storage
-
-sudo setfacl -d -R -m u:$USER:rwx,g:www-data:rwx,o:rx /usr/share/laravel
+sudo usermod -a -G www-data ubuntu
 
 set -e
 
@@ -20,7 +18,7 @@ git reset --hard origin/deploy
 #place correct env
 cp .env.ci .env
 # Install dependencies based on lock file
-sudo composer install --no-interaction --prefer-dist --optimize-autoloader
+composer install --no-interaction --prefer-dist --optimize-autoloader
 # Clear cache
 php artisan optimize
 # Reload PHP to update opcache
@@ -29,15 +27,5 @@ echo "" | sudo -S service php7.4-fpm reload
 php artisan up
 # Link Storage
 php artisan storage:link
-
-sudo find /usr/share/laravel/ -type f -exec chmod 644 {} \;
-
-sudo find /usr/share/laravel/ -type d -exec chmod 755 {} \;
-
-sudo chown -R www-data:www-data /usr/share/laravel/
-
-sudo chgrp -R www-data storage bootstrap/cache
-
-sudo chmod -R ug+rwx storage bootstrap/cache
 
 echo "Application deployed!"
