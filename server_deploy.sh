@@ -13,6 +13,8 @@ set -e
 
 echo "Deploying application ..."
 
+# Install dependencies based on lock file 1
+composer install --no-interaction --prefer-dist --optimize-autoloader
 # Enter maintenance mode
 (php artisan down --render="errors::503" || true
 # Update codebase

@@ -1,8 +1,8 @@
 <template>
     <div class="space-y-4 sm:space-y-0 sm:mr-auto sm:inline-grid sm:grid-cols-2 sm:gap-5">
-        <Link :href="route('demo')" :class="{'text-blue-presta2 bg-white hover:bg-indigo-50' : context === 'homepage', 'text-white bg-blue-presta4 hover:bg-blue-presta3' : context !== 'homepage'}" class="flex items-center justify-center px-4 py-3 border border-transparent text-base font-medium rounded-md shadow-sm sm:px-8">
+        <button type="button" @click="this.$inertia.visit(route('demo'), { method: 'get' })" :class="{'text-blue-presta2 bg-white hover:bg-indigo-50' : context === 'homepage', 'text-white bg-blue-presta4 hover:bg-blue-presta3' : context !== 'homepage'}" class="flex items-center justify-center px-4 py-3 border border-transparent text-base font-medium rounded-md shadow-sm sm:px-8">
             Request demo
-        </Link>
+        </button>
         <button v-show="context === 'homepage'" @click="openModal('video')" type="button" class="flex items-center justify-center px-4 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-blue-presta1 bg-opacity-60 hover:bg-opacity-70 sm:px-8">
             <PlayIcon class="flex-none w-5 h-5 text-white mr-1" aria-hidden="true" />
             Watch video
@@ -114,7 +114,7 @@ export default {
         DialogOverlay,
         DialogTitle,
         PlayIcon,
-        Link
+        Link,
     },
 
     props: {
