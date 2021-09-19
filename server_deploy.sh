@@ -1,4 +1,9 @@
 #!/bin/sh
+
+sudo usermod -a -G www-data `whoami`
+
+[ ! -d "/usr/share/laravel/vendor" ] && sudo mkdir vendor
+
 sudo find /usr/share/laravel/ -type f -exec chmod 644 {} \;
 
 sudo find /usr/share/laravel/ -type d -exec chmod 755 {} \;
@@ -8,6 +13,8 @@ sudo chown -R www-data:www-data /usr/share/laravel/
 sudo chgrp -R www-data storage bootstrap/cache
 
 sudo chmod -R ug+rwx storage bootstrap/cache
+
+sudo chmod -R 777 /usr/share/laravel/vendor
 
 set -e
 
