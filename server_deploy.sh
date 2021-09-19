@@ -7,6 +7,7 @@ echo "Deploying application ..."
 (php artisan down --render="errors::503" || true
 # Update codebase
 git fetch origin deploy
+
 git reset --hard origin/deploy
 #place correct env
 cp .env.ci .env
