@@ -128,7 +128,7 @@
                                             <div class="mt-1">
                                                 <select id="organisation_size" name="organisation_size" autocomplete="organisation_size" class="py-3 px-4 block w-full shadow-sm text-gray-900 focus:ring-blue-presta3 focus:border-blue-presta3 border-gray-300 rounded-md">
                                                     <option>0 - 100</option>
-                                                    <option>250 - 500</option>
+                                                    <option>100 - 500</option>
                                                     <option>500 +</option>
                                                 </select>
                                             </div>
