@@ -16,6 +16,8 @@ composer install --no-interaction --prefer-dist --optimize-autoloader
 php artisan optimize
 # Reload PHP to update opcache
 echo "" | sudo -S service php7.4-fpm reload
+# Link Storage
+php artisan storage:link
 # Exit maintenance mode
 php artisan up
 echo "Application deployed!"
