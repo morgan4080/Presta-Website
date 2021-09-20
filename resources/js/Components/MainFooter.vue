@@ -122,9 +122,9 @@ import { Link } from '@inertiajs/inertia-vue3';
 
 const navigation = {
     solutions: [
-        { name: 'Microfinance', href: 'micro-finance' },
-        { name: 'Saccos', href: 'saccos' },
-        { name: 'Investment Groups', href: 'investment-groups' },
+        { name: 'Microfinance', href: 'solutions/micro-finance' },
+        { name: 'Saccos', href: 'solutions/saccos' },
+        { name: 'Investment Groups', href: 'solutions/investment-groups' },
     ],
     contact: [
         { name: 'support@presta.co.ke', href: '#' },
