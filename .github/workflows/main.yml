@@ -32,4 +32,4 @@ jobs:
           username: ubuntu
           host: presta.co.ke
           key: ${{ secrets.SSH_KEY }}
-          script: 'cd /usr/share/laravel && sudo chmod +x server_deploy.sh && sh ./server_deploy.sh'
+          script: 'cd /usr/share/laravel && sudo chmod -R 777 ./ && sudo chown -R www-data:www-data ./ && sudo usermod -a -G www-data ubuntu && sudo chmod +x server_deploy.sh && sh ./server_deploy.sh'
