@@ -1,17 +1,17 @@
 #!/bin/sh
 
+set -e
+
+echo "Deploying application ..."
+
 sudo chmod -R 777 ./
 
 sudo chown -R www-data:www-data ./
 
 sudo usermod -a -G www-data ubuntu
 
-set -e
-
-echo "Deploying application ..."
-
 # Enter maintenance mode
-(php artisan down --render="errors::503") || true
+php artisan down --render="errors::503"
 # Update codebase
 git fetch origin deploy
 
