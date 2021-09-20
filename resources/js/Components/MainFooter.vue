@@ -39,9 +39,9 @@
                                 </h3>
                                 <ul role="list" class="mt-4 space-y-4">
                                     <li v-for="item in navigation.solutions" :key="item.name">
-                                        <a :href="item.href" class="text-base text-blue-200 hover:text-white">
+                                        <Link :href="item.href" class="text-base text-blue-200 hover:text-white">
                                             {{ item.name }}
-                                        </a>
+                                        </Link>
                                     </li>
                                 </ul>
                             </div>
@@ -51,9 +51,9 @@
                                 </h3>
                                 <ul role="list" class="mt-4 space-y-4">
                                     <li v-for="item in navigation.company" :key="item.name">
-                                        <a :href="item.href" class="text-base text-blue-200 hover:text-white">
+                                        <Link :href="item.href" class="text-base text-blue-200 hover:text-white">
                                             {{ item.name }}
-                                        </a>
+                                        </Link>
                                     </li>
                                 </ul>
                             </div>
@@ -65,9 +65,9 @@
                                 </h3>
                                 <ul role="list" class="mt-4 space-y-4">
                                     <li v-for="item in navigation.legal" :key="item.name">
-                                        <a :href="item.href" class="text-base text-blue-200 hover:text-white">
+                                        <Link :href="item.href" class="text-base text-blue-200 hover:text-white">
                                             {{ item.name }}
-                                        </a>
+                                        </Link>
                                     </li>
                                 </ul>
                             </div>
@@ -77,9 +77,9 @@
                                 </h3>
                                 <ul role="list" class="mt-4 space-y-4">
                                     <li v-for="item in navigation.contact" :key="item.name">
-                                        <a :href="item.href" class="text-base text-blue-200 hover:text-white">
+                                        <Link :href="item.href" class="text-base text-blue-200 hover:text-white">
                                             {{ item.name }}
-                                        </a>
+                                        </Link>
                                     </li>
                                 </ul>
                             </div>
@@ -122,10 +122,9 @@ import { Link } from '@inertiajs/inertia-vue3';
 
 const navigation = {
     solutions: [
-        { name: 'Marketing', href: '#' },
-        { name: 'Analytics', href: '#' },
-        { name: 'Commerce', href: '#' },
-        { name: 'Insights', href: '#' },
+        { name: 'Microfinance', href: 'micro-finance' },
+        { name: 'Saccos', href: 'saccos' },
+        { name: 'Investment Groups', href: 'investment-groups' },
     ],
     contact: [
         { name: 'support@presta.co.ke', href: '#' },
@@ -133,7 +132,7 @@ const navigation = {
         { name: 'KATO Place, Longonot Road\n' + 'Upperhill, Nairobi. Kenya', href: '#' },
     ],
     company: [
-        { name: 'About', href: '#' },
+        { name: 'About', href: '/about-us' },
         { name: 'Blog', href: '#' },
         { name: 'Jobs', href: '#' },
         { name: 'Press', href: '#' },
