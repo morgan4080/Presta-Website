@@ -1,6 +1,8 @@
 #!/bin/sh
 set -e
 
+git push origin master
+
 (git push) || true
 
 git checkout production

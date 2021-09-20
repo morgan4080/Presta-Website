@@ -101,7 +101,7 @@ yarn dev
 ### Deploy to production
 
 ```bash
-git add .
+git add . 
 git commit -m "task:comments"
 .\deploy.sh
 ```
