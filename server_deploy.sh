@@ -19,4 +19,3 @@ echo "" | sudo -S service php7.4-fpm reload
 # Exit maintenance mode
 php artisan up
 echo "Application deployed!"
-
