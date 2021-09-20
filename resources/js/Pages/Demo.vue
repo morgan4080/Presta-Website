@@ -9,7 +9,7 @@
                 <div class="bg-gray-100">
                     <div class="max-w-7xl mx-auto pt-32 pb-16 px-4 sm:pt-48 sm:pb-24 sm:px-6 lg:px-8">
                         <div class="relative bg-white shadow-xl">
-                            <h2 class="sr-only">Demo Request</h2>
+                            <h2 class="sr-only">Request Demo</h2>
 
                             <div class="grid grid-cols-1 lg:grid-cols-3">
                                 <!-- Contact information -->
