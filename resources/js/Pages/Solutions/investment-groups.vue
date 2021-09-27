@@ -299,7 +299,7 @@ const faqs = [
     {
         question: "Borrower Portal",
         answer:
-            "An intuitive and well-designed interface with all the functionality your borrower needs for efficient work with your employees.",
+            "An intuitive and well-designed interface with all the functionality your borrower needs for efficient work with your employees..",
     },
     {
         question: "Loan Servicing Module",
