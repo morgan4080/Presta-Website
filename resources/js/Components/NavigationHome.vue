@@ -125,7 +125,7 @@
                                 </div>
                                 <div class="mt-6">
                                     <nav class="grid grid-cols-1 gap-7">
-                                        <Link v-for="item in solutions" :key="item.name" :href="item.href" class="-m-3 p-3 flex items-center rounded-lg hover:bg-gray-50">
+                                        <Link v-for="item in solutions" :key="item.name" :href="route('solutions.show', item.href)" class="-m-3 p-3 flex items-center rounded-lg hover:bg-gray-50">
                                             <div class="flex-shrink-0 flex items-center justify-center h-10 w-10 rounded-md bg-blue-presta2 text-white">
                                                 <component :is="item.icon" class="h-6 w-6" aria-hidden="true" />
                                             </div>

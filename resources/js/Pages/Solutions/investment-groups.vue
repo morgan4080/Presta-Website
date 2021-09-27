@@ -299,7 +299,7 @@ const faqs = [
     {
         question: "Borrower Portal",
         answer:
-            "An intuitive and well-designed interface with all the functionality your borrower needs for efficient work with your employees.",
+            "An intuitive and well-designed interface with all the functionality your borrower needs for efficient work with your employees..",
     },
     {
         question: "Loan Servicing Module",
@@ -331,18 +331,18 @@ const faqs = [
 const sliders = [
     {
         id: 1,
-        title: 'Investment groups on',
-        sub_title: 'new revenue streams.',
-        excerpt: 'Our group investment solution automates every step of the crediting process and adds a new monetization channel to your group.',
-        image: '/images/investmentslider0.png',
-        videoId: '0gvPT1SAGko'
-    },
-    {
-        id: 2,
         title: 'Investment groups',
         sub_title: 'Cutting cost on processes.',
         excerpt: 'Automates every step of the crediting process and add new monetization channel to your group.',
         image: '/images/investmentgroup1.png',
+        videoId: '0gvPT1SAGko'
+    },
+    {
+        id: 2,
+        title: 'Investment groups on',
+        sub_title: 'new revenue streams.',
+        excerpt: 'Our group investment solution automates every step of the crediting process and adds a new monetization channel to your group.',
+        image: '/images/investmentslider0.png',
         videoId: '0gvPT1SAGko'
     }
 ]
