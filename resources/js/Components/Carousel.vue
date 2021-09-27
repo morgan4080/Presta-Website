@@ -15,7 +15,7 @@
                                 </div>
                             </div>
                             <div :class="{ 'lg:py-32' : context === 'homepage', 'lg:pb-32 lg:pt-40' : context !== 'homepage'}" class="relative max-w-7xl mx-auto px-4 py-16 sm:px-6 sm:py-24 lg:px-8">
-                                <h1 class="text-left mt-48 lg:mt-32 text-4xl font-extrabold tracking-tight sm:text-5xl lg:text-6xl">
+                                <h1 class="text-left mt-48 w-full lg:mt-32 text-4xl font-extrabold tracking-tight sm:text-5xl lg:text-6xl lg:w-2/3">
                                     <span :class="{ 'text-white' : context === 'homepage', 'text-blue-presta4' : context !== 'homepage'}" class="block text-white">{{ slider.title }}</span>
                                     <span :class="{ 'text-blue-presta1' : context === 'homepage', 'text-blue-presta4' : context !== 'homepage'}" class="block">{{ slider.sub_title }}</span>
                                 </h1>

@@ -362,17 +362,17 @@ const faqs = [
 const sliders = [
     {
         id: 1,
-        title: 'SACCOs Can Lower',
-        sub_title: 'costs and Run Leaner.',
-        excerpt: 'Does your SACCO struggle with these common pain points?.',
+        title: 'Digital Guarantorship',
+        sub_title: 'made for SACCOs.',
+        excerpt: 'Embrace digital transformation and boost your members customer experience.',
         image: '/images/saccoslider1.png',
         videoId: '0gvPT1SAGko'
     },
     {
         id: 2,
-        title: 'Digital Guarantorship',
-        sub_title: 'made for SACCOs.',
-        excerpt: 'Embrace digital transformation and boost your members customer experience.',
+        title: 'Does your SACCO need to',
+        sub_title: ' Lower Costs and Boost efficiency?',
+        excerpt: 'Embrace digital transformation. Gain control over daily operations, attract more members, and increase revenues. Give Customers a Better Experience.',
         image: '/images/saccoslider0.png',
         videoId: '0gvPT1SAGko'
     }

@@ -32,7 +32,7 @@
                                         <ul class="list-disc space-y-2">
                                             <li class="flex items-start">
                                                 <p class="ml-2 text-base text-center">
-                                                    Small Lenders are supported with features you need to get started with the least amount of capital out of pocket.
+                                                    When it comes to onboarding your customers, time is of the essence. That’s why we keep speed in mind, so you can welcome newcomers in 5 minutes or less.
                                                 </p>
                                             </li>
                                         </ul>
@@ -42,8 +42,8 @@
                                     <svg class="w-14 h-14 pb-3" xmlns="http://www.w3.org/2000/svg" width="49.617" height="74" viewBox="0 0 49.617 74">
                                         <path id="XMLID_498_" d="M96.46,42.222h-.922V39.23a20.476,20.476,0,1,0-16.428,0v2.992h-.922A15.69,15.69,0,0,0,62.515,57.895V74h49.617v-16.1A15.69,15.69,0,0,0,96.46,42.222ZM87.324,68.087S75.67,61.774,75.67,53.734a6.5,6.5,0,0,1,11.654-3.951,6.5,6.5,0,0,1,11.654,3.951C98.977,61.847,87.324,68.087,87.324,68.087Z" transform="translate(-62.515 0.001)" fill="#489aab"/>
                                     </svg>
-                                    Onboard & Nurture
-                                    Customers
+                                    Digital Onboarding
+                                    In under 5 min or less
                                 </dd>
                             </div>
                             <div class="col-span-1 bg-white relative p-8 md:py-10 md:px-5 border border-gray-200 rounded-2xl shadow flex flex-col lg:col-span-1">
@@ -52,7 +52,7 @@
                                         <ul class="list-disc space-y-2">
                                             <li class="flex items-start">
                                                 <p class="ml-2 text-base text-center">
-                                                    Custom processes with rules and permissions at any step. Automate processing and decisioning . Reduce time to decision.
+                                                    Reduce labor costs and operating expenditures. Accelerate the speed of loan application handling from first engagement with a borrower to the final acceptance.
                                                 </p>
                                             </li>
                                         </ul>
@@ -66,7 +66,7 @@
                                         <path id="Path_11851" data-name="Path 11851" d="M190.066,36.133A18.066,18.066,0,1,0,172,18.066,18.087,18.087,0,0,0,190.066,36.133ZM184.6,23.973a1.445,1.445,0,0,1,2-.418,4.377,4.377,0,0,0,1.923.824v-6.1A10.66,10.66,0,0,1,186.342,17a4.325,4.325,0,0,1-1.429-4.26,4.869,4.869,0,0,1,3.339-3.817c.091-.027.181-.052.27-.076v-.9a1.445,1.445,0,0,1,2.891,0V8.69a5.019,5.019,0,0,1,2.875,1.485,1.445,1.445,0,0,1-2.171,1.908,1.991,1.991,0,0,0-.7-.417v4.67c.257.1.513.188.765.277a5.172,5.172,0,0,1,3.516,5.852,5.878,5.878,0,0,1-4.281,4.683v1.035a1.445,1.445,0,0,1-2.891,0v-.9a7,7,0,0,1-3.506-1.313,1.445,1.445,0,0,1-.418-2Z" transform="translate(-147.141)" fill="#489aab"/>
                                         <path id="Path_11852" data-name="Path 11852" d="M307.739,136.909a2.236,2.236,0,0,0-1.43-2.57v4.643A2.987,2.987,0,0,0,307.739,136.909Z" transform="translate(-262.038 -114.923)" fill="#489aab"/>
                                     </svg>
-                                    Process Loan Applications
+                                    Loan Origination
                                 </dd>
                             </div>
                             <div class="col-span-1 bg-white relative p-8 md:py-10 md:px-5 border border-gray-200 rounded-2xl shadow flex flex-col lg:col-span-1">
@@ -75,7 +75,7 @@
                                         <ul class="list-disc space-y-2">
                                             <li class="flex items-start">
                                                 <p class="ml-2 text-base text-center">
-                                                    From quick short-term loans to decades-long mortgages we keep things in order. Notifications triggered by events and more.
+                                                    Automate every single step of microfinance services after disbursing the funds until the loan is fully paid off.
                                                 </p>
                                             </li>
                                         </ul>
@@ -100,7 +100,7 @@
                                         </g>
                                     </svg>
 
-                                    Service Booked Loans
+                                    Flexibility
                                 </dd>
                             </div>
                             <div class="col-span-1 bg-white relative p-8 md:py-10 md:px-5 border border-gray-200 rounded-2xl shadow flex flex-col lg:col-span-1">
@@ -124,7 +124,7 @@
                                             </g>
                                         </g>
                                     </svg>
-                                    Intelligence & Reporting
+                                    Reporting
                                 </dd>
                             </div>
                         </div>
@@ -143,12 +143,12 @@
                 <div class="relative mt-12 sm:mt-16 lg:mt-24">
                     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                         <h3 class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-blue-presta3 sm:text-4xl relative bg-white">
-                            Intelligent-processing
+                            Our Technology
                         </h3>
                     </div>
                     <div class="lg:grid lg:grid-flow-row-dense lg:grid-cols-2 lg:gap-8 lg:items-center">
                         <div class="lg:col-start-2 px-4 sm:px-6 lg:px-0">
-                            <p class="mt-3 text-lg text-gray-500">
+                            <p class="mt-3 text-lg text-gray-500 hidden">
                                 Define requirements so you meet your “Know Your Customer” (KYC) obligations.
                             </p>
 
@@ -409,7 +409,7 @@ import { ChevronDownIcon, CheckCircleIcon } from '@heroicons/vue/outline'
 
 const faqs = [
     {
-        question: "Admin On-boarding",
+        question: "Onboarding in 5 minutes or less",
         answer:
             "Give Users permission to create Customers. Define requirements so you meet “Know Your Customer” (KYC) obligations. Add as much non-standard information as you need with our Custom Field feature. Extend and integrate with other solutions and bring in customers from 3rd party sources.",
     },
@@ -437,19 +437,19 @@ const faqs = [
 
 const sliders = [
     {
-        id: 1,
-        title: 'We Make Microfinance',
-        sub_title: 'Seamless & Simple.',
-        excerpt: 'Presta allows you to focus on growing your business and connecting with your customers wherever they are.',
-        image: '/images/microfin0.png',
-        videoId: '0gvPT1SAGko'
-    },
-    {
-        id: 2,
+        id: 1 ,
         title: 'Automating MFIs',
         sub_title: 'Lending Processes.',
         excerpt: 'Digital transformation through mobile of all microfinance credit processes.',
         image: '/images/microfin1.png',
+        videoId: '0gvPT1SAGko'
+    },
+    {
+        id: 2,
+        title: 'Looking for an easy',
+        sub_title: 'Customer-Facing mobile solution?',
+        excerpt: 'Automate every step of micro lending process from onboarding to repayment. Trusted by 65 microfinance lenders in Kenya. Get a fully configurable microfinance system ready to go in 12 days.',
+        image: '/images/microfin0.png',
         videoId: '0gvPT1SAGko'
     }
 ]

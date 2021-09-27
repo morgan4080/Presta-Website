@@ -85,7 +85,7 @@
 
                                 <!-- Contact form -->
                                 <div class="py-10 px-6 sm:px-10 lg:col-span-2 xl:p-12">
-                                    <form action="#" method="POST" class="mt-6 grid grid-cols-1 gap-y-6 sm:grid-cols-2 sm:gap-x-8">
+                                    <form action="#" method="POST" class="mt-6 grid grid-cols-1 gap-y-6 sm:grid-cols-2 sm:gap-x-8 hidden">
                                         <div>
                                             <label for="first-name" class="block text-sm font-medium text-gray-900">First name</label>
                                             <div class="mt-1">
@@ -139,6 +139,7 @@
                                             </button>
                                         </div>
                                     </form>
+                                    <iframe frameborder="0" style="height:500px;width:99%;border:none;" src='https://forms.zohopublic.com/prestacapitalltd/form/WebsiteContactForm/formperma/seY3_OB0SJGLDGwufWuIskAn-OvAkU0orx_MnRXrai8'></iframe>
                                 </div>
                             </div>
                         </div>
