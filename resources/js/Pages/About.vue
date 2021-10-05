@@ -19,7 +19,7 @@
                         <div class="space-y-5 sm:space-y-4 px-4 bg-white">
 <!--                            <h2 class="text-3xl font-extrabold tracking-tight sm:text-4xl">Meet Our <span class="block text-blue-presta1">Team</span></h2>-->
                             <h2 class="text-3xl font-extrabold tracking-tight sm:text-4xl">About <span class="block text-blue-presta1">Presta Capital</span></h2>
-                            <p class="text-xl text-gray-500">We offer a secure, simple and affordable digital banking platforms for SACCOs and their members, who are often excluded by traditional banks.</p>
+                            <p class="text-xl text-gray-500">We offer secure, simple and affordable digital banking platforms for SACCOs and their members, who are often excluded by traditional banks.</p>
                         </div>
 
                         <nav class="max-w-sm py-16 px-4" aria-label="Sidebar">
