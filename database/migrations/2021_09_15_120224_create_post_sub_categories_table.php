@@ -15,6 +15,7 @@ class CreatePostSubCategoriesTable extends Migration
     {
         Schema::create('post_sub_categories', function (Blueprint $table) {
             $table->id();
+            $table->unsignedBigInteger('user_id');
             $table->unsignedBigInteger('post_category_id');
             $table->text('name');
             $table->char('slug', 200)->unique();
@@ -22,7 +23,9 @@ class CreatePostSubCategoriesTable extends Migration
             $table->timestamps();
             $table->softDeletes();
 
-            $table->index(['post_category_id']);
+            $table->index(['user_id', 'post_category_id']);
+
+            $table->foreign('user_id')->references('id')->on('users');
 
             $table->foreign('post_category_id')->references('id')->on('post_categories');
         });

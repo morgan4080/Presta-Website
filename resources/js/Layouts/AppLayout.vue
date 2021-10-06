@@ -4,7 +4,7 @@
 
         <jet-banner />
 
-        <div class="min-h-screen bg-gray-100">
+        <div class="min-h-screen bg-gray-50">
             <nav class="bg-white border-b border-gray-100">
                 <!-- Primary Navigation Menu -->
                 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -21,6 +21,10 @@
                             <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
                                 <jet-nav-link :href="route('dashboard')" :active="route().current('dashboard')">
                                     Dashboard
+                                </jet-nav-link>
+
+                                <jet-nav-link :href="route('post-categories')" :active="route().current('post-categories')">
+                                    Categories
                                 </jet-nav-link>
                             </div>
                         </div>
@@ -226,7 +230,10 @@
             <!-- Page Content -->
             <main>
                 <slot></slot>
+                <flash-messages />
             </main>
+
+            <div id="dropdown"></div>
         </div>
     </div>
 </template>
@@ -238,6 +245,7 @@
     import JetDropdownLink from '@/Jetstream/DropdownLink.vue'
     import JetNavLink from '@/Jetstream/NavLink.vue'
     import JetResponsiveNavLink from '@/Jetstream/ResponsiveNavLink.vue'
+    import FlashMessages from '@/Shared/FlashMessages'
     import { Head, Link } from '@inertiajs/inertia-vue3';
 
     export default {
@@ -254,6 +262,7 @@
             JetNavLink,
             JetResponsiveNavLink,
             Link,
+            FlashMessages
         },
 
         data() {
