@@ -6,6 +6,7 @@ git push origin master
 (git push) || true
 
 git checkout production
+
 git merge master
 
 git push origin production
