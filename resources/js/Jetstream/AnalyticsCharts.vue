@@ -1,91 +1,76 @@
 <template>
-    <div>
-        <div class="p-6 sm:px-20 bg-white border-b border-gray-200">
-            <div class="mt-8 text-2xl">
-                Total weekly page views
+    <div class="bg-gray-200 bg-opacity-25 grid grid-cols-1">
+        <div class="p-6">
+            <div class="flex items-center">
+                <div class="ml-4 text-lg text-gray-600 leading-7 font-semibold">Weekly Page Views</div>
             </div>
 
-            <div class="mt-6 text-gray-500">
-                <canvas id="analyticsChart" class=""></canvas>
+            <div>
+                <canvas id="analyticsChart" class="h-96 w-full"></canvas>
+            </div>
+        </div>
+    </div>
+    <div class="bg-gray-200 bg-opacity-25 grid grid-cols-1 md:grid-cols-2">
+
+        <div class="p-6">
+            <div class="flex items-center">
+                <div class="ml-4 text-lg text-gray-600 leading-7 font-semibold">Top browsers monthly</div>
+            </div>
+
+            <div class="h-full">
+                <div class="mt-4 text-sm text-gray-500 h-96">
+                    <canvas id="topbrowsers" class=""></canvas>
+                </div>
             </div>
         </div>
 
-        <div class="bg-gray-200 bg-opacity-25 grid grid-cols-1 md:grid-cols-2">
-            <div class="p-6">
-                <div class="flex items-center">
-                    <div class="ml-4 text-lg text-gray-600 leading-7 font-semibold">Top browsers monthly</div>
-                </div>
-
-                <div class="ml-12">
-                    <div class="mt-2 text-sm text-gray-500">
-                        <canvas id="topbrowsers" class=""></canvas>
-                    </div>
-                </div>
+        <div class="p-6">
+            <div class="flex items-center">
+                <div class="ml-4 text-lg text-gray-600 leading-7 font-semibold">User types</div>
             </div>
 
-            <div class="p-6 border-t border-gray-200 md:border-t-0 md:border-l">
-                <div class="flex items-center">
-                    <div class="ml-4 text-lg text-gray-600 leading-7 font-semibold">User types</div>
-                </div>
-
-                <div class="ml-12">
-                    <div class="mt-2 text-sm text-gray-500">
-                        <canvas id="usertypes" class=""></canvas>
-                    </div>
-                </div>
-            </div>
-
-            <div class="p-6 border-t border-gray-200">
-                <div class="flex items-center">
-                    <div class="ml-4 text-lg text-gray-600 leading-7 font-semibold">Top referer websites monthly</div>
-                </div>
-
-                <div class="ml-12">
-                    <div class="mt-2 text-sm text-gray-500">
-                        <table class="table-auto">
-                            <thead>
-                            <tr>
-                                <th class="px-4 py-2 text-left">Referer</th>
-                                <th class="px-4 py-2 text-left">Views</th>
-                            </tr>
-                            </thead>
-                            <tbody>
-                            <tr v-for="topReferers in analytics.topReferers">
-                                <td class="border px-4 py-2">{{ topReferers.url }}</td>
-                                <td class="border px-4 py-2">{{ topReferers.pageViews }}</td>
-                            </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-            </div>
-
-            <div class="p-6 border-t border-gray-200 md:border-l">
-                <div class="flex items-center">
-
-                </div>
-
-                <div class="ml-12">
-
+            <div class="h-full">
+                <div class="mt-4 text-sm text-gray-500 h-96">
+                    <canvas id="usertypes" class=""></canvas>
                 </div>
             </div>
         </div>
+
+        <div class="p-6">
+        <div class="flex items-center">
+            <div class="ml-4 text-lg text-gray-600 leading-7 font-semibold">Top referer websites monthly</div>
+        </div>
+
+        <div class="h-full">
+            <div class="mt-2 text-sm text-gray-500 h-full">
+                <table class="table-auto w-full">
+                    <thead>
+                    <tr>
+                        <th class="px-4 py-2 text-left">Referer</th>
+                        <th class="px-4 py-2 text-left">Views</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr v-for="topReferers in analytics.topReferers">
+                        <td class="border px-4 py-2">{{ topReferers.url }}</td>
+                        <td class="border px-4 py-2">{{ topReferers.pageViews }}</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
     </div>
 </template>
 
 <script>
-
-    import Chart from 'chart.js'
     import forEach from 'lodash/forEach'
+    import { reactive, toRefs, onMounted } from "vue"
+    import { Chart, registerables } from 'chart.js'
 
-    import {reactive, toRefs, onMounted} from "vue";
-
-    Chart.platform.disableCSSInjection = true;
+    Chart.register(...registerables);
 
     export default {
-        components: {
-
-        },
         props: {
             analytics: Object,
         },

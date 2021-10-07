@@ -15,6 +15,7 @@ class CreatePostsTable extends Migration
     {
         Schema::create('posts', function (Blueprint $table) {
             $table->id();
+            $table->unsignedBigInteger('user_id');
             $table->unsignedBigInteger('post_category_id');
             $table->unsignedBigInteger('post_sub_category_id');
             $table->text('title');
@@ -22,10 +23,13 @@ class CreatePostsTable extends Migration
             $table->char('slug', 200)->unique();
             $table->longText('excerpt')->nullable();
             $table->longText('description')->nullable();
+            $table->json('metadata')->nullable();
             $table->timestamps();
             $table->softDeletes();
 
-            $table->index(['post_category_id','post_sub_category_id']);
+            $table->index(['user_id','post_category_id','post_sub_category_id']);
+
+            $table->foreign('user_id')->references('id')->on('users');
 
             $table->foreign('post_category_id')->references('id')->on('post_categories');
 

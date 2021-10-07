@@ -21,5 +21,6 @@ mix.js('resources/js/app.js', 'public/js').vue()
 if (mix.inProduction()) {
     mix.version();
 } else {
+    mix.browserSync(process.env.MIX_APP_URL)
     mix.sourceMaps();
 }
