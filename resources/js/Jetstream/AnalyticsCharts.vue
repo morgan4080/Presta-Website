@@ -67,7 +67,7 @@
     import forEach from 'lodash/forEach'
     import { reactive, toRefs, onMounted } from "vue"
     import { Chart, registerables } from 'chart.js'
-    Chart.register(...registerables);
+    Chart.register(...registerables); // registering all registerables
 
     export default {
         props: {
