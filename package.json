@@ -1,4 +1,8 @@
 {
+    "name": "presta_website",
+    "version": "1.0.0",
+    "description": "Presta Capital Website",
+    "author": "morgan4080",
     "private": true,
     "scripts": {
         "dev": "npm run development",
@@ -18,7 +22,6 @@
         "@vue/compiler-sfc": "^3.0.5",
         "browser-sync": "^2.27.5",
         "browser-sync-webpack-plugin": "^2.3.0",
-        "gsap": "file:gsap-bonus.tgz",
         "laravel-mix": "^6.0.6",
         "lodash": "^4.17.19",
         "postcss": "^8.1.14",
@@ -35,6 +38,7 @@
         "@tiptap/starter-kit": "^2.0.0-beta.99",
         "@tiptap/vue-3": "^2.0.0-beta.55",
         "chart.js": "2.9.3",
+        "gsap": "npm:@gsap/member@^3.8.0",
         "popper.js": "^1.16.1",
         "vuex": "^4.0.2"
     }
