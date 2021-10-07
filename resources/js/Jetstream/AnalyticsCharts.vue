@@ -67,7 +67,6 @@
     import forEach from 'lodash/forEach'
     import { reactive, toRefs, onMounted } from "vue"
     import { Chart, registerables } from 'chart.js'
-
     Chart.register(...registerables);
 
     export default {
