@@ -1,6 +1,6 @@
 <template>
   <div>
-    <label v-if="label" class="form-label">{{ label }}:</label>
+    <label v-if="label" class="block text-sm font-medium text-gray-700">{{ label }}:</label>
     <div class="form-input p-0" :class="{ error: errors.length }">
       <input ref="file" type="file" :accept="accept" class="hidden" @change="change" />
       <div v-if="!value" class="p-2">
