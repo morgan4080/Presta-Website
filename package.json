@@ -38,7 +38,7 @@
         "@tiptap/starter-kit": "^2.0.0-beta.99",
         "@tiptap/vue-3": "^2.0.0-beta.55",
         "chart.js": "^3.5.1",
-        "gsap": "npm:@gsap/member@^3.8.0",
+        "gsap": "file:gsap-bonus.tgz",
         "popper.js": "^1.16.1",
         "vuex": "^4.0.2"
     }

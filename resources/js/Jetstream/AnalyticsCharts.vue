@@ -37,29 +37,29 @@
         </div>
 
         <div class="p-6">
-        <div class="flex items-center">
-            <div class="ml-4 text-lg text-gray-600 leading-7 font-semibold">Top referer websites monthly</div>
-        </div>
+            <div class="flex items-center">
+                <div class="ml-4 text-lg text-gray-600 leading-7 font-semibold">Top referer websites monthly</div>
+            </div>
 
-        <div class="h-full">
-            <div class="mt-2 text-sm text-gray-500 h-full">
-                <table class="table-auto w-full">
-                    <thead>
-                    <tr>
-                        <th class="px-4 py-2 text-left">Referer</th>
-                        <th class="px-4 py-2 text-left">Views</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    <tr v-for="topReferers in analytics.topReferers">
-                        <td class="border px-4 py-2">{{ topReferers.url }}</td>
-                        <td class="border px-4 py-2">{{ topReferers.pageViews }}</td>
-                    </tr>
-                    </tbody>
-                </table>
+            <div class="h-full">
+                <div class="mt-2 text-sm text-gray-500 h-full">
+                    <table class="table-auto w-full">
+                        <thead>
+                        <tr>
+                            <th class="px-4 py-2 text-left">Referer</th>
+                            <th class="px-4 py-2 text-left">Views</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr v-for="topReferers in analytics.topReferers">
+                            <td class="border px-4 py-2">{{ topReferers.url }}</td>
+                            <td class="border px-4 py-2">{{ topReferers.pageViews }}</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
             </div>
         </div>
-    </div>
     </div>
 </template>
 
