@@ -12,6 +12,7 @@ class PostSubCategory extends Model
     use SoftDeletes;
 
     protected $fillable = [
+        'post_category_id',
         'name',
         'slug',
         'description',

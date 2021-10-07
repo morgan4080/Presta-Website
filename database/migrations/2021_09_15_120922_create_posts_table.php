@@ -23,6 +23,7 @@ class CreatePostsTable extends Migration
             $table->char('slug', 200)->unique();
             $table->longText('excerpt')->nullable();
             $table->longText('description')->nullable();
+            $table->json('metadata')->nullable();
             $table->timestamps();
             $table->softDeletes();
 

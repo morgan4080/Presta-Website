@@ -3,6 +3,7 @@
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\PostCategoryController;
 use App\Http\Controllers\PostSubCategoryController;
+use App\Http\Controllers\PostController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Http\Request;
 use Inertia\Inertia;
@@ -69,6 +70,14 @@ Route::get('/blogs/{post:slug}', function (Post $post) {
 
 
 
+Route::get('/request-a-demo/confirmation', function () {
+    return Inertia::render('Confirmation', [
+
+    ]);
+})->name('confirmation.index');
+
+
+
 // CMS
 
 // ******** Dashboard
@@ -90,8 +99,17 @@ Route::put('/post-categories/{postCategory}/restore', [PostCategoryController::c
 // ******* PostSubCategory
 
 Route::get('/post-sub-categories/{postSubCategory}/edit', [PostSubCategoryController::class, 'edit'])->name('post-sub-category.edit')->middleware(['auth:sanctum', 'verified']);
-Route::get('/post-sub-categories/create', [PostSubCategoryController::class, 'create'])->name('post-sub-category.create')->middleware(['auth:sanctum', 'verified']);
+Route::get('/post-sub-categories/{postCategory}/create', [PostSubCategoryController::class, 'create'])->name('post-sub-category.create')->middleware(['auth:sanctum', 'verified']);
 Route::post('/post-sub-categories', [PostSubCategoryController::class, 'store'])->name('post-sub-category.store')->middleware(['auth:sanctum', 'verified']);
 Route::put('/post-sub-categories/{postSubCategory}', [PostSubCategoryController::class, 'update'])->name('post-sub-category.update')->middleware(['auth:sanctum', 'verified']);
 Route::delete('/post-sub-categories/{postSubCategory}', [PostSubCategoryController::class, 'destroy'])->name('post-sub-category.destroy')->middleware(['auth:sanctum', 'verified']);
 Route::put('/post-sub-categories/{postSubCategory}/restore', [PostSubCategoryController::class, 'restore'])->name('post-sub-category.restore')->middleware(['auth:sanctum', 'verified']);
+
+// ******* Posts
+
+Route::get('/posts/{post}/edit', [PostController::class, 'edit'])->name('post.edit')->middleware(['auth:sanctum', 'verified']);
+Route::get('/posts/{postCategory}/{postSubCategory}/create', [PostController::class, 'create'])->name('post.create')->middleware(['auth:sanctum', 'verified']);
+Route::post('/posts', [PostController::class, 'store'])->name('post.store')->middleware(['auth:sanctum', 'verified']);
+Route::put('/posts/{post}', [PostController::class, 'update'])->name('post.update')->middleware(['auth:sanctum', 'verified']);
+Route::delete('/posts/{post}', [PostController::class, 'destroy'])->name('post.destroy')->middleware(['auth:sanctum', 'verified']);
+Route::put('/posts/{post}/restore', [PostController::class, 'restore'])->name('post.restore')->middleware(['auth:sanctum', 'verified']);

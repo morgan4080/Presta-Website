@@ -1,5 +1,5 @@
 <template>
-    <app-layout title="Create | Post Categories">
+    <app-layout title="Edit | Post Categories">
         <template #header>
             <h2 class="font-semibold text-xl text-gray-800 leading-tight">
                 <Link :href="route('post-categories')" class="text-blue-presta3 hover:text-blue-presta4">Post Categories </Link>
@@ -39,7 +39,7 @@
                                 <option value="only">Only Trashed</option>
                             </select>
                         </search-filter>
-                        <Link class="bg-blue-presta4 text-white rounded px-3 py-3 hover:bg-blue-presta3" :href="route('post-sub-category.create')">
+                        <Link class="bg-blue-presta4 text-white rounded px-3 py-3 hover:bg-blue-presta3" :href="route('post-sub-category.create', postCategory.id)">
                             <span>Create </span>
                             <span class="hidden md:inline">Sub-Category</span>
                         </Link>

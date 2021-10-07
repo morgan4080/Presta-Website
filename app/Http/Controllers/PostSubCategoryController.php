@@ -10,30 +10,37 @@ use Inertia\Inertia;
 
 class PostSubCategoryController extends Controller
 {
-    public function create()
+    public function create($postCategory)
     {
         return Inertia::render('PostSubCategory/Create', [
-
+            'postCategoryId' => (int)$postCategory
         ]);
     }
 
     public function store()
     {
-        Auth::user()->postCategories()->create(
-            Request::validate([
-                'name' => ['required', 'max:50'],
-                'slug' => ['required', 'max:50'],
-                'description' => ['required', 'max:150']
-            ])
-        );
+        Request::validate([
+            'name' => ['required', 'max:50'],
+            'slug' => ['required', 'max:50'],
+            'description' => ['required', 'max:150']
+        ]);
 
-        return Redirect::route('post-categories')->with('success', 'Post Category created.');
+        $data = Request::all(['post_category_id', 'name','slug','description']);
+
+        $created = Auth::user()
+            ->postSubCategories()
+            ->create(
+                $data
+            );
+
+        return Redirect::route('post-category.edit', $created->post_category_id)->with('success', 'Post Sub Category created.');
     }
 
     public function edit(PostSubCategory $postSubCategory)
     {
         return Inertia::render('PostSubCategory/Edit', [
-            'PostSubCategory' => [
+            'postSubCategory' => [
+                'post_category_id' => $postSubCategory->post_category_id,
                 'id' => $postSubCategory->id,
                 'name' => $postSubCategory->name,
                 'slug' => $postSubCategory->slug,
@@ -48,7 +55,7 @@ class PostSubCategoryController extends Controller
                 ->withQueryString()
                 ->through(fn($category) => [
                     'id' => $category->id,
-                    'name' => $category->name,
+                    'title' => $category->title,
                     'slug' => $category->slug,
                     'description' => $category->description,
                     'created_at' => \Carbon\Carbon::parse($category->created_at)->diffForHumans(),
@@ -67,20 +74,20 @@ class PostSubCategoryController extends Controller
             ])
         );
 
-        return Redirect::back()->with('success', 'Post Category updated.');
+        return Redirect::back()->with('success', 'Post Sub Category updated.');
     }
 
     public function destroy(PostSubCategory $postSubCategory)
     {
         $postSubCategory->delete();
 
-        return Redirect::back()->with('success', 'Post Category deleted.');
+        return Redirect::back()->with('success', 'Post Sub Category deleted.');
     }
 
     public function restore(PostSubCategory $postSubCategory)
     {
         $postSubCategory->restore();
 
-        return Redirect::back()->with('success', 'Post Category restored.');
+        return Redirect::back()->with('success', 'Post Sub Category restored.');
     }
 }

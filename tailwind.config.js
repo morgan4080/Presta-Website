@@ -35,6 +35,7 @@ module.exports = {
             backgroundImage: theme => ({
                 'footer-texture': "url('/images/Mask Group 7.png')",
                 'banner-texture': "url('/images/Mask Group 3.png')",
+                'background0': "url('/images/background0.png')",
             })
         },
     },
