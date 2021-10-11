@@ -23,7 +23,7 @@
                             </div>
                             <div class="px-8 py-4 bg-gray-100 border-t border-gray-200 flex justify-between items-center overflow-hidden">
                                 <button v-if="postSubCategory.deleted_at" type="button" @click="restore" class="bg-yellow-300 font-medium text-yellow-800 rounded px-3 py-3 hover:bg-yellow-400">Restore Category</button>
-                                <button v-else type="button" @click="destroy" class="bg-red-200 text-red-900 font-medium rounded px-3 py-3 hover:bg-red-300">Delete Category</button>
+                                <button v-else type="button" @click="destroy" class="bg-red-200 text-red-900 font-medium rounded px-3 py-3 hover:bg-red-300">Delete Sub Category</button>
                                 <loading-button :loading="form.processing" class="bg-blue-presta4 text-white font-medium rounded px-3 py-3 hover:bg-blue-presta3" type="submit">Update Category</loading-button>
                             </div>
                         </form>
@@ -151,22 +151,17 @@ export default {
         }
 
         function doUpdate() {
-            form.put(route('post-sub-category.update', form.id),{
-                preserveScroll: true,
-                onSuccess: () => {
-
-                },
-            })
+            form.put(route('post-sub-category.update', form.id))
         }
 
         function destroy() {
-            if (confirm('Are you sure you want to delete this category?')) {
+            if (confirm('Are you sure you want to delete this sub category?')) {
                 form.delete(route('post-sub-category.destroy', form.id))
             }
         }
 
         function restore() {
-            if (confirm('Are you sure you want to restore this category?')) {
+            if (confirm('Are you sure you want to restore this sub category?')) {
                 form.put(route('post-sub-category.restore', form.id))
             }
         }

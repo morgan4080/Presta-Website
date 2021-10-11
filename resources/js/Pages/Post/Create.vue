@@ -4,7 +4,7 @@
             <h2 class="font-semibold text-xl text-gray-800 leading-tight">
                 <Link :href="route('post-sub-category.edit', postSubCategoryId)" class="text-blue-presta3 hover:text-blue-presta4">Post </Link>
                 <span class="text-blue-presta3 font-medium">/</span>
-                Create
+                Create <span class="text-sm text-gray-700"> - {{ postSubCategoryName }}</span>
             </h2>
         </template>
 
@@ -18,7 +18,7 @@
                                     <input type="hidden" v-model="form.post_category_id">
                                     <input type="hidden" v-model="form.post_sub_category_id">
                                     <text-input @change="genSlug" v-model="form.title" :error="form.errors.title" label="Title" />
-                                    <text-input @change="genSlug" v-model="form.sub_title" :error="form.errors.sub_title" label="Sub Title" />
+                                    <text-input v-model="form.sub_title" :error="form.errors.sub_title" label="Sub Title" />
                                     <text-input v-model="form.slug" :error="form.errors.slug" label="Slug" />
                                     <textarea-input v-model="form.excerpt" :error="form.errors.excerpt" label="Excerpt" />
                                     <textarea-input v-model="form.description" :error="form.errors.description" label="Description" />
@@ -35,7 +35,7 @@
                                             <div class="flex text-sm text-gray-600">
                                                 <label for="file-upload" class="relative cursor-pointer bg-white rounded-md font-medium text-blue-presta3 hover:text-blue-presta4 focus-within:outline-none focus-within:ring-2 focus-within:ring-offset-2 focus-within:ring-indigo-500">
                                                     <span>Upload a file</span>
-                                                    <input @change="change" id="file-upload" multiple="" accept="image/jpg,image/png,image/gif" type="file" class="sr-only" />
+                                                    <input @change="change" id="file-upload" multiple="" accept="image/jpeg,image/png,image/gif" type="file" class="sr-only" />
                                                 </label>
                                                 <p class="pl-1">or drag and drop</p>
                                             </div>
@@ -45,7 +45,7 @@
                                         </div>
                                     </div>
                                     <ul class="mt-2 mb-6 previewImgTab">
-                                        <li class="text-xs font-medium text-gray-700 flex items-center justify-center" v-for="upload in form.featured_image">{{ upload.name }} - {{ filesize(upload.size) }} bytes<svg @click="removeFile(upload)" stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512" class="cursor-pointer ml-1" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M256 48C141.1 48 48 141.1 48 256s93.1 208 208 208 208-93.1 208-208S370.9 48 256 48zm52.7 283.3L256 278.6l-52.7 52.7c-6.2 6.2-16.4 6.2-22.6 0-3.1-3.1-4.7-7.2-4.7-11.3 0-4.1 1.6-8.2 4.7-11.3l52.7-52.7-52.7-52.7c-3.1-3.1-4.7-7.2-4.7-11.3 0-4.1 1.6-8.2 4.7-11.3 6.2-6.2 16.4-6.2 22.6 0l52.7 52.7 52.7-52.7c6.2-6.2 16.4-6.2 22.6 0 6.2 6.2 6.2 16.4 0 22.6L278.6 256l52.7 52.7c6.2 6.2 6.2 16.4 0 22.6-6.2 6.3-16.4 6.3-22.6 0z"></path></svg></li>
+                                        <li class="text-xs font-medium text-gray-700 flex items-center justify-center" v-for="upload in form.featured_image"><span class="truncated">{{ upload.name }}</span> - {{ filesize(upload.size) }} bytes<svg @click="removeFile(upload)" stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512" class="cursor-pointer ml-1" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M256 48C141.1 48 48 141.1 48 256s93.1 208 208 208 208-93.1 208-208S370.9 48 256 48zm52.7 283.3L256 278.6l-52.7 52.7c-6.2 6.2-16.4 6.2-22.6 0-3.1-3.1-4.7-7.2-4.7-11.3 0-4.1 1.6-8.2 4.7-11.3l52.7-52.7-52.7-52.7c-3.1-3.1-4.7-7.2-4.7-11.3 0-4.1 1.6-8.2 4.7-11.3 6.2-6.2 16.4-6.2 22.6 0l52.7 52.7 52.7-52.7c6.2-6.2 16.4-6.2 22.6 0 6.2 6.2 6.2 16.4 0 22.6L278.6 256l52.7 52.7c6.2 6.2 6.2 16.4 0 22.6-6.2 6.3-16.4 6.3-22.6 0z"></path></svg></li>
                                     </ul>
                                     <span class="block text-sm font-medium text-gray-700">
                                         Meta Data
@@ -62,18 +62,18 @@
                                         </tr>
                                         </thead>
                                         <tbody class="bg-white divide-y divide-gray-200">
-                                            <tr>
+                                            <tr v-for="(metaSlot, i) in metaSlots" :key="i+1">
                                                 <td class="px-1 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
-                                                    <text-input v-model="form.title" :do-bottom-pad="false"/>
+                                                    <text-input v-model="form.metadataKeys[i]" :do-bottom-pad="false"/>
                                                 </td>
-                                                <td class="px-1 py-4 whitespace-nowrap text-sm text-gray-500">
-                                                    <text-input v-model="form.title" :do-bottom-pad="false" />
+                                                <td :class="{'opacity-50': !form.metadataKeys[i] || form.metadataKeys[i] === undefined }" class="px-1 py-4 whitespace-nowrap text-sm text-gray-500">
+                                                    <text-input :disabled="!form.metadataKeys[i] || form.metadataKeys[i] === undefined" v-model="form.metadata[i][`${form.metadataKeys[i]}`]" :do-bottom-pad="false" />
                                                 </td>
                                             </tr>
                                         </tbody>
                                     </table>
                                     <div class="flex flex-col justify-center items-center mb-6 cYEHpg">
-                                        <button type="button">
+                                        <button @click="incrementMetaSlot" type="button">
                                             <svg class="text-gray-700 fill-current" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="16pt" height="16pt" viewBox="0 0 50 50" version="1.1">
                                                 <g id="surface4628842">
                                                     <path d="M 25 2 C 12.316406 2 2 12.316406 2 25 C 2 37.683594 12.316406 48 25 48 C 37.683594 48 48 37.683594 48 25 C 48 12.316406 37.683594 2 25 2 Z M 37 26 L 26 26 L 26 37 L 24 37 L 24 26 L 13 26 L 13 24 L 24 24 L 24 13 L 26 13 L 26 24 L 37 24 Z M 37 26 " class="fill-current" style="stroke: none; fill-rule: nonzero; fill-opacity: 1;"></path>
@@ -121,6 +121,7 @@ import { useForm } from '@inertiajs/inertia-vue3'
 import TextInput from '@/Shared/TextInput'
 import LoadingButton from '@/Shared/LoadingButton'
 import TextareaInput from "@/Shared/TextareaInput"
+import {ref, watchEffect} from "vue";
 
 export default {
     components: {
@@ -132,7 +133,8 @@ export default {
     },
     props: {
         postCategoryId: Number,
-        postSubCategoryId: Number
+        postSubCategoryId: Number,
+        postSubCategoryName: String
     },
     setup({ postCategoryId, postSubCategoryId }) {
         const form = useForm({
@@ -143,13 +145,26 @@ export default {
             slug: null,
             excerpt: null,
             description: null,
-            metadata: {},
+            metadata: [],
+            metadataKeys: [],
             featured_image: []
         })
 
+        /*watchEffect(() => {
+            console.log(`metadata: ` + JSON.stringify(form.metadata))
+            console.log(`featured_image: ` + form.featured_image)
+        })*/
+
+        const metaSlots = ref([])
+
+        function incrementMetaSlot(e) {
+            metaSlots.value.push(e)
+            form.metadata.push({})
+        }
+
         function genSlug() {
             if (form.title) {
-                form.slug = form.name.toLocaleLowerCase().replace(/ /g,"-");
+                form.slug = form.title.toLocaleLowerCase().replace(/ /g,"-");
             }
         }
 
@@ -210,6 +225,23 @@ export default {
             return (size / Math.pow(1024, i)).toFixed(2) * 1 + ' ' + ['B', 'kB', 'MB', 'GB', 'TB'][i]
         }
 
+        function submitPost() {
+            /*let formData = new FormData();
+            formData.append('post_category_id', form.post_category_id);
+            formData.append('post_sub_category_id', form.post_sub_category_id);
+            formData.append('title', form.title);
+            formData.append('slug', form.slug);
+            formData.append('excerpt', form.excerpt);
+            formData.append('description', form.description);
+            formData.append('metadata',  JSON.stringify(form.metadata) || '');
+
+            if (form.featured_image !== null) {
+                for (let i = 0; i < form.featured_image.length; i++) {
+                    formData.append('featured_image[]', form.featured_image[i]);
+                }
+            }*/
+        }
+
         return {
             form,
             genSlug,
@@ -219,7 +251,10 @@ export default {
             handleDragLeave,
             change,
             removeFile,
-            filesize
+            filesize,
+            metaSlots,
+            incrementMetaSlot,
+            submitPost
         }
     }
 }
@@ -289,5 +324,11 @@ export default {
 }
 .dxpDLC > svg {
     fill: currentcolor;
+}
+.truncated {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 200px;
 }
 </style>

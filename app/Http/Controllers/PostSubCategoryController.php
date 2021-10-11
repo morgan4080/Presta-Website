@@ -20,9 +20,9 @@ class PostSubCategoryController extends Controller
     public function store()
     {
         Request::validate([
-            'name' => ['required', 'max:50'],
-            'slug' => ['required', 'max:50'],
-            'description' => ['required', 'max:150']
+            'name' => ['required'],
+            'slug' => ['required', 'max:200'],
+            'description' => ['required']
         ]);
 
         $data = Request::all(['post_category_id', 'name','slug','description']);
@@ -68,9 +68,9 @@ class PostSubCategoryController extends Controller
     {
         $postSubCategory->update(
             Request::validate([
-                'name' => ['required', 'max:50'],
-                'slug' => ['required', 'max:50'],
-                'description' => ['required', 'max:150']
+                'name' => ['required'],
+                'slug' => ['required', 'max:200'],
+                'description' => ['required']
             ])
         );
 

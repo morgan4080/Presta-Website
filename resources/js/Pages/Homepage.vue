@@ -177,7 +177,7 @@
                 </div>
 
                 <!--Blogs-->
-                <Blog :posts="posts" />
+                <Blog v-if="blogs.length > 0" :blogs="blogs" />
 
                 <!--Track Record-->
                 <div class="bg-gray-50 pt-12 sm:pt-16">
@@ -261,79 +261,7 @@ import MainFooter from '@/Components/MainFooter.vue';
 import Blog from '@/Components/Blog.vue';
 import TabsHome from '@/Components/TabsHome.vue';
 import Carousel from '@/Components/Carousel.vue';
-
-const posts = [
-    {
-        title: 'Penniah Wahu: Swipe Capital',
-        href: '#',
-        category: { name: 'Article', href: '#' },
-        description:
-            'Using Presta for our Lending Business has been a game changer, we have been able to scale up, find new investors because our daily operational elements are sorted. Presta offers an unparalleled experience.',
-        date: 'Mar 16, 2020',
-        datetime: '2020-03-16',
-        imageUrl:
-            '/images/Penniah Wahu.jpg',
-        author: {
-            name: 'Michael Maweu',
-            href: '#',
-            imageUrl:
-                'https://dummyimage.com/256x256',
-        },
-    },
-    {
-        title: 'Bernard Rono: Ketepa SACCO ',
-        href: '#',
-        category: { name: 'Video', href: '#' },
-        description:
-            'As the Chairman of the sacco, I have seen and felt the impact this product has made to our organization since our partnership. We have been able to increase our loan book over a remarkable period of time, improved our efficiency and scale to greater heights. One of the things that attracted us to this platform is the fact that it is very easy to use and straightforward to both us the administration and the users. Considering the type of customers we handle where some are unable to access smart phones, or apps, the system has made it very simple for everyone to use. Using this platform has enabled us to digitize all our operations making it easier for our  members to access their loans without any paperwork. This has made a huge difference in how we do reconciliation and most importantly how we serve our members. The support we get from their support team is extremely commendable, we always feel free and at home whenever we are in communication with them. There is constant effort to ensure that we are comfortable and content. We are happy to be working together and I look forward to what the future holds.',
-        date: 'Mar 10, 2020',
-        datetime: '2020-03-10',
-        imageUrl:
-            '/images/Benard-Ketepa.jpg',
-        author: {
-            name: 'Michael Maweu',
-            href: '#',
-            imageUrl:
-                'https://dummyimage.com/256x256',
-        },
-    },
-    {
-        title: 'Quentin: Feezy Mobile Credit',
-        href: '#',
-        category: { name: 'Case Study', href: '#' },
-        description:
-            'My experience interacting with the Presta Platform and working with the team has been a fulfilling journey. While sourcing for a digital platform to aid in running our business, they stood out as being committed and flexible in meeting their clients’ needs, offering solutions on every turn of our business growth. They have lived up to their brand promise and the platform compliments our business needs, giving us the flexibility and functionalities required to achieve our vision. Their affordable and bundled pricing has been ideal for each growth stage and it has allowed us to scale up at the right cost. With an interactive interface, the platform allows us to have a broad range of products for our different categories of clients and the various accounting and statistical tools allow us to confidently monitor our business performance, all this under one roof. The end user experience has also been rewarding to us as our clients of different capabilities are able to easily interact and navigate on the platform giving them confidence in our service delivery.The entire Presta team and help desk has consistently been proactive and exemplary in their service delivery and issue resolution, giving us the peace of mind that we have the right partner who treats our customers as their own. As we look into building and growing our relationship further, it is our hope that through Presta’s outreach and advancement, we will be able to have more financial partners come on board and offer liquidity and equity solutions through the platform which will go a long way into aiding different players’ contribute to the financial sector deepening agenda. We are proud to be your partner and are excited with what the future holds for this relationship. Keep doing what you are doing.',
-        date: 'Feb 12, 2020',
-        datetime: '2020-02-12',
-        imageUrl:
-            '/images/Quentin-Feezy.png',
-        author: {
-            name: 'Michael Maweu',
-            href: '#',
-            imageUrl:
-                'https://dummyimage.com/256x256',
-        },
-    },
-]
-
-const sliders = [
-    {
-        id: 1,
-        title: 'Simple & Secure',
-        sub_title: 'Lending Platform',
-        excerpt: 'Suitable for Microfinance & Saccos.',
-        image: '/images/slider2.jpg',
-        videoId: '0gvPT1SAGko'
-    },
-    {
-        id: 2,
-        title: 'Digital Guarantorship',
-        sub_title: 'For SACCOs',
-        excerpt: 'Booting customer experience with digital signatures.',
-        image: '/images/scroll-image-2.jpg',
-        videoId: '0gvPT1SAGko'
-    }
-]
+import {reactive} from "vue";
 
 export default {
     components: {
@@ -348,12 +276,25 @@ export default {
     },
 
     props: {
-
+        blogs: Array,
+        homepageData: Array,
     },
 
-    setup() {
+    setup({ homepageData }) {
+
+        const sliders = homepageData.filter(obj => obj.post_sub_category.slug === "carousel-homepage").reduce((accumulator, item) => {
+            accumulator.push({
+                id: item.id,
+                title: item.title,
+                sub_title: item.sub_title,
+                excerpt: item.excerpt,
+                image: item.featured_images[0],
+                videoId: item.metadata[0].video_id
+            })
+            return accumulator
+        }, []);
+
         return {
-            posts,
             sliders
         }
     },
