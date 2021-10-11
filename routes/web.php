@@ -105,9 +105,9 @@ Route::get('/', function () {
 
     $blogsBuilder =  $commander1 ? $commander1[0] : null;
 
-    if ($homepageBuilder):
+    $postProcessor = new PostProcessor;
 
-        $postProcessor = new PostProcessor;
+    if ($homepageBuilder):
 
         $homepageData = $postProcessor->do_reduce($homepageBuilder["posts"]->all(), $homepageBuilder["postSubCategories"]->all());
 
@@ -140,9 +140,9 @@ Route::get('/blogs/{subCategory_slug}/{post_slug}/', function ($subCategory_slug
         $query->where('slug', $subCategory_slug)->with('posts')->get()->all()[0];
     }])->get()->all();
     $blogsBuilder =  $connector0 ? $connector0[0] : null;
+    $postProcessor = new PostProcessor;
     if ($blogsBuilder):
         $postSubCategory = $blogsBuilder["postSubCategories"]->all();
-        $postProcessor = new PostProcessor;
         $related_articles = $postProcessor->related_articles($postSubCategory[0]["posts"]->all(), $postSubCategory[0]);
         $post = array_filter($related_articles, function ($item) use ($post_slug){
             return ($item['slug'] === $post_slug);
@@ -173,10 +173,11 @@ Route::get('/blogs/{subCategory_slug}', function ($subCategory_slug) {
         $query->where('slug', $subCategory_slug)->with('posts')->get()->all()[0];
     }])->get()->all();
     $blogsBuilder =  $connector1 ? $connector1[0] : null;
+    $postProcessor = new PostProcessor;
 
     if ($blogsBuilder):
         $postSubCategory = $blogsBuilder["postSubCategories"]->all();
-        $postProcessor = new PostProcessor;
+
         $subCategory_articles = $postProcessor->related_articles($postSubCategory[0]["posts"]->all(), $postSubCategory[0]);
 
         return Inertia::render('Blogs/Index', [
@@ -232,8 +233,9 @@ Route::get('/blogs', function () {
 
     $blogsBuilder =  $commander ? $commander[0] : null;
 
+    $postProcessor = new PostProcessor;
+
     if ($blogsBuilder):
-        $postProcessor = new PostProcessor;
 
         $blogs = $postProcessor->do_reduce($blogsBuilder["posts"]->all(), $blogsBuilder["postSubCategories"]->all());
 
