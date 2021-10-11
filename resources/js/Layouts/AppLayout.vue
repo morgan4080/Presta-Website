@@ -228,9 +228,9 @@
             </header>
 
             <!-- Page Content -->
-            <main>
-                <slot></slot>
+            <main class="relative overflow-hidden">
                 <flash-messages />
+                <slot></slot>
             </main>
 
             <div id="dropdown"></div>

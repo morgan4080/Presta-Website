@@ -40,9 +40,9 @@ class PostCategoryController extends Controller
     {
         Auth::user()->postCategories()->create(
             Request::validate([
-                'name' => ['required', 'max:50'],
-                'slug' => ['required', 'max:50'],
-                'description' => ['required', 'max:150']
+                'name' => ['required'],
+                'slug' => ['required', 'max:200'],
+                'description' => ['required']
             ])
         );
 
@@ -80,9 +80,9 @@ class PostCategoryController extends Controller
     {
         $postCategory->update(
             Request::validate([
-                'name' => ['required', 'max:50'],
-                'slug' => ['required', 'max:50'],
-                'description' => ['required', 'max:150']
+                'name' => ['required'],
+                'slug' => ['required', 'max:200'],
+                'description' => ['required']
             ])
         );
 

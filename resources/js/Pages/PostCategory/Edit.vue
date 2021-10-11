@@ -151,12 +151,7 @@ export default {
         }
 
         function doUpdate() {
-            form.put(route('post-category.update', form.id),{
-                preserveScroll: true,
-                onSuccess: () => {
-
-                },
-            })
+            form.put(route('post-category.update', form.id))
         }
 
         function destroy() {

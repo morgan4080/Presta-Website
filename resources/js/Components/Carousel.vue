@@ -9,7 +9,8 @@
                     <div class="w-full mx-auto">
                         <div class="relative min-h-screen sm:overflow-hidden">
                             <div class="absolute inset-0">
-                                <img :class="{ 'min-h-screen object-cover' : context === 'homepage', 'min-h-screen lg:min-h-0 object-cover object-right-bottom lg:object-center lg:object-fit lg:pt-40' : context !== 'homepage'}" class="w-full" :src="slider.image" alt="Show Casing Presta Capital" />
+                                <div v-if="context === 'homepage'" v-html="slider.image"></div>
+                                <img v-else class="w-full min-h-screen lg:min-h-0 object-cover object-right-bottom lg:object-center lg:object-fit lg:pt-40" :src="slider.image" alt="Show Casing Presta Capital" />
                                 <div v-if="context === 'homepage'" class="fixed inset-0">
                                     <img class="min-h-screen w-full object-cover" src="/images/Path 33.png" alt="Show Casing Presta Capital" />
                                 </div>
@@ -43,6 +44,7 @@
 import { gsap } from 'gsap';
 import HomeDialogue from '@/Components/HomeDialogue.vue';
 import { reactive } from 'vue'
+import '@/Modules/NewStringSplicer'
 
 export default {
     props: {
@@ -181,7 +183,6 @@ export default {
             }, 5000);
         },
     },
-
     data() {
         return {
             timeline: null,
@@ -190,8 +191,16 @@ export default {
         }
     },
 
-    setup(props) {
-        const slider_images = reactive(props.sliders);
+    setup({ sliders, context }) {
+
+        if (context === 'homepage') {
+            sliders = sliders.map(slider => {
+                slider.image = slider.image.splice(4, 0, ` class="min-h-screen object-cover"`);
+                return slider
+            })
+        }
+
+        const slider_images = reactive(sliders);
 
         function giveIndicator(i, index) {
             return ['&#8213;', '&#8213;'].filter((ic, i) => i === index)

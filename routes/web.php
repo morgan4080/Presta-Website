@@ -5,11 +5,10 @@ use App\Http\Controllers\PostCategoryController;
 use App\Http\Controllers\PostSubCategoryController;
 use App\Http\Controllers\PostController;
 use Illuminate\Support\Facades\Route;
-use Illuminate\Http\Request;
 use Inertia\Inertia;
 use App\Models\PostCategory;
-use App\Models\PostSubCategory;
-use App\Models\Post;
+use App\Models\User;
+use Illuminate\Support\Facades\View;
 
 /*
 |--------------------------------------------------------------------------
@@ -22,12 +21,139 @@ use App\Models\Post;
 |
 */
 
+class PostProcessor {
+    public array $featuredImages = [];
+
+    public function do_filter($id, $arr): array
+    {
+        return array_filter($arr, function ($item) use ($id){
+            return ($item->id === $id);
+        });
+    }
+
+    public function do_image_each($arr): array {
+        $arr->each(function ($featuredImg) {
+            $this->featuredImages[] = View::make('Svg', ['img' => $featuredImg])->render();
+        });
+
+        $returnVal = $this->featuredImages;
+
+        $this->featuredImages = [];
+
+        return $returnVal;
+    }
+
+    public function do_reduce($posts, $postSubCategories): array {
+        return array_reduce($posts, function (&$carry, $item) use ($postSubCategories) {
+            $filterResult = $this->do_filter($item->post_sub_category_id, $postSubCategories);
+            $images = $item->getMedia('featured_image');
+            $featured_images = null;
+            if ($images):
+                $featured_images = $this->do_image_each($images);
+            endif;
+            $carry[] = array(
+                "id" => $item->id,
+                "author_name" => User::find($item->user_id)->name,
+                "post_sub_category" => $filterResult[array_key_first($filterResult)]->toArray(),
+                "title" => $item->title,
+                "sub_title" => $item->sub_title,
+                "slug" => $item->slug,
+                "excerpt" => $item->excerpt,
+                "description" => $item->description,
+                "metadata" => $item->metadata,
+                "featured_images" => $featured_images,
+                "created_at" => \Carbon\Carbon::parse($item->created_at)->diffForHumans(),
+            );
+
+            return $carry;
+        }, []);
+    }
+
+    public function related_articles($posts, $postSubCategory): array {
+        return array_reduce($posts, function (&$carry, $item) use($postSubCategory) {
+            $images = $item->getMedia('featured_image');
+            $featured_images = null;
+            if ($images):
+                $featured_images = $this->do_image_each($images);
+            endif;
+            $carry[] = array(
+                "id" => $item->id,
+                "author_name" => User::find($item->user_id)->name,
+                "post_sub_category" => $postSubCategory->toArray(),
+                "title" => $item->title,
+                "sub_title" => $item->sub_title,
+                "slug" => $item->slug,
+                "excerpt" => $item->excerpt,
+                "description" => $item->description,
+                "metadata" => $item->metadata,
+                "featured_images" => $featured_images,
+                "created_at" => \Carbon\Carbon::parse($item->created_at)->diffForHumans(),
+            );
+            return $carry;
+        },[]);
+    }
+}
+
 Route::get('/', function () {
+    $postCategoryClass = new PostCategory;
+
+    $homepageBuilder = $postCategoryClass->where('slug', 'homepage')->with('postSubCategories')->with('posts')->get()->all()[0];
+
+    $blogsBuilder =  $postCategoryClass->where('slug', 'blogs')->with('postSubCategories')->with('posts')->get()->all()[0];
+
+    $postProcessor = new PostProcessor;
+
+    $homepageData = $postProcessor->do_reduce($homepageBuilder["posts"]->all(), $homepageBuilder["postSubCategories"]->all());
+
+    $blogs = $postProcessor->do_reduce($blogsBuilder["posts"]->take(3)->all(), $blogsBuilder["postSubCategories"]->all());
 
     return Inertia::render('Homepage', [
-
+        "blogs" => $blogs,
+        "homepageData" => $homepageData
     ]);
+
 })->name('homepage');
+
+Route::get('/blogs/{subCategory_slug}/{post_slug}/', function ($subCategory_slug, $post_slug) {
+    $postCategoryClass = new PostCategory;
+    $blogsBuilder =  $postCategoryClass->where('slug', 'blogs')->with(['postSubCategories' => function($query) use($subCategory_slug) {
+        $query->where('slug', $subCategory_slug)->with('posts')->get()->all()[0];
+    }])->get()->all()[0];
+    $postSubCategory = $blogsBuilder["postSubCategories"]->all();
+    $postProcessor = new PostProcessor;
+    $related_articles = $postProcessor->related_articles($postSubCategory[0]["posts"]->all(), $postSubCategory[0]);
+    $post = array_filter($related_articles, function ($item) use ($post_slug){
+        return ($item['slug'] === $post_slug);
+    });
+    $posts = array_reduce($related_articles, function (&$carry, $item) use ($post_slug) {
+        if ($item['slug'] !== $post_slug) {
+            $carry[] = $item;
+        }
+        return $carry;
+    }, []);
+
+    return Inertia::render('Blogs/SingleBlog', [
+        "posts" => $posts,
+        "post" => $post
+    ]);
+})->name('blogs.view');
+
+
+Route::get('/blogs/{subCategory_slug}', function ($subCategory_slug) {
+    // show specific sub category blogs
+    $postCategoryClass = new PostCategory;
+    $blogsBuilder =  $postCategoryClass->where('slug', 'blogs')->with(['postSubCategories' => function($query) use($subCategory_slug) {
+        $query->where('slug', $subCategory_slug)->with('posts')->get()->all()[0];
+    }])->get()->all()[0];
+    $postSubCategory = $blogsBuilder["postSubCategories"]->all();
+    $postProcessor = new PostProcessor;
+    $subCategory_articles = $postProcessor->related_articles($postSubCategory[0]["posts"]->all(), $postSubCategory[0]);
+
+    return Inertia::render('Blogs/Index', [
+        "posts" => $subCategory_articles
+    ]);
+
+})->name('blog_sub_category.index');
 
 Route::get('/pricing', function () {
 
@@ -57,17 +183,27 @@ Route::get('/request-demo', function () {
     ]);
 })->name('demo');
 
-// {postSubCategory:slug} PostSubCategory $postSubCategory
+
 Route::get('solutions/{slug}', function ($slug) {
     return Inertia::render('Solutions/' . $slug, [
 
     ]);
 })->name('solutions.show');
 
-Route::get('/blogs/{post:slug}', function (Post $post) {
-    dd($post);
-})->name('blogs.index');
+Route::get('/blogs', function () {
+    $postCategoryClass = new PostCategory;
 
+    $blogsBuilder =  $postCategoryClass->where('slug', 'blogs')->with('postSubCategories')->with('posts')->get()->all()[0];
+
+    $postProcessor = new PostProcessor;
+
+    $blogs = $postProcessor->do_reduce($blogsBuilder["posts"]->all(), $blogsBuilder["postSubCategories"]->all());
+
+    return Inertia::render('Blogs/Index', [
+        "posts" => $blogs
+    ]);
+
+})->name('blogs.index');
 
 
 Route::get('/request-a-demo/confirmation', function () {
@@ -113,3 +249,7 @@ Route::post('/posts', [PostController::class, 'store'])->name('post.store')->mid
 Route::put('/posts/{post}', [PostController::class, 'update'])->name('post.update')->middleware(['auth:sanctum', 'verified']);
 Route::delete('/posts/{post}', [PostController::class, 'destroy'])->name('post.destroy')->middleware(['auth:sanctum', 'verified']);
 Route::put('/posts/{post}/restore', [PostController::class, 'restore'])->name('post.restore')->middleware(['auth:sanctum', 'verified']);
+
+
+
+// {postSubCategory:slug} PostSubCategory $postSubCategory

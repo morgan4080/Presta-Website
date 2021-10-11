@@ -207,13 +207,13 @@ const solutions = [
 ];
 
 const resources = [
-    { name: 'About Presta', description: 'Learn how to maximize our platform to get the most out of it.', href: '/about-us' },
-    { name: 'Blogs', description: 'Understand how we work to streamline credit services.', href: '#' },
-    { name: 'Videos', description: 'Understand how we work to deliver platform specific credit solutions.', href: '#' },
+    { name: 'About Presta', description: 'Learn how to maximize our platform to get the most out of it.', href: route('about') },
+    { name: 'Blogs', description: 'Understand how we work to streamline credit services.', href: route('blogs.index') },
+    { name: 'Videos', description: 'Understand how we work to deliver platform specific credit solutions.', href: '/blogs/videos' },
     {
         name: 'Help Center',
         description: 'Get all of your questions answered in our forums or contact support.',
-        href: '#',
+        href: route('blogs.index'),
     },
 ];
 
