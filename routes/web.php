@@ -136,25 +136,32 @@ Route::get('/', function () {
 
 Route::get('/blogs/{subCategory_slug}/{post_slug}/', function ($subCategory_slug, $post_slug) {
     $postCategoryClass = new PostCategory;
-    $blogsBuilder =  $postCategoryClass->where('slug', 'blogs')->with(['postSubCategories' => function($query) use($subCategory_slug) {
+    $connector0 = $postCategoryClass->where('slug', 'blogs')->with(['postSubCategories' => function($query) use($subCategory_slug) {
         $query->where('slug', $subCategory_slug)->with('posts')->get()->all()[0];
-    }])->get()->all()[0];
-    $postSubCategory = $blogsBuilder["postSubCategories"]->all();
-    $postProcessor = new PostProcessor;
-    $related_articles = $postProcessor->related_articles($postSubCategory[0]["posts"]->all(), $postSubCategory[0]);
-    $post = array_filter($related_articles, function ($item) use ($post_slug){
-        return ($item['slug'] === $post_slug);
-    });
-    $posts = array_reduce($related_articles, function (&$carry, $item) use ($post_slug) {
-        if ($item['slug'] !== $post_slug) {
-            $carry[] = $item;
-        }
-        return $carry;
-    }, []);
+    }])->get()->all();
+    $blogsBuilder =  $connector0 ? $connector0[0] : null;
+    if ($blogsBuilder):
+        $postSubCategory = $blogsBuilder["postSubCategories"]->all();
+        $postProcessor = new PostProcessor;
+        $related_articles = $postProcessor->related_articles($postSubCategory[0]["posts"]->all(), $postSubCategory[0]);
+        $post = array_filter($related_articles, function ($item) use ($post_slug){
+            return ($item['slug'] === $post_slug);
+        });
+        $posts = array_reduce($related_articles, function (&$carry, $item) use ($post_slug) {
+            if ($item['slug'] !== $post_slug) {
+                $carry[] = $item;
+            }
+            return $carry;
+        }, []);
 
+        return Inertia::render('Blogs/SingleBlog', [
+            "posts" => $posts,
+            "post" => $post
+        ]);
+    endif;
     return Inertia::render('Blogs/SingleBlog', [
-        "posts" => $posts,
-        "post" => $post
+        "posts" => [],
+        "post" => []
     ]);
 })->name('blogs.view');
 
@@ -162,15 +169,23 @@ Route::get('/blogs/{subCategory_slug}/{post_slug}/', function ($subCategory_slug
 Route::get('/blogs/{subCategory_slug}', function ($subCategory_slug) {
     // show specific sub category blogs
     $postCategoryClass = new PostCategory;
-    $blogsBuilder =  $postCategoryClass->where('slug', 'blogs')->with(['postSubCategories' => function($query) use($subCategory_slug) {
+    $connector1 = $postCategoryClass->where('slug', 'blogs')->with(['postSubCategories' => function($query) use($subCategory_slug) {
         $query->where('slug', $subCategory_slug)->with('posts')->get()->all()[0];
-    }])->get()->all()[0];
-    $postSubCategory = $blogsBuilder["postSubCategories"]->all();
-    $postProcessor = new PostProcessor;
-    $subCategory_articles = $postProcessor->related_articles($postSubCategory[0]["posts"]->all(), $postSubCategory[0]);
+    }])->get()->all();
+    $blogsBuilder =  $connector1 ? $connector1[0] : null;
+
+    if ($blogsBuilder):
+        $postSubCategory = $blogsBuilder["postSubCategories"]->all();
+        $postProcessor = new PostProcessor;
+        $subCategory_articles = $postProcessor->related_articles($postSubCategory[0]["posts"]->all(), $postSubCategory[0]);
+
+        return Inertia::render('Blogs/Index', [
+            "posts" => $subCategory_articles
+        ]);
+    endif;
 
     return Inertia::render('Blogs/Index', [
-        "posts" => $subCategory_articles
+        "posts" => []
     ]);
 
 })->name('blog_sub_category.index');
