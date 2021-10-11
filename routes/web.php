@@ -97,20 +97,40 @@ class PostProcessor {
 Route::get('/', function () {
     $postCategoryClass = new PostCategory;
 
-    $homepageBuilder = $postCategoryClass->where('slug', 'homepage')->with('postSubCategories')->with('posts')->get()->all()[0];
+    $commander = $postCategoryClass->where('slug', 'homepage')->with('postSubCategories')->with('posts')->get()->all();
 
-    $blogsBuilder =  $postCategoryClass->where('slug', 'blogs')->with('postSubCategories')->with('posts')->get()->all()[0];
+    $commander1 = $postCategoryClass->where('slug', 'blogs')->with('postSubCategories')->with('posts')->get()->all();
 
-    $postProcessor = new PostProcessor;
+    $homepageBuilder = $commander ? $commander[0] : null;
 
-    $homepageData = $postProcessor->do_reduce($homepageBuilder["posts"]->all(), $homepageBuilder["postSubCategories"]->all());
+    $blogsBuilder =  $commander1 ? $commander1[0] : null;
 
-    $blogs = $postProcessor->do_reduce($blogsBuilder["posts"]->take(3)->all(), $blogsBuilder["postSubCategories"]->all());
+    if ($homepageBuilder):
 
-    return Inertia::render('Homepage', [
-        "blogs" => $blogs,
-        "homepageData" => $homepageData
-    ]);
+        $postProcessor = new PostProcessor;
+
+        $homepageData = $postProcessor->do_reduce($homepageBuilder["posts"]->all(), $homepageBuilder["postSubCategories"]->all());
+
+        if ($blogsBuilder):
+            $blogs = $postProcessor->do_reduce($blogsBuilder["posts"]->take(3)->all(), $blogsBuilder["postSubCategories"]->all());
+
+            return Inertia::render('Homepage', [
+                "blogs" => $blogs,
+                "homepageData" => $homepageData
+            ]);
+        endif;
+
+        return Inertia::render('Homepage', [
+            "blogs" => [],
+            "homepageData" => $homepageData
+        ]);
+    else:
+        return Inertia::render('Homepage', [
+            "blogs" => [],
+            "homepageData" => []
+        ]);
+
+    endif;
 
 })->name('homepage');
 
