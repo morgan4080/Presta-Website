@@ -213,14 +213,22 @@ Route::get('solutions/{slug}', function ($slug) {
 Route::get('/blogs', function () {
     $postCategoryClass = new PostCategory;
 
-    $blogsBuilder =  $postCategoryClass->where('slug', 'blogs')->with('postSubCategories')->with('posts')->get()->all()[0];
+    $commander = $postCategoryClass->where('slug', 'blogs')->with('postSubCategories')->with('posts')->get()->all();
 
-    $postProcessor = new PostProcessor;
+    $blogsBuilder =  $commander ? $commander[0] : null;
 
-    $blogs = $postProcessor->do_reduce($blogsBuilder["posts"]->all(), $blogsBuilder["postSubCategories"]->all());
+    if ($blogsBuilder):
+        $postProcessor = new PostProcessor;
+
+        $blogs = $postProcessor->do_reduce($blogsBuilder["posts"]->all(), $blogsBuilder["postSubCategories"]->all());
+
+        return Inertia::render('Blogs/Index', [
+            "posts" => $blogs
+        ]);
+    endif;
 
     return Inertia::render('Blogs/Index', [
-        "posts" => $blogs
+        "posts" => []
     ]);
 
 })->name('blogs.index');
