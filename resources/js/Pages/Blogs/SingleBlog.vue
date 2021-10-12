@@ -1,10 +1,11 @@
 <template>
     <Head>
         <title>Blogs | Presta Capital</title>
-        <meta :name="blog.title" :content="blog.excerpt">
+        <meta property="og:url" :content="getLocation"/>
+        <meta name="shareaholic:url" :content="getLocation"/>
         <meta property="og:type" content="article"/>
         <meta property="og:title" :content="blog.title"/>
-        <meta property="og:description" content="Presta Capital Publication"/>
+        <meta property="og:description" :content="blog.excerpt"/>
         <meta property="article:published_time" :content="blog.created_at">
         <meta property="article:modified_time" :content="blog.created_at">
         <meta name="description" :content="blog.title"/>
@@ -13,8 +14,6 @@
         <meta property="og:image:width" content="1200"/>
         <meta property="og:image:height" content="800"/>
         <meta property="og:locale" content="en_GB"/>
-        <meta property="og:url" :content="getLocation"/>
-        <meta name="shareaholic:url" :content="getLocation"/>
         <meta name="twitter:text:title" :content="blog.title">
         <meta name="twitter:card" content="summary_large_image">
         <meta name="twitter:site" content="@presta_africa"/>
