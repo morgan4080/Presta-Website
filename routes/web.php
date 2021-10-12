@@ -198,8 +198,6 @@ Route::get('/request-a-demo/confirmation', function () {
     ]);
 })->name('confirmation.index');
 
-
-
 // CMS
 
 // ******** Dashboard
