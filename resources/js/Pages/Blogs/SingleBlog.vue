@@ -15,7 +15,6 @@
             </svg>
             <div class="relative px-4 sm:px-6 lg:px-0">
                 <div class="space-y-5 sm:space-y-4 px-4 bg-white lg:pt-5">
-                    <!--                            <h2 class="text-3xl font-extrabold tracking-tight sm:text-4xl">Meet Our <span class="block text-blue-presta1">Team</span></h2>-->
                     <h2 class="text-3xl font-extrabold tracking-tight sm:text-4xl">
                         <span class="block text-sm tracking-wide font-bold text-blue-presta1">{{ blog.post_sub_category.name }}</span>
                         {{ blog.title }}
@@ -34,7 +33,7 @@
         <div class="lg:mx-auto lg:max-w-7xl lg:px-8 lg:items-start pt-6 pb-16 relative">
             <div class="relative bg-white px-4 sm:px-6 lg:px-0">
                 <div class="px-4 prose-indigo prose-lg text-gray-500">
-                    {{ blog.description }}
+                    <span v-html="blog.description"></span>
                 </div>
             </div>
         </div>
