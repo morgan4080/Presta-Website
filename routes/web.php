@@ -65,12 +65,18 @@ Route::get('/', function () {
 Route::get('/blogs/{subCategory_slug}/{post_slug}/', function ($subCategory_slug, $post_slug) {
     $postCategoryClass = new PostCategory;
     $connector0 = $postCategoryClass->where('slug', 'blogs')->with(['postSubCategories' => function($query) use($subCategory_slug) {
-        $query->where('slug', $subCategory_slug)->with('posts')->get()->all()[0];
+        $query->where('slug', $subCategory_slug)->with('posts')->get()->map(function ($sub) {
+            return $sub;
+        });
     }])->get()->all();
+
     $blogsBuilder =  $connector0 ? $connector0[0] : null;
+
     $postProcessor = new PostProcessor;
-    if ($blogsBuilder):
-        $postSubCategory = $blogsBuilder["postSubCategories"]->all();
+
+    $postSubCategory = $blogsBuilder["postSubCategories"]->all();
+
+    if ($blogsBuilder && count($postSubCategory) > 0):
         $related_articles = $postProcessor->related_articles($postSubCategory[0]["posts"]->all(), $postSubCategory[0]);
         $post = array_filter($related_articles, function ($item) use ($post_slug){
             return ($item['slug'] === $post_slug);
@@ -98,16 +104,17 @@ Route::get('/blogs/{subCategory_slug}', function ($subCategory_slug) {
     // show specific sub category blogs
     $postCategoryClass = new PostCategory;
     $connector1 = $postCategoryClass->where('slug', 'blogs')->with(['postSubCategories' => function($query) use($subCategory_slug) {
-        $query->where('slug', $subCategory_slug)->with('posts')->get()->all()[0];
+        $query->where('slug', $subCategory_slug)->with('posts')->get()->map(function ($sub) {
+           return $sub;
+        });
     }])->get()->all();
     $blogsBuilder =  $connector1 ? $connector1[0] : null;
     $postProcessor = new PostProcessor;
 
-    if ($blogsBuilder):
-        $postSubCategory = $blogsBuilder["postSubCategories"]->all();
+    $postSubCategory = $blogsBuilder["postSubCategories"]->all();
 
+    if ($blogsBuilder && count($postSubCategory) > 0):
         $subCategory_articles = $postProcessor->related_articles($postSubCategory[0]["posts"]->all(), $postSubCategory[0]);
-
         return Inertia::render('Blogs/Index', [
             "posts" => $subCategory_articles
         ]);
