@@ -88,6 +88,12 @@ Route::get('/blogs/{subCategory_slug}/{post_slug}/', function ($subCategory_slug
             return $carry;
         }, []);
 
+        $post = array_reduce($post, function (&$carry, $item) {
+            $carry[] = $item;
+            return $carry;
+        }, []);
+
+
         return Inertia::render('Blogs/SingleBlog', [
             "posts" => $posts,
             "post" => $post
