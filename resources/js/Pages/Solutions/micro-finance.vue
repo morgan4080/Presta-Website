@@ -451,6 +451,16 @@ const sliders = [
         excerpt: 'Automate every step of micro lending process from onboarding to repayment. Trusted by 65 microfinance lenders in Kenya. Get a fully configurable microfinance system ready to go in 12 days.',
         image: '/images/microfin0.png',
         videoId: '0gvPT1SAGko'
+    },
+    {
+        id: 3,
+        title: 'Complete Microfinance',
+        sub_title: 'Software',
+        excerpt: 'Automate every step of micro lending process from onboarding to repayment. Trusted by 65 microfinance lenders in Kenya.\n' +
+            '\n' +
+            'Get a fully configurable microfinance system ready to go in 12 days.',
+        image: '/images/microfinbanner.jpg',
+        videoId: '0gvPT1SAGko'
     }
 ]
 
