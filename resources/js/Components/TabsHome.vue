@@ -1,5 +1,5 @@
 <template>
-    <div class="w-full px-2 py-4 sm:px-0">
+    <div class="w-full px-2 sm:px-0">
         <TabGroup>
             <TabList class="flex flex-wrap md:flex-nowrap p-1 space-x-1 rounded-xl">
                 <Tab
@@ -10,11 +10,11 @@
                 >
                     <button
                         :class="[
-              'w-full py-2.5 text-sm leading-5 font-medium text-blue-presta3 rounded-lg relative',
+              !microFinance ? 'w-full py-2.5 text-sm leading-5 font-medium text-blue-presta3 rounded-lg relative' : selected ? 'w-full py-2.5 text-sm leading-5 font-medium text-blue-presta2 rounded-lg relative' : 'w-full py-2.5 text-sm leading-5 font-medium text-white rounded-lg relative',
               'focus:outline-none focus:ring-2 ring-offset-2 ring-offset-blue-presta2 ring-gray-200 ring-opacity-60',
               selected
                 ? 'bg-white shadow'
-                : 'text-blue-presta2 hover:bg-gray-500/20 hover:text-blue-presta1',
+                : !microFinance ? 'text-blue-presta2 hover:bg-gray-500/20 hover:text-blue-presta1' : 'text-white hover:bg-gray-500/20 hover:text-blue-presta1',
             ]"
                     >
                         {{ category }}
@@ -28,7 +28,6 @@
                     v-for="(posts, idx) in Object.values(categories)"
                     :key="idx"
                     :class="[
-            'p-3',
             'focus:outline-none',
           ]"
                 >
@@ -36,9 +35,9 @@
                         <li
                             v-for="post in posts"
                             key="post.id"
-                            class="relative p-3 rounded-md hover:bg-coolGray-100"
+                            class="relative rounded-md hover:bg-coolGray-100"
                         >
-                            <div class="mt-12 md:grid md:grid-cols-2 md:gap-8">
+                            <div v-if="!microFinance" class="mt-12 md:grid md:grid-cols-2 md:gap-8">
                                 <div class="col-span-1 flex justify-center md:col-span-2 lg:col-span-1">
                                     <img :src="post.featured_image" class="w-80" alt="features presta capital">
                                 </div>
@@ -52,11 +51,35 @@
 
                                     </ul>
                                     <div v-else class="block mt-6 md:mt-0">
-                                        <p class="text-xl font-semibold text-gray-900">{{ post.title }}</p>
-                                        <p class="mt-3 text-base text-gray-500">{{ post.description }}</p>
+                                        <p :class="{ 'text-white' : microFinance, 'text-gray-900' : !microFinance }" class="text-2xl font-semibold">{{ post.title }}</p>
+                                        <p :class="{ 'text-gray-200' : microFinance, 'text-gray-500' : !microFinance }" class="mt-3 text-base">{{ post.description }}</p>
                                     </div>
 
                                     <a v-if="post.featured_link" class="text-sm font-medium text-blue-presta4 py-3" :href="post.featured_link"> See more → </a>
+                                </div>
+                            </div>
+
+                            <div v-else class="mt-12 md:grid md:grid-cols-2 md:gap-12">
+
+                                <div class="col-span-1 flex flex-col justify-center md:col-span-2 lg:col-span-1 pb-20">
+                                    <ul v-if="post.featured_points" role="list" class="mt-6 md:mt-0 space-y-4 flex flex-col justify-center">
+
+                                        <li v-for="point in post.featured_points" class="flex space-x-3">
+                                            <check-circle-icon class="flex-shrink-0 h-5 w-5 md:h-8 md:w-8 text-blue-presta3" aria-hidden="true" />
+                                            <span class="text-base md:text-lg font-medium text-gray-500" v-html="point"></span>
+                                        </li>
+
+                                    </ul>
+                                    <div v-else class="block mt-6 md:mt-0">
+                                        <p :class="{ 'text-white' : microFinance, 'text-gray-900' : !microFinance }" class="text-2xl font-semibold">{{ post.title }}</p>
+                                        <p :class="{ 'text-gray-200' : microFinance, 'text-gray-500' : !microFinance }" class="mt-3 text-base" v-html="post.description"></p>
+                                    </div>
+
+                                    <a v-if="post.featured_link" class="text-sm font-medium text-blue-presta4 py-3" :href="post.featured_link"> See more → </a>
+                                </div>
+
+                                <div class="col-span-1 flex justify-center md:col-span-2 lg:col-span-1">
+                                    <img :src="post.featured_image" class="w-full object-center object-contain" alt="features presta capital">
                                 </div>
                             </div>
                         </li>
@@ -83,97 +106,17 @@ export default {
         TabPanel,
         CheckCircleIcon
     },
-    setup() {
-        let categories = ref({
-            'Mobile Access' : [
-                {
-                    id: 1,
-                    title: null,
-                    excerpt: '',
-                    description: '',
-                    featured_link: null,
-                    featured_image: '/images/ussdandapp.png',
-                    featured_points: ['USSD / App Access to your loan facilities.', 'Realtime disbursement to Mpesa or Bank.', '24/7 access to your services.'],
-                    created_at: new Date().toISOString()
-                }
-            ],
-            'Guarantorship' : [
-                {
-                    id: 1,
-                    title: null,
-                    excerpt: '',
-                    description: '',
-                    featured_link: null,
-                    featured_image: '/images/PHONE 2.png',
-                    featured_points: ['Digital Signatures.', 'Real-time loan approvals.', 'Tracking of guarantors approvals.', 'Realtime acknowledgement of \n approvals via SMS & Email.'],
-                    created_at: new Date().toISOString()
-                }
-            ],
-            'Collections' : [
-                {
-                    id: 1,
-                    title: null,
-                    excerpt: '',
-                    description: '',
-                    featured_link: null,
-                    featured_image: '/images/Group 7421.png',
-                    featured_points: ['Payment of savings, shares, registration fees & loans via Mpesa.', 'Realtime acknowledgement of payments via SMS.', 'Support for Check-off.'],
-                    created_at: new Date().toISOString()
-                }
-            ],
-            'Monitoring' : [
-                {
-                    id: 1,
-                    title: null,
-                    excerpt: '',
-                    description: '',
-                    featured_link: null,
-                    featured_image: '/images/Layer 4.png',
-                    featured_points: ['Tracking of member contributions.', 'Loan payments scheduling and tracking.', 'Automatic reminders for due payments.','Member statements.', 'Advanced analysis and reporting.'],
-                    created_at: new Date().toISOString()
-                }
-            ],
-            'Appraisal' : [
-                {
-                    id: 1,
-                    title: null,
-                    excerpt: '',
-                    description: '',
-                    featured_link: null,
-                    featured_image: '/images/Group 7732.png',
-                    featured_points: ['Group loaning with group voting.', 'Review & Approval of each loan by\n' +
-                    'back-office staff\n.', 'M-PESA statements importation & analysis\n' +
-                    'Savings Based (automatic) approval\n.', 'Approval limit matrix (Graduated borrowing\n' + 'limit based on customer behavior and\n' + ' number of loans)',
-                    'CRB integration', 'IPRS (Immigration) - confirmation of\n' + ' member details'],
-                    created_at: new Date().toISOString()
-                }
-            ],
-            'Disbursement' : [
-                {
-                    id: 1,
-                    title: null,
-                    excerpt: '',
-                    description: '',
-                    featured_link: null,
-                    featured_image: '/images/Group 7687.png',
-                    featured_points: ['Real-time disbursements to Mpesa.', 'Real-time disbursements to Bank\n' +
-                    '(via M-PESA/ PesaLink).'],
-                    created_at: new Date().toISOString()
-                }
-            ],
-            'SuperLender' : [
-                {
-                    id: 1,
-                    title: 'Never run out of loaning capital',
-                    excerpt: 'new',
-                    description: 'Work with superlenders to fund customers when cash runs out.',
-                    featured_link: '#',
-                    featured_image: '/images/Group 55.png',
-                    featured_points: null,
-                    created_at: new Date().toISOString()
-                }
-            ],
-        })
+    props: {
+        tabs: Object,
+        microFinance: {
+            type: Boolean,
+            default() {
+                return false
+            }
+        }
+    },
+    setup({ tabs }) {
+        let categories = ref(tabs)
 
         return { categories }
     },

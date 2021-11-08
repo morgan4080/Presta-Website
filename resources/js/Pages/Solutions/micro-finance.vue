@@ -8,6 +8,11 @@
             <div>
                 <Carousel :sliders="sliders" :context="'microfinance'" />
 
+                <div class="bg-blue-presta4">
+                    <div class="relative max-w-7xl mx-auto pt-16 px-4 sm:px-6 lg:px-8">
+                        <tabs-home :microFinance="true" :tabs="tabs" />
+                    </div>
+                </div>
                 <!-- platform -->
                 <div class="bg-white relative">
                     <div aria-hidden="true" class="hidden sm:block">
@@ -403,6 +408,7 @@
 import { Head, Link } from '@inertiajs/inertia-vue3';
 import { Disclosure, DisclosureButton, DisclosurePanel } from '@headlessui/vue';
 import MainFooter from '@/Components/MainFooter.vue';
+import TabsHome from '@/Components/TabsHome.vue';
 import NavigationHome from '@/Components/NavigationHome.vue';
 import Carousel from "@/Components/Carousel";
 import { ChevronDownIcon, CheckCircleIcon } from '@heroicons/vue/outline'
@@ -464,6 +470,95 @@ const sliders = [
     }
 ]
 
+const tabs = {
+    'End-to-End Solution' : [
+        {
+            id: 1,
+            title: 'End-to-End Solution',
+            excerpt: '',
+            description: 'Presta software for MFI lenders combines end-to-end functionality in \n' +
+                'a single system — origination, underwriting, servicing, collection, & \n' +
+                'reporting. Speed up your time-to-fund and discard insecure manual \n' +
+                'processes in favor of smooth automated financial services.\n' +
+                '</br>' +
+                '</br>' +
+                'Whether you need to go digital, add process automation, or \n' +
+                'facilitate the transformation of current operations, our microfinance \n' +
+                'system will meet your business needs in an ever-changing lending \n' +
+                'market.',
+            featured_link: null,
+            featured_image: '/images/endend.png',
+            featured_points: null,
+            created_at: new Date().toISOString()
+        }
+    ],
+    'Digital Onboarding' : [
+        {
+            id: 2,
+            title: 'Digital Onboarding',
+            excerpt: '',
+            description: 'When it comes to onboarding your customers, time is of the essence. That’s why we keep speed in mind, so you can welcome newcomers in 5 minutes or less.\n' +
+                '</br>' +
+                '</br>' +
+                'More speed and less friction means fewer dropouts along the way. Turn First impressions Into Obsessions.',
+            featured_link: '/solutions/digital-on-boarding',
+            featured_image: '/images/oboarding.png',
+            featured_points: null,
+            created_at: new Date().toISOString()
+        }
+    ],
+    'Loan Origination' : [
+        {
+            id: 3,
+            title: 'Loan Origination',
+            excerpt: '',
+            description: 'Orchestrate the loan origination process with a dedicated microfinance loans solution. Reduce labor costs and operating expenditures. Accelerate the speed of loan application handling from first engagement with a borrower to the final acceptance.\n' +
+                '</br>' +
+                '</br>' +
+                '— Smooth application process\n' +
+                '— Verification of the customers’ identity and compliance\n' +
+                '— Quick credit risk assessment with MPESA Statement Scoring\n' +
+                '— Automatic processing of documents/loan underwriting',
+            featured_link: null,
+            featured_image: '/images/loanorganisation.png',
+            featured_points: null,
+            created_at: new Date().toISOString()
+        }
+    ],
+    'Servicing' : [
+        {
+            id: 4,
+            title: 'Servicing',
+            excerpt: '',
+            description: 'Presta software replaces siloed servicing & provides full control over the process. Automate every single step of microfinance services after disbursing the funds until the loan is fully paid off. Collect principal, interest, & guaranteed payments from a borrower. Monitor delinquencies, restructurings & execute foreclosures.\n' +
+                '</br>' +
+                '</br>' +
+                '— Loan disbursement automation\n' +
+                '— Payment schedules management\n' +
+                '— Daily calculations for accruals, arrears, write-offs',
+            featured_link: null,
+            featured_image: '/images/servicing_panel.png',
+            featured_points: null,
+            created_at: new Date().toISOString()
+        }
+    ],
+    'Statistics & Reporting' : [
+        {
+            id: 5,
+            title: 'Statistics & Reporting',
+            excerpt: '',
+            description: 'Explore our reporting module that provides fast and customizable access to interactive dashboards. Get accurate information at hand and enjoy easy-to-use tools to make critical business decisions. Instant reports allow MFIs to track areas that need immediate attention.\n' +
+                '</br>' +
+                '</br>' +
+                'Export data to a range of formats using clear standard dashboards or add custom functionality as you see fit. Presta can create comprehensive reports and deliver results to the right person in the right format.',
+            featured_link: null,
+            featured_image: '/images/statisticsReporting.png',
+            featured_points: null,
+            created_at: new Date().toISOString()
+        }
+    ]
+}
+
 export default {
     components: {
         Carousel,
@@ -475,12 +570,14 @@ export default {
         DisclosureButton,
         DisclosurePanel,
         ChevronDownIcon,
-        CheckCircleIcon
+        CheckCircleIcon,
+        TabsHome,
     },
     setup() {
         return {
             sliders,
-            faqs
+            faqs,
+            tabs
         }
     }
 }

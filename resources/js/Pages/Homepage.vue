@@ -172,7 +172,7 @@
                             Features at a glance
                         </h3>
 
-                        <tabs-home />
+                        <tabs-home :tabs="tabs" />
                     </div>
                 </div>
 
@@ -263,6 +263,97 @@ import TabsHome from '@/Components/TabsHome.vue';
 import Carousel from '@/Components/Carousel.vue';
 import {reactive} from "vue";
 
+const tabs = {
+    'Mobile Access' : [
+        {
+            id: 1,
+            title: null,
+            excerpt: '',
+            description: '',
+            featured_link: null,
+            featured_image: '/images/ussdandapp.png',
+            featured_points: ['USSD / App Access to your loan facilities.', 'Realtime disbursement to Mpesa or Bank.', '24/7 access to your services.'],
+            created_at: new Date().toISOString()
+        }
+    ],
+    'Guarantorship' : [
+        {
+            id: 1,
+            title: null,
+            excerpt: '',
+            description: '',
+            featured_link: null,
+            featured_image: '/images/PHONE 2.png',
+            featured_points: ['Digital Signatures.', 'Real-time loan approvals.', 'Tracking of guarantors approvals.', 'Realtime acknowledgement of \n approvals via SMS & Email.'],
+            created_at: new Date().toISOString()
+        }
+    ],
+    'Collections' : [
+        {
+            id: 1,
+            title: null,
+            excerpt: '',
+            description: '',
+            featured_link: null,
+            featured_image: '/images/Group 7421.png',
+            featured_points: ['Payment of savings, shares, registration fees & loans via Mpesa.', 'Realtime acknowledgement of payments via SMS.', 'Support for Check-off.'],
+            created_at: new Date().toISOString()
+        }
+    ],
+    'Monitoring' : [
+        {
+            id: 1,
+            title: null,
+            excerpt: '',
+            description: '',
+            featured_link: null,
+            featured_image: '/images/Layer 4.png',
+            featured_points: ['Tracking of member contributions.', 'Loan payments scheduling and tracking.', 'Automatic reminders for due payments.','Member statements.', 'Advanced analysis and reporting.'],
+            created_at: new Date().toISOString()
+        }
+    ],
+    'Appraisal' : [
+        {
+            id: 1,
+            title: null,
+            excerpt: '',
+            description: '',
+            featured_link: null,
+            featured_image: '/images/Group 7732.png',
+            featured_points: ['Group loaning with group voting.', 'Review & Approval of each loan by\n' +
+            'back-office staff\n.', 'M-PESA statements importation & analysis\n' +
+            'Savings Based (automatic) approval\n.', 'Approval limit matrix (Graduated borrowing\n' + 'limit based on customer behavior and\n' + ' number of loans)',
+                'CRB integration', 'IPRS (Immigration) - confirmation of\n' + ' member details'],
+            created_at: new Date().toISOString()
+        }
+    ],
+    'Disbursement' : [
+        {
+            id: 1,
+            title: null,
+            excerpt: '',
+            description: '',
+            featured_link: null,
+            featured_image: '/images/Group 7687.png',
+            featured_points: ['Real-time disbursements to Mpesa.', 'Real-time disbursements to Bank\n' +
+            '(via M-PESA/ PesaLink).'],
+            created_at: new Date().toISOString()
+        }
+    ],
+    'SuperLender' : [
+        {
+            id: 1,
+            title: 'Never run out of loaning capital',
+            excerpt: 'new',
+            description: 'Work with superlenders to fund customers when cash runs out.',
+            featured_link: '#',
+            featured_image: '/images/Group 55.png',
+            featured_points: null,
+            created_at: new Date().toISOString()
+        }
+    ],
+}
+
 export default {
     components: {
         Head,
@@ -295,7 +386,8 @@ export default {
         }, []);
 
         return {
-            sliders
+            sliders,
+            tabs
         }
     },
 }
