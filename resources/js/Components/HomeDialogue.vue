@@ -1,5 +1,6 @@
 <template>
-    <div class="space-y-4 sm:space-y-0 sm:mr-auto sm:inline-grid sm:grid-cols-2 sm:gap-5">
+    <img v-if="context === 'micro-finance'" @click="openModal('video')" src="/images/playvideo0.png" class="w-full cursor-pointer" alt="play-video">
+    <div v-else class="space-y-4 sm:space-y-0 sm:mr-auto sm:inline-grid sm:grid-cols-2 sm:gap-5">
         <button type="button" @click="this.$inertia.visit(route('demo'), { method: 'get' })" :class="{'text-blue-presta2 bg-white hover:bg-indigo-50' : context === 'homepage', 'text-white bg-blue-presta4 hover:bg-blue-presta3' : context !== 'homepage'}" class="flex items-center justify-center px-4 py-3 border border-transparent text-base font-medium rounded-md shadow-sm sm:px-8">
             Request demo
         </button>
