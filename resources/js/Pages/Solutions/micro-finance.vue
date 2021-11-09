@@ -21,28 +21,28 @@
                         </h2>
                         <div class="mt-8 grid grid-cols-2 gap-8 md:grid-cols-5 lg:grid-cols-8">
                             <div class="col-span-1 flex justify-center md:col-span-2 lg:col-span-1">
-                                <img class="h-28 md:h-20" src="/images/onepaylogo.png" alt="Tuple" />
+                                <img class="h-20 md:h-16" src="/images/onepaylogo.png" alt="Tuple" />
                             </div>
                             <div class="col-span-1 flex justify-center md:col-span-2 lg:col-span-1">
-                                <img class="h-28 md:h-20" src="/images/bcklogo.png" alt="Mirage" />
+                                <img class="h-20 md:h-16" src="/images/bcklogo.png" alt="Mirage" />
                             </div>
                             <div class="col-span-1 flex justify-center md:col-span-2 lg:col-span-1">
-                                <img class="h-28 md:h-20" src="/images/Rasilimalilogo.png" alt="StaticKit" />
+                                <img class="h-20 md:h-16" src="/images/Rasilimalilogo.png" alt="StaticKit" />
                             </div>
                             <div class="col-span-1 flex justify-center md:col-span-3 lg:col-span-1">
-                                <img class="h-28 md:h-20" src="/images/mpayalogo.png" alt="Transistor" />
+                                <img class="h-20 md:h-16" src="/images/mpayalogo.png" alt="Transistor" />
                             </div>
                             <div class="col-span-2 flex justify-center md:col-span-3 lg:col-span-1">
-                                <img class="h-28 md:h-20" src="/images/kwihandlogo.png" alt="Workcation" />
+                                <img class="h-20 md:h-16" src="/images/kwihandlogo.png" alt="Workcation" />
                             </div>
                             <div class="col-span-1 flex justify-center md:col-span-2 lg:col-span-1">
-                                <img class="h-28 md:h-20" src="/images/chipacreditlogo.png" alt="Tuple" />
+                                <img class="h-20 md:h-16" src="/images/chipacreditlogo.png" alt="Tuple" />
                             </div>
                             <div class="col-span-1 flex justify-center md:col-span-2 lg:col-span-1">
-                                <img class="h-28 md:h-20" src="/images/tressorlogo.png" alt="Mirage" />
+                                <img class="h-20 md:h-16" src="/images/tressorlogo.png" alt="Mirage" />
                             </div>
                             <div class="col-span-1 flex justify-center md:col-span-2 lg:col-span-1">
-                                <img class="h-28 md:h-20" src="/images/jiinuelogo.png" alt="StaticKit" />
+                                <img class="h-20 md:h-16" src="/images/jiinuelogo.png" alt="StaticKit" />
                             </div>
                         </div>
                     </div>
@@ -81,130 +81,173 @@
                     </div>
                 </div>
 
-                <!-- platform -->
-                <div class="bg-white relative">
-                    <div aria-hidden="true" class="hidden sm:block">
-                        <div class="absolute inset-y-0 left-0 w-1/2 bg-gray-50"></div>
-                        <svg class="absolute top-8 left-1/2 -ml-3" width="404" height="392" fill="none" viewBox="0 0 404 392">
-                            <defs>
-                                <pattern id="8228f071-bcee-4ec8-905a-2a059a2cc4fb" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
-                                    <rect x="0" y="0" width="4" height="4" class="text-gray-200" fill="currentColor"></rect>
-                                </pattern>
-                            </defs>
-                            <rect width="404" height="392" fill="url(#8228f071-bcee-4ec8-905a-2a059a2cc4fb)"></rect>
-                        </svg>
-                    </div>
-                    <div class="max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:px-8">
-                        <h3 class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-blue-presta3 sm:text-4xl relative">
-                            Everything In One Platform
+                <div class="bg-white">
+                    <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:py-16 lg:px-8">
+                        <h3 class="mt-2 text-center text-3xl leading-8 font-extrabold tracking-tight text-blue-presta3 sm:text-4xl">
+                            What can you do with Presta
                         </h3>
-                        <div class="mt-14 space-y-12 lg:space-y-0 lg:grid lg:gap-8 lg:grid-cols-4">
-                            <div class="col-span-1 bg-white relative p-8 md:py-10 md:px-5 border border-gray-200 rounded-2xl shadow flex flex-col lg:col-span-1">
-                                <dt class="order-2 mt-4 text-lg leading-6 font-medium text-gray-500">
-                                    <div class="flex items-center justify-center ">
-                                        <ul class="list-disc space-y-2">
-                                            <li class="flex items-start">
-                                                <p class="ml-2 text-base text-center">
-                                                    When it comes to onboarding your customers, time is of the essence. That’s why we keep speed in mind, so you can welcome newcomers in 5 minutes or less.
-                                                </p>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </dt>
-                                <dd class="order-1 text-lg font-bold text-blue-presta3 flex flex-col justify-center items-center text-center px-6">
-                                    <svg class="w-14 h-14 pb-3" xmlns="http://www.w3.org/2000/svg" width="49.617" height="74" viewBox="0 0 49.617 74">
-                                        <path id="XMLID_498_" d="M96.46,42.222h-.922V39.23a20.476,20.476,0,1,0-16.428,0v2.992h-.922A15.69,15.69,0,0,0,62.515,57.895V74h49.617v-16.1A15.69,15.69,0,0,0,96.46,42.222ZM87.324,68.087S75.67,61.774,75.67,53.734a6.5,6.5,0,0,1,11.654-3.951,6.5,6.5,0,0,1,11.654,3.951C98.977,61.847,87.324,68.087,87.324,68.087Z" transform="translate(-62.515 0.001)" fill="#489aab"/>
-                                    </svg>
-                                    Digital Onboarding
-                                    In under 5 min or less
-                                </dd>
-                            </div>
-                            <div class="col-span-1 bg-white relative p-8 md:py-10 md:px-5 border border-gray-200 rounded-2xl shadow flex flex-col lg:col-span-1">
-                                <dt class="order-2 mt-4 text-lg leading-6 font-medium text-gray-500">
-                                    <div class="flex items-center justify-center ">
-                                        <ul class="list-disc space-y-2">
-                                            <li class="flex items-start">
-                                                <p class="ml-2 text-base text-center">
-                                                    Reduce labor costs and operating expenditures. Accelerate the speed of loan application handling from first engagement with a borrower to the final acceptance.
-                                                </p>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </dt>
-                                <dd class="order-1 text-lg font-bold text-blue-presta3 flex flex-col justify-center items-center text-center px-6">
-                                    <svg class="w-14 h-14 pb-3" id="money" xmlns="http://www.w3.org/2000/svg" width="74" height="74" viewBox="0 0 74 74">
-                                        <path id="Path_11848" data-name="Path 11848" d="M161.827,291.579l-8.2,10.724a8.672,8.672,0,0,1-6.889,3.4H131.512a2.168,2.168,0,0,1,0-4.336h13.2a5.138,5.138,0,0,0,5.158-5.157,5.059,5.059,0,0,0-5.058-4.96H129.633a12.555,12.555,0,0,0-16-1.166L112,291.253v24.57h37.7a13.008,13.008,0,0,0,10.942-5.974l8.461-13.161a4.45,4.45,0,0,0-7.279-5.11Z" transform="translate(-95.812 -246.16)" fill="#489aab"/>
-                                        <path id="Path_11849" data-name="Path 11849" d="M9.684,282H2.168A2.168,2.168,0,0,0,0,284.168v28.906a2.168,2.168,0,0,0,2.168,2.168H9.684a2.168,2.168,0,0,0,2.168-2.168V284.168A2.168,2.168,0,0,0,9.684,282Z" transform="translate(0 -241.242)" fill="#489aab"/>
-                                        <path id="Path_11850" data-name="Path 11850" d="M281.535,82.9a2.152,2.152,0,0,0-.768,1.294,1.5,1.5,0,0,0,.372,1.45c.12.094.253.187.4.278Z" transform="translate(-240.154 -70.923)" fill="#489aab"/>
-                                        <path id="Path_11851" data-name="Path 11851" d="M190.066,36.133A18.066,18.066,0,1,0,172,18.066,18.087,18.087,0,0,0,190.066,36.133ZM184.6,23.973a1.445,1.445,0,0,1,2-.418,4.377,4.377,0,0,0,1.923.824v-6.1A10.66,10.66,0,0,1,186.342,17a4.325,4.325,0,0,1-1.429-4.26,4.869,4.869,0,0,1,3.339-3.817c.091-.027.181-.052.27-.076v-.9a1.445,1.445,0,0,1,2.891,0V8.69a5.019,5.019,0,0,1,2.875,1.485,1.445,1.445,0,0,1-2.171,1.908,1.991,1.991,0,0,0-.7-.417v4.67c.257.1.513.188.765.277a5.172,5.172,0,0,1,3.516,5.852,5.878,5.878,0,0,1-4.281,4.683v1.035a1.445,1.445,0,0,1-2.891,0v-.9a7,7,0,0,1-3.506-1.313,1.445,1.445,0,0,1-.418-2Z" transform="translate(-147.141)" fill="#489aab"/>
-                                        <path id="Path_11852" data-name="Path 11852" d="M307.739,136.909a2.236,2.236,0,0,0-1.43-2.57v4.643A2.987,2.987,0,0,0,307.739,136.909Z" transform="translate(-262.038 -114.923)" fill="#489aab"/>
-                                    </svg>
-                                    Loan Origination
-                                </dd>
-                            </div>
-                            <div class="col-span-1 bg-white relative p-8 md:py-10 md:px-5 border border-gray-200 rounded-2xl shadow flex flex-col lg:col-span-1">
-                                <dt class="order-2 mt-4 text-lg leading-6 font-medium text-gray-500">
-                                    <div class="flex items-center justify-center ">
-                                        <ul class="list-disc space-y-2">
-                                            <li class="flex items-start">
-                                                <p class="ml-2 text-base text-center">
-                                                    Automate every single step of microfinance services after disbursing the funds until the loan is fully paid off.
-                                                </p>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </dt>
-                                <dd class="order-1 text-lg font-bold text-blue-presta3 flex flex-col justify-center items-center text-center px-6">
-                                    <svg class="w-14 h-14 pb-3" xmlns="http://www.w3.org/2000/svg" width="75.117" height="75.117" viewBox="0 0 75.117 75.117">
-                                        <g id="asset" transform="translate(-6.556 -6.556)">
-                                            <path id="Path_11854" data-name="Path 11854" d="M35,5.095v5.56A31.665,31.665,0,0,1,62.314,37.969h5.56A37.393,37.393,0,0,0,35,5.095Z" transform="translate(13.24 2.02)" fill="#489aab" stroke="#489aab" stroke-width="1"/>
-                                            <path id="Path_11855" data-name="Path 11855" d="M26.33,18.286l3.25,8.667h9.057L41.98,16.924l-3.174-.793-4.53,6.039-4.7-4.7Z" transform="translate(9.987 6.161)" fill="#489aab" stroke="#489aab" stroke-width="1"/>
-                                            <path id="Path_11856" data-name="Path 11856" d="M51.255,41.548A14.705,14.705,0,0,0,46.232,30.48L41.112,26H31.144l-5.121,4.48a14.706,14.706,0,0,0,9.684,25.774h.842A14.723,14.723,0,0,0,51.255,41.548Zm-9.626-3.171h-2.75V37H34.752a1.375,1.375,0,1,0,0,2.75H37.5A4.126,4.126,0,0,1,37.5,48v2.75h-2.75V48H30.626V43.878h2.75v1.375H37.5a1.375,1.375,0,0,0,0-2.75h-2.75a4.126,4.126,0,1,1,0-8.251V31.5H37.5v2.75h4.126Z" transform="translate(7.987 9.864)" fill="#489aab" stroke="#489aab" stroke-width="1"/>
-                                            <path id="Path_11857" data-name="Path 11857" d="M19.554,14.983l-3.042-4.552a37.669,37.669,0,0,0-2.895,2.437l3.862,3.862q1-.918,2.075-1.747Z" transform="translate(5.217 4.022)" fill="#489aab" stroke="#489aab" stroke-width="1"/>
-                                            <path id="Path_11858" data-name="Path 11858" d="M22.766,12.974,20.659,7.89a37.571,37.571,0,0,0-3.3,1.917L20.4,14.352q1.153-.738,2.368-1.378Z" transform="translate(6.622 3.068)" fill="#489aab" stroke="#489aab" stroke-width="1"/>
-                                            <path id="Path_11859" data-name="Path 11859" d="M26.3,11.513l-1.08-5.431a36.48,36.48,0,0,0-3.64,1.331l2.1,5.065c.855-.358,1.729-.683,2.621-.965Z" transform="translate(8.204 2.39)" fill="#489aab" stroke="#489aab" stroke-width="1"/>
-                                            <path id="Path_11860" data-name="Path 11860" d="M30.064,10.655V5.095a36.562,36.562,0,0,0-3.9.672l1.073,5.394C28.165,10.953,29.106,10.78,30.064,10.655Z" transform="translate(9.925 2.02)" fill="#489aab" stroke="#489aab" stroke-width="1"/>
-                                            <path id="Path_11861" data-name="Path 11861" d="M11.161,27.236,5.766,26.163a36.909,36.909,0,0,0-.671,3.9h5.56C10.78,29.106,10.953,28.164,11.161,27.236Z" transform="translate(2.02 9.925)" fill="#489aab" stroke="#489aab" stroke-width="1"/>
-                                            <path id="Path_11862" data-name="Path 11862" d="M12.478,23.675l-5.065-2.1a36.826,36.826,0,0,0-1.331,3.64l5.431,1.08C11.795,25.4,12.121,24.53,12.478,23.675Z" transform="translate(2.39 8.204)" fill="#489aab" stroke="#489aab" stroke-width="1"/>
-                                            <path id="Path_11863" data-name="Path 11863" d="M16.729,17.479l-3.862-3.862a37.652,37.652,0,0,0-2.435,2.895l4.552,3.042q.827-1.077,1.745-2.075Z" transform="translate(4.022 5.217)" fill="#489aab" stroke="#489aab" stroke-width="1"/>
-                                            <path id="Path_11864" data-name="Path 11864" d="M14.352,20.4,9.807,17.361a37.241,37.241,0,0,0-1.918,3.3l5.084,2.105Q13.613,21.547,14.352,20.4Z" transform="translate(3.068 6.622)" fill="#489aab" stroke="#489aab" stroke-width="1"/>
-                                            <path id="Path_11865" data-name="Path 11865" d="M35,62.314v5.56A37.393,37.393,0,0,0,67.874,35h-5.56A31.665,31.665,0,0,1,35,62.314Z" transform="translate(13.24 13.24)" fill="#489aab" stroke="#489aab" stroke-width="1"/>
-                                            <path id="Path_11866" data-name="Path 11866" d="M10.655,35H5.095A37.393,37.393,0,0,0,37.969,67.874v-5.56A31.665,31.665,0,0,1,10.655,35Z" transform="translate(2.02 13.24)" fill="#489aab" stroke="#489aab" stroke-width="1"/>
-                                        </g>
-                                    </svg>
 
-                                    Flexibility
+                        <div class="my-6 grid grid-cols-2 gap-2 md:grid-cols-3 lg:mt-8">
+                            <div class="col-span-1 flex flex-col justify-center py-8 px-8 bg-white shadow-lg">
+                                <img class="max-h-20" src="/images/icons/distributioncosticon.svg" alt="Asset finance" />
+                                <p class="mt-3 max-w-3xl text-sm text-gray-900 text-center">
+                                    Long, manual, paper-based, error-prone
+                                    processes lead to <span class="font-semibold">high distribution costs</span> and
+                                    <span class="font-semibold">slow loan turnaround times</span>.
+                                </p>
+                            </div>
+                            <div class="col-span-1 flex flex-col justify-center py-8 px-8 bg-white shadow-lg">
+                                <img class="max-h-20" src="/images/icons/dispersedcustomerbaseicon.svg" alt="Emergency loans" />
+                                <p class="mt-3 max-w-3xl text-sm text-gray-900 text-center">
+                                    <span class="font-semibold">Dispersed customer base</span> and low transaction
+                                    values result in high costs per transaction and limit
+                                    the ability to scale.
+                                </p>
+                            </div>
+                            <div class="col-span-1 flex flex-col justify-center py-8 px-8 bg-white shadow-lg">
+                                <img class="max-h-20" src="/images/icons/deliquencyicon.svg" alt="Group loans" />
+                                <p class="mt-3 max-w-3xl text-sm text-gray-900 text-center">
+                                    Lack of data to inform credit decisions result in
+                                    <span class="font-semibold">higher loan delinquency</span> and poor portfolio
+                                    quality.
+                                </p>
+                            </div>
+                            <div class="col-span-1 flex flex-col justify-center py-8 px-8 bg-white shadow-lg">
+                                <img class="max-h-20" src="/images/icons/customerexperienceicon.svg" alt="Higher purchase loans" />
+                                <p class="mt-3 max-w-3xl text-sm text-gray-900 text-center">
+                                    Inefficient back-and-forth visits and congested
+                                    branches cause <span class="font-semibold">poor customer experience</span>.
+                                </p>
+                            </div>
+                            <div class="col-span-1 flex flex-col justify-center py-8 px-8 bg-white shadow-lg">
+                                <img class="max-h-20" src="/images/icons/fintechtelcosicon.svg" alt="Logbook loans" />
+                                <p class="mt-3 max-w-3xl text-sm text-gray-900 text-center">
+                                    Aggressive competition from <span class="font-semibold">FinTechs</span> and
+                                    <span class="font-semibold">telcos</span> threatens market share.
+                                </p>
+                            </div>
+                            <div class="col-span-1 flex flex-col justify-center py-8 px-8 bg-white shadow-lg">
+                                <img class="max-h-20" src="/images/icons/slowgotomarketicon.svg" alt="Payroll loans" />
+                                <p class="mt-3 max-w-3xl text-sm text-gray-900 text-center">
+                                    Limited digitalization leads to <span class="font-semibold">slow go-to-market</span> and operational inefficiencies.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-blue-presta4">
+                    <div class="max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:px-8">
+                        <h3 class="mt-2 text-center text-3xl leading-8 font-extrabold tracking-tight text-white sm:text-4xl relative">Ready-to-go capabilities, endless possibilities</h3>
+                        <p class="mt-4 text-center text-lg leading-6 text-gray-100 relative">Ready-to-go capabilities instantly transform the digital experience for both employees and customers.</p>
+                        <div class="my-14 space-y-12 lg:space-y-0 lg:grid lg:gap-4 lg:grid-cols-4">
+                            <div class="col-span-1 relative h-72 p-8 md:py-10 md:px-8 flex flex-col justify-center lg:col-span-1">
+                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="absolute inset-0 w-full" viewBox="0 0 335.196 336.211">
+                                    <defs>
+                                        <filter id="Path_11004" x="0" y="0" width="335.196" height="336.211" filterUnits="userSpaceOnUse">
+                                            <feOffset dx="-2" dy="4" input="SourceAlpha"/>
+                                            <feGaussianBlur stdDeviation="4" result="blur"/>
+                                            <feFlood flood-color="#7df1f9"/>
+                                            <feComposite operator="in" in2="blur"/>
+                                            <feComposite in="SourceGraphic"/>
+                                        </filter>
+                                    </defs>
+                                    <g transform="matrix(1, 0, 0, 1, 0, 0)" filter="url(#Path_11004)">
+                                        <path id="Path_11004-2" data-name="Path 11004" d="M2188.189,2021.08c123.459-36.26,222.411-45.269,188.951,63.661s-120.062,234.058-188.951,223.271-130.053-188.487-112.681-248.257C2075.721,2058.832,2064.73,2057.34,2188.189,2021.08Z" transform="translate(-2058.52 -1988.45)" fill="#fff" opacity="0.3"/>
+                                    </g>
+                                </svg>
+                                <dt class="order-2 mt-2 text-lg leading-6 font-bold text-gray-100 flex flex-col justify-center px-6">
+                                    <p class="text-base">
+                                        Reduction
+                                        in operating
+                                        costs
+                                    </p>
+                                </dt>
+                                <dd class="order-1 text-lg text-white flex flex-col justify-center px-6">
+                                    <h1 class="text-6xl font-extrabold">60%</h1>
                                 </dd>
                             </div>
-                            <div class="col-span-1 bg-white relative p-8 md:py-10 md:px-5 border border-gray-200 rounded-2xl shadow flex flex-col lg:col-span-1">
-                                <dt class="order-2 mt-4 text-lg leading-6 font-medium text-gray-500">
-                                    <div class="flex items-center justify-center ">
-                                        <ul class="list-disc space-y-2">
-                                            <li class="flex items-start">
-                                                <p class="ml-2 text-base text-center">
-                                                    From quick short-term loans to decades-long mortgages we keep things in order. Notifications triggered by events and more.
-                                                </p>
-                                            </li>
-                                        </ul>
-                                    </div>
+                            <div class="col-span-1 relative h-72 p-8 md:py-10 md:px-8 flex flex-col justify-center lg:col-span-1">
+                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="w-full absolute inset-0" viewBox="0 0 335.196 336.211">
+                                    <defs>
+                                        <filter id="Path_11004" x="0" y="0" width="335.196" height="336.211" filterUnits="userSpaceOnUse">
+                                            <feOffset dx="-2" dy="4" input="SourceAlpha"/>
+                                            <feGaussianBlur stdDeviation="4" result="blur"/>
+                                            <feFlood flood-color="#7df1f9"/>
+                                            <feComposite operator="in" in2="blur"/>
+                                            <feComposite in="SourceGraphic"/>
+                                        </filter>
+                                    </defs>
+                                    <g transform="matrix(1, 0, 0, 1, 0, 0)" filter="url(#Path_11004)">
+                                        <path id="Path_11004-2" data-name="Path 11004" d="M2188.189,2021.08c123.459-36.26,222.411-45.269,188.951,63.661s-120.062,234.058-188.951,223.271-130.053-188.487-112.681-248.257C2075.721,2058.832,2064.73,2057.34,2188.189,2021.08Z" transform="translate(-2058.52 -1988.45)" fill="#fff" opacity="0.3"/>
+                                    </g>
+                                </svg>
+                                <dt class="order-2 mt-2 text-lg leading-6 font-bold text-gray-100 flex flex-col justify-center px-6">
+                                    <p class="text-base">
+                                        Weeks
+                                        to implement
+                                    </p>
                                 </dt>
-                                <dd class="order-1 text-lg font-bold text-blue-presta3 flex flex-col justify-center items-center text-center px-6">
-                                    <svg class="w-14 h-14 pb-3" id="Group_350" data-name="Group 350" xmlns="http://www.w3.org/2000/svg" width="74" height="74" viewBox="0 0 74 74">
-                                        <g id="Group_349" data-name="Group 349">
-                                            <g id="Group_348" data-name="Group 348">
-                                                <path id="Path_311" data-name="Path 311" d="M284.606,256.742a2.242,2.242,0,0,0-2.242-2.242h-8.97a2.242,2.242,0,0,0-2.242,2.242v31.394h13.455Zm19.061,4.485a2.242,2.242,0,0,0-2.242-2.242h-8.97a2.242,2.242,0,0,0-2.242,2.242v26.909h13.455Zm8.97,32.515H245.364a3.364,3.364,0,0,0,0,6.727h67.273a3.364,3.364,0,0,0,0-6.727Zm-47.091-25.788a2.242,2.242,0,0,0-2.242-2.242h-8.97a2.242,2.242,0,0,0-2.242,2.242v20.182h13.455Z" transform="translate(-242 -226.47)" fill="#489aab"/>
-                                                <path id="Path_312" data-name="Path 312" d="M302.57,242.02l-10.082,1.44a1.992,1.992,0,0,0-1.126,3.379l2.33,2.33-8.133,8.131L272.2,247.169a3.366,3.366,0,0,0-4.166.081l-21.3,17.509a3.364,3.364,0,1,0,4.27,5.2l19.251-15.825,13.582,10.3a3.361,3.361,0,0,0,4.409-.3l10.208-10.205L300,255.479a1.99,1.99,0,0,0,3.377-1.126l1.44-10.082A1.991,1.991,0,0,0,302.57,242.02Z" transform="translate(-237.652 -242)" fill="#489aab"/>
-                                            </g>
-                                        </g>
-                                    </svg>
-                                    Reporting
+                                <dd class="order-1 text-lg text-white flex flex-col justify-center px-6">
+                                    <h1 class="text-6xl font-extrabold">1-2</h1>
+                                </dd>
+                            </div>
+                            <div class="col-span-1 relative h-72 p-8 md:py-10 md:px-8 flex flex-col justify-center lg:col-span-1">
+                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="w-full absolute inset-0" viewBox="0 0 335.196 336.211">
+                                    <defs>
+                                        <filter id="Path_11004" x="0" y="0" width="335.196" height="336.211" filterUnits="userSpaceOnUse">
+                                            <feOffset dx="-2" dy="4" input="SourceAlpha"/>
+                                            <feGaussianBlur stdDeviation="4" result="blur"/>
+                                            <feFlood flood-color="#7df1f9"/>
+                                            <feComposite operator="in" in2="blur"/>
+                                            <feComposite in="SourceGraphic"/>
+                                        </filter>
+                                    </defs>
+                                    <g transform="matrix(1, 0, 0, 1, 0, 0)" filter="url(#Path_11004)">
+                                        <path id="Path_11004-2" data-name="Path 11004" d="M2188.189,2021.08c123.459-36.26,222.411-45.269,188.951,63.661s-120.062,234.058-188.951,223.271-130.053-188.487-112.681-248.257C2075.721,2058.832,2064.73,2057.34,2188.189,2021.08Z" transform="translate(-2058.52 -1988.45)" fill="#fff" opacity="0.3"/>
+                                    </g>
+                                </svg>
+                                <dt class="order-2 mt-2 text-lg leading-6 font-bold text-gray-100 flex flex-col justify-center px-6">
+                                    <p class="text-base">
+                                        Boost
+                                        in efficiency
+                                    </p>
+                                </dt>
+                                <dd class="order-1 text-lg text-white flex flex-col justify-center px-6">
+                                    <h1 class="text-6xl font-extrabold">35%</h1>
+                                </dd>
+                            </div>
+                            <div class="col-span-1 relative h-72 p-8 md:py-10 md:px-8 flex flex-col justify-center lg:col-span-1">
+                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="w-full absolute inset-0" viewBox="0 0 335.196 336.211">
+                                    <defs>
+                                        <filter id="Path_11004" x="0" y="0" width="335.196" height="336.211" filterUnits="userSpaceOnUse">
+                                            <feOffset dx="-2" dy="4" input="SourceAlpha"/>
+                                            <feGaussianBlur stdDeviation="4" result="blur"/>
+                                            <feFlood flood-color="#7df1f9"/>
+                                            <feComposite operator="in" in2="blur"/>
+                                            <feComposite in="SourceGraphic"/>
+                                        </filter>
+                                    </defs>
+                                    <g transform="matrix(1, 0, 0, 1, 0, 0)" filter="url(#Path_11004)">
+                                        <path id="Path_11004-2" data-name="Path 11004" d="M2188.189,2021.08c123.459-36.26,222.411-45.269,188.951,63.661s-120.062,234.058-188.951,223.271-130.053-188.487-112.681-248.257C2075.721,2058.832,2064.73,2057.34,2188.189,2021.08Z" transform="translate(-2058.52 -1988.45)" fill="#fff" opacity="0.3"/>
+                                    </g>
+                                </svg>
+                                <dt class="order-2 mt-2 text-lg leading-6 font-bold text-gray-100 flex flex-col justify-center px-6">
+                                    <p class="text-base">
+                                        Software
+                                        robustness and
+                                        flexibility
+                                    </p>
+                                </dt>
+                                <dd class="order-1 text-lg text-white flex flex-col justify-center px-6">
+                                    <h1 class="text-6xl font-extrabold">100%</h1>
                                 </dd>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <svg class="hidden lg:block absolute right-full transform translate-x-1/2 translate-y-12" width="404" height="784" fill="none" viewBox="0 0 404 784" aria-hidden="true">
+                <svg class="hidden lg:hidden absolute right-full transform translate-x-1/2 translate-y-12" width="404" height="784" fill="none" viewBox="0 0 404 784" aria-hidden="true">
                     <defs>
                         <pattern id="64e643ad-2176-4f86-b3d7-f2c5da3b6a6d" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
                             <rect x="0" y="0" width="4" height="4" class="text-gray-200" fill="currentColor" />
@@ -213,7 +256,7 @@
                     <rect width="404" height="784" fill="url(#64e643ad-2176-4f86-b3d7-f2c5da3b6a6d)" />
                 </svg>
 
-                <div class="relative mt-12 sm:mt-16 lg:mt-24">
+                <div class="relative mt-12 sm:mt-16 lg:mt-24 hidden">
                     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                         <h3 class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-blue-presta3 sm:text-4xl relative bg-white">
                             Our Technology
@@ -262,7 +305,7 @@
 
                 <div class="relative overflow-hidden">
 
-                    <div class="bg-white relative">
+                    <div class="bg-white relative hidden">
                         <svg class="absolute left-full top-full right-0 transform -translate-x-40 -translate-y-56" width="404" height="784" fill="none" viewBox="0 0 404 784" aria-hidden="true">
                             <defs>
                                 <pattern id="56409614-3d62-4985-9a10-7ca758a8f4f0" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
@@ -280,7 +323,7 @@
                             </h3>
                             <div class="mt-14 space-y-12 lg:space-y-0 lg:grid lg:gap-8 lg:grid-cols-3">
                                 <div class="col-span-1 bg-white relative p-8 md:py-10 md:px-5 border border-gray-200 rounded-2xl shadow flex flex-col lg:col-span-1">
-                                    <dt class="order-2 mt-4 text-lg leading-6 font-medium text-gray-500">
+                                    <dt class="order-2 mt-2 text-lg leading-6 font-medium text-gray-500">
                                         <div class="flex items-center justify-center px-6">
                                             <ul class="list-disc space-y-2">
                                                 <li class="flex items-start">
@@ -323,7 +366,7 @@
                                     </dd>
                                 </div>
                                 <div class="col-span-1 bg-white relative p-8 md:py-10 md:px-5 border border-gray-200 rounded-2xl shadow flex flex-col lg:col-span-1">
-                                    <dt class="order-2 mt-4 text-lg leading-6 font-medium text-gray-500">
+                                    <dt class="order-2 mt-2 text-lg leading-6 font-medium text-gray-500">
                                         <div class="flex items-center justify-center px-6">
                                             <ul class="list-disc space-y-2">
                                                 <li class="flex items-start">
@@ -369,7 +412,7 @@
                                     </dd>
                                 </div>
                                 <div class="col-span-1 bg-white relative p-8 md:py-10 md:px-5 border border-gray-200 rounded-2xl shadow flex flex-col lg:col-span-1">
-                                    <dt class="order-2 mt-4 text-lg leading-6 font-medium text-gray-500">
+                                    <dt class="order-2 mt-2 text-lg leading-6 font-medium text-gray-500">
                                         <div class="flex items-center justify-center px-6">
                                             <ul class="list-disc space-y-2">
                                                 <li class="flex items-start">
@@ -445,9 +488,10 @@
                     <div class="bg-white">
                         <div class="max-w-4xl mx-auto text-center py-16 px-4 sm:py-20 sm:px-6 lg:px-8">
                             <h2 class="text-3xl font-extrabold text-blue-presta4 sm:text-4xl relative">
-                                <span class="block">Works As Good As It Looks.</span>
+                                <span class="block">Ready to take your lending strategy to the next level?</span>
                             </h2>
-                            <p class="mt-4 text-lg leading-6 text-gray-500 relative">Inject your Process into Presta. Build Custom Process Rules. Penalty and Fees Management. Event-driven email and SMS communications. Custom Report Builder. One-Click to Send Loan Statements.</p>
+                            <p class="mt-4 text-lg leading-6 text-gray-500 relative">Tech giants and digital-only banks have set customer expectation—now surpass them.
+                                Get in touch and let's transform your business.</p>
 
                             <blockquote class="mt-10 relative">
                                 <div class="max-w-3xl mx-auto text-center text-2xl font-bold leading-9 font-medium text-blue-presta3">
