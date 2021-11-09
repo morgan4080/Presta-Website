@@ -13,6 +13,74 @@
                         <tabs-home :microFinance="true" :tabs="tabs" />
                     </div>
                 </div>
+
+                <div class="bg-white">
+                    <div class="max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:py-24 lg:px-8">
+                        <h2 class="text-3xl text-center font-extrabold text-blue-presta4 pb-8">
+                            <span class="block">Powering 65+ Financial institutions around the Region</span>
+                        </h2>
+                        <div class="mt-8 grid grid-cols-2 gap-8 md:grid-cols-5 lg:grid-cols-8">
+                            <div class="col-span-1 flex justify-center md:col-span-2 lg:col-span-1">
+                                <img class="h-28 md:h-20" src="/images/onepaylogo.png" alt="Tuple" />
+                            </div>
+                            <div class="col-span-1 flex justify-center md:col-span-2 lg:col-span-1">
+                                <img class="h-28 md:h-20" src="/images/bcklogo.png" alt="Mirage" />
+                            </div>
+                            <div class="col-span-1 flex justify-center md:col-span-2 lg:col-span-1">
+                                <img class="h-28 md:h-20" src="/images/Rasilimalilogo.png" alt="StaticKit" />
+                            </div>
+                            <div class="col-span-1 flex justify-center md:col-span-3 lg:col-span-1">
+                                <img class="h-28 md:h-20" src="/images/mpayalogo.png" alt="Transistor" />
+                            </div>
+                            <div class="col-span-2 flex justify-center md:col-span-3 lg:col-span-1">
+                                <img class="h-28 md:h-20" src="/images/kwihandlogo.png" alt="Workcation" />
+                            </div>
+                            <div class="col-span-1 flex justify-center md:col-span-2 lg:col-span-1">
+                                <img class="h-28 md:h-20" src="/images/chipacreditlogo.png" alt="Tuple" />
+                            </div>
+                            <div class="col-span-1 flex justify-center md:col-span-2 lg:col-span-1">
+                                <img class="h-28 md:h-20" src="/images/tressorlogo.png" alt="Mirage" />
+                            </div>
+                            <div class="col-span-1 flex justify-center md:col-span-2 lg:col-span-1">
+                                <img class="h-28 md:h-20" src="/images/jiinuelogo.png" alt="StaticKit" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white">
+                    <div class="relative sm:py-16">
+                        <div aria-hidden="true" class="hidden sm:block">
+                            <div class="absolute inset-y-0 left-0 w-1/2 bg-gray-50 rounded-r-3xl" />
+                            <svg class="absolute top-8 left-1/2 -ml-3" width="404" height="392" fill="none" viewBox="0 0 404 392">
+                                <defs>
+                                    <pattern id="8228f071-bcee-4ec8-905a-2a059a2cc4fb" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
+                                        <rect x="0" y="0" width="4" height="4" class="text-gray-200" fill="currentColor" />
+                                    </pattern>
+                                </defs>
+                                <rect width="404" height="392" fill="url(#8228f071-bcee-4ec8-905a-2a059a2cc4fb)" />
+                            </svg>
+                        </div>
+                        <div class="mx-auto max-w-md px-4 sm:max-w-3xl sm:px-6 lg:max-w-7xl lg:px-8">
+                            <div class="relative rounded-2xl px-6 py-10 bg-gray-300 overflow-hidden shadow-xl sm:px-12 sm:py-20">
+                                <div class="relative md:grid md:grid-cols-2 md:gap-12">
+                                    <div>
+                                        <h2 class="text-3xl font-extrabold text-blue-presta4">
+                                            <span class="block">An Introduction to our Mobile Lending Platform</span>
+                                        </h2>
+                                        <p class="pt-6 mx-auto max-w-2xl text-lg text-gray-900">
+                                            The Presta Mobile Lending Platform gives Microfinance & Financial institutions, a people-first upgrade. But what exactly does that mean? Find out in under two animated minutes.
+                                        </p>
+                                    </div>
+                                    <div class="sm:max-w-lg sm:flex items-center justify-center">
+                                        <home-dialogue :context="'micro-finance'" :video-id="'0gvPT1SAGko'" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
                 <!-- platform -->
                 <div class="bg-white relative">
                     <div aria-hidden="true" class="hidden sm:block">
@@ -412,6 +480,7 @@ import TabsHome from '@/Components/TabsHome.vue';
 import NavigationHome from '@/Components/NavigationHome.vue';
 import Carousel from "@/Components/Carousel";
 import { ChevronDownIcon, CheckCircleIcon } from '@heroicons/vue/outline'
+import HomeDialogue from '@/Components/HomeDialogue.vue'
 
 const faqs = [
     {
@@ -572,6 +641,7 @@ export default {
         ChevronDownIcon,
         CheckCircleIcon,
         TabsHome,
+        HomeDialogue
     },
     setup() {
         return {
