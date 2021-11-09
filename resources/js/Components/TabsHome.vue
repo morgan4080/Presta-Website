@@ -75,7 +75,7 @@
                                         <p :class="{ 'text-gray-200' : microFinance, 'text-gray-500' : !microFinance }" class="mt-3 text-base" v-html="post.description"></p>
                                     </div>
 
-                                    <a v-if="post.featured_link" class="text-sm font-medium text-blue-presta4 py-3" :href="post.featured_link"> See more → </a>
+                                    <a v-if="post.featured_link" class="text-sm font-medium text-white py-3 underline" :href="post.featured_link"> See more → </a>
                                 </div>
 
                                 <div class="col-span-1 flex justify-center md:col-span-2 lg:col-span-1">

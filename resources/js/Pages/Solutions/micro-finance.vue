@@ -632,7 +632,7 @@ const tabs = {
                 '— Verification of the customers’ identity and compliance\n' +
                 '— Quick credit risk assessment with MPESA Statement Scoring\n' +
                 '— Automatic processing of documents/loan underwriting',
-            featured_link: null,
+            featured_link: '/solutions/digital-on-boarding',
             featured_image: '/images/loanorganisation.png',
             featured_points: null,
             created_at: new Date().toISOString()
