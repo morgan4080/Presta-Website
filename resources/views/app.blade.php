@@ -18,13 +18,13 @@
         <script src="{{ mix('js/app.js') }}" defer></script>
 
         <!-- Global site tag (gtag.js) - Google Analytics -->
-        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-206065181-1"></script>
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-YSNM3NH1JV"></script>
         <script>
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
 
-            gtag('config', 'UA-206065181-1');
+            gtag('config', 'G-YSNM3NH1JV');
         </script>
 
         <!-- Icons -->
