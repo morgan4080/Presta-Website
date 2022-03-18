@@ -42,9 +42,6 @@
             html {
                 scroll-behavior: smooth;
             }
-            html {
-                scroll-behavior: smooth;
-            }
 
             /* width */
             ::-webkit-scrollbar {
