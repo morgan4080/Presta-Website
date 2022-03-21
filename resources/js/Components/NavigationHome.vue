@@ -1,4 +1,3 @@
-<!-- This example requires Tailwind CSS v2.0+ -->
 <template>
     <div class="relative">
         <div class="absolute inset-0 z-10">
