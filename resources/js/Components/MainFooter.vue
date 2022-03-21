@@ -128,7 +128,7 @@ const navigation = {
     ],
     contact: [
         { name: 'support@presta.co.ke', href: '#' },
-        { name: '+254798217067', href: '#' },
+        { name: '+254711082442', href: '#' },
         { name: 'KATO Place, Longonot Road\n' + 'Upperhill, Nairobi. Kenya', href: '#' },
     ],
     company: [
