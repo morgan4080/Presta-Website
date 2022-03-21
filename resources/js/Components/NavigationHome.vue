@@ -7,7 +7,7 @@
                     <div class="flex items-center lg:w-0 lg:flex-1">
                         <a href="#" class="text-sm flex items-center font-medium text-white hover:text-gray-200 mr-8">
                             <phone-icon class="flex-none w-5 h-5 text-white mr-1" aria-hidden="true" />
-                            +254798217067
+                            +254711082442
                         </a>
                         <a href="#" class="text-sm flex items-center font-medium text-white hover:text-gray-200">
                             <mail-icon class="flex-none w-5 h-5 text-white mr-1" aria-hidden="true" />
