@@ -53,7 +53,7 @@
                                         <dt><span class="sr-only">Phone number</span></dt>
                                         <dd class="flex text-base text-blue-50">
                                             <PhoneIcon class="flex-shrink-0 w-6 h-6 text-blue-200" aria-hidden="true" />
-                                            <span class="ml-3">+254 798 217 067</span>
+                                            <span class="ml-3">+254 711 082 442</span>
                                         </dd>
                                         <dt><span class="sr-only">Email</span></dt>
                                         <dd class="flex text-base text-blue-50">
