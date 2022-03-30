@@ -4,6 +4,7 @@ use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\PostCategoryController;
 use App\Http\Controllers\PostSubCategoryController;
 use App\Http\Controllers\PostController;
+use App\Http\Controllers\GalleryController;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 use App\Models\PostCategory;
@@ -237,3 +238,12 @@ Route::put('/posts/{post}/restore', [PostController::class, 'restore'])->name('p
 
 
 // {postSubCategory:slug} PostSubCategory $postSubCategory
+
+
+
+//Gallery
+Route::get('/gallery/', [GalleryController::class, 'index'])
+    ->name('gallery.index');
+
+Route::get('/gallery/create', [GalleryController::class, 'create'])
+    ->name('gallery.create');

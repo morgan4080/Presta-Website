@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Redirect;
+use Inertia\Inertia;
 
 class GalleryController extends Controller
 {
@@ -27,29 +28,29 @@ class GalleryController extends Controller
             'user_id' => ['required'],
             'title' => ['required'],
             'description' => ['nullable'],
-            'metadata' => ['nullable'],
+            'date' => ['nullable'],
             'gallery_image' => ['nullable']
         ]);
 
         $created = Auth::user()
             ->gallery()
             ->create(
-                Request::all(['post_category_id', 'post_sub_category_id', 'title', 'sub_title', 'slug', 'excerpt', 'description', 'metadata'])
+                Request::all([ 'user_id','title','description','date'])
             );
 
-        if (Request::file('featured_image')):
+        if (Request::file('gallery_image')):
             $images = [];
-            foreach (Request::file('featured_image') as $image):
+            foreach (Request::file('gallery_image') as $image):
                 $images[] = $image;
             endforeach;
             foreach ($images as $im):
                 $created->addMedia($im)
                     ->withResponsiveImages()
-                    ->toMediaCollection('featured_image');
+                    ->toMediaCollection('gallery_image');
             endforeach;
         endif;
 
-        return Redirect::route('post-sub-category.edit', $created->post_sub_category_id)->with('success', 'Post created.');
+        return Redirect::route('post-sub-category.edit', $created->title)->with('success', 'Gallery created.');
     }
     public function show()
     {
