@@ -16,8 +16,6 @@ class CreateGalleriesTable extends Migration
         Schema::create('galleries', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('user_id')->index()->unique();
-            $table->unsignedBigInteger('album_id')->index()->unique();
-            $table->text('thumbNail');
             $table->text('title');
             $table->text('description');
             $table->text('date');
@@ -25,7 +23,6 @@ class CreateGalleriesTable extends Migration
 
             $table->foreign('user_id')->references('id')->on('users');
 
-            $table->foreign('album_id')->references('id')->on('albums');
         });
     }
 
