@@ -63,6 +63,13 @@ class User extends Authenticatable
         return $this->hasMany(Post::class);
     }
 
+    public function album() {
+        return $this->hasMany(Album::class);
+    }
+    public function gallery() {
+        return $this->hasMany(Gallery::class);
+    }
+
     public function postCategories()
     {
         return $this->hasMany(PostCategory::class);
