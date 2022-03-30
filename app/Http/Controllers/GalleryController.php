@@ -50,7 +50,7 @@ class GalleryController extends Controller
             endforeach;
         endif;
 
-        return Redirect::route('post-sub-category.edit', $created->title)->with('success', 'Gallery created.');
+        return Redirect::route('gallery.edit', $created->title)->with('success', 'Gallery created.');
     }
     public function show()
     {

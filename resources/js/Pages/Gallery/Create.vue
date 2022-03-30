@@ -3,7 +3,8 @@
 
     <NavigationHome :incomingNavClass="'bg-blue-presta4'" />
 
-    <form class="space-y-8 mx-auto divide-y mx-auto pt-32 px-4 max-w-7xl sm:px-6 lg:px-8 lg:pt-56 divide-gray-200">
+    <form @submit.prevent="form.post(route('gallery.store'))"
+        class="space-y-8 mx-auto divide-y mx-auto pt-32 px-4 max-w-7xl sm:px-6 lg:px-8 lg:pt-56 divide-gray-200">
         <div class="space-y-8 divide-y divide-gray-200 sm:space-y-5">
             <div>
                 <div>
@@ -60,8 +61,8 @@
             </div>
         <div class="pt-5">
             <div class="flex justify-end">
-                <button type="button" class="bg-white py-2 px-4 border border-gray-300 rounded-md shadow-sm text-sm font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">Cancel</button>
-                <button type="submit" class="ml-3 inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">Save</button>
+                <button @click="form.reset()" type="button" class="bg-white py-2 px-4 border border-gray-300 rounded-md shadow-sm text-sm font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">Cancel</button>
+                <loading-button :loading="form.processing"  type="submit" class="ml-3 inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-blue-presta4 hover:bg-blue-presta4 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">Save</loading-button>
             </div>
         </div>
     </form>
@@ -72,7 +73,8 @@
 <script>
 import NavigationHome from '@/Components/NavigationHome.vue';
 import MainFooter from '@/Components/MainFooter.vue';
-import { Head, Link,useForm } from '@inertiajs/inertia-vue3';
+import { Head, Link } from '@inertiajs/inertia-vue3';
+import { useForm } from '@inertiajs/inertia-vue3';
 
 export default {
     name: "index",
@@ -121,12 +123,14 @@ export default {
             document.querySelector('#dragBox').style.borderColor = '2px dashed var(--inputBorderColor)';
         }
         async function change(e) {
+            console.log('jjjjj',e)
             await readFileUrl(e.target);
         }
 
         async function readFileUrl(input) {
             if (input.files && input.files[0]) {
                 for (let i = 0; i < input.files.length; i++) {
+                    console.log('images',input.files[i])
                     form.gallery_image.push(input.files[i]);
                 }
             }

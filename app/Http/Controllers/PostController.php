@@ -54,7 +54,7 @@ class PostController extends Controller
             endforeach;
         endif;
 
-        return Redirect::route('gallery.edit', $created->post_sub_category_id)->with('success', 'Post created.');
+        return Redirect::route('post-sub-category.edit', $created->post_sub_category_id)->with('success', 'Post created.');
     }
 
     public function edit(Post $post)

@@ -247,3 +247,6 @@ Route::get('/gallery', [GalleryController::class, 'index'])
 
 Route::get('/gallery/create', [GalleryController::class, 'create'])
     ->name('gallery.create');
+
+Route::post('/gallery', [GalleryController::class, 'store'])
+    ->name('gallery.store');
