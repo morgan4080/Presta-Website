@@ -251,5 +251,5 @@ Route::get('/gallery/create', [GalleryController::class, 'create'])
 Route::post('/gallery', [GalleryController::class, 'store'])
     ->name('gallery.store');
 
-Route::post('/gallery/{gallery}', [GalleryController::class, 'show'])
+Route::get('/gallery/{gallery}', [GalleryController::class, 'show'])
     ->name('gallery.show');

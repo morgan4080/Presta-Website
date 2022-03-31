@@ -75,10 +75,23 @@ class GalleryController extends Controller
 
         return Redirect::route('gallery.index', $created->title)->with('success', 'Gallery created.');
     }
-    public function show()
-    {
-        return Inertia::render('Gallery/View', [
 
+    public function show(Gallery $gallery)
+    {
+        if ($gallery->getMedia('gallery_image')):
+            $gallery->getMedia('gallery_image')->each(function ($fileAdder) {
+                $this->gallery_image[] = $fileAdder->getUrl();
+            });
+        endif;
+        return Inertia::render('Gallery/View', [
+            'album' => [
+                'id' => $gallery->id,
+                'title' => $gallery->title,
+                'description' => $gallery->description,
+                'date' => $gallery->date,
+                'deleted_at' => $gallery->deleted_at,
+                'gallery_image' => $gallery->getMedia('gallery_image') ? $this->gallery_image : null,
+            ]
         ]);
     }
     }

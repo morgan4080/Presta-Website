@@ -1,40 +1,68 @@
-<template>
-    <!--
-  This example requires Tailwind CSS v2.0+
+    <template>
+        <Head title="Gallery Create | Presta Capital" />
 
-  This example requires some changes to your config:
-
-  ```
-  // tailwind.config.js
-  module.exports = {
-    // ...
-    plugins: [
-      // ...
-      require('@tailwindcss/aspect-ratio'),
-    ],
-  }
-  ```
--->
-    <ul role="list" class="grid grid-cols-2 gap-x-4 gap-y-8 sm:grid-cols-3 sm:gap-x-6 lg:grid-cols-4 xl:gap-x-8">
-        <li class="relative">
-            <div class="group block w-full aspect-w-10 aspect-h-7 rounded-lg bg-gray-100 focus-within:ring-2 focus-within:ring-offset-2 focus-within:ring-offset-gray-100 focus-within:ring-indigo-500 overflow-hidden">
-                <img src="https://images.unsplash.com/photo-1582053433976-25c00369fc93?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=512&q=80" alt="" class="object-cover pointer-events-none group-hover:opacity-75">
-                <button type="button" class="absolute inset-0 focus:outline-none">
-                    <span class="sr-only">View details for IMG_4985.HEIC</span>
-                </button>
+        <NavigationHome :incomingNavClass="'bg-blue-presta4'" />
+        <div class="bg-white mx-auto pt-32 px-4 max-w-7xl sm:px-6 lg:px-8 lg:pt-40">
+            <div class="mx-auto py-12 px-4 max-w-7xl sm:px-6 lg:px-8 lg:py-24">
+                <div class="space-y-12 lg:grid lg:grid-cols-3 lg:gap-8 lg:space-y-0">
+                    <div class="space-y-5 sm:space-y-4">
+                        <h2 class="text-3xl font-extrabold tracking-tight sm:text-4xl">{{ album.title }}</h2>
+                        <p class="text-indigo-600">{{ album.date }}</p>
+                        <p class="text-xl text-gray-500">{{
+                                album.description
+                            }}</p>
+                    </div>
+                    <div class="lg:col-span-2">
+                        <ul role="list" class="space-y-12 sm:grid sm:grid-cols-2 sm:gap-x-6 sm:gap-y-12 sm:space-y-0 lg:gap-x-8">
+                            <li v-for="(img,idx) in album.gallery_image" :key="idx">
+                                <div class="space-y-4">
+                                    <div class="aspect-w-3 aspect-h-2">
+                                        <img class="object-cover shadow-lg rounded-lg" :src="img" alt="" />
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
             </div>
-            <p class="mt-2 block text-sm font-medium text-gray-900 truncate pointer-events-none">IMG_4985.HEIC</p>
-            <p class="block text-sm font-medium text-gray-500 pointer-events-none">3.9 MB</p>
-        </li>
-
-        <!-- More files... -->
-    </ul>
+        </div>
+    <MainFooter/>
 
 </template>
 
 <script>
+import NavigationHome from '@/Components/NavigationHome.vue';
+import MainFooter from '@/Components/MainFooter.vue';
+import {Head} from "@inertiajs/inertia-vue3";
+const people = [
+    {
+        name: 'Emma Dorsey',
+        role: 'Senior Front-end Developer',
+        imageUrl:
+            'https://images.unsplash.com/photo-1505840717430-882ce147ef2d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80',
+        bio: 'Ultricies massa malesuada viverra cras lobortis. Tempor orci hac ligula dapibus mauris sit ut eu. Eget turpis urna maecenas cras. Nisl dictum.',
+        twitterUrl: '#',
+        linkedinUrl: '#',
+    },
+
+    // More people...
+]
+
 export default {
-    name: "View"
+    name: "View",
+    components:{
+        NavigationHome,
+        MainFooter
+    },
+    props:{
+        album : Array
+    },
+    setup({album}){
+        return{
+            people,
+        }
+    }
+
 }
 </script>
 
