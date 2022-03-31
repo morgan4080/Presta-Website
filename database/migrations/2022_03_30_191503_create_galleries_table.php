@@ -15,11 +15,12 @@ class CreateGalleriesTable extends Migration
     {
         Schema::create('galleries', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('user_id')->index()->unique();
+            $table->unsignedBigInteger('user_id')->index();
             $table->text('title');
             $table->text('description');
             $table->text('date');
             $table->timestamps();
+            $table->softDeletes();
 
             $table->foreign('user_id')->references('id')->on('users');
 

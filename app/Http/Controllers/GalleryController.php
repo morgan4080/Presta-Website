@@ -2,17 +2,43 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
+use App\Models\Gallery;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Redirect;
+use Illuminate\Support\Facades\Request;
 use Inertia\Inertia;
 
 class GalleryController extends Controller
 {
+    protected $gallery_image = null;
+
+
     public function index()
     {
-        return Inertia::render('Gallery/Index', [
+        $gallery = new Gallery;
+        $allGs = $gallery->get();
+        $arr = $allGs->all();
+        $dump = [];
+        foreach ($arr as $items) {
+//            dd($a->getMedia('gallery_image'));
+            if ($items->getMedia('gallery_image')):
+                $items->getMedia('gallery_image')->each(function ($fileAdder) {
+                    $this->gallery_image[] = $fileAdder->getUrl();
+                });
+            endif;
+            $dump[] = [
+                'id' => $items->id,
+                'title' => $items->title,
+                'date' => $items->description,
+                'description' => $items->description,
+                'gallery_image'=> $this->gallery_image
+            ];
+            $this->gallery_image = [];
+        }
 
+//        dd($this->gallery_image);
+        return Inertia::render('Gallery/Index', [
+            'gallery' =>collect($dump)
         ]);
     }
 
@@ -25,7 +51,6 @@ class GalleryController extends Controller
     public function store()
     {
         \Illuminate\Support\Facades\Request::validate([
-            'user_id' => ['required'],
             'title' => ['required'],
             'description' => ['nullable'],
             'date' => ['nullable'],
@@ -37,7 +62,6 @@ class GalleryController extends Controller
             ->create(
                 Request::all([ 'user_id','title','description','date'])
             );
-
         if (Request::file('gallery_image')):
             $images = [];
             foreach (Request::file('gallery_image') as $image):
@@ -50,7 +74,7 @@ class GalleryController extends Controller
             endforeach;
         endif;
 
-        return Redirect::route('gallery.edit', $created->title)->with('success', 'Gallery created.');
+        return Redirect::route('gallery.index', $created->title)->with('success', 'Gallery created.');
     }
     public function show()
     {
