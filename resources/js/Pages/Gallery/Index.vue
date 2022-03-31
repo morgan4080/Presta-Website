@@ -33,10 +33,11 @@
 
                     <ul role="list" class="space-y-12 lg:grid lg:grid-cols-2 lg:items-start lg:gap-x-8 lg:gap-y-12 lg:space-y-0">
                         <li v-for="album in gallery">
-                            <div class="space-y-4 sm:grid sm:grid-cols-3 sm:gap-6 sm:space-y-0 lg:gap-8">
-                                <div class="h-0 aspect-w-5 aspect-h-2 sm:aspect-w-3 sm:aspect-h-4">
-                                    <img class="object-cover h-10 w-10 shadow-lg rounded-lg" :src="album.gallery_image[0]" alt="">
-                                </div>
+                            <Link :href="route('gallery.show',[album.id])">
+                                <div class="space-y-4 sm:flex-col">
+                                    <div class="h-0 aspect-w-3 aspect-h-1 sm:aspect-w-3 sm:aspect-h-1">
+                                        <img class="object-cover shadow-lg rounded-lg" :src="album.gallery_image[0]" alt="">
+                                    </div>
                                 <div class="sm:col-span-2">
                                     <div class="space-y-4">
                                         <div class="text-lg leading-6 font-medium space-y-1">
@@ -51,6 +52,7 @@
                                     </div>
                                 </div>
                             </div>
+                            </Link>
                         </li>
                     </ul>
                 </div>

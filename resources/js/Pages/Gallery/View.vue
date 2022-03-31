@@ -4,16 +4,16 @@
         <NavigationHome :incomingNavClass="'bg-blue-presta4'" />
         <div class="bg-white mx-auto pt-32 px-4 max-w-7xl sm:px-6 lg:px-8 lg:pt-40">
             <div class="mx-auto py-12 px-4 max-w-7xl sm:px-6 lg:px-8 lg:py-24">
-                <div class="space-y-12 lg:grid lg:grid-cols-3 lg:gap-8 lg:space-y-0">
+                <div class="space-y-12 lg:flex-col  lg:space-y-0">
                     <div class="space-y-5 sm:space-y-4">
                         <h2 class="text-3xl font-extrabold tracking-tight sm:text-4xl">{{ album.title }}</h2>
                         <p class="text-indigo-600">{{ album.date }}</p>
-                        <p class="text-xl text-gray-500">{{
+                        <p class="text-xl text-gray-500 my-2">{{
                                 album.description
                             }}</p>
                     </div>
-                    <div class="lg:col-span-2">
-                        <ul role="list" class="space-y-12 sm:grid sm:grid-cols-2 sm:gap-x-6 sm:gap-y-12 sm:space-y-0 lg:gap-x-8">
+                    <div class="pt-6">
+                        <ul role="list" class="space-y-12 sm:grid sm:grid-cols-3 sm:gap-x-6 sm:gap-y-12 sm:space-y-0 lg:gap-x-8">
                             <li v-for="(img,idx) in album.gallery_image" :key="idx">
                                 <div class="space-y-4">
                                     <div class="aspect-w-3 aspect-h-2">
