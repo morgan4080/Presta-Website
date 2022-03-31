@@ -20,7 +20,6 @@ class GalleryController extends Controller
         $arr = $allGs->all();
         $dump = [];
         foreach ($arr as $items) {
-//            dd($a->getMedia('gallery_image'));
             if ($items->getMedia('gallery_image')):
                 $items->getMedia('gallery_image')->each(function ($fileAdder) {
                     $this->gallery_image[] = $fileAdder->getUrl();
@@ -29,7 +28,7 @@ class GalleryController extends Controller
             $dump[] = [
                 'id' => $items->id,
                 'title' => $items->title,
-                'date' => $items->description,
+                'date' => $items->date,
                 'description' => $items->description,
                 'gallery_image'=> $this->gallery_image
             ];
