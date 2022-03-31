@@ -46,7 +46,7 @@
                                         </div>
                                         <div class="text-lg">
                                             <p class="text-gray-500">{{
-                                                    album.description
+                                                    filterDescription(album.description)
                                                 }}</p>
                                         </div>
                                     </div>
@@ -133,6 +133,15 @@ export default {
     },
     setup({ gallery }) {
         console.log(gallery)
+        function filterDescription(value) {
+            if (value && value.length > 20) {
+                value = value.substring(0, 187) + '...';
+            }
+            return value
+        }
+        return{
+            filterDescription
+        }
     }
 }
 </script>
