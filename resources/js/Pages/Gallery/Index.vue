@@ -20,7 +20,15 @@
   ```
 -->
         <div class="bg-white relative">
-            <div class="mx-auto pt-32 px-4 max-w-7xl sm:px-6 lg:px-8 lg:pt-56">
+            <div class="mx-auto pt-32 px-4 max-w-7xl sm:px-6 lg:px-8 lg:pt-52">
+                <div class="py-1">
+                    <div class="flex justify-end">
+                        <Link href="/gallery/create">
+                         <button  type="button" class="bg-white py-2 px-4 border border-gray-300 rounded-md shadow-sm text-sm font-medium text-gray-700
+                        hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">create Gallery Album</button>
+                        </Link>
+                         </div>
+                </div>
                 <div class="space-y-12">
                     <h2 class="text-3xl font-extrabold tracking-tight sm:text-4xl">Gallery</h2>
 
