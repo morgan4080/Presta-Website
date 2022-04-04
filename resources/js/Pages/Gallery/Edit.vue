@@ -59,6 +59,17 @@
                 </div>
             </div>
             </div>
+        <div class="pt-6">
+            <ul role="list" class="space-y-12 sm:grid sm:grid-cols-5 sm:gap-x-6 sm:gap-y-12 sm:space-y-0 lg:gap-x-8">
+                <li v-for="(img,idx) in form.gallery_image" :key="idx">
+                    <div class="space-y-4">
+                        <div class="aspect-w-3 aspect-h-2">
+                            <img class="object-cover shadow-lg rounded-lg" :src="getBlobUrl(img)" alt="" />
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
         <div class="pt-5">
             <div class="flex justify-end">
                 <button @click="form.reset()" type="button" class="bg-white py-2 px-4 border border-gray-300 rounded-md shadow-sm text-sm font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">Cancel</button>
@@ -147,6 +158,10 @@ export default {
             await readFileUrl(e.target);
         }
 
+        const getBlobUrl = (x) => {
+            return URL.createObjectURL(x)
+        }
+
         async function readFileUrl(input) {
             if (input.files && input.files[0]) {
                 for (let i = 0; i < input.files.length; i++) {
@@ -166,6 +181,7 @@ export default {
             handleDragOver,
             handleDragEnter,
             doUpdate,
+            getBlobUrl,
             handleDragLeave,
         }
     }
