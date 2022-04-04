@@ -3,7 +3,7 @@
 
     <NavigationHome :incomingNavClass="'bg-blue-presta4'" />
 
-    <form @submit.prevent="form.post(route('gallery.store'))"
+    <form @submit.prevent="doUpdate"
         class="space-y-8 mx-auto divide-y mx-auto pt-32 px-4 max-w-7xl sm:px-6 lg:px-8 lg:pt-56 divide-gray-200">
         <div class="space-y-8 divide-y divide-gray-200 sm:space-y-5">
             <div>
@@ -107,7 +107,7 @@ export default {
             form.title = gallery.title
             form.description = gallery.description
             form.date = gallery.date
-            form.gallery_image = gallery.gallery_image
+            // form.gallery_image = gallery.gallery_image
 
         })
         function dropHandler(ev) {
@@ -154,12 +154,16 @@ export default {
                 }
             }
         }
+        function doUpdate() {
+            form.put(route('gallery.update', gallery.id))
+        }
         return{
             change,
             form,
             dropHandler,
             handleDragOver,
             handleDragEnter,
+            doUpdate,
             handleDragLeave,
         }
     }
