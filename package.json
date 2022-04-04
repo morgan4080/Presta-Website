@@ -2,7 +2,7 @@
     "name": "presta_website",
     "version": "1.0.0",
     "description": "Presta Capital Website",
-    "author": "morgan4080",
+    "author": "lennyjuma",
     "private": true,
     "scripts": {
         "dev": "npm run development",

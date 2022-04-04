@@ -4,6 +4,7 @@ use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\PostCategoryController;
 use App\Http\Controllers\PostSubCategoryController;
 use App\Http\Controllers\PostController;
+use App\Http\Controllers\GalleryController;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 use App\Models\PostCategory;
@@ -200,7 +201,7 @@ Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard
 
 // ******** PostCategory
 
-Route::get('/post-categories', [PostCategoryController::class, 'index'])->name('post-categories')->middleware(['auth:sanctum', 'verified']);
+Route::get('/post-categories', [PostCategoryController::class, 'index'])->name('post-categories');
 Route::get('/post-categories/{postCategory}/edit', [PostCategoryController::class, 'edit'])->name('post-category.edit')->middleware(['auth:sanctum', 'verified']);
 Route::get('/post-categories/create', [PostCategoryController::class, 'create'])->name('post-category.create')->middleware(['auth:sanctum', 'verified']);
 Route::post('/post-categories', [PostCategoryController::class, 'store'])->name('post-category.store')->middleware(['auth:sanctum', 'verified']);
@@ -231,3 +232,18 @@ Route::put('/posts/{post}/restore', [PostController::class, 'restore'])->name('p
 
 
 // {postSubCategory:slug} PostSubCategory $postSubCategory
+
+
+
+//Gallery
+Route::get('/gallery', [GalleryController::class, 'index'])
+    ->name('gallery.index');
+
+Route::get('/gallery/create', [GalleryController::class, 'create'])
+    ->name('gallery.create');
+
+Route::post('/gallery', [GalleryController::class, 'store'])
+    ->name('gallery.store');
+
+Route::get('/gallery/{gallery}', [GalleryController::class, 'show'])
+    ->name('gallery.show');
