@@ -3,8 +3,9 @@
 /public/storage
 /storage/*.key
 /vendor
-/public/css
-/public/js
+/public/css/*.css
+/public/js/*.js
+/public/js/*.js.LICENCE.txt
 .env
 .env.backup
 .phpunit.result.cache
