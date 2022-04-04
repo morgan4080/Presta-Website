@@ -118,12 +118,6 @@ class GalleryController extends Controller
     public function update(Gallery $gallery)
     {
         if (\Illuminate\Support\Facades\Request::file('gallery_image')) :
-            $mediaItems = $gallery->getMedia('gallery_image');
-           /* if (isset($mediaItems)) :
-                foreach ($mediaItems as $mediaItem):
-                    $mediaItem->delete();
-                endforeach;
-            endif;*/
             $images = [];
             foreach (Request::file('gallery_image') as $image):
                 $images[] = $image;
