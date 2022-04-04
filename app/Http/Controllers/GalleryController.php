@@ -113,4 +113,37 @@ class GalleryController extends Controller
             ]
         ]);
     }
+
+    public function update(Gallery $gallery)
+    {
+        $gallery->update(
+            Request::validate([
+                'title' => ['required'],
+                'date' => ['nullable'],
+                'description' => ['nullable'],
+            ])
+        );
+
+        if (Request::file('gallery_image')) :
+            $mediaItems = $gallery->getMedia('gallery_image');
+            if (isset($mediaItems)) :
+                foreach ($mediaItems as $mediaItem):
+                    $mediaItem->delete();
+                endforeach;
+            endif;
+            $images = [];
+            foreach (Request::file('gallery_image') as $image):
+                $images[] = $image;
+            endforeach;
+            foreach ($images as $im):
+                $gallery->addMedia($im)
+                    ->withResponsiveImages()
+                    ->toMediaCollection('gallery_image');
+            endforeach;
+        endif;
+
+        return Redirect::back()->with('success', 'Post updated.');
     }
+
+
+}
