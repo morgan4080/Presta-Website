@@ -114,15 +114,13 @@ class GalleryController extends Controller
         ]);
     }
 
+    /**
+     * @throws \Spatie\MediaLibrary\MediaCollections\Exceptions\FileDoesNotExist
+     * @throws \Spatie\MediaLibrary\MediaCollections\Exceptions\FileIsTooBig
+     */
     public function update(Gallery $gallery)
     {
-        $gallery->update(
-            Request::validate([
-                'title' => ['required'],
-                'date' => ['nullable'],
-                'description' => ['nullable'],
-            ])
-        );
+
 
         if (Request::file('gallery_image')) :
             $mediaItems = $gallery->getMedia('gallery_image');
@@ -131,18 +129,26 @@ class GalleryController extends Controller
                     $mediaItem->delete();
                 endforeach;
             endif;
+            dd($mediaItems);
             $images = [];
-            foreach (Request::file('gallery_image') as $image):
+            /*foreach (Request::file('gallery_image') as $image):
                 $images[] = $image;
             endforeach;
             foreach ($images as $im):
                 $gallery->addMedia($im)
                     ->withResponsiveImages()
                     ->toMediaCollection('gallery_image');
-            endforeach;
+            endforeach;*/
         endif;
+        $gallery->update(
+            Request::validate([
+                'title' => ['required'],
+                'date' => ['nullable'],
+                'description' => ['nullable'],
+            ])
+        );
 
-        return Redirect::back()->with('success', 'Post updated.');
+        return Redirect::back()->with('success', 'Gallery updated.');
     }
 
 

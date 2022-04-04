@@ -107,7 +107,7 @@ export default {
             form.title = gallery.title
             form.description = gallery.description
             form.date = gallery.date
-            // form.gallery_image = gallery.gallery_image
+            form.gallery_image = gallery.gallery_image
 
         })
         function dropHandler(ev) {
