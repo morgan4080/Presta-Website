@@ -114,31 +114,25 @@ class GalleryController extends Controller
         ]);
     }
 
-    /**
-     * @throws \Spatie\MediaLibrary\MediaCollections\Exceptions\FileDoesNotExist
-     * @throws \Spatie\MediaLibrary\MediaCollections\Exceptions\FileIsTooBig
-     */
+
     public function update(Gallery $gallery)
     {
-
-
-        if (Request::file('gallery_image')) :
+        if (\Illuminate\Support\Facades\Request::file('gallery_image')) :
             $mediaItems = $gallery->getMedia('gallery_image');
-            if (isset($mediaItems)) :
+           /* if (isset($mediaItems)) :
                 foreach ($mediaItems as $mediaItem):
                     $mediaItem->delete();
                 endforeach;
-            endif;
-            dd($mediaItems);
+            endif;*/
             $images = [];
-            /*foreach (Request::file('gallery_image') as $image):
+            foreach (Request::file('gallery_image') as $image):
                 $images[] = $image;
             endforeach;
             foreach ($images as $im):
                 $gallery->addMedia($im)
                     ->withResponsiveImages()
                     ->toMediaCollection('gallery_image');
-            endforeach;*/
+            endforeach;
         endif;
         $gallery->update(
             Request::validate([

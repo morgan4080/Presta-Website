@@ -100,6 +100,7 @@ export default {
             description:null,
             date:null,
             gallery_image:[],
+            _method: 'put',
         })
 
         onMounted(()=>{
@@ -107,7 +108,7 @@ export default {
             form.title = gallery.title
             form.description = gallery.description
             form.date = gallery.date
-            form.gallery_image = gallery.gallery_image
+            // form.gallery_image = gallery.gallery_image
 
         })
         function dropHandler(ev) {
@@ -155,7 +156,8 @@ export default {
             }
         }
         function doUpdate() {
-            form.put(route('gallery.update', gallery.id))
+            console.log(form.gallery_image)
+            form.post(route('gallery.update', gallery.id))
         }
         return{
             change,
