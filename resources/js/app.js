@@ -9,16 +9,20 @@ const store = createStore({
     state () {
         return {
             toggleCreate: false,
+            imgModalUrl:""
         }
     },
     getters: {
         getToggleCreate: (state) => state.toggleCreate,
+        getImgModalUrl: (state) => state.imgModalUrl,
 
     },
     mutations: {
-
         setToggleCreate: (state, payload = []) => {
             state.toggleCreate = payload
+        },
+        setImgModalUrl: (state, payload = []) => {
+            state.imgModalUrl = payload
         }
     },
     actions: {

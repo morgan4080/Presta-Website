@@ -19,10 +19,10 @@
                     </div>
                     <div class="pt-6">
                         <ul role="list" class="space-y-12 sm:grid sm:grid-cols-3 sm:gap-x-6 sm:gap-y-12 sm:space-y-0 lg:gap-x-8">
-                            <li @click="alert('modal')" v-for="(img,idx) in album.gallery_image" :key="idx">
+                            <li  v-for="(img,idx) in album.gallery_image" :key="idx">
                                 <div class="space-y-4">
                                     <div class="aspect-w-3 aspect-h-2">
-                                        <img class="object-cover shadow-lg rounded-lg" :src="img" alt="" />
+                                        <img @click="toggleModal($event)" class="object-cover shadow-lg rounded-lg" :src="img" alt="" />
                                     </div>
                                 </div>
                             </li>
@@ -31,6 +31,7 @@
                 </div>
             </div>
         </div>
+        <img-modal></img-modal>
     <MainFooter/>
 
 </template>
@@ -40,6 +41,9 @@ import NavigationHome from '@/Components/NavigationHome.vue';
 import imgModal from '@/Components/ImageModal';
 import MainFooter from '@/Components/MainFooter.vue';
 import {Link} from "@inertiajs/inertia-vue3";
+
+import {useStore} from "vuex";
+
 const people = [
     {
         name: 'Emma Dorsey',
@@ -66,8 +70,20 @@ export default {
         album : Array
     },
     setup({album}){
+        const store = useStore()
+
+        const toggleModal = (e)=>{
+            console.log('click event',e.target.src)
+            let payload = {
+                url:e.target.src,
+                togglemodal:true
+            }
+            store.commit('setToggleCreate',true)
+            store.commit('setImgModalUrl',payload.url)
+        }
         return{
             people,
+            toggleModal
         }
     }
 
