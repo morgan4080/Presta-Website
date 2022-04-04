@@ -98,8 +98,6 @@ export default {
         onMounted(()=>{
             console.log('gallery',gallery)
         })
-
-
         const form = useForm({
             title:null,
             description:null,
@@ -137,6 +135,7 @@ export default {
             ev.preventDefault();
             document.querySelector('#dragBox').style.borderColor = '2px dashed var(--inputBorderColor)';
         }
+
         async function change(e) {
             await readFileUrl(e.target);
         }

@@ -35,8 +35,8 @@
                         <li v-for="album in gallery">
                             <Link :href="route('gallery.show',[album.id])">
                                 <div class="space-y-4 sm:flex-col">
-                                    <div class="h-0 aspect-w-3 aspect-h-1 sm:aspect-w-3 sm:aspect-h-1">
-                                        <img class="object-cover shadow-lg rounded-lg" :src="album.gallery_image[0]" alt="">
+                                    <div class="h-0 aspect-w-3 aspect-h-2 sm:aspect-w-2 sm:aspect-h-1 relative">
+                                        <img class="object-cover shadow-lg rounded-lg hover:opacity-30" :src="album.gallery_image[0]" alt="">
                                     </div>
                                 <div class="sm:col-span-2">
                                     <div class="space-y-4">
