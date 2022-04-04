@@ -19,7 +19,7 @@
                     </div>
                     <div class="pt-6">
                         <ul role="list" class="space-y-12 sm:grid sm:grid-cols-3 sm:gap-x-6 sm:gap-y-12 sm:space-y-0 lg:gap-x-8">
-                            <li v-for="(img,idx) in album.gallery_image" :key="idx">
+                            <li @click="alert('modal')" v-for="(img,idx) in album.gallery_image" :key="idx">
                                 <div class="space-y-4">
                                     <div class="aspect-w-3 aspect-h-2">
                                         <img class="object-cover shadow-lg rounded-lg" :src="img" alt="" />
@@ -37,6 +37,7 @@
 
 <script>
 import NavigationHome from '@/Components/NavigationHome.vue';
+import imgModal from '@/Components/ImageModal';
 import MainFooter from '@/Components/MainFooter.vue';
 import {Link} from "@inertiajs/inertia-vue3";
 const people = [
@@ -59,6 +60,7 @@ export default {
         NavigationHome,
         MainFooter,
         Link,
+        imgModal,
     },
     props:{
         album : Array

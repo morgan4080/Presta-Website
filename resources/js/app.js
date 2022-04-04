@@ -8,13 +8,22 @@ import { createStore } from 'vuex'
 const store = createStore({
     state () {
         return {
-
+            toggleCreate: false,
         }
+    },
+    getters: {
+        getToggleCreate: (state) => state.toggleCreate,
+
     },
     mutations: {
 
+        setToggleCreate: (state, payload = []) => {
+            state.toggleCreate = payload
+        }
     },
     actions: {
+
+
 
     }
 })
