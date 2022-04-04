@@ -67,6 +67,17 @@
             </div>
         </div>
     </form>
+    <div class="pt-6 max-w-7xl">
+        <ul role="list" class="space-y-12 sm:grid sm:grid-cols-5 sm:gap-x-6 sm:gap-y-12 sm:space-y-0 lg:gap-x-8">
+            <li v-for="(img,idx) in form.gallery_image" :key="idx">
+                <div class="space-y-4">
+                    <div class="aspect-w-3 aspect-h-2">
+                        <img class="object-cover shadow-lg rounded-lg" :src="getBlobUrl(img)" alt="" />
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
     <MainFooter/>
 
 </template>
@@ -104,6 +115,9 @@ export default {
             date:null,
             gallery_image:[],
         })
+        const getBlobUrl = (x) => {
+            return URL.createObjectURL(x)
+        }
         function dropHandler(ev) {
             ev.preventDefault();
             if (ev.dataTransfer.items) {
@@ -155,6 +169,7 @@ export default {
             handleDragOver,
             handleDragEnter,
             handleDragLeave,
+            getBlobUrl,
         }
     }
 }
