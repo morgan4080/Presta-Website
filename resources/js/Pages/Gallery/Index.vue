@@ -35,23 +35,28 @@
                         <li v-for="album in gallery">
                             <Link :href="route('gallery.show',[album.id])">
                                 <div class="space-y-4 sm:flex-col">
-                                    <div class="h-0 aspect-w-3 aspect-h-2 sm:aspect-w-2 sm:aspect-h-1 relative">
+                                    <div class="relative aspect-w-3 aspect-h-2">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="absolute icon-color top-0 p-2 rounded hover:bg-blue-800 h-16 w-16" viewBox="0 0 20 20" fill="currentColor">
+                                            <path fill-rule="evenodd" d="M4 3a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V5a2 2 0 00-2-2H4zm12 12H4l4-8 3 6 2-4 3 6z" clip-rule="evenodd" />
+                                        </svg>
                                         <img class="object-cover shadow-lg rounded-lg hover:opacity-30" :src="album.gallery_image[0]" alt="">
                                     </div>
-                                <div class="sm:col-span-2">
-                                    <div class="space-y-4">
-                                        <div class="text-lg leading-6 font-medium space-y-1">
-                                            <h3>{{ album.title }}</h3>
-                                            <p class="text-indigo-600">{{ album.date }}</p>
-                                        </div>
-                                        <div class="text-lg">
-                                            <p class="text-gray-500">{{
-                                                    filterDescription(album.description)
-                                                }}</p>
+                                    <div class="sm:col-span-2">
+                                        <div class="space-y-4">
+                                            <div class="text-lg leading-6 font-medium space-y-1">
+                                                <h3>{{ album.title }}</h3>
+                                                <p class="text-indigo-600">{{ album.date }}</p>
+                                            </div>
+                                            <div class="text-lg">
+                                                <p class="text-gray-500">
+                                                    {{
+                                                        filterDescription(album.description)
+                                                    }}
+                                                </p>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
                             </Link>
                         </li>
                     </ul>
@@ -94,5 +99,7 @@ export default {
 </script>
 
 <style scoped>
-
+ .icon-color{
+     background-color: #479aab;
+ }
 </style>
