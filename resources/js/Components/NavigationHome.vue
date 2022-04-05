@@ -209,6 +209,7 @@ const resources = [
     { name: 'About Presta', description: 'Learn how to maximize our platform to get the most out of it.', href: route('about') },
     { name: 'Blogs', description: 'Understand how we work to streamline credit services.', href: route('blogs.index') },
     { name: 'Gallery', description: 'Understand how we work to streamline credit services.', href: route('gallery.index') },
+    { name: 'CaseStudy', description: 'Understand how we work to streamline credit services.', href: route('case-study.index') },
     { name: 'Videos', description: 'Understand how we work to deliver platform specific credit solutions.', href: '/blogs/videos' },
     {
         name: 'Help Center',
