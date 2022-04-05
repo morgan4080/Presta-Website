@@ -1,6 +1,5 @@
 <!-- This example requires Tailwind CSS v2.0+ -->
 <template>
-    <img class="object-cover shadow-lg rounded-lg" :src="getImgModalUrl" alt="">
     <TransitionRoot as="template" :show="getToggleCreate" >
         <Dialog as="div" class="fixed z-10 w-full h-full inset-0 overflow-y-auto" @close="toggleModal(false)">
             <div class="flex items-end justify-center min-h-screen pt-4 px-4 pb-20 text-center sm:block sm:p-0">
