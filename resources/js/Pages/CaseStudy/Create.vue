@@ -17,7 +17,7 @@
                         <label for="title" class="block text-sm font-medium text-gray-700 sm:mt-px sm:pt-2"> Title </label>
                         <div class="mt-1 sm:mt-0 sm:col-span-2">
                             <div class="max-w-lg flex rounded-md shadow-sm">
-                                <input v-model="form.title" type="text" name="title" id="title" autocomplete="title" class="flex-1 block w-full focus:ring-indigo-500 focus:border-indigo-500 min-w-0 rounded-none rounded-r-md sm:text-sm border-gray-300">
+                                <input v-model="form.title" type="text" name="title" id="title" autocomplete="title" class="flex-1 block w-full focus:ring-indigo-500 focus:border-indigo-500 min-w-0  rounded-md sm:text-sm border-gray-300">
                             </div>
                         </div>
                     </div>
@@ -25,7 +25,7 @@
                         <label for="title" class="block text-sm font-medium text-gray-700 sm:mt-px sm:pt-2"> client </label>
                         <div class="mt-1 sm:mt-0 sm:col-span-2">
                             <div class="max-w-lg flex rounded-md shadow-sm">
-                                <input v-model="form.client" type="text" name="client" id="client" autocomplete="client" class="flex-1 block w-full focus:ring-indigo-500 focus:border-indigo-500 min-w-0 rounded-none rounded-r-md sm:text-sm border-gray-300">
+                                <input v-model="form.client" type="text" name="client" id="client" autocomplete="client" class="flex-1 block w-full focus:ring-indigo-500 focus:border-indigo-500 min-w-0  rounded-md sm:text-sm border-gray-300">
                             </div>
                         </div>
                     </div>

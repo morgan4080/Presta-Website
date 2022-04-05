@@ -49,7 +49,7 @@ class CaseStudyController extends Controller
             endforeach;
         endif;
 
-        return Redirect::route('gallery.index', $created->title)->with('success', 'Gallery created.');
+        return Redirect::route('gallery.index', $created->title)->with('success', 'Case Study created.');
     }
     public function show()
     {

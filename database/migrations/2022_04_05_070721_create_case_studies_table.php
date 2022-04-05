@@ -19,11 +19,10 @@ class CreateCaseStudiesTable extends Migration
             $table->text('title');
             $table->text('client');
             $table->text('category');
-            $table->text('description');
+            $table->longText('description');
             $table->text('date');
             $table->timestamps();
             $table->softDeletes();
-            $table->timestamps();
 
             $table->foreign('user_id')->references('id')->on('users');
 
