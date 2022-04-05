@@ -3,7 +3,7 @@
 
     <NavigationHome :incomingNavClass="'bg-blue-presta4'" />
 
-    <form @submit.prevent="form.post(route('gallery.store'))"
+    <form @submit.prevent="doPost"
           class="space-y-8 mx-auto divide-y mx-auto pt-32 px-4 max-w-7xl sm:px-6 lg:px-8 lg:pt-56 divide-gray-200">
         <div class="space-y-8 divide-y divide-gray-200 sm:space-y-5">
             <div>
@@ -45,7 +45,7 @@
                     <div class="sm:grid sm:grid-cols-3 sm:gap-4 sm:items-start sm:border-t sm:border-gray-200 sm:pt-5">
                         <label class="block text-sm font-medium text-gray-700 sm:mt-px sm:pt-2"> Description </label>
                         <div class="mt-1 sm:mt-0 sm:col-span-2">
-                            <textarea-input v-model="form.description" :error="form.errors.description" :cms="true" label="Description" />
+                            <textarea-input v-model="form.description" :error="form.errors.description" :cms="true" />
                         </div>
                     </div>
                     <div class="sm:grid sm:grid-cols-3 sm:gap-4 sm:items-start sm:border-t sm:border-gray-200 sm:pt-5">
@@ -176,6 +176,10 @@ export default {
         async function change(e) {
             await readFileUrl(e.target);
         }
+        function doPost() {
+            form.category = getCategory
+            form.post(route('case-study.store'))
+        }
 
         async function readFileUrl(input) {
             if (input.files && input.files[0]) {
@@ -189,6 +193,7 @@ export default {
             change,
             form,
             dropHandler,
+            doPost,
             getCategory,
             handleDragOver,
             handleDragEnter,

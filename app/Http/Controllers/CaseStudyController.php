@@ -29,7 +29,7 @@ class CaseStudyController extends Controller
             'category' => ['required'],
             'description' => ['nullable'],
             'date' => ['nullable'],
-            'gallery_image' => ['nullable']
+            'caseStudy_image' => ['nullable']
         ]);
 
         $created = Auth::user()
@@ -37,15 +37,15 @@ class CaseStudyController extends Controller
             ->create(
                 Request::all([ 'user_id','category','title','client','description','date'])
             );
-        if (Request::file('gallery_image')):
+        if (Request::file('caseStudy_image')):
             $images = [];
-            foreach (Request::file('gallery_image') as $image):
+            foreach (Request::file('caseStudy_image') as $image):
                 $images[] = $image;
             endforeach;
             foreach ($images as $im):
                 $created->addMedia($im)
                     ->withResponsiveImages()
-                    ->toMediaCollection('gallery_image');
+                    ->toMediaCollection('caseStudy_image');
             endforeach;
         endif;
 
