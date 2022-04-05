@@ -15,6 +15,14 @@ class CreateCaseStudiesTable extends Migration
     {
         Schema::create('case_studies', function (Blueprint $table) {
             $table->id();
+            $table->unsignedBigInteger('user_id')->index();
+            $table->text('title');
+            $table->text('client');
+            $table->text('category');
+            $table->text('description');
+            $table->text('date');
+            $table->timestamps();
+            $table->softDeletes();
             $table->timestamps();
         });
     }
