@@ -9,12 +9,14 @@ const store = createStore({
     state () {
         return {
             toggleCreate: false,
-            imgModalUrl:""
+            imgModalUrl:"",
+            category:"",
         }
     },
     getters: {
         getToggleCreate: (state) => state.toggleCreate,
         getImgModalUrl: (state) => state.imgModalUrl,
+        getCategory: (state) => state.category,
 
     },
     mutations: {
@@ -23,6 +25,9 @@ const store = createStore({
         },
         setImgModalUrl: (state, payload = []) => {
             state.imgModalUrl = payload
+        },
+        setCategory: (state, payload = []) => {
+            state.category = payload
         }
     },
     actions: {

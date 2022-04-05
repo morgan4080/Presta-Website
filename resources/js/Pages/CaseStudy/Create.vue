@@ -31,11 +31,7 @@
                     </div>
                     <div class="sm:grid sm:grid-cols-3 sm:gap-4 sm:items-start sm:border-t sm:border-gray-200 sm:pt-5">
                         <label for="title" class="block text-sm font-medium text-gray-700 sm:mt-px sm:pt-2"> Category </label>
-                        <div class="mt-1 sm:mt-0 sm:col-span-2">
-                            <div class="max-w-lg flex rounded-md shadow-sm">
-                                <input v-model="form.category" type="text" name="Category" id="Category" autocomplete="Category" class="flex-1 block w-full focus:ring-indigo-500 focus:border-indigo-500 min-w-0 rounded-none rounded-r-md sm:text-sm border-gray-300">
-                            </div>
-                        </div>
+                        <drop @caseStudydrop="listenForDrop($emit)"></drop>
                     </div>
                     <div class="sm:grid sm:grid-cols-3 sm:gap-4 sm:items-start sm:border-t sm:border-gray-200 sm:pt-5">
                         <label for="date" class="block text-sm font-medium text-gray-700 sm:mt-px sm:pt-2"> Date </label>
@@ -103,8 +99,9 @@ import NavigationHome from '@/Components/NavigationHome.vue';
 import MainFooter from '@/Components/MainFooter.vue';
 import loadingButton from "@/Shared/LoadingButton";
 import TextareaInput from "@/Shared/TextareaInput"
+import drop from "@/Shared/DropCaseStudy"
 import TextInput from '@/Shared/TextInput'
-
+import { mapState, mapGetters, mapMutations, mapActions } from '../../Modules/map-state'
 
 import { useForm } from '@inertiajs/inertia-vue3';
 import { onMounted } from "vue"
@@ -115,6 +112,7 @@ export default {
         NavigationHome,
         TextareaInput,
         TextInput,
+        drop,
         MainFooter,
         loadingButton,
     },
@@ -125,6 +123,10 @@ export default {
         onMounted(()=>{
             console.log('caseStudy',caseStudy)
         })
+
+        const { getCategory } = mapGetters()
+
+
         const form = useForm({
             title:null,
             client:null,
@@ -135,6 +137,9 @@ export default {
         })
         const getBlobUrl = (x) => {
             return URL.createObjectURL(x)
+        }
+        const listenForDrop = (x) => {
+            console.log('emited this',x)
         }
         function dropHandler(ev) {
             ev.preventDefault();
@@ -184,10 +189,12 @@ export default {
             change,
             form,
             dropHandler,
+            getCategory,
             handleDragOver,
             handleDragEnter,
             handleDragLeave,
             getBlobUrl,
+            listenForDrop,
         }
     }
 }
