@@ -113,7 +113,7 @@ Route::get('/blogs/{subCategory_slug}', function ($subCategory_slug) {
     $blogsBuilder =  $connector1 ? $connector1[0] : null;
     $postProcessor = new PostProcessor;
 
-    $postSubCategory = $blogsBuilder["postSubCategories"]->all();
+    $postSubCategory = $blogsBuilder ? $blogsBuilder["postSubCategories"]->all() : [];
 
     if ($blogsBuilder && count($postSubCategory) > 0):
         $subCategory_articles = $postProcessor->related_articles($postSubCategory[0]["posts"]->all(), $postSubCategory[0]);
