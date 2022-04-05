@@ -26,6 +26,13 @@
                 </a>
             </nav>
         </div>
+        <div class="py-1">
+        <div class="flex justify-end">
+            <Link href="/case-study/create">
+                <button  type="button" class="ml-3 inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-blue-presta4 hover:bg-blue-presta4 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">create Gallery Album</button>
+            </Link>
+        </div>
+    </div>
         <div class="mx-auto py-12 px-4 max-w-7xl sm:px-6 lg:px-8 lg:py-24">
             <div class="space-y-12">
                 <ul role="list" class="space-y-12 sm:grid sm:grid-cols-2 sm:gap-x-6 sm:gap-y-12 sm:space-y-0 lg:grid-cols-2 lg:gap-x-8">
