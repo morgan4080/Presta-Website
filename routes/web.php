@@ -5,6 +5,7 @@ use App\Http\Controllers\PostCategoryController;
 use App\Http\Controllers\PostSubCategoryController;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\GalleryController;
+use App\Http\Controllers\CaseStudyController;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 use App\Models\PostCategory;
@@ -253,3 +254,22 @@ Route::get('/gallery/edit/{gallery}', [GalleryController::class, 'edit'])
 
 Route::get('/gallery/{gallery}', [GalleryController::class, 'show'])
     ->name('gallery.show');
+
+//Casestudy
+Route::get('/case-study', [CaseStudyController::class, 'index'])
+    ->name('case-study.index');
+
+Route::get('/case-study/create', [CaseStudyController::class, 'create'])
+    ->name('case-study.create');
+
+Route::post('/case-study', [CaseStudyController::class, 'store'])
+    ->name('case-study.store');
+
+Route::put('/case-study/{casestudy}', [CaseStudyController::class, 'update'])
+    ->name('case-study.update');
+
+Route::get('/case-study/edit/{casestudy}', [CaseStudyController::class, 'edit'])
+    ->name('case-study.edit');
+
+Route::get('/case-study/{casestudy}', [CaseStudyController::class, 'show'])
+    ->name('case-study.show');
