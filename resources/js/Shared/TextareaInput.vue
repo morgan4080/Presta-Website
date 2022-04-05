@@ -74,8 +74,8 @@
 
 <script>
 import {getCurrentInstance} from 'vue'
-import { useEditor, EditorContent } from '@tiptap/vue-3'
-import StarterKit from '@tiptap/starter-kit'
+import { useEditor,Editor, EditorContent } from '@tiptap/vue-3'
+import {defaultExtensions} from '@tiptap/starter-kit'
 import Button from "@/Jetstream/Button";
 export default {
   emits: ['update:modelValue'],
@@ -116,9 +116,13 @@ export default {
   setup({ modelValue }, { emit }) {
       const editor = useEditor({
           content: modelValue,
-          extensions: [
-              StarterKit,
-          ],
+          extensions: defaultExtensions({blockquote: undefined, bold: undefined, bulletList: undefined, code: undefined, codeBlock: undefined, dropursor: undefined, hardBreak: undefined, heading: undefined, history: undefined, horizontalRule: undefined, italic: undefined, listItem: undefined, orderedList: undefined, paragraph: undefined, strike: undefined}),
+          editorProps: {
+              attributes: {
+                  class:
+                      "prose prose-sm sm:prose lg:prose-lg xl:prose-2xl m-5 focus:outline-none"
+              }
+          },
           onUpdate({ editor }) {
               console.log("updating")
               emit('update:modelValue', editor.getHTML())
@@ -148,4 +152,5 @@ export default {
     .ProseMirror {
         border: 0.5px solid #8080801f !important;
     }
+
 </style>

@@ -47,9 +47,9 @@
                         </div>
                     </div>
                     <div class="sm:grid sm:grid-cols-3 sm:gap-4 sm:items-start sm:border-t sm:border-gray-200 sm:pt-5">
-                        <label for="about" class="block text-sm font-medium text-gray-700 sm:mt-px sm:pt-2"> Description </label>
+                        <label class="block text-sm font-medium text-gray-700 sm:mt-px sm:pt-2"> Description </label>
                         <div class="mt-1 sm:mt-0 sm:col-span-2">
-                            <textarea v-model="form.description" id="about" name="about" rows="3" class="max-w-lg shadow-sm block w-full focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm border border-gray-300 rounded-md"></textarea>
+                            <textarea-input v-model="form.description" :error="form.errors.description" :cms="true" label="Description" />
                         </div>
                     </div>
                     <div class="sm:grid sm:grid-cols-3 sm:gap-4 sm:items-start sm:border-t sm:border-gray-200 sm:pt-5">
@@ -107,7 +107,7 @@ import TextInput from '@/Shared/TextInput'
 
 
 import { useForm } from '@inertiajs/inertia-vue3';
-import { onMounted } from "vue";
+import { onMounted } from "vue"
 
 export default {
     name: "index",
@@ -116,7 +116,7 @@ export default {
         TextareaInput,
         TextInput,
         MainFooter,
-        loadingButton
+        loadingButton,
     },
     props:{
         caseStudy: Array
@@ -192,3 +192,62 @@ export default {
     }
 }
 </script>
+<style scoped lang="scss">
+/* Basic editor styles */
+.ProseMirror {
+    > * + * {
+        margin-top: 0.75em;
+    }
+
+    ul,
+    ol {
+        padding: 0 1rem;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        line-height: 1.1;
+    }
+
+    code {
+        background-color: rgba(#616161, 0.1);
+        color: #616161;
+    }
+
+    pre {
+        background: #0D0D0D;
+        color: #FFF;
+        font-family: 'JetBrainsMono', monospace;
+        padding: 0.75rem 1rem;
+        border-radius: 0.5rem;
+
+        code {
+            color: inherit;
+            padding: 0;
+            background: none;
+            font-size: 0.8rem;
+        }
+    }
+
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    blockquote {
+        padding-left: 1rem;
+        border-left: 2px solid rgba(#0D0D0D, 0.1);
+    }
+
+    hr {
+        border: none;
+        border-top: 2px solid rgba(#0D0D0D, 0.1);
+        margin: 2rem 0;
+    }
+}
+
+</style>

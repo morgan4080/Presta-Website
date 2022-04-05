@@ -21,6 +21,36 @@ class CaseStudyController extends Controller
 
         ]);
     }
+    public function store()
+    {
+        \Illuminate\Support\Facades\Request::validate([
+            'title' => ['required'],
+            'client' => ['required'],
+            'category' => ['required'],
+            'description' => ['nullable'],
+            'date' => ['nullable'],
+            'gallery_image' => ['nullable']
+        ]);
+
+        $created = Auth::user()
+            ->caseStudy()
+            ->create(
+                Request::all([ 'user_id','category','title','client','description','date'])
+            );
+        if (Request::file('gallery_image')):
+            $images = [];
+            foreach (Request::file('gallery_image') as $image):
+                $images[] = $image;
+            endforeach;
+            foreach ($images as $im):
+                $created->addMedia($im)
+                    ->withResponsiveImages()
+                    ->toMediaCollection('gallery_image');
+            endforeach;
+        endif;
+
+        return Redirect::route('gallery.index', $created->title)->with('success', 'Gallery created.');
+    }
     public function show()
     {
         return Inertia::render('CaseStudy/View', [
