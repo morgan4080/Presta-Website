@@ -24,6 +24,9 @@ class CreateCaseStudiesTable extends Migration
             $table->timestamps();
             $table->softDeletes();
             $table->timestamps();
+
+            $table->foreign('user_id')->references('id')->on('users');
+
         });
     }
 
