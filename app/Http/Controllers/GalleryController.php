@@ -47,6 +47,25 @@ class GalleryController extends Controller
 
         ]);
     }
+
+    public function edit(Gallery $gallery)
+    {
+        if ($gallery->getMedia('gallery_image')):
+            $gallery->getMedia('gallery_image')->each(function ($fileAdder) {
+                $this->gallery_image[] = $fileAdder->getUrl();
+            });
+        endif;
+        return Inertia::render('Gallery/Edit', [
+            'gallery' => [
+                'id' => $gallery->id,
+                'title' => $gallery->title,
+                'description' => $gallery->description,
+                'date' => $gallery->date,
+                'deleted_at' => $gallery->deleted_at,
+                'gallery_image' => $gallery->getMedia('gallery_image') ? $this->gallery_image : null,
+            ]
+        ]);
+    }
     public function store()
     {
         \Illuminate\Support\Facades\Request::validate([
@@ -94,4 +113,31 @@ class GalleryController extends Controller
             ]
         ]);
     }
+
+
+    public function update(Gallery $gallery)
+    {
+        if (\Illuminate\Support\Facades\Request::file('gallery_image')) :
+            $images = [];
+            foreach (Request::file('gallery_image') as $image):
+                $images[] = $image;
+            endforeach;
+            foreach ($images as $im):
+                $gallery->addMedia($im)
+                    ->withResponsiveImages()
+                    ->toMediaCollection('gallery_image');
+            endforeach;
+        endif;
+        $gallery->update(
+            Request::validate([
+                'title' => ['required'],
+                'date' => ['nullable'],
+                'description' => ['nullable'],
+            ])
+        );
+
+        return Redirect::back()->with('success', 'Gallery updated.');
     }
+
+
+}

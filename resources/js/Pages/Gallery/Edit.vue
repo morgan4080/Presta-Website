@@ -3,7 +3,7 @@
 
     <NavigationHome :incomingNavClass="'bg-blue-presta4'" />
 
-    <form @submit.prevent="form.post(route('gallery.store'))"
+    <form @submit.prevent="doUpdate"
         class="space-y-8 mx-auto divide-y mx-auto pt-32 px-4 max-w-7xl sm:px-6 lg:px-8 lg:pt-56 divide-gray-200">
         <div class="space-y-8 divide-y divide-gray-200 sm:space-y-5">
             <div>
@@ -59,25 +59,25 @@
                 </div>
             </div>
             </div>
+        <div class="pt-6">
+            <ul role="list" class="space-y-12 sm:grid sm:grid-cols-5 sm:gap-x-6 sm:gap-y-12 sm:space-y-0 lg:gap-x-8">
+                <li v-for="(img,idx) in form.gallery_image" :key="idx">
+                    <div class="space-y-4">
+                        <div class="aspect-w-3 aspect-h-2">
+                            <img class="object-cover shadow-lg rounded-lg" :src="getBlobUrl(img)" alt="" />
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
         <div class="pt-5">
             <div class="flex justify-end">
                 <button @click="form.reset()" type="button" class="bg-white py-2 px-4 border border-gray-300 rounded-md shadow-sm text-sm font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">Cancel</button>
                 <loading-button :loading="form.processing"  type="submit"
-                                class="ml-3 inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-blue-presta4 hover:bg-blue-presta4 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">Save</loading-button>
+                                class="ml-3 inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-blue-presta4 hover:bg-blue-presta4 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">Update</loading-button>
             </div>
         </div>
     </form>
-    <div class="pt-6 max-w-7xl">
-        <ul role="list" class="space-y-12 sm:grid sm:grid-cols-5 sm:gap-x-6 sm:gap-y-12 sm:space-y-0 lg:gap-x-8">
-            <li v-for="(img,idx) in form.gallery_image" :key="idx">
-                <div class="space-y-4">
-                    <div class="aspect-w-3 aspect-h-2">
-                        <img class="object-cover shadow-lg rounded-lg" :src="getBlobUrl(img)" alt="" />
-                    </div>
-                </div>
-            </li>
-        </ul>
-    </div>
     <MainFooter/>
 
 </template>
@@ -106,18 +106,22 @@ export default {
         gallery: Array
     },
     setup({gallery}){
-        onMounted(()=>{
-            console.log('gallery',gallery)
-        })
-        const form = useForm({
+        let form = useForm({
             title:null,
             description:null,
             date:null,
             gallery_image:[],
+            _method: 'put',
         })
-        const getBlobUrl = (x) => {
-            return URL.createObjectURL(x)
-        }
+
+        onMounted(()=>{
+            console.log('gallery',gallery)
+            form.title = gallery.title
+            form.description = gallery.description
+            form.date = gallery.date
+            // form.gallery_image = gallery.gallery_image
+
+        })
         function dropHandler(ev) {
             ev.preventDefault();
             if (ev.dataTransfer.items) {
@@ -154,6 +158,10 @@ export default {
             await readFileUrl(e.target);
         }
 
+        const getBlobUrl = (x) => {
+            return URL.createObjectURL(x)
+        }
+
         async function readFileUrl(input) {
             if (input.files && input.files[0]) {
                 for (let i = 0; i < input.files.length; i++) {
@@ -162,14 +170,19 @@ export default {
                 }
             }
         }
+        function doUpdate() {
+            console.log(form.gallery_image)
+            form.post(route('gallery.update', gallery.id))
+        }
         return{
             change,
             form,
             dropHandler,
             handleDragOver,
             handleDragEnter,
-            handleDragLeave,
+            doUpdate,
             getBlobUrl,
+            handleDragLeave,
         }
     }
 }

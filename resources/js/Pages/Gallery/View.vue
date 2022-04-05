@@ -6,7 +6,12 @@
             <div class="mx-auto py-12 px-4 max-w-7xl sm:px-6 lg:px-8 lg:py-24">
                 <div class="space-y-12 lg:flex-col  lg:space-y-0">
                     <div class="space-y-5 sm:space-y-4">
-                        <h2 class="text-3xl font-extrabold tracking-tight sm:text-4xl">{{ album.title }}</h2>
+                        <div class="flex justify-between">
+                            <h2 class="text-3xl font-extrabold tracking-tight sm:text-4xl">{{ album.title }}</h2>
+                            <Link :href="route('gallery.edit',[album.id])">
+                                <button  type="button" class="ml-3 inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-blue-presta4 hover:bg-blue-presta4 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">Edit Album</button>
+                            </Link>
+                        </div>
                         <p class="text-indigo-600">{{ album.date }}</p>
                         <p class="text-xl text-gray-500 my-2">{{
                                 album.description
@@ -14,10 +19,10 @@
                     </div>
                     <div class="pt-6">
                         <ul role="list" class="space-y-12 sm:grid sm:grid-cols-3 sm:gap-x-6 sm:gap-y-12 sm:space-y-0 lg:gap-x-8">
-                            <li v-for="(img,idx) in album.gallery_image" :key="idx">
+                            <li  v-for="(img,idx) in album.gallery_image" :key="idx">
                                 <div class="space-y-4">
                                     <div class="aspect-w-3 aspect-h-2">
-                                        <img class="object-cover shadow-lg rounded-lg" :src="img" alt="" />
+                                        <img @click="toggleModal($event)" class="object-cover shadow-lg rounded-lg" :src="img" alt="" />
                                     </div>
                                 </div>
                             </li>
@@ -26,14 +31,19 @@
                 </div>
             </div>
         </div>
+        <img-modal></img-modal>
     <MainFooter/>
 
 </template>
 
 <script>
 import NavigationHome from '@/Components/NavigationHome.vue';
+import imgModal from '@/Components/ImageModal';
 import MainFooter from '@/Components/MainFooter.vue';
-import {Head} from "@inertiajs/inertia-vue3";
+import {Link} from "@inertiajs/inertia-vue3";
+
+import {useStore} from "vuex";
+
 const people = [
     {
         name: 'Emma Dorsey',
@@ -52,14 +62,28 @@ export default {
     name: "View",
     components:{
         NavigationHome,
-        MainFooter
+        MainFooter,
+        Link,
+        imgModal,
     },
     props:{
         album : Array
     },
     setup({album}){
+        const store = useStore()
+
+        const toggleModal = (e)=>{
+            console.log('click event',e.target.src)
+            let payload = {
+                url:e.target.src,
+                togglemodal:true
+            }
+            store.commit('setToggleCreate',true)
+            store.commit('setImgModalUrl',payload.url)
+        }
         return{
             people,
+            toggleModal
         }
     }
 
