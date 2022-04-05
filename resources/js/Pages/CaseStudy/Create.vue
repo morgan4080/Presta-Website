@@ -22,6 +22,22 @@
                         </div>
                     </div>
                     <div class="sm:grid sm:grid-cols-3 sm:gap-4 sm:items-start sm:border-t sm:border-gray-200 sm:pt-5">
+                        <label for="title" class="block text-sm font-medium text-gray-700 sm:mt-px sm:pt-2"> client </label>
+                        <div class="mt-1 sm:mt-0 sm:col-span-2">
+                            <div class="max-w-lg flex rounded-md shadow-sm">
+                                <input v-model="form.client" type="text" name="client" id="client" autocomplete="client" class="flex-1 block w-full focus:ring-indigo-500 focus:border-indigo-500 min-w-0 rounded-none rounded-r-md sm:text-sm border-gray-300">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="sm:grid sm:grid-cols-3 sm:gap-4 sm:items-start sm:border-t sm:border-gray-200 sm:pt-5">
+                        <label for="title" class="block text-sm font-medium text-gray-700 sm:mt-px sm:pt-2"> Category </label>
+                        <div class="mt-1 sm:mt-0 sm:col-span-2">
+                            <div class="max-w-lg flex rounded-md shadow-sm">
+                                <input v-model="form.category" type="text" name="Category" id="Category" autocomplete="Category" class="flex-1 block w-full focus:ring-indigo-500 focus:border-indigo-500 min-w-0 rounded-none rounded-r-md sm:text-sm border-gray-300">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="sm:grid sm:grid-cols-3 sm:gap-4 sm:items-start sm:border-t sm:border-gray-200 sm:pt-5">
                         <label for="date" class="block text-sm font-medium text-gray-700 sm:mt-px sm:pt-2"> Date </label>
                         <div class="relative">
                             <div class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
@@ -69,7 +85,7 @@
     </form>
     <div class="pt-6 max-w-7xl">
         <ul role="list" class="space-y-12 sm:grid sm:grid-cols-5 sm:gap-x-6 sm:gap-y-12 sm:space-y-0 lg:gap-x-8">
-            <li v-for="(img,idx) in form.gallery_image" :key="idx">
+            <li v-for="(img,idx) in form.caseStudy_image" :key="idx">
                 <div class="space-y-4">
                     <div class="aspect-w-3 aspect-h-2">
                         <img class="object-cover shadow-lg rounded-lg" :src="getBlobUrl(img)" alt="" />
@@ -103,17 +119,19 @@ export default {
         loadingButton
     },
     props:{
-        gallery: Array
+        caseStudy: Array
     },
-    setup({gallery}){
+    setup({caseStudy}){
         onMounted(()=>{
-            console.log('gallery',gallery)
+            console.log('caseStudy',caseStudy)
         })
         const form = useForm({
             title:null,
+            client:null,
+            category:null,
             description:null,
             date:null,
-            gallery_image:[],
+            caseStudy_image:[],
         })
         const getBlobUrl = (x) => {
             return URL.createObjectURL(x)
@@ -123,13 +141,13 @@ export default {
             if (ev.dataTransfer.items) {
                 for (let i = 0; i < ev.dataTransfer.items.length; i++) {
                     if (ev.dataTransfer.items[i].kind === 'file') {
-                        form.gallery_image.push(ev.dataTransfer.items[i].getAsFile());
+                        form.caseStudy_image.push(ev.dataTransfer.items[i].getAsFile());
                         document.querySelector('#dragBox').style.borderColor = '2px dashed var(--inputBorderColor)';
                     }
                 }
             } else {
                 for (let i = 0; i < ev.dataTransfer.files.length; i++) {
-                    form.gallery_image.push(ev.dataTransfer.files[i]);
+                    form.caseStudy_image.push(ev.dataTransfer.files[i]);
                     document.querySelector('#dragBox').style.borderColor = '2px dashed var(--inputBorderColor)';
                 }
             }
@@ -158,7 +176,7 @@ export default {
             if (input.files && input.files[0]) {
                 for (let i = 0; i < input.files.length; i++) {
                     console.log('images',input.files[i])
-                    form.gallery_image.push(input.files[i]);
+                    form.caseStudy_image.push(input.files[i]);
                 }
             }
         }
