@@ -100,10 +100,24 @@ class CaseStudyController extends Controller
             ]
         ]);
     }
-    public function edit()
+    public function edit(CaseStudy $caseStudy)
     {
+        if ($caseStudy->getMedia('caseStudy_image')):
+            $caseStudy->getMedia('caseStudy_image')->each(function ($fileAdder) {
+                $this->caseStudy_image[] = $fileAdder->getUrl();
+            });
+        endif;
         return Inertia::render('CaseStudy/Edit', [
-
+            'CaseStudy' => [
+                'id' => $caseStudy->id,
+                'title' => $caseStudy->title,
+                'client' => $caseStudy->client,
+                'category' => $caseStudy->category,
+                'description' => $caseStudy->description,
+                'date' => $caseStudy->date,
+                'deleted_at' => $caseStudy->deleted_at,
+                'caseStudy_image' => $caseStudy->getMedia('caseStudy_image') ? $this->caseStudy_image : null,
+            ]
         ]);
     }
 }

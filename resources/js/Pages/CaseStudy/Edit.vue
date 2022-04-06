@@ -117,9 +117,6 @@ export default {
         caseStudy: Array
     },
     setup({caseStudy}){
-        onMounted(()=>{
-            console.log('caseStudy',caseStudy)
-        })
 
         const { getCategory } = mapGetters()
 
@@ -132,6 +129,16 @@ export default {
             date:null,
             caseStudy_image:[],
         })
+
+        onMounted(()=>{
+            console.log('caseStudy',caseStudy)
+            form.title = caseStudy.title
+            form.client = caseStudy.client
+            form.category = caseStudy.category
+            form.description = caseStudy.description
+            form.date = caseStudy.date
+        })
+
         const getBlobUrl = (x) => {
             return URL.createObjectURL(x)
         }
