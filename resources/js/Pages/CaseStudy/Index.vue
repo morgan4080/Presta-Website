@@ -3,11 +3,11 @@
     <NavigationHome :incomingNavClass="'bg-blue-presta4'" />
     <div class="relative bg-indigo-800 pt-32 px-4 sm:px-6 lg:px-8 lg:pt-40">
         <div class="absolute inset-0">
-            <img class="w-full h-full object-cover" src="/images/CaseStudy.png" alt="" />
-            <div class="absolute inset-0 bg-indigo-800 mix-blend-multiply" aria-hidden="true" />
+            <img class="w-full h-full " src="/images/CaseStudy.png" alt="" />
+            <div class="absolute inset-0 bg-blue-presta4 mix-blend-multiply" aria-hidden="true" />
         </div>
         <div class="relative max-w-7xl mx-auto py-16 px-4 sm:py-20 sm:px-6 lg:px-8">
-            <h1 class="text-4xl font-extrabold tracking-tight text-white sm:text-5xl lg:text-6xl">Case Study</h1>
+            <h1 class="text-4xl font-extrabold tracking-tight text-white sm:text-5xl lg:text-6xl">Case Studies</h1>
         </div>
     </div>
     <div class="sm:hidden">
