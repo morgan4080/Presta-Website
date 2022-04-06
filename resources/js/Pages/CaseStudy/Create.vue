@@ -8,7 +8,7 @@
         <div class="space-y-8 divide-y divide-gray-200 sm:space-y-5">
             <div>
                 <div>
-                    <h3 class="text-lg leading-6 font-medium text-gray-900">Gallery Upload</h3>
+                    <h3 class="text-lg leading-6 font-medium text-gray-900">Case Study Upload</h3>
                     <p class="mt-1 max-w-2xl text-sm text-gray-500">Create photo albums with useful information here</p>
                 </div>
 
