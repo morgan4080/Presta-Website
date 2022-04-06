@@ -2,9 +2,9 @@
 <template>
     <Menu as="div" class="relative inline-block text-left z-10">
         <div>
-            <MenuButton class="inline-flex justify-center w-full rounded-md border border-gray-300 shadow-sm px-4 py-2 bg-white text-sm font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-100 focus:ring-indigo-500">
+            <MenuButton class="inline-flex justify-end w-full rounded-md border border-gray-300 shadow-sm px-4 py-2 bg-white text-sm font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-100 focus:ring-indigo-500">
                 {{ getCategory }}
-                <ChevronDownIcon class="-mr-1 ml-2 h-5 w-5" aria-hidden="true" />
+                <ChevronDownIcon class="ml-auto h-5 w-5" aria-hidden="true" />
             </MenuButton>
         </div>
 
