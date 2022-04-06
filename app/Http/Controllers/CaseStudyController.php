@@ -86,6 +86,7 @@ class CaseStudyController extends Controller
                 $this->caseStudy_image[] = $fileAdder->getUrl();
             });
         endif;
+        dd($caseStudy);
         return Inertia::render('CaseStudy/View', [
             'CaseStudy' => [
                 'id' => $caseStudy->id,
