@@ -13,7 +13,7 @@
             <p class="text-white"><span class="text-white uppercase">Date : </span>{{ CaseStudy.date }}</p>
         </div>
     </div>
-    <div class="hidden sm:block mx-auto max-w-7xl py-2">
+    <div class="hidden sm:block mx-auto max-w-7xl pt-4 pb-2">
         <div  class="mt-1 sm:mt-0 sm:col-span-2 prose prose-sm sm:prose lg:prose-lg xl:prose-2xl m-5 focus:outline-none" v-html="CaseStudy.description">
 
         </div>
