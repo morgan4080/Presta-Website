@@ -7,8 +7,8 @@
             <img class="w-full h-full object-cover" src="https://images.unsplash.com/photo-1525130413817-d45c1d127c42?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1920&q=60&&sat=-100" alt="" />
             <div class="absolute inset-0 bg-indigo-800 mix-blend-multiply" aria-hidden="true" />
         </div>
-        <div class="relative max-w-7xl mx-auto py-16 px-4 sm:py-20 sm:px-6 lg:px-8">
-            <h1 class="text-4xl font-extrabold tracking-tight text-white sm:text-5xl lg:text-6xl">Case Study</h1>
+        <div class="relative max-w-7xl mx-auto pt-6 pb-8 px-4 sm:py-20 sm:px-6 lg:px-8">
+            <h1 class="text-4xl font-extrabold tracking-tight pb-4 text-white sm:text-5xl lg:text-6xl">Case Study</h1>
             <p class="text-gray-800"><span class="text-blue-400">Category :</span>asasas</p>
             <p class="text-gray-800"><span class="text-blue-400">Date :</span>asasas</p>
         </div>
