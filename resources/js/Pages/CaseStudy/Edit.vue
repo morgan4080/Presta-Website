@@ -42,7 +42,7 @@
                     <div class="sm:grid sm:grid-cols-3 sm:gap-4 sm:items-start sm:border-t sm:border-gray-200 sm:pt-5">
                         <label class="block text-sm font-medium text-gray-700 sm:mt-px sm:pt-2"> Description </label>
                         <div class="mt-1 sm:mt-0 sm:col-span-2">
-                            <textarea-input v-model="form.description" :error="form.errors.description" :cms="true" class="prose prose-sm sm:prose lg:prose-lg xl:prose-2xl m-5 focus:outline-none" />
+                            <textarea-input v-model="form.description" :model-value="caseStudy.description" :error="form.errors.description" :cms="true" class="prose prose-sm sm:prose lg:prose-lg xl:prose-2xl m-5 focus:outline-none" />
 <!--                            <textarea-input v-model="form.description" :error="form.errors.description" :cms="true" v-html="caseStudy.description" class="prose prose-sm sm:prose lg:prose-lg xl:prose-2xl m-5 focus:outline-none" />-->
                         </div>
                     </div>
