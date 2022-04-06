@@ -82,7 +82,7 @@ export default {
     },
     setup({CaseStudy}){
         return{
-
+            CaseStudy
         }
     }
 }
