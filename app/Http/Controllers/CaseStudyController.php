@@ -96,7 +96,7 @@ class CaseStudyController extends Controller
                 'description' => $caseStudy->description,
                 'date' => $caseStudy->date,
                 'deleted_at' => $caseStudy->deleted_at,
-                'gallery_image' => $caseStudy->getMedia('caseStudy_image') ? $this->caseStudy_image : null,
+                'caseStudy_image' => $caseStudy->getMedia('caseStudy_image') ? $this->caseStudy_image : null,
             ]
         ]);
     }
