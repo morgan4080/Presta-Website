@@ -1,6 +1,5 @@
 <template>
     <Head title="Gallery Create | Presta Capital" />
-
     <NavigationHome :incomingNavClass="'bg-blue-presta4'" />
     <div class="relative bg-indigo-800 pt-32 px-4 sm:px-6 lg:px-8 lg:pt-40">
         <div class="absolute inset-0">

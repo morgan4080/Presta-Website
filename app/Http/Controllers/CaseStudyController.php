@@ -82,7 +82,15 @@ class CaseStudyController extends Controller
     public function show(CaseStudy $caseStudy)
     {
         return Inertia::render('CaseStudy/View', [
-
+            'album' => [
+                'id' => $caseStudy->id,
+                'title' => $caseStudy->title,
+                'client' => $caseStudy->client,
+                'category' => $caseStudy->title,
+                'description' => $caseStudy->description,
+                'date' => $caseStudy->date,
+                'deleted_at' => $caseStudy->deleted_at,
+            ]
         ]);
     }
     public function edit()
