@@ -14,8 +14,8 @@
         </div>
     </div>
     <div class="hidden sm:block mx-auto max-w-7xl py-2">
-        <div class="mt-1 sm:mt-0 sm:col-span-2">
-            <textarea-input v-model="CaseStudy.description" :error="form.errors.description" :cms="true" />
+        <div  class="mt-1 sm:mt-0 sm:col-span-2 prose prose-sm sm:prose lg:prose-lg xl:prose-2xl m-5 focus:outline-none" v-html="CaseStudy.description">
+
         </div>
     </div>
     <MainFooter/>
