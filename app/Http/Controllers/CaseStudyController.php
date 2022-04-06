@@ -79,7 +79,7 @@ class CaseStudyController extends Controller
 
         return Redirect::route('case-study.index', $created->title)->with('success', 'Case Study created.');
     }
-    public function show()
+    public function show(CaseStudy $caseStudy)
     {
         return Inertia::render('CaseStudy/View', [
 
