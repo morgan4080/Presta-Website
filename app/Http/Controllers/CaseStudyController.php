@@ -108,7 +108,7 @@ class CaseStudyController extends Controller
             });
         endif;
         return Inertia::render('CaseStudy/Edit', [
-            'CaseStudy' => [
+            'caseStudy' => [
                 'id' => $caseStudy->id,
                 'title' => $caseStudy->title,
                 'client' => $caseStudy->client,
