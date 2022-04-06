@@ -265,11 +265,11 @@ Route::get('/case-study/create', [CaseStudyController::class, 'create'])
 Route::post('/case-study', [CaseStudyController::class, 'store'])
     ->name('case-study.store');
 
-Route::put('/case-study/{casestudy}', [CaseStudyController::class, 'update'])
+Route::put('/case-study/{caseStudy}', [CaseStudyController::class, 'update'])
     ->name('case-study.update');
 
-Route::get('/case-study/edit/{casestudy}', [CaseStudyController::class, 'edit'])
+Route::get('/case-study/edit/{caseStudy}', [CaseStudyController::class, 'edit'])
     ->name('case-study.edit');
 
-Route::get('/case-study/{casestudy}', [CaseStudyController::class, 'show'])
+Route::get('/case-study/{caseStudy}', [CaseStudyController::class, 'show'])
     ->name('case-study.show');

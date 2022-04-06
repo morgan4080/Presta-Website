@@ -86,13 +86,13 @@ class CaseStudyController extends Controller
                 $this->caseStudy_image[] = $fileAdder->getUrl();
             });
         endif;
-        dd($caseStudy);
+//        dd($caseStudy);
         return Inertia::render('CaseStudy/View', [
             'CaseStudy' => [
                 'id' => $caseStudy->id,
                 'title' => $caseStudy->title,
                 'client' => $caseStudy->client,
-                'category' => $caseStudy->title,
+                'category' => $caseStudy->category,
                 'description' => $caseStudy->description,
                 'date' => $caseStudy->date,
                 'deleted_at' => $caseStudy->deleted_at,
