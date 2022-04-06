@@ -134,7 +134,6 @@ export default {
             description:null,
             date:null,
             caseStudy_image:[],
-            _method: 'put',
         })
         const getBlobUrl = (x) => {
             return URL.createObjectURL(x)

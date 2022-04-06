@@ -52,7 +52,7 @@
         <div class="pt-5 lg:px-8 ">
             <div class="flex justify-end">
                 <Link href="/case-study/create">
-                    <button  type="button" class="ml-3 inline-flex justify-center py-2 px-4  border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-blue-presta4 hover:bg-blue-presta4 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">create</button>
+                    <button  type="button" class="ml-3 inline-flex justify-center py-2 px-4  border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-blue-presta4 hover:bg-blue-presta4 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">create Case Study</button>
                 </Link>
             </div>
         </div>

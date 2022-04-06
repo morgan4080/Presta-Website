@@ -141,6 +141,6 @@ class CaseStudyController extends Controller
             ])
         );
 
-        return Redirect::back()->with('success', 'Gallery updated.');
+        return Redirect::route('case-study.show', $caseStudy->id)->with('success', 'Case Study updated.');
     }
 }
