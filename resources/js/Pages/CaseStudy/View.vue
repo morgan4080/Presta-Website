@@ -9,6 +9,8 @@
         </div>
         <div class="relative max-w-7xl mx-auto py-16 px-4 sm:py-20 sm:px-6 lg:px-8">
             <h1 class="text-4xl font-extrabold tracking-tight text-white sm:text-5xl lg:text-6xl">Case Study</h1>
+            <p class="text-gray-800"><span class="text-blue-400">Category :</span>asasas</p>
+            <p class="text-gray-800"><span class="text-blue-400">Date :</span>asasas</p>
         </div>
     </div>
     <div class="sm:hidden">

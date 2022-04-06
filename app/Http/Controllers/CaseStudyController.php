@@ -81,8 +81,13 @@ class CaseStudyController extends Controller
     }
     public function show(CaseStudy $caseStudy)
     {
+        if ($caseStudy->getMedia('caseStudy_image')):
+            $caseStudy->getMedia('caseStudy_image')->each(function ($fileAdder) {
+                $this->caseStudy_image[] = $fileAdder->getUrl();
+            });
+        endif;
         return Inertia::render('CaseStudy/View', [
-            'album' => [
+            'CaseStudy' => [
                 'id' => $caseStudy->id,
                 'title' => $caseStudy->title,
                 'client' => $caseStudy->client,
@@ -90,6 +95,7 @@ class CaseStudyController extends Controller
                 'description' => $caseStudy->description,
                 'date' => $caseStudy->date,
                 'deleted_at' => $caseStudy->deleted_at,
+                'gallery_image' => $caseStudy->getMedia('caseStudy_image') ? $this->caseStudy_image : null,
             ]
         ]);
     }
