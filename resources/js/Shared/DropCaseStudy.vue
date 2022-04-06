@@ -1,9 +1,9 @@
 <!-- This example requires Tailwind CSS v2.0+ -->
 <template>
-    <Menu as="div" class="relative inline-block text-left z-10">
+    <Menu as="div" class="relative inline-block text-left z-50">
         <div>
             <MenuButton class="inline-flex justify-center w-full rounded-md border border-gray-300 shadow-sm px-4 py-2 bg-white text-sm font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-100 focus:ring-indigo-500">
-                Categories
+                {{ getCategory }}
                 <ChevronDownIcon class="-mr-1 ml-2 h-5 w-5" aria-hidden="true" />
             </MenuButton>
         </div>
@@ -25,6 +25,7 @@ import { Menu, MenuButton, MenuItem, MenuItems } from '@headlessui/vue'
 import { ChevronDownIcon } from '@heroicons/vue/solid'
 import {useStore} from "vuex";
 const categories = ['investment groups','sacco','Microfinance']
+import { mapState, mapGetters, mapMutations, mapActions } from '../Modules/map-state'
 
 export default {
     emits:['caseStudydrop'],
@@ -37,12 +38,14 @@ export default {
     },
     setup({emit}){
         const store = useStore()
+        const { getCategory } = mapGetters()
 
         const emitItem = (param)=>{
             store.commit('setCategory',param)
         }
         return{
             categories,
+            getCategory,
             emitItem
         }
     }

@@ -31,6 +31,7 @@ import imgModal from '@/Components/ImageModal';
 import MainFooter from '@/Components/MainFooter.vue';
 import {Link} from "@inertiajs/inertia-vue3";
 import { onMounted } from "vue";
+import { mapState, mapGetters, mapMutations, mapActions } from '../../Modules/map-state'
 export default {
     name: "View",
     components:{
