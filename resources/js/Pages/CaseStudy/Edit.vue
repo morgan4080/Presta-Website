@@ -1,8 +1,6 @@
 <template>
     <Head title="Case Study Create | Presta Capital" />
-
     <NavigationHome :incomingNavClass="'bg-blue-presta4'" />
-
     <form @submit.prevent="doPost"
           class="space-y-8 mx-auto divide-y mx-auto pt-32 px-4 max-w-7xl sm:px-6 lg:px-8 lg:pt-56 divide-gray-200">
         <div class="space-y-8 divide-y divide-gray-200 sm:space-y-5">
@@ -11,7 +9,6 @@
                     <h3 class="text-lg leading-6 font-medium text-gray-900">Case Study Upload</h3>
                     <p class="mt-1 max-w-2xl text-sm text-gray-500">Create photo albums with useful information here</p>
                 </div>
-
                 <div class="mt-6 sm:mt-5 space-y-6 sm:space-y-5">
                     <div class="sm:grid sm:grid-cols-3 sm:gap-4 sm:items-start sm:border-t sm:border-gray-200 sm:pt-5">
                         <label for="title" class="block text-sm font-medium text-gray-700 sm:mt-px sm:pt-2"> Title </label>
