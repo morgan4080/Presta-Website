@@ -37,7 +37,7 @@
             <div class="space-y-12">
                 <ul role="list" class="space-y-12 sm:grid sm:grid-cols-2 sm:gap-x-6 sm:gap-y-12 sm:space-y-0 lg:grid-cols-2 lg:gap-x-8">
                     <li v-for="item in caseStudy" :key="item.id">
-                        <Link :href="route('case-study.show',[album.id])">
+                        <Link :href="route('case-study.show',[item.id])">
                             <div class="space-y-4">
                             <div class="aspect-w-3 aspect-h-1">
                                 <img class="object-cover shadow-lg rounded-lg" :src="item.caseStudy_image[0]" alt="" />
