@@ -9,8 +9,8 @@
         </div>
         <div class="relative max-w-7xl mx-auto pt-6 pb-8 px-4 sm:py-20 sm:px-6 lg:px-8">
             <h1 class="text-4xl font-extrabold tracking-tight pb-4 text-white sm:text-5xl lg:text-6xl">{{ CaseStudy.title }}</h1>
-            <p class="text-gray-800"><span class="text-blue-400">Category :</span>{{ CaseStudy.category }}</p>
-            <p class="text-gray-800"><span class="text-blue-400">Date :</span>{{ CaseStudy.date }}</p>
+            <p class="text-gray-800"><span class="text-white">Category :</span>{{ CaseStudy.category }}</p>
+            <p class="text-gray-800"><span class="text-white">Date :</span>{{ CaseStudy.date }}</p>
         </div>
     </div>
     <div class="sm:hidden">
