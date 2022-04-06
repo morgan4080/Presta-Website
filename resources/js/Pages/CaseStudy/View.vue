@@ -81,6 +81,9 @@ export default {
         CaseStudy: Array
     },
     setup({CaseStudy}){
+        onMounted(()=>{
+            console.log('case study',CaseStudy)
+        })
         return{
             CaseStudy
         }
