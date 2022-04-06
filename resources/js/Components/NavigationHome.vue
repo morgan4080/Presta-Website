@@ -1,6 +1,6 @@
 <template>
     <div class="relative">
-        <div class="absolute inset-0 z-10">
+        <div class="absolute inset-0 z-20">
             <Popover :class="incomingNavClass" class="relative">
                 <div class="hidden md:flex justify-between items-center max-w-7xl mx-auto px-2 py-3 md:justify-start md:space-x-10 md:border-white md:border-b">
                     <div class="flex items-center lg:w-0 lg:flex-1">

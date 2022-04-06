@@ -3,7 +3,7 @@
     <NavigationHome :incomingNavClass="'bg-blue-presta4'" />
     <div class="relative bg-indigo-800 pt-32 px-4 sm:px-6 lg:px-8 lg:pt-40">
         <div class="absolute inset-0">
-            <img class="w-full h-full object-cover" src="/images/CaseStudy.png" alt="" />
+            <img class="aspect-h-1 aspect-w-3 w-full object-cover" src="/images/CaseStudy.png" alt="" />
             <div class="absolute inset-0  mix-blend-multiply" aria-hidden="true" />
         </div>
         <div class="relative max-w-7xl mx-auto py-16 px-4 sm:py-20 sm:px-6 lg:px-8">
@@ -25,13 +25,6 @@
                 </a>
             </nav>
         </div>
-        <div class="pt-5 lg:px-8 ">
-        <div class="flex justify-end">
-            <Link href="/case-study/create">
-                <button  type="button" class="ml-3 inline-flex justify-center py-2 px-4  border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-blue-presta4 hover:bg-blue-presta4 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">create Gallery Album</button>
-            </Link>
-        </div>
-    </div>
         <div class="mx-auto py-6 px-4 max-w-7xl sm:px-6 lg:px-8 lg:py-6">
             <div class="space-y-12">
                 <ul role="list" class="space-y-12 sm:grid sm:grid-cols-2 sm:gap-x-6 sm:gap-y-12 sm:space-y-0 lg:grid-cols-2 lg:gap-x-8">
@@ -54,6 +47,13 @@
                         </Link>
                     </li>
                 </ul>
+            </div>
+        </div>
+        <div class="pt-5 lg:px-8 ">
+            <div class="flex justify-end">
+                <Link href="/case-study/create">
+                    <button  type="button" class="ml-3 inline-flex justify-center py-2 px-4  border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-blue-presta4 hover:bg-blue-presta4 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">create</button>
+                </Link>
             </div>
         </div>
     </div>
