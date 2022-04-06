@@ -4,12 +4,12 @@
     <div class="relative bg-indigo-800 pt-32 px-4 sm:px-6 lg:px-8 lg:pt-40">
         <div class="absolute inset-0">
             <img class="w-full h-full object-cover" :src="CaseStudy.caseStudy_image[0]" alt="" />
-            <div class="absolute inset-0 bg-indigo-800 mix-blend-multiply" aria-hidden="true" />
+            <div class="absolute inset-0  mix-blend-multiply" aria-hidden="true" />
         </div>
-        <div class="relative max-w-7xl mx-auto pt-6 pb-8 px-4 sm:py-20 sm:px-6 lg:px-8">
-            <h1 class="text-4xl font-extrabold tracking-tight pb-4 text-white sm:text-5xl lg:text-6xl">{{ CaseStudy.title }}</h1>
-            <p class="text-white"><span class="text-white uppercase">Category : </span>{{ CaseStudy.category }}</p>
-            <p class="text-white"><span class="text-white uppercase">Date : </span>{{ CaseStudy.date }}</p>
+        <div class="relative mx-auto pt-6 pb-8 px-4 sm:py-20 sm:px-6 lg:px-16">
+            <h1 class="text-4xl font-extrabold tracking-tight pb-4 text-blue-presta3 max-w-3xl sm:text-5xl lg:text-6xl">{{ CaseStudy.title }}</h1>
+            <p class="text-blue-presta3"><span class="text-blue-presta3 uppercase">Category : </span>{{ CaseStudy.category }}</p>
+            <p class="text-blue-presta3"><span class="text-blue-presta3 uppercase">Date : </span>{{ CaseStudy.date }}</p>
         </div>
     </div>
     <div class="flex justify-end px-4 pt-4 ">
