@@ -11,8 +11,6 @@ use Inertia\Inertia;
 class CaseStudyController extends Controller
 {
     protected $caseStudy_image = null;
-
-
     public function index()
     {
         $caseStudy = new CaseStudy();
@@ -119,5 +117,30 @@ class CaseStudyController extends Controller
                 'caseStudy_image' => $caseStudy->getMedia('caseStudy_image') ? $this->caseStudy_image : null,
             ]
         ]);
+    }
+    public function update(CaseStudy $caseStudy)
+    {
+        if (\Illuminate\Support\Facades\Request::file('caseStudy_image')) :
+            $images = [];
+            foreach (Request::file('caseStudy_image') as $image):
+                $images[] = $image;
+            endforeach;
+            foreach ($images as $im):
+                $caseStudy->addMedia($im)
+                    ->withResponsiveImages()
+                    ->toMediaCollection('caseStudy_image');
+            endforeach;
+        endif;
+        $caseStudy->update(
+            Request::validate([
+                'title' => ['required'],
+                'client' => ['nullable'],
+                'category' => ['nullable'],
+                'date' => ['nullable'],
+                'description' => ['nullable'],
+            ])
+        );
+
+        return Redirect::back()->with('success', 'Gallery updated.');
     }
 }

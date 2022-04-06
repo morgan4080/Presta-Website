@@ -182,7 +182,7 @@ export default {
         }
         function doPost() {
             form.category = getCategory
-            form.post(route('case-study.store'))
+            form.post(route('case-study.update',caseStudy.id))
         }
 
         async function readFileUrl(input) {
