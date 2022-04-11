@@ -21,7 +21,7 @@
                                     <text-input v-model="form.sub_title" :error="form.errors.sub_title" label="Sub Title" />
                                     <text-input v-model="form.slug" :error="form.errors.slug" label="Slug" />
                                     <textarea-input v-model="form.excerpt" :error="form.errors.excerpt" label="Excerpt" />
-                                    <textarea-input v-model="form.description" :error="form.errors.description" label="Description" />
+                                    <textarea-input :cms="true" v-model="form.description" :error="form.errors.description" label="Description" />
                                 </div>
                                 <div class="p-8 -mr-6 -mb-8 flex flex-col w-1/3">
                                     <span class="block text-sm font-medium text-gray-700">

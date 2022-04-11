@@ -1,6 +1,6 @@
 <template>
     <div class="relative">
-        <div class="absolute inset-0 z-10">
+        <div class="absolute inset-0 z-20">
             <Popover :class="incomingNavClass" class="relative">
                 <div class="hidden md:flex justify-between items-center max-w-7xl mx-auto px-2 py-3 md:justify-start md:space-x-10 md:border-white md:border-b">
                     <div class="flex items-center lg:w-0 lg:flex-1">
@@ -209,6 +209,7 @@ const resources = [
     { name: 'About Presta', description: 'Learn how to maximize our platform to get the most out of it.', href: route('about') },
     { name: 'Blogs', description: 'Understand how we work to streamline credit services.', href: route('blogs.index') },
     { name: 'Gallery', description: 'Understand how we work to streamline credit services.', href: route('gallery.index') },
+    { name: 'CaseStudy', description: 'Understand how we work to streamline credit services.', href: route('case-study.index') },
     { name: 'Videos', description: 'Understand how we work to deliver platform specific credit solutions.', href: '/blogs/videos' },
     {
         name: 'Help Center',

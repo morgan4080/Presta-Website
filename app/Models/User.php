@@ -69,6 +69,9 @@ class User extends Authenticatable
     public function gallery() {
         return $this->hasMany(Gallery::class);
     }
+    public function caseStudy() {
+        return $this->hasMany(CaseStudy::class);
+    }
 
     public function postCategories()
     {

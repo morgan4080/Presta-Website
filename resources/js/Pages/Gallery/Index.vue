@@ -2,23 +2,6 @@
     <Head title="Gallery | Presta Capital" />
     <NavigationHome :incomingNavClass="'bg-blue-presta4'" />
     <div class="min-h-screen bg-white">
-        <!--Blogs-->
-        <!--
-  This example requires Tailwind CSS v2.0+
-
-  This example requires some changes to your config:
-
-  ```
-  // tailwind.config.js
-  module.exports = {
-    // ...
-    plugins: [
-      // ...
-      require('@tailwindcss/aspect-ratio'),
-    ],
-  }
-  ```
--->
         <div class="bg-white relative">
             <div class="mx-auto pt-32 px-4 max-w-7xl sm:px-6 lg:px-8 lg:pt-52">
                 <div class="py-1">

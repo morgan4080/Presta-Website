@@ -8,13 +8,31 @@ import { createStore } from 'vuex'
 const store = createStore({
     state () {
         return {
-
+            toggleCreate: false,
+            imgModalUrl:"",
+            category:"",
         }
     },
-    mutations: {
+    getters: {
+        getToggleCreate: (state) => state.toggleCreate,
+        getImgModalUrl: (state) => state.imgModalUrl,
+        getCategory: (state) => state.category,
 
     },
+    mutations: {
+        setToggleCreate: (state, payload = []) => {
+            state.toggleCreate = payload
+        },
+        setImgModalUrl: (state, payload = []) => {
+            state.imgModalUrl = payload
+        },
+        setCategory: (state, payload = []) => {
+            state.category = payload
+        }
+    },
     actions: {
+
+
 
     }
 })

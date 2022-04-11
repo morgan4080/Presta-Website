@@ -5,6 +5,7 @@ use App\Http\Controllers\PostCategoryController;
 use App\Http\Controllers\PostSubCategoryController;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\GalleryController;
+use App\Http\Controllers\CaseStudyController;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 use App\Models\PostCategory;
@@ -112,7 +113,7 @@ Route::get('/blogs/{subCategory_slug}', function ($subCategory_slug) {
     $blogsBuilder =  $connector1 ? $connector1[0] : null;
     $postProcessor = new PostProcessor;
 
-    $postSubCategory = $blogsBuilder["postSubCategories"]->all();
+    $postSubCategory = $blogsBuilder ? $blogsBuilder["postSubCategories"]->all() : [];
 
     if ($blogsBuilder && count($postSubCategory) > 0):
         $subCategory_articles = $postProcessor->related_articles($postSubCategory[0]["posts"]->all(), $postSubCategory[0]);
@@ -245,5 +246,30 @@ Route::get('/gallery/create', [GalleryController::class, 'create'])
 Route::post('/gallery', [GalleryController::class, 'store'])
     ->name('gallery.store');
 
+Route::put('/gallery/{gallery}', [GalleryController::class, 'update'])
+    ->name('gallery.update');
+
+Route::get('/gallery/edit/{gallery}', [GalleryController::class, 'edit'])
+    ->name('gallery.edit');
+
 Route::get('/gallery/{gallery}', [GalleryController::class, 'show'])
     ->name('gallery.show');
+
+//Casestudy
+Route::get('/case-study', [CaseStudyController::class, 'index'])
+    ->name('case-study.index');
+
+Route::get('/case-study/create', [CaseStudyController::class, 'create'])
+    ->name('case-study.create');
+
+Route::post('/case-study', [CaseStudyController::class, 'store'])
+    ->name('case-study.store');
+
+Route::put('/case-study/{caseStudy}', [CaseStudyController::class, 'update'])
+    ->name('case-study.update');
+
+Route::get('/case-study/edit/{caseStudy}', [CaseStudyController::class, 'edit'])
+    ->name('case-study.edit');
+
+Route::get('/case-study/{caseStudy}', [CaseStudyController::class, 'show'])
+    ->name('case-study.show');
