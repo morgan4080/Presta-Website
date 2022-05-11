@@ -101,7 +101,6 @@
                     </PopoverGroup>
                     <div class="hidden md:flex items-center justify-end md:flex-1 lg:w-0">
                         <Link :href="route('demo')" class="ml-8 mr-4 whitespace-nowrap inline-flex items-center justify-center px-4 py-2 border border-white rounded-md shadow-sm text-base font-medium text-white bg-opacity-25 bg-gray-900 backdrop-filter backdrop-blur hover:bg-blue-presta1">
-<!--                            <chat-alt2-icon class="flex-none w-5 h-5 text-white mr-1" aria-hidden="true" />-->
                             Explore Demo
                         </Link>
                     </div>

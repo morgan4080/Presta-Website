@@ -74,7 +74,7 @@
 
 <script>
 import {getCurrentInstance} from 'vue'
-import { useEditor,Editor, EditorContent } from '@tiptap/vue-3'
+import { useEditor, EditorContent } from '@tiptap/vue-3'
 import {defaultExtensions} from '@tiptap/starter-kit'
 import Button from "@/Jetstream/Button";
 export default {
