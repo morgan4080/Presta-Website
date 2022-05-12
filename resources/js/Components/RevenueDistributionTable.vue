@@ -42,9 +42,9 @@
                     </table>-->       <div class="grid grid-rows-3 h-96 gap-0">
                     <div class="flex bg-blue-prestaW text-white justify-center items-center font-black text-5xl">PRESTA</div>
                     <div class="flex justify-center items-center">
-                        <span class="font-black text-4xl"> 20% &nbsp &nbsp</span>
-                        <span>-</span>
-                        <span class="font-black text-4xl"> &nbsp &nbsp 30% </span>
+                        <span class="font-black proportional-nums text-4xl"> 20% &nbsp &nbsp</span>
+                        <span class="font-black text-4xl">-</span>
+                        <span class="font-black proportional-nums text-4xl"> &nbsp &nbsp 30% </span>
                     </div>
                     <div class="flex bg-blue-presta4 text-white justify-center items-center font-black text-5xl">ON INTEREST ACCRUED</div>
                 </div>

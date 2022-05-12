@@ -231,7 +231,7 @@ const pricing = {
             cta: 'Monthly billing',
             mostPopular: false,
         },
-        {
+        /*{
             title: 'Basic+penalties',
             icon: `#D0F8A3`,
             price: '6,000',
@@ -263,7 +263,7 @@ const pricing = {
             ],
             cta: 'Monthly billing',
             mostPopular: false,
-        },
+        },*/
         {
             title: 'Intermediate',
             icon: `#608BFF`,
