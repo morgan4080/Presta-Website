@@ -48,7 +48,8 @@
                                         </svg>
                                     </div>
                                     <h3 class="text-lg font-medium text-white">Contact information</h3>
-                                    <p class="mt-6 text-base text-blue-50 max-w-3xl">KATO Place, Longonot Road Upperhill, Nairobi. Kenya.</p>
+                                    //changed by lenny
+                                    <p class="mt-6 text-base text-blue-50 max-w-3xl">Stone Groove, Mirema Road, Nairobi. Kenya.</p>
                                     <dl class="mt-8 space-y-6">
                                         <dt><span class="sr-only">Phone number</span></dt>
                                         <dd class="flex text-base text-blue-50">
@@ -88,8 +89,6 @@
                                         </li>
                                     </ul>
                                 </div>
-
-                                <!-- Contact form -->
                                 <div class="py-10 px-6 sm:px-10 lg:col-span-2 xl:p-12">
                                     <h3 class="text-lg font-medium text-gray-900">Send us a message</h3>
                                     <form action="#" method="POST" class="mt-6 grid grid-cols-1 gap-y-6 sm:grid-cols-2 sm:gap-x-8">

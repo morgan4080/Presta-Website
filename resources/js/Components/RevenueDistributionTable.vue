@@ -3,10 +3,10 @@
         <div class="-my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
             <div class="py-2 align-middle inline-block min-w-full sm:px-6 lg:px-8">
                 <div class="mb-4">
-                    <p class="text-right font-extrabold text-gray-700 text-lg tracking-wider">REVENUE SHARE DISTRIBUTION</p>
+                    <p class="text-right font-extrabold flex justify-center items-center text-gray-700 text-lg tracking-wider">REVENUE SHARE DISTRIBUTION</p>
                 </div>
                 <div class="shadow overflow-hidden border-b border-gray-200 sm:rounded-lg">
-                    <table class="min-w-full divide-y divide-gray-200">
+<!--                    <table class="min-w-full divide-y divide-gray-200">
                         <thead class="bg-gray-50">
                         <tr>
                             <th scope="col" class="px-6 py-3 text-left text-base font-bold text-gray-900 uppercase tracking-wider">
@@ -39,11 +39,19 @@
                             </td>
                         </tr>
                         </tbody>
-                    </table>
+                    </table>-->       <div class="grid grid-rows-3 h-96 gap-0">
+                    <div class="flex bg-blue-prestaW text-white justify-center items-center font-black text-5xl">PRESTA</div>
+                    <div class="flex justify-center items-center">
+                        <span class="font-black proportional-nums text-4xl"> 20% &nbsp &nbsp</span>
+                        <span class="font-black text-4xl">-</span>
+                        <span class="font-black proportional-nums text-4xl"> &nbsp &nbsp 30% </span>
+                    </div>
+                    <div class="flex bg-blue-presta4 text-white justify-center items-center font-black text-5xl">ON INTEREST ACCRUED</div>
                 </div>
-                <div class="mt-4">
+                </div>
+<!--                <div class="mt-4">
                     <p class="text-right font-extrabold text-gray-700 text-lg tracking-wider">INITIAL SETUP - KSH. BASED ON REQUIREMENTS</p>
-                </div>
+                </div>-->
             </div>
         </div>
     </div>
