@@ -48,7 +48,7 @@
                                         </svg>
                                     </div>
                                     <h3 class="text-lg font-medium text-white">Contact information</h3>
-                                    //changed by lenny
+<!--                                    //changed by lenny-->
                                     <p class="mt-6 text-base text-blue-50 max-w-3xl">Stone Groove, Mirema Road, Nairobi. Kenya.</p>
                                     <dl class="mt-8 space-y-6">
                                         <dt><span class="sr-only">Phone number</span></dt>
