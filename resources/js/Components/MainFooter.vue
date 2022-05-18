@@ -129,7 +129,7 @@ const navigation = {
     contact: [
         { name: 'support@presta.co.ke', href: '#' },
         { name: '+254711082442', href: '#' },
-        { name: 'KATO Place, Longonot Road\n' + 'Upperhill, Nairobi. Kenya', href: '#' },
+        { name: 'Stone Groove, Mirema Drive,\n' + ' Nairobi. Kenya', href: 'https://www.google.com/maps/place/Presta+-+Africa\'s+Lending+Platform/@-1.2130289,36.8867196,15z/data=!4m5!3m4!1s0x0:0xe7d4efbba0489d3c!8m2!3d-1.2130289!4d36.8867196' },
     ],
     company: [
         { name: 'About', href: '/about-us' },
