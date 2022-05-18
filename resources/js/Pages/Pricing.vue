@@ -24,7 +24,7 @@
                     <p class="max-w-2xl text-center mx-auto text-xl text-gray-500">Subscription model is for microfinance organisations, Investment groups and Bosa Saccos.</p>
 
                     <!-- Tiers -->
-                    <div class="mt-24 space-y-12 lg:space-y-0 lg:grid lg:grid-cols-6 lg:gap-x-2">
+                    <div class="mt-24 space-y-12 lg:space-y-0 lg:grid lg:grid-cols-4 lg:gap-x-2">
                         <div v-for="tier in pricing.tiers" :key="tier.title" :class="{'bg-blue-presta4 text-white': tier.mostPopular, 'bg-white': !tier.mostPopular, }" class="relative p-8 md:py-4 md:px-2 border border-gray-200 rounded-2xl shadow flex flex-col">
                             <div class="flex-1">
                                 <div class="flex justify-between">
