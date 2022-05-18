@@ -78,7 +78,7 @@
                                 <ul role="list" class="mt-4 space-y-4">
                                     <li v-for="(item,idx) in navigation.contact" :key="item.name">
                                         <Link v-if="idx === 2" :href="item.href" target="_blank" class="text-base text-blue-200 hover:text-white">
-                                            {{ item.name }} hhhhh
+                                            {{ item.name }}
                                         </Link>
                                         <Link v-else :href="item.href" class="text-base text-blue-200 hover:text-white">
                                             {{ item.name }}
