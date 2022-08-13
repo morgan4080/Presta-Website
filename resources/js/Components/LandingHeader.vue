@@ -1,27 +1,28 @@
 <!-- This example requires Tailwind CSS v2.0+ -->
 <template>
-    <div class="relative bg-gray-50">
-        <main class="lg:relative">
-            <div class="mx-auto max-w-7xl w-full pt-16 pb-20 text-center lg:py-48 lg:text-left">
-                <div class="px-4 lg:w-1/2 sm:px-8 xl:pr-16">
+    <div class="relative bg-white">
+        <main class="lg:relative lg:h-screen">
+            <div class="mx-auto lg:h-full lg:flex lg:justify-start lg:items-center max-w-7xl w-full my-auto  text-center lg:text-left">
+                <div class="px-4 lg:flex-col lg:justify-start lg:items-center lg:w-1/2 sm:px-8 xl:pr-16">
                     <h1 class="text-4xl tracking-tight font-bold text-gray-900 sm:text-5xl sm:tracking-tight md:text-6xl md:tracking-tight lg:text-5xl lg:tracking-tight xl:text-6xl xl:tracking-tight">
-                        <span class="block xl:inline">Data to enrich your</span>
+                        <span style="color: #489AAB" class="block xl:inline">Supercharge</span>
+                        <span style="color:#27627E" class="block xl:inline"> Your</span>
                         {{ ' ' }}
-                        <span class="block text-indigo-600 xl:inline">online business</span>
+                        <span style="color:#27627E"  class="block text-indigo-600 xl:inline">Lending</span>
                     </h1>
-                    <p class="mt-3 max-w-md mx-auto text-lg text-gray-500 sm:text-xl md:mt-5 md:max-w-3xl">Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat fugiat aliqua.</p>
+                    <p class="mt-3 max-w-md mx-auto text-lg text-gray-500 sm:text-xl md:mt-5 md:max-w-3xl">Grow your business, unlock new efficiencies and create happier & more loyal customers with Presta.</p>
                     <div class="mt-10 sm:flex sm:justify-center lg:justify-start">
                         <div class="rounded-md shadow">
-                            <a href="#" class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 md:py-4 md:text-lg md:px-10"> Get started </a>
+                            <a href="#" class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 md:py-4 md:text-lg md:px-10"> START 1 MONTH FREE TRIAL </a>
                         </div>
                         <div class="mt-3 rounded-md shadow sm:mt-0 sm:ml-3">
-                            <a href="#" class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-indigo-600 bg-white hover:bg-gray-50 md:py-4 md:text-lg md:px-10"> Live demo </a>
+                            <a href="#" class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-indigo-600 bg-white hover:bg-gray-50 md:py-4 md:text-lg md:px-10">EXPLORE DEMO </a>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="relative w-full h-64 sm:h-72 md:h-96 lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2 lg:h-full">
-                <img style="border-top-left-radius: 4.5rem;	" class="absolute inset-0 w-full h-full object-cover" src="https://images.unsplash.com/photo-1520333789090-1afc82db536a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2102&q=80" alt="" />
+                <img style="border-top-left-radius: 3.5rem;	" class="absolute inset-0  w-full h-full object-cover" src="/images/landingHeader/img.png" alt="" />
             </div>
         </main>
     </div>
