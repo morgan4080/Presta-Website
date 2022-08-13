@@ -80,7 +80,7 @@
                             <MenuIcon class="h-6 w-6" aria-hidden="true" />
                         </PopoverButton>
                     </div>
-                    <div class="flex justify-between items-center lg:w-0 lg:flex-1">
+                    <div class="hidden md:flex justify-between items-center lg:w-0 lg:flex-1">
                         <div class="flex justify-center space-x-6 ml-12">
                             <a v-for="item in navigation" :key="item.name" :href="item.href" target="_blank" class="text-white hover:text-gray-500">
                                 <span class="sr-only">{{ item.name }}</span>
