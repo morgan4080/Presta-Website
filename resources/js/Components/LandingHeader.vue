@@ -13,10 +13,10 @@
                     <p class="mt-3 max-w-md mx-auto text-lg text-gray-500 sm:text-xl md:mt-5 md:max-w-3xl">Grow your business, unlock new efficiencies and create happier & more loyal customers with Presta.</p>
                     <div class="mt-10 sm:flex sm:justify-center lg:justify-start">
                         <div class="rounded-md shadow">
-                            <a href="#" class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 md:py-4 md:text-lg md:px-10"> START 1 MONTH FREE TRIAL </a>
+                            <a href="#"  class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-presta2 hover:bg-blue-presta3 md:py-4 md:text-lg md:px-10"> START 1 MONTH FREE TRIAL </a>
                         </div>
                         <div class="mt-3 rounded-md shadow sm:mt-0 sm:ml-3">
-                            <a href="#" class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-indigo-600 bg-white hover:bg-gray-50 md:py-4 md:text-lg md:px-10">EXPLORE DEMO </a>
+                            <a href="#" class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-blue-presta3 bg-white hover:bg-gray-50 md:py-4 md:text-lg md:px-10">EXPLORE DEMO </a>
                         </div>
                     </div>
                 </div>
