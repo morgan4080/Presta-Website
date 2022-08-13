@@ -3,7 +3,7 @@
     <div class="relative bg-white">
         <main class="lg:relative lg:h-screen">
             <div class="mx-auto lg:h-full lg:flex lg:justify-start lg:items-center max-w-7xl w-full my-auto  text-center lg:text-left">
-                <div class="px-4 lg:flex-col lg:justify-start lg:items-center lg:w-1/2 sm:px-8 xl:pr-16">
+                <div class="px-4 pt-12 md:pt-0 lg:flex-col lg:justify-start lg:items-center lg:w-1/2 sm:px-8 xl:pr-16">
                     <h1 class="text-4xl tracking-tight font-bold text-gray-900 sm:text-5xl sm:tracking-tight md:text-6xl md:tracking-tight lg:text-5xl lg:tracking-tight xl:text-6xl xl:tracking-tight">
                         <span style="color: #489AAB" class="block xl:inline">Supercharge</span>
                         <span style="color:#27627E" class="block xl:inline"> Your</span>
@@ -16,7 +16,8 @@
                             <a href="#"  class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-presta2 hover:bg-blue-presta3 md:py-4 md:text-lg md:px-10"> START 1 MONTH FREE TRIAL </a>
                         </div>
                         <div class="mt-3 rounded-md shadow sm:mt-0 sm:ml-3">
-                            <a href="#" class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-blue-presta3 bg-white hover:bg-gray-50 md:py-4 md:text-lg md:px-10">EXPLORE DEMO </a>
+                            <Link  :href="route('demo')"
+                               class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-blue-presta3 bg-white hover:bg-gray-50 md:py-4 md:text-lg md:px-10">EXPLORE DEMO </Link>
                         </div>
                     </div>
                 </div>
@@ -30,6 +31,8 @@
 
 <script setup>
 import { Popover, PopoverButton, PopoverGroup, PopoverPanel } from '@headlessui/vue'
+import { Link } from '@inertiajs/inertia-vue3'
+
 import {
     BookmarkAltIcon,
     CalendarIcon,
