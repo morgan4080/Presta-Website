@@ -36,12 +36,12 @@
                         </PopoverButton>
                     </div>
                     <PopoverGroup as="nav" class="hidden md:flex space-x-10">
-                        <Link :href="route('homepage')" class="text-base font-medium text-white hover:text-gray-200">
+                        <Link :href="route('homepage')" class="text-base font-medium text-blue-presta3 hover:text-gray-200">
                             Home
                         </Link>
                         <Popover class="relative" v-slot="{ open }">
                             <PopoverButton :class="[open ? 'text-white' : 'text-white', 'group bg-transparent rounded-md inline-flex items-center text-base font-medium hover:text-gray-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-presta0']">
-                                <span>Solutions</span>
+                                <span class="nav-text">Solutions</span>
                                 <ChevronDownIcon :class="[open ? 'text-white' : 'text-white', 'ml-2 h-5 w-5 group-hover:text-white']" aria-hidden="true" />
                             </PopoverButton>
 
