@@ -24,7 +24,30 @@
             </div>
             <div class="relative w-full h-64 sm:h-72 md:h-96 lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2 lg:h-full">
                 <img style="border-top-left-radius: 3.5rem;	" class="absolute inset-0  w-full h-full object-cover" src="/images/landingHeader/img.png" alt="" />
+                <div v-if="!showVideo" @click="playVideo('play')" class="relative col-span-2 h-full flex justify-center items-center">
+                    <svg width="84" height="94" class="hover:scale-110" viewBox="0 0 84 94" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g filter="url(#filter0_d_912_545)">
+                            <path d="M67.5 35.6699C70.8333 37.5944 70.8333 42.4056 67.5 44.3301L7.5 78.9711C4.16667 80.8956 0 78.49 0 74.641V5.35899C0 1.50998 4.16666 -0.895643 7.5 1.02886L67.5 35.6699Z" fill="white"/>
+                        </g>
+                        <defs>
+                            <filter id="filter0_d_912_545" x="0" y="0.351526" width="84" height="93.297" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                                <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                                <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+                                <feOffset dx="10" dy="10"/>
+                                <feGaussianBlur stdDeviation="2"/>
+                                <feComposite in2="hardAlpha" operator="out"/>
+                                <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.45 0"/>
+                                <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_912_545"/>
+                                <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_912_545" result="shape"/>
+                            </filter>
+                        </defs>
+                    </svg>
+
+                </div>
+
             </div>
+            <iframe id="video" class="z-40 absolute inset-0 m-auto" v-if="showVideo" width="1280" height="720" src="https://www.youtube.com/embed/xjYoSQwiy1g?rel=0&autoplay=1" title="Presta Africa - Scale up your lending Business" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <div v-if="showVideo" @click="showVideo = !showVideo" class="z-30 absolute inset-0 my-auto bg-gray-500 opacity-50"></div>
         </main>
     </div>
 </template>
@@ -32,6 +55,7 @@
 <script setup>
 import { Popover, PopoverButton, PopoverGroup, PopoverPanel } from '@headlessui/vue'
 import { Link } from '@inertiajs/inertia-vue3'
+import HomeDialogue from '@/Components/HomeDialogue.vue';
 
 import {
     BookmarkAltIcon,
@@ -48,7 +72,11 @@ import {
     XIcon,
 } from '@heroicons/vue/outline'
 import { ChevronDownIcon } from '@heroicons/vue/solid'
-
+import {ref} from "vue";
+const showVideo = ref(false)
+const playVideo = (param) => {
+    showVideo.value = !showVideo.value
+}
 const features = [
     {
         name: 'Analytics',
