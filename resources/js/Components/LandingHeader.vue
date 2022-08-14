@@ -46,7 +46,7 @@
                 </div>
 
             </div>
-            <iframe id="video" class="z-40 absolute inset-0 m-auto" v-if="showVideo" width="1280" height="720" src="https://www.youtube.com/embed/xjYoSQwiy1g?rel=0&autoplay=1" title="Presta Africa - Scale up your lending Business" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe id="video" width="1280" class="z-40 absolute inset-0 m-auto" v-if="showVideo" height="720" src="https://www.youtube.com/embed/lSfu-lYVN-M?rel=0&autoplay=1" title="Your simplified Mobile Lending Platform to scale up your Lending business (System)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             <div v-if="showVideo" @click="showVideo = !showVideo" class="z-30 absolute inset-0 my-auto bg-gray-500 opacity-50"></div>
         </main>
     </div>

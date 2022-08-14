@@ -69,9 +69,13 @@
                                 </transition>
                             </Popover>
 
-                            <Link :href="route('contact')" :class="checkPage() === '/' ? 'nav-text' : 'text-white' "  class="text-base font-medium hover:text-gray-200">
-                                Contact Us
-                            </Link>
+<!--                            <Link :href="route('contact')" :class="checkPage() === '/' ? 'nav-text' : 'text-white' "  class="text-base font-medium hover:text-gray-200">-->
+<!--                                Contact Us-->
+<!--                            </Link>-->
+                            <a href="https://presta.co.ke/kopesha" :class="checkPage() === '/' ? 'text-white' : 'text-white' "
+                               class="-ml-2 whitespace-nowrap px-4 py-2 -mt-2 border border-transparent rounded-md shadow-sm text-base text-white hover:bg-blue-presta2 bg-blue-presta1 font-medium hover:text-white bg-white text-white">
+                                Sign In
+                            </a>
                         </PopoverGroup>
                     </div>
                     <div class="-mr-2 -my-2 md:hidden">
