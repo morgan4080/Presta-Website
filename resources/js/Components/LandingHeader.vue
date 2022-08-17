@@ -46,8 +46,9 @@
                 </div>
 
             </div>
-            <iframe id="video" width="1280" class="z-40 absolute inset-0 m-auto" v-if="showVideo" height="720" src="https://www.youtube.com/embed/lSfu-lYVN-M?rel=0&autoplay=1" title="Your simplified Mobile Lending Platform to scale up your Lending business (System)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            <div v-if="showVideo" @click="showVideo = !showVideo" class="z-30 absolute inset-0 my-auto bg-gray-500 opacity-50"></div>
+<!--            <iframe id="video" width="1280" class="z-40 absolute sm: lg:inset-0 m-auto" v-if="showVideo" height="720" src="https://www.youtube.com/embed/lSfu-lYVN-M?rel=0&autoplay=1" title="Your simplified Mobile Lending Platform to scale up your Lending business (System)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>-->
+            <YoutubeModal @closeModal="playVideo('ee')" class="z-40" v-if="showVideo"></YoutubeModal>
+<!--            <div v-if="showVideo" @click="showVideo = !showVideo" class="z-30 absolute inset-0 my-auto bg-gray-500 opacity-50"></div>-->
         </main>
     </div>
 </template>
@@ -55,6 +56,7 @@
 <script setup>
 import { Popover, PopoverButton, PopoverGroup, PopoverPanel } from '@headlessui/vue'
 import { Link } from '@inertiajs/inertia-vue3'
+import YoutubeModal from '@/Components/YoutubeModal';
 import HomeDialogue from '@/Components/HomeDialogue.vue';
 
 import {
