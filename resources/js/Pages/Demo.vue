@@ -9,7 +9,7 @@
                 <div class="bg-gray-100">
                     <div class="max-w-7xl mx-auto pt-32 pb-16 px-4 sm:pt-48 sm:pb-24 sm:px-6 lg:px-8">
                         <div class="relative bg-white shadow-xl">
-                            <h2 class="sr-only">Request Demo</h2>
+                            <h2 class="sr-only">You are one step away <br> to start your 1 month free trial</h2>
 
                             <div class="grid grid-cols-1 lg:grid-cols-3">
                                 <!-- Contact information -->
@@ -47,7 +47,7 @@
                                             </defs>
                                         </svg>
                                     </div>
-                                    <h3 class="text-lg font-medium text-white">Request Demo</h3>
+                                    <h3 class="text-lg font-medium text-white">You are one step away to start<br>your 1 month free trial</h3>
                                     <p class="mt-6 text-base text-blue-50 max-w-3xl">What Happens Next after you fill the form:</p>
                                     <dl class="mt-8 space-y-6">
                                         <dt></dt>
@@ -63,22 +63,7 @@
                                         <dt></dt>
                                         <dd class="flex text-base text-blue-50">
                                             <chat-alt2-icon class="flex-shrink-0 w-6 h-6 text-blue-200" aria-hidden="true" />
-                                            <span class="ml-3">Sales Pitch or Product Demo.</span>
-                                        </dd>
-                                        <dt></dt>
-                                        <dd class="flex text-base text-blue-50">
-                                            <chat-alt2-icon class="flex-shrink-0 w-6 h-6 text-blue-200" aria-hidden="true" />
-                                            <span class="ml-3">Proposal and Handling Objections.</span>
-                                        </dd>
-                                        <dt></dt>
-                                        <dd class="flex text-base text-blue-50">
-                                            <chat-alt2-icon class="flex-shrink-0 w-6 h-6 text-blue-200" aria-hidden="true" />
-                                            <span class="ml-3">Closing and project on-boarding.</span>
-                                        </dd>
-                                        <dt></dt>
-                                        <dd class="flex text-base text-blue-50">
-                                            <chat-alt2-icon class="flex-shrink-0 w-6 h-6 text-blue-200" aria-hidden="true" />
-                                            <span class="ml-3">Following Up & Customer Service.</span>
+                                            <span class="ml-3">Product Demo.</span>
                                         </dd>
                                     </dl>
                                 </div>
