@@ -1,9 +1,8 @@
-<!-- This example requires Tailwind CSS v2.0+ -->
 <template>
     <div class="relative bg-white">
         <main class="lg:relative lg:h-screen">
             <div class="mx-auto lg:ml-40 lg:h-full lg:flex lg:justify-start lg:items-center max-w-7xl w-full my-auto  text-center lg:text-left">
-                <div class="px-4 pt-12 md:pt-0 lg:flex-col lg:justify-start lg:items-center lg:w-1/2 sm:px-8">
+                <div class="px-4 pt-24 md:pt-0 lg:flex-col lg:justify-start lg:items-center lg:w-1/2 sm:px-8">
                     <h1 class="text-4xl tracking-tight font-bold text-gray-900 sm:text-5xl sm:tracking-tight md:text-6xl md:tracking-tight lg:text-5xl lg:tracking-tight xl:text-6xl xl:tracking-tight">
                         <span style="color: #489AAB" class="block xl:inline">Supercharge</span>
                         <span style="color:#27627E" class="block xl:inline"> Your</span>
@@ -46,25 +45,21 @@
                 </div>
 
             </div>
-<!--            <iframe id="video" width="1280" class="z-40 absolute sm: lg:inset-0 m-auto" v-if="showVideo" height="720" src="https://www.youtube.com/embed/lSfu-lYVN-M?rel=0&autoplay=1" title="Your simplified Mobile Lending Platform to scale up your Lending business (System)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>-->
+
             <YoutubeModal @closeModal="playVideo('ee')" class="z-40" v-if="showVideo"></YoutubeModal>
-<!--            <div v-if="showVideo" @click="showVideo = !showVideo" class="z-30 absolute inset-0 my-auto bg-gray-500 opacity-50"></div>-->
+
         </main>
     </div>
 </template>
 
 <script setup>
-import { Popover, PopoverButton, PopoverGroup, PopoverPanel } from '@headlessui/vue'
 import { Link } from '@inertiajs/inertia-vue3'
 import YoutubeModal from '@/Components/YoutubeModal';
-import HomeDialogue from '@/Components/HomeDialogue.vue';
-
 import {
     BookmarkAltIcon,
     CalendarIcon,
     ChartBarIcon,
     CursorClickIcon,
-    MenuIcon,
     PhoneIcon,
     PlayIcon,
     RefreshIcon,
@@ -73,7 +68,7 @@ import {
     ViewGridIcon,
     XIcon,
 } from '@heroicons/vue/outline'
-import { ChevronDownIcon } from '@heroicons/vue/solid'
+
 import {ref} from "vue";
 const showVideo = ref(false)
 const playVideo = (param) => {
@@ -137,11 +132,10 @@ const recentPosts = [
     { id: 3, name: 'Improve your customer experience', href: '#' },
 ]
 </script>
-<style>
-
-@media (min-width: 1024px) {
-    .pik{
-        border-top-left-radius: 3.5rem;
+<style scoped>
+    @media (min-width: 1024px) {
+        .pik{
+            border-top-left-radius: 3.5rem;
+        }
     }
-}
 </style>

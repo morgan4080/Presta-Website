@@ -10,7 +10,7 @@
             <div>
                 <!-- Carousel -->
 <!--                <Carousel :sliders="sliders" :context="'homepage'" />-->
-                <LandingHeader></LandingHeader>
+                <LandingHeader/>
 
                 <!-- Logos -->
                 <div class="bg-white">
