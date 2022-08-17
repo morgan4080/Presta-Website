@@ -109,9 +109,7 @@ const closeModal = () => {
 }
 
 const submitDemoUser = () => {
-    // show second info
     formSubmitted.value = true;
-    // navigate to https://accounts.presta.co.ke/?tn=t10009
 }
 
 </script>
