@@ -11,7 +11,7 @@ git reset --hard origin/deploy
 #place correct env
 cp .env.ci .env
 # Install dependencies based on lock file
-composer install --no-interaction --prefer-dist --optimize-autoloader
+composer update
 # make migrations
 php artisan migrate
 # Clear cache
