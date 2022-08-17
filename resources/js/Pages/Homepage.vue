@@ -9,7 +9,8 @@
         <main>
             <div>
                 <!-- Carousel -->
-                <Carousel :sliders="sliders" :context="'homepage'" />
+<!--                <Carousel :sliders="sliders" :context="'homepage'" />-->
+                <LandingHeader/>
 
                 <!-- Logos -->
                 <div class="bg-white">
@@ -261,6 +262,7 @@ import MainFooter from '@/Components/MainFooter.vue';
 import Blog from '@/Components/Blog.vue';
 import TabsHome from '@/Components/TabsHome.vue';
 import Carousel from '@/Components/Carousel.vue';
+import LandingHeader from '@/Components/LandingHeader.vue';
 import {reactive} from "vue";
 
 const tabs = {
@@ -363,7 +365,8 @@ export default {
         CheckCircleIcon,
         Blog,
         TabsHome,
-        Carousel
+        Carousel,
+        LandingHeader,
     },
 
     props: {

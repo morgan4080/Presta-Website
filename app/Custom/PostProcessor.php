@@ -26,7 +26,7 @@ class PostProcessor {
     }
 
     public function do_reduce($posts, $postSubCategories): array {
-        return array_reduce($posts, function (&$carry, $item) use ($postSubCategories) {
+        return array_reduce($posts, function ($carry, $item) use ($postSubCategories) {
             $filterResult = $this->do_filter($item->post_sub_category_id, $postSubCategories);
             $images = $item->getMedia('featured_image');
             $featured_images = null;

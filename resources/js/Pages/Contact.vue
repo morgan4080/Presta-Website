@@ -48,7 +48,8 @@
                                         </svg>
                                     </div>
                                     <h3 class="text-lg font-medium text-white">Contact information</h3>
-                                    <p class="mt-6 text-base text-blue-50 max-w-3xl">KATO Place, Longonot Road Upperhill, Nairobi. Kenya.</p>
+<!--                                    //changed by lenny-->
+                                    <p class="mt-6 text-base text-blue-50 max-w-3xl">Stone Groove, Mirema Road, Nairobi. Kenya.</p>
                                     <dl class="mt-8 space-y-6">
                                         <dt><span class="sr-only">Phone number</span></dt>
                                         <dd class="flex text-base text-blue-50">
@@ -83,6 +84,15 @@
                                                 <span class="sr-only">Twitter</span>
                                                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" aria-hidden="true">
                                                     <path d="M7.548 22.501c9.056 0 14.01-7.503 14.01-14.01 0-.213 0-.425-.015-.636A10.02 10.02 0 0024 5.305a9.828 9.828 0 01-2.828.776 4.94 4.94 0 002.165-2.724 9.867 9.867 0 01-3.127 1.195 4.929 4.929 0 00-8.391 4.491A13.98 13.98 0 011.67 3.9a4.928 4.928 0 001.525 6.573A4.887 4.887 0 01.96 9.855v.063a4.926 4.926 0 003.95 4.827 4.917 4.917 0 01-2.223.084 4.93 4.93 0 004.6 3.42A9.88 9.88 0 010 20.289a13.941 13.941 0 007.548 2.209" fill="currentColor" />
+                                                </svg>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a class="text-blue-200 hover:text-blue-100" target="_blank" href="https://g.page/prestaafrica?share">
+                                                <span class="sr-only">Google Map</span>
+                                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                                    <path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                                                    <path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                                                 </svg>
                                             </a>
                                         </li>
