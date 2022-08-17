@@ -169,7 +169,7 @@
                 <!-- The Features -->
                 <div class="bg-gray-100">
                     <div class="relative max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:px-8">
-                        <h3 class="mt-2 text-center text-3xl leading-8 font-extrabold tracking-tight text-blue-presta3 sm:text-4xl">
+                        <h3 class="mt-2 mb-20 sm:mb-0 text-center text-3xl leading-8 font-extrabold tracking-tight text-blue-presta3 sm:text-4xl">
                             Features at a glance
                         </h3>
 

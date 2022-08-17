@@ -10,13 +10,13 @@
                         <span style="color:#27627E"  class="block text-indigo-600 xl:inline">Lending</span>
                     </h1>
                     <p class="mt-3 max-w-md mx-auto text-lg text-gray-500 sm:text-xl md:mt-5 md:max-w-3xl">Grow your business, unlock new efficiencies and create happier & more loyal customers with Presta.</p>
-                    <div class="mt-10 sm:flex sm:justify-center lg:justify-start">
+                    <div class="mt-10 mb-10 sm:mb-0 sm:flex sm:justify-center lg:justify-start">
                         <div class="rounded-md shadow">
-                            <a href="#"  class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-presta2 hover:bg-blue-presta3 md:py-4 md:text-lg md:px-10"> START 1 MONTH FREE TRIAL </a>
+                            <Link :href="route('demo')" class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-presta2 hover:bg-blue-presta3 md:py-4 md:text-lg md:px-10"> START 1 MONTH FREE TRIAL </Link>
                         </div>
                         <div class="mt-3 rounded-md shadow sm:mt-0 sm:ml-3">
-                            <Link  :href="route('demo')"
-                               class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-blue-presta3 bg-white hover:bg-gray-50 md:py-4 md:text-lg md:px-10">EXPLORE DEMO </Link>
+                            <a @click="openDemoDialogue" href="#"
+                               class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-blue-presta3 bg-white hover:bg-gray-50 md:py-4 md:text-lg md:px-10">EXPLORE DEMO </a>
                         </div>
                     </div>
                 </div>
@@ -46,8 +46,10 @@
 
             </div>
 
-            <YoutubeModal @closeModal="playVideo('ee')" class="z-40" v-if="showVideo"></YoutubeModal>
+            <YoutubeModal @closeModal="playVideo('ee')" class="z-40" v-if="showVideo"/>
 
+
+            <DemoDialogue v-if="openDemoModal" />
         </main>
     </div>
 </template>
@@ -55,6 +57,7 @@
 <script setup>
 import { Link } from '@inertiajs/inertia-vue3'
 import YoutubeModal from '@/Components/YoutubeModal';
+import DemoDialogue from '@/Components/DemoDialogue';
 import {
     BookmarkAltIcon,
     CalendarIcon,
@@ -70,10 +73,19 @@ import {
 } from '@heroicons/vue/outline'
 
 import {ref} from "vue";
-const showVideo = ref(false)
-const playVideo = (param) => {
-    showVideo.value = !showVideo.value
+
+const showVideo = ref(false);
+
+const openDemoModal = ref(false);
+
+const openDemoDialogue = () => {
+    openDemoModal.value = !openDemoModal.value;
 }
+
+const playVideo = (param) => {
+    showVideo.value = !showVideo.value;
+}
+
 const features = [
     {
         name: 'Analytics',
@@ -101,10 +113,12 @@ const features = [
         icon: RefreshIcon,
     },
 ]
+
 const callsToAction = [
     { name: 'Watch Demo', href: '#', icon: PlayIcon },
     { name: 'Contact Sales', href: '#', icon: PhoneIcon },
 ]
+
 const resources = [
     {
         name: 'Help Center',
@@ -126,11 +140,13 @@ const resources = [
     },
     { name: 'Security', description: 'Understand how we take your privacy seriously.', href: '#', icon: ShieldCheckIcon },
 ]
+
 const recentPosts = [
     { id: 1, name: 'Boost your conversion rate', href: '#' },
     { id: 2, name: 'How to use search engine optimization to drive traffic to your site', href: '#' },
     { id: 3, name: 'Improve your customer experience', href: '#' },
 ]
+
 </script>
 <style scoped>
     @media (min-width: 1024px) {
