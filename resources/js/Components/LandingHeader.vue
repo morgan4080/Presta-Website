@@ -23,9 +23,9 @@
                 </div>
             </div>
             <div class="relative w-full h-64 sm:h-72 md:h-96 lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2 lg:h-full">
-                <img style="border-top-left-radius: 3.5rem;	" class="absolute inset-0  w-full h-full object-cover" src="/images/landingHeader/img.png" alt="" />
+                <img class="absolute inset-0 pik w-full h-full object-cover" src="/images/landingHeader/img.jpg" alt="" />
                 <div v-if="!showVideo" @click="playVideo('play')" class="relative col-span-2 h-full flex justify-center items-center">
-                    <svg width="84" height="94" class="hover:scale-110 " viewBox="0 0 84 94" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <svg width="84" height="94" class="hover:scale-110 sm:scale-90 lg:scale-100" viewBox="0 0 84 94" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <g filter="url(#filter0_d_912_545)">
                             <path d="M67.5 35.6699C70.8333 37.5944 70.8333 42.4056 67.5 44.3301L7.5 78.9711C4.16667 80.8956 0 78.49 0 74.641V5.35899C0 1.50998 4.16666 -0.895643 7.5 1.02886L67.5 35.6699Z" fill="white"/>
                         </g>
@@ -137,3 +137,11 @@ const recentPosts = [
     { id: 3, name: 'Improve your customer experience', href: '#' },
 ]
 </script>
+<style>
+
+@media (min-width: 1024px) {
+    .pik{
+        border-top-left-radius: 3.5rem;
+    }
+}
+</style>
