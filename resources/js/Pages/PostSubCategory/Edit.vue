@@ -1,0 +1,182 @@
+<template>
+    <app-layout title="Edit | Post Sub Categories">
+        <template #header>
+            <h2 class="font-semibold text-xl text-gray-800 leading-tight">
+                <Link :href="route('post-category.edit', postSubCategory.post_category_id)" class="text-blue-presta3 hover:text-blue-presta4">Post Sub Categories</Link>
+                <span class="text-blue-presta3 font-medium">/</span>
+                Edit
+            </h2>
+        </template>
+
+        <div class="py-12">
+            <div class="max-w-7xl mx-auto sm:px-6 lg:px-8 space-y-10">
+                <div class="overflow-hidden">
+                    <trashed-message v-if="postSubCategory.deleted_at" class="mb-6" @restore="restore">
+                        This sub category has been deleted.
+                    </trashed-message>
+                    <div class="bg-white rounded-md shadow overflow-hidden max-w-3xl">
+                        <form @submit.prevent="doUpdate">
+                            <div class="p-8 -mr-6 -mb-8 flex flex-col">
+                                <text-input @change="genSlug" v-model="form.name" :error="form.errors.name" label="Name" />
+                                <text-input v-model="form.slug" :error="form.errors.slug" label="Slug" />
+                                <textarea-input v-model="form.description" :error="form.errors.description" label="Description" />
+                            </div>
+                            <div class="px-8 py-4 bg-gray-100 border-t border-gray-200 flex justify-between items-center overflow-hidden">
+                                <button v-if="postSubCategory.deleted_at" type="button" @click="restore" class="bg-yellow-300 font-medium text-yellow-800 rounded px-3 py-3 hover:bg-yellow-400">Restore Category</button>
+                                <button v-else type="button" @click="destroy" class="bg-red-200 text-red-900 font-medium rounded px-3 py-3 hover:bg-red-300">Delete Sub Category</button>
+                                <loading-button :loading="form.processing" class="bg-blue-presta4 text-white font-medium rounded px-3 py-3 hover:bg-blue-presta3" type="submit">Update Category</loading-button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="overflow-hidden">
+                    <div class="mb-6 flex justify-between items-center">
+                        <search-filter v-model="formSearch.search" class="w-full max-w-md mr-4" @reset="reset">
+                            <label class="block text-gray-700">Trashed:</label>
+                            <select v-model="formSearch.trashed" class="mt-1 w-full pr-2 shadow border-0.5 border-gray-200 focus:ring-4 focus:ring-blue-presta4 focus:ring-opacity-50 rounded">
+                                <option :value="null" />
+                                <option value="with">With Trashed</option>
+                                <option value="only">Only Trashed</option>
+                            </select>
+                        </search-filter>
+                        <Link class="bg-blue-presta4 text-white rounded px-3 py-3 hover:bg-blue-presta3" :href="route('post.create', [postSubCategory.post_category_id, postSubCategory.id])">
+                            <span>Create </span>
+                            <span class="hidden md:inline">Post</span>
+                        </Link>
+                    </div>
+                    <div class="bg-white rounded-md shadow overflow-x-auto">
+                        <table class="w-full whitespace-nowrap">
+                            <tr class="text-left font-bold">
+                                <th class="px-6 pt-6 pb-4">Title</th>
+                                <th class="px-6 pt-6 pb-4">Slug</th>
+                                <th class="px-6 pt-6 pb-4" colspan="2">Date</th>
+                            </tr>
+                            <tr v-for="post in posts.data" :key="post.id" class="hover:bg-gray-100 focus-within:bg-gray-100">
+                                <td class="border-t">
+                                    <Link class="px-6 py-4 flex items-center focus:text-indigo-500" :href="route('post.edit', post.id)">
+                                        {{ post.title }}
+                                        <icon v-if="post.deleted_at" name="trash" class="flex-shrink-0 w-3 h-3 fill-gray-400 ml-2" />
+                                    </Link>
+                                </td>
+                                <td class="border-t">
+                                    <Link class="px-6 py-4 flex items-center" :href="route('post.edit', post.id)" tabindex="-1">
+                                        <div v-if="post.slug">
+                                            {{ post.slug }}
+                                        </div>
+                                    </Link>
+                                </td>
+                                <td class="border-t">
+                                    <Link class="px-6 py-4 flex items-center" :href="route('post.edit', post.id)" tabindex="-1">
+                                        {{ post.created_at }}
+                                    </Link>
+                                </td>
+                            </tr>
+                            <tr v-if="posts.data.length === 0">
+                                <td class="border-t px-6 py-4" colspan="4">No posts found.</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <pagination class="mt-6" :links="posts.links" />
+                </div>
+            </div>
+        </div>
+    </app-layout>
+</template>
+
+<script>
+import AppLayout from '@/Layouts/AppLayout.vue'
+import { Link } from '@inertiajs/inertia-vue3'
+import { useForm } from '@inertiajs/inertia-vue3'
+import TextInput from '@/Shared/TextInput'
+import LoadingButton from '@/Shared/LoadingButton'
+import TextareaInput from "@/Shared/TextareaInput";
+import TrashedMessage from "@/Shared/TrashedMessage"
+import Pagination from '@/Shared/Pagination'
+import Icon from '@/Shared/Icon'
+import SearchFilter from '@/Shared/SearchFilter'
+import throttle from "lodash/throttle";
+import pickBy from "lodash/pickBy";
+import mapValues from "lodash/mapValues";
+
+export default {
+    components: {
+        AppLayout,
+        Link,
+        TextInput,
+        LoadingButton,
+        TextareaInput,
+        TrashedMessage,
+        Pagination,
+        Icon,
+        SearchFilter
+    },
+    props: {
+        postSubCategory: Object,
+        filters: Object,
+        posts: Object
+    },
+    data() {
+        return {
+            formSearch: {
+                search: this.filters.search,
+                trashed: this.filters.trashed,
+            },
+        }
+    },
+    watch: {
+        formSearch: {
+            deep: true,
+            handler: throttle(function() {
+                this.$inertia.get(this.route('post-sub-category.edit', this.postSubCategory.id), pickBy(this.formSearch), { preserveState: true })
+            }, 150),
+        },
+    },
+    methods: {
+        reset() {
+            this.formSearch = mapValues(this.formSearch, () => null)
+        },
+    },
+    setup({ postSubCategory }) {
+        const form = useForm({
+            id: postSubCategory.id,
+            name: postSubCategory.name,
+            slug: postSubCategory.slug,
+            description: postSubCategory.description
+        })
+
+        function genSlug() {
+            if (form.name) {
+                form.slug = form.name.toLocaleLowerCase().replace(/ /g,"-");
+            }
+        }
+
+        function doUpdate() {
+            form.put(route('post-sub-category.update', form.id))
+        }
+
+        function destroy() {
+            if (confirm('Are you sure you want to delete this sub category?')) {
+                form.delete(route('post-sub-category.destroy', form.id))
+            }
+        }
+
+        function restore() {
+            if (confirm('Are you sure you want to restore this sub category?')) {
+                form.put(route('post-sub-category.restore', form.id))
+            }
+        }
+
+        return {
+            form,
+            genSlug,
+            doUpdate,
+            destroy,
+            restore,
+        }
+    }
+}
+</script>
+
+<style scoped>
+
+</style>

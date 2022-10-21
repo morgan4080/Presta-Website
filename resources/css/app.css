@@ -1,0 +1,15 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+
+.is-active {
+    background-color: black !important;
+    color: #fff;
+    @apply rounded-md;
+    @apply bg-black;
+}
+
+.nav-text{
+    color: #656464;
+}
