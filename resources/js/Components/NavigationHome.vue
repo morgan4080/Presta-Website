@@ -6,7 +6,6 @@
                     <div class="flex justify-center items-center lg:w-0 lg:flex-1">
                         <Link :href="route('homepage')">
                             <span class="sr-only">Presta Capital</span>
-                            <img class="h-8 md:mr-4 lg:mr-6 w-auto sm:h-12" :src="checkPage() === '/' ? '/images/logos/landingHeader.svg' : '/images/logos/Group 18.svg' " alt="" />
                         </Link>
 
                         <PopoverGroup as="nav" class="hidden md:flex justify-center space-x-10">

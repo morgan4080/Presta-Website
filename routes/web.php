@@ -6,6 +6,8 @@ use App\Http\Controllers\PostSubCategoryController;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\GalleryController;
 use App\Http\Controllers\CaseStudyController;
+use App\Http\Controllers\EnterpriseController;
+use App\Http\Controllers\SaccoController;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 use App\Models\PostCategory;
@@ -273,3 +275,11 @@ Route::get('/case-study/edit/{caseStudy}', [CaseStudyController::class, 'edit'])
 
 Route::get('/case-study/{caseStudy}', [CaseStudyController::class, 'show'])
     ->name('case-study.show');
+
+
+//Casestudy
+Route::get('/enterprise', [EnterpriseController::class, 'index'])
+    ->name('enterprise.index');
+
+Route::get('/sacco', [SaccoController::class, 'index'])
+    ->name('sacco.index');

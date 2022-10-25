@@ -12,7 +12,7 @@
 <!--                <Carousel :sliders="sliders" :context="'homepage'" />-->
                 <LandingHeader/>
 
-                <!-- Logos -->
+<!--                &lt;!&ndash; Logos &ndash;&gt;
                 <div class="bg-white">
                     <div class="max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:px-8">
                         <h3 class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-blue-presta3 sm:text-4xl">
@@ -41,7 +41,7 @@
                     </div>
                 </div>
 
-                <!-- The Platform -->
+                &lt;!&ndash; The Platform &ndash;&gt;
                 <div class="bg-gray-100 overflow-hidden">
                     <div class="relative">
                         <div class="absolute inset-y-0 h-full w-full" aria-hidden="true">
@@ -97,7 +97,7 @@
                     </div>
                 </div>
 
-                <!-- What we Do -->
+                &lt;!&ndash; What we Do &ndash;&gt;
                 <div class="bg-white">
                     <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:py-16 lg:px-8">
                         <h3 class="mt-2 text-center text-3xl leading-8 font-extrabold tracking-tight text-blue-presta3 sm:text-4xl">
@@ -166,7 +166,7 @@
                     </div>
                 </div>
 
-                <!-- The Features -->
+                &lt;!&ndash; The Features &ndash;&gt;
                 <div class="bg-gray-100">
                     <div class="relative max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:px-8">
                         <h3 class="mt-2 mb-20 sm:mb-0 text-center text-3xl leading-8 font-extrabold tracking-tight text-blue-presta3 sm:text-4xl">
@@ -177,10 +177,10 @@
                     </div>
                 </div>
 
-                <!--Blogs-->
+                &lt;!&ndash;Blogs&ndash;&gt;
                 <Blog v-if="blogs.length > 0" :blogs="blogs" />
 
-                <!--Track Record-->
+                &lt;!&ndash;Track Record&ndash;&gt;
                 <div class="bg-gray-50 pt-12 sm:pt-16">
                     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                         <div class="max-w-4xl mx-auto text-center">
@@ -242,7 +242,7 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </div>-->
             </div>
 
             <!-- More main page content here... -->

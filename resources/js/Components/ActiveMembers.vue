@@ -33,22 +33,22 @@
             <div class="mx-auto max-w-7xl py-12 px-4 sm:px-6 lg:px-8">
                 <div class="grid grid-cols-1 gap-8 md:grid-cols-2  lg:grid-cols-4">
                     <div class="col-span-1 flex flex-col border-b border-gray-100 p-6 text-center sm:border-0 sm:border-r">
-                        <img src="/images/svg/imarisha.svg" alt="imarisha logo" >
+                        <img src="/images/svg/imarisha.svg" style="height: 130px" alt="imarisha logo" >
                         <h2 class="text-lg font-bold tracking-tight text-gray-900 ">Imarisha SACCO</h2>
                         <p class=" text-sm text-gray-500">www.imarishasacco.co.ke</p>
                     </div>
                     <div class="col-span-1 flex flex-col border-b border-gray-100 p-6 text-center sm:border-0 sm:border-r">
-                        <img src="/images/svg/onepay.svg" alt="onepay logo" >
+                        <img src="/images/svg/onepay.svg" style="height: 130px" alt="onepay logo" >
                         <h2 class="text-lg font-bold tracking-tight text-gray-900 ">One Pay SACCO</h2>
                         <p class=" text-sm text-gray-500">www.onepay.co.ke</p>
                     </div>
                     <div class="col-span-1 flex flex-col border-b border-gray-100 p-6 text-center sm:border-0 sm:border-r">
-                        <img src="/images/svg/bat.svg" alt="bat logo" >
+                        <img src="/images/svg/bat.svg" style="height: 130px" alt="bat logo" >
                         <h2 class="text-lg font-bold tracking-tight text-gray-900 ">B.A.T SACCO</h2>
                         <p class=" text-sm text-gray-500">www.batsacco.co.ke</p>
                     </div>
                     <div class="col-span-1 flex flex-col border-b border-gray-100 p-6 text-center sm:border-0 sm:border-r">
-                        <img src="/images/svg/ketepa.svg" alt="ketepa logo" >
+                        <img src="/images/svg/ketepa.svg" style="height: 130px" alt="ketepa logo" >
                         <h2 class="text-lg font-bold tracking-tight text-gray-900 ">Ketepa SACCO</h2>
                         <p class=" text-sm text-gray-500">www.ketepasacco.co.ke</p>
                     </div>

@@ -1,5 +1,5 @@
 <template>
-    <div class="mx-auto max-w-7xl grid grid-cols-2 bg-blue-prestaS sm:gap-x-12  sm:px-4  " >
+    <div class="mx-auto max-w-7xl grid grid-cols-2 bg-blue-prestaS sm:gap-x-12  sm:px-4" >
         <div class="col-span-1  sm:mt-20 my-auto">
             <h2 class="custom-blue-200 text-lg sm:py-4">SIGN LOAN FORMS</h2>
             <h1 class="font-bold text-4xl text-blue-presta4 sm:pb-4">Anywhere, Anytime</h1>
