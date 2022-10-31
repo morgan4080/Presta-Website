@@ -175,23 +175,31 @@ import {defineComponent, h, onMounted} from 'vue'
 
 const solutions = [
     {
+        name: 'Enterprise',
+        description: "Your customers' data will be safe and secure.",
+        href: 'enterprise',
+        icon: ChatAlt2Icon
+    },
+    {
+        name: 'Saccos',
+        description: 'Speak directly to your customers in a more meaningful way.',
+        href: 'saccos',
+        icon: CursorClickIcon,
+    },
+    {
         name: 'Digital Onboarding',
         description: 'Get a better understanding of your customers financial needs.',
         href: 'Digital Onboarding',
         icon: ChartBarIcon,
     },
-    {
-        name: 'Saccos',
-        description: 'Speak directly to your customers in a more meaningful way.',
-        href: route('blogs.index'),
-        icon: CursorClickIcon,
-    },
+
     {
         name: 'Loan Origination',
         description: "Your customers' data will be safe and secure.",
         href: 'LoanOrigination',
         icon: ShieldCheckIcon
     },
+
 ];
 
 const resources = [
