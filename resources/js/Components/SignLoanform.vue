@@ -1,8 +1,8 @@
 <template>
     <div class="mx-auto max-w-7xl grid grid-cols-2 bg-blue-prestaS sm:gap-x-12  sm:px-4" >
-        <div class="col-span-1  sm:mt-20 my-auto">
+        <div class="col-span-1 my-auto">
             <h2 class="custom-blue-200 text-lg sm:py-4">SIGN LOAN FORMS</h2>
-            <h1 class="font-bold text-4xl text-blue-presta4 sm:pb-4">Anywhere, Anytime</h1>
+            <h1 class="font-bold text-4xl custom-blue-900 sm:pb-4">Anywhere, Anytime</h1>
             <p class="custom-grey sm:mb-12">Who needs to physically sign loan forms<br> anymore? Our digital gurantorship app simplifies<br> the Loan Application Process for both Members<br> & Staff</p>
             <div class="inline-flex">
                 <button>
@@ -36,5 +36,9 @@ export default {
 .custom-grey {
 
     color: #8C8C8C
+}
+.custom-blue-900 {
+
+    color: #0A093D
 }
 </style>

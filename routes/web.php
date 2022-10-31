@@ -7,6 +7,7 @@ use App\Http\Controllers\PostController;
 use App\Http\Controllers\GalleryController;
 use App\Http\Controllers\CaseStudyController;
 use App\Http\Controllers\EnterpriseController;
+use App\Http\Controllers\DigitalOnboardingController;
 use App\Http\Controllers\SaccoController;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
@@ -283,3 +284,6 @@ Route::get('/enterprise', [EnterpriseController::class, 'index'])
 
 Route::get('/sacco', [SaccoController::class, 'index'])
     ->name('sacco.index');
+
+Route::get('/digitalOnboarding', [DigitalOnboardingController::class, 'index'])
+    ->name('digitalOnboarding.index');

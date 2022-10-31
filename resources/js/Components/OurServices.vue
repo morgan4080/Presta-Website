@@ -1,11 +1,11 @@
 <template>
     <div class="bg-gradient-to-r from-[#FFFFFF] to-[#D4E7FE] mt-4">
         <div class="mx-auto max-w-7xl flex flex-col justify-center items-center">
-            <h2 class="custom-blue-800 mt-4">Our Services</h2>
+            <h2 class="custom-blue-200 mt-4">Our Services</h2>
              <h1 class="sm:font-normal text-2xl custom-blue-900">Enabling Businesses to <br><span class="sm:font-semibold flex flex-row justify-center">Thrive & Grow</span></h1>
              <p class="font-light sm:text-sm custom-grey text-center pb-2">We used our wide market research to bring you<br> carefully curated products that fit your SACCO/MFI</p>
         </div>
-        <div class="mx-auto max-w-7xl grid grid-cols-2 sm:gap-x-8 sm:mt-10 sm:px-12 sm:py-12 mb-10 " >
+        <div class="mx-auto max-w-7xl grid  sm:grid-rows-2 lg:grid-cols-2 lg:grid-rows-1 sm:gap-x-8 sm:gap-y-8 sm:mt-10 sm:px-12 sm:py-12 mb-10 " >
             <div class="col-span-1 mx-auto shadow-2xl rounded-md bg-white pb-8 px-10">
                 <div class="inline-flex my-auto">
                     <svg width="106" height="107" viewBox="0 0 106 107" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -28,7 +28,7 @@
                                 <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_274_1011" result="shape"/>
                             </filter>
                             <linearGradient id="paint0_linear_274_1011" x1="33.5" y1="10.1885" x2="65" y2="76.1885" gradientUnits="userSpaceOnUse">
-                                <stop stop-color="#5CA1FE"/>
+                                <stop stop-color="#5CA1FE" offset="1"/>
                                 <stop offset="1" stop-color="#217BF4"/>
                             </linearGradient>
                         </defs>
@@ -40,7 +40,7 @@
                     </p>
                     </div>
                 </div>
-                    <div class="custom-grey sm: flex flex-col justify-between sm:text-sm ml-8">
+                    <div class="custom-grey flex flex-col justify-between  sm:text-sm ml-8">
                         <div class="inline-flex sm:pb-8 ">
                             <svg class="mr-16" width="22" height="20" viewBox="0 0 22 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M16.3786 12.2048C16.3786 14.7063 14.3507 16.7342 11.8492 16.7342H8.00225C5.24082 16.7342 3.00224 14.4956 3.00224 11.7342V8.35772C3.00224 5.59629 5.24082 3.35771 8.00224 3.35771H12.8208C13.2189 3.35771 13.6007 3.19956 13.8822 2.91805C14.8279 1.9724 14.1581 0.355469 12.8208 0.355469H4.81654C2.15644 0.355469 0 2.51191 0 5.17201V14.7364C0 17.4978 2.23858 19.7364 5 19.7364H15.7461C17.7535 19.7364 19.3808 18.109 19.3808 16.1016V10.9505C19.3808 9.61309 17.7639 8.94334 16.8183 9.88901C16.5367 10.1705 16.3786 10.5523 16.3786 10.9505V12.2048Z" fill="#217BF4"/>
@@ -87,8 +87,8 @@
 
             </div>
 
-            <div class="col-span-1 mx-auto">
-                <div class="col-span-1 mx-auto shadow-2xl rounded-md bg-white pb-8 px-10">
+            <div class="md:col-span-1 mx-auto">
+                <div class="md:col-span-1 mx-auto shadow-2xl rounded-md bg-white pb-8 px-10">
                     <div class="inline-flex my-auto">
                         <svg width="106" height="107" viewBox="0 0 106 107" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <g filter="url(#filter0_d_278_1051)">
@@ -112,7 +112,7 @@
                                     <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_278_1051" result="shape"/>
                                 </filter>
                                 <linearGradient id="paint0_linear_278_1051" x1="33.5" y1="12.1885" x2="65" y2="78.1885" gradientUnits="userSpaceOnUse">
-                                    <stop stop-color="#FF858A"/>
+                                    <stop stop-color="#FF858A" offset="1"/>
                                     <stop offset="1" stop-color="#F04148"/>
                                 </linearGradient>
                             </defs>
@@ -184,14 +184,10 @@ export default {
 
 <style >
 .custom-grey {
-
     color: #8C8C8C
 }
-.custom-blue-800 {
-
-
-
-    color: #489AAB
+.custom-blue-200{
+    color: #217BF4
 }
 .custom-blue-900 {
 

@@ -158,40 +158,38 @@
 </template>
 
 <script>
-import { Popover, PopoverButton, PopoverGroup, PopoverPanel } from '@headlessui/vue'
+import {Popover, PopoverButton, PopoverGroup, PopoverPanel} from '@headlessui/vue'
 import {
     ChartBarIcon,
-    CursorClickIcon,
-    DocumentReportIcon,
-    MenuIcon,
-    RefreshIcon,
-    ShieldCheckIcon,
-    ViewGridIcon,
-    XIcon,
     ChatAlt2Icon,
+    CursorClickIcon,
+    MailIcon,
+    MenuIcon,
     PhoneIcon,
-    MailIcon
+    ShieldCheckIcon,
+    XIcon
 } from '@heroicons/vue/outline'
-import { ChevronDownIcon } from '@heroicons/vue/solid'
-import { Link } from '@inertiajs/inertia-vue3'
+import {ChevronDownIcon} from '@heroicons/vue/solid'
+import {Link} from '@inertiajs/inertia-vue3'
+import {defineComponent, h, onMounted} from 'vue'
 
 const solutions = [
     {
-        name: 'Microfinance',
+        name: 'Digital Onboarding',
         description: 'Get a better understanding of your customers financial needs.',
-        href: 'micro-finance',
+        href: 'Digital Onboarding',
         icon: ChartBarIcon,
     },
     {
         name: 'Saccos',
         description: 'Speak directly to your customers in a more meaningful way.',
-        href: 'saccos',
+        href: route('blogs.index'),
         icon: CursorClickIcon,
     },
     {
-        name: 'Investment Groups',
+        name: 'Loan Origination',
         description: "Your customers' data will be safe and secure.",
-        href: 'investment-groups',
+        href: 'LoanOrigination',
         icon: ShieldCheckIcon
     },
 ];
@@ -208,8 +206,6 @@ const resources = [
         href: route('blogs.index'),
     },
 ];
-
-import {defineComponent, h, onMounted} from 'vue'
 
 const navigation = [
     {
@@ -269,8 +265,7 @@ const navigation = [
 ]
 
 const checkPage = () => {
-  let pth = window.location.pathname
-    return pth
+    return window.location.pathname
 }
 checkPage()
 onMounted(()=>{

@@ -1,11 +1,12 @@
 <template>
-        <div class="my-8">
-            <div class="mx-auto max-w-7xl flex flex-col justify-center items-center">
-                <h2 style="" class="custom-blue-200 py-2 font-semibold">OUR CLIENTS</h2>
-                <h1 class="text-2xl font-semibold custom-blue-900 pb-2" >Our Business Patners</h1>
-                <p class="text-center pb-2">Trusted by over 50 credit unions and 500,000+ members <br> across African regions</p>
-            </div>
-            <div class=" mx-auto flex justify-center items-center">
+    <div class="my-8">
+        <div class="mx-auto max-w-7xl flex flex-col justify-center items-center">
+            <h2 style="" class="custom-blue-200 py-2">OUR CLIENTS</h2>
+            <h1 class="text-2xl font-semibold custom-blue-900 pb-2" >Our SACCO Patners</h1>
+            <p class="text-center pb-2">Trusted by over 50 credit unions and 500,000+ members <br> across African regions</p>
+        </div>
+        <div class=" mx-auto flex justify-center items-center">
+
                 <div class="sm:hidden">
                     <label for="tabs" class="sr-only">Select a tab</label>
                     <!-- Use an "onChange" listener to redirect the user to the selected tab URL. -->
@@ -95,25 +96,27 @@
                 </div>
             </div>
         </div>
-    </template>
-    <script setup>
-    import {ref} from 'vue';
-    const tabIndex = ref(0)
-    const tabs = ref([
-        { name: "SACCO's", href: '#', current: false },
-        { name: 'MFIs', href: '#', current: false },
-        { name: 'Other', href: '#', current: true },
-    ])
-    const selectMember = (param) => {
-        console.log('param',param)
-        tabIndex.value = param
-        tabs.value.forEach(function (ele,idx) {
-            console.log('element',ele)
-            ele.current = idx === param;
-        })
 
-    }
-    </script>
+
+</template>
+<script setup>
+import {ref} from 'vue';
+const tabIndex = ref(0)
+const tabs = ref([
+    { name: "SACCO's", href: '#', current: false },
+    { name: 'MFIs', href: '#', current: false },
+    { name: 'Other', href: '#', current: true },
+])
+const selectMember = (param) => {
+    console.log('param',param)
+    tabIndex.value = param
+    tabs.value.forEach(function (ele,idx) {
+        console.log('element',ele)
+        ele.current = idx === param;
+    })
+
+}
+</script>
 
 <style scoped>
 .custom-blue-200{
@@ -123,5 +126,6 @@
 
     color: #0A093D
 }
-
 </style>
+
+

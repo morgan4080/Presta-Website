@@ -1,20 +1,20 @@
 <template>
-    <div class="relative">
 
-        <Head title="Presta Enterprise | Presta Capital" />
+
+        <Head title="Presta Enterprise | Presta Capital" ><title></title></Head>
 
       <NavigationHome :incomingNavClass="'bg-blue-presta4'"></NavigationHome>
 
         <div class="relative custom-light-blue pt-24 px-4 sm:px-6 lg:px-8 lgkkk:pt-40">
             <div class="mx-auto max-w-7xl grid grid-cols-2 bg-gradient-to-r from-[#FFFFFF] to-[#D4E7FE] sm:gap-x-12  sm:px-4" >
                 <div class="col-span-1  sm:mt-20 my-auto">
-                    <h2 class="text-lg custom-light-blue sm:py-4">PRESTA ENTERPRISE</h2>
+                    <h2 class="text-lg custom-light-blue font-semibold sm:py-4">PRESTA ENTERPRISE</h2>
 
                     <h1 class="font-bold text-5xl tracking-wider text-sm:pb-4 custom-light-blue">Enabling Lending<br>
                         Businesses to<br>
                       <span class="custom-dark-bg"> thrive </span> and <span class="custom-dark-bg"> grow.</span></h1>
                     <p class="custom-light-blue font-bold text-base sm:mb-2">Generate new leads, Improve margins, increase revenue, streamline workflows, and close and fund loans seamlessly</p>
-                    <div class="sm:text-xs custom-grey-dark" >
+                    <div class="sm:text-sm custom-grey-dark" >
                     <p class="sm:mb-6 ">It’s time to replace the last century’s lending processes. Today’s borrowers expect quick and easy digital experiences—and lenders need the flexibility to deploy and modify lending applications quickly. Make borrowing simple and fast for your customers with automated processes that can approve, underwrite, and fund loans in minutes—and make life easier for your staff by minimizing the rekeying of data and avoiding manual handoffs of workstreams between departments.<br>
                 <span class="sm:py-4">
                     It’s time for your lending to move at the speed of business.
@@ -57,7 +57,7 @@
 
         <OurClients></OurClients>
         <ScaleLending></ScaleLending>
-        <SeamBorrow></SeamBorrow>
+        <BorrowEnterprise></BorrowEnterprise>
         <HappyClients2></HappyClients2>
         <OpportunityAwait></OpportunityAwait>
         <Demo2></Demo2>
@@ -65,17 +65,17 @@
 
         <MainFooter :showDemo="true" />
 
-        </div>
+
 
 </template>
 
 <script setup>
-import { Head, Link } from '@inertiajs/inertia-vue3';
+import { Head } from '@inertiajs/inertia-vue3';
 import MainFooter from '@/Components/MainFooter.vue';
 import NavigationHome from '@/Components/NavigationHome.vue';
 import OurClients from '@/Components/OurClients.vue';
 import ScaleLending from '@/Components/ScaleLending.vue';
-import SeamBorrow from '@/Components/SeamBorrow.vue';
+import BorrowEnterprise from '@/Components/BorrowEnterprise.vue';
 import HappyClients2 from '@/Components/HappyClients2.vue';
 import OpportunityAwait from '@/Components/OpportunityAwait.vue';
 import SignLoanform from "@/Components/SignLoanform";
@@ -85,10 +85,6 @@ import Demo2 from '@/Components/Demo2.vue';
 </script>
 
 <style scoped>
-.custom-bg-light{
-    background-color:#D4E7FE
-    ;
-}
 .custom-light-blue{
     color:
         #489AAB
@@ -100,4 +96,5 @@ import Demo2 from '@/Components/Demo2.vue';
 .custom-dark-bg{
     color:#00637F
 }
+
 </style>

@@ -5,11 +5,11 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Inertia\Inertia;
 
-class SaccoController extends Controller
+class DigitalOnboardingController extends Controller
 {
     public function index()
     {
-        return Inertia::render('Sacco/Index', [
+        return Inertia::render('DigitalOnboarding/Index', [
         ]);
     }
 }

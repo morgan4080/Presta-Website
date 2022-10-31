@@ -32,7 +32,7 @@
             </div>
             <div class="bg-white-500 mx-auto" >
                 <h2 style="" class="custom-blue-200 py-2">What's Presta</h2>
-                <h1 class="text-2xl font-semibold pb-2 " >Why join Presta?</h1>
+                <h1 class="text-2xl font-semibold pb-2 custom-blue-900" >Why join Presta?</h1>
                 <p class="mb-2">Recent surveys have indicated that small businesses recognise the need they have to connect with <br> consumer.</p>
                 <ul>
                     <li>Groups</li>
@@ -69,5 +69,10 @@ ul li::before {
     width: 1em;
     margin-left: 0;
 }
+.custom-blue-900 {
+
+    color: #0A093D
+}
+
 
 </style>
