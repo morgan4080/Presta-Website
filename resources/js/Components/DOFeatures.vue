@@ -5,7 +5,7 @@
                 <span class="sm:font-semibold custom-blue-900">Digital Onboarding</span>
             </h1>
         </div>
-        <div class="mx-auto max-w-7xl grid grid-cols-3  sm:px-20 bg-gradient-to-r from-[#FFFFFF] to-[#D4E7FE]">
+        <div class="mx-auto max-w-7xl grid sm:grid-rows-3 lg:grid-cols-3 lg:grid-rows-1  sm:px-20 bg-gradient-to-r from-[#FFFFFF] to-[#D4E7FE]">
             <div class="col-span-1 flex flex-col justify-centre items-center  sm:py-4 sm:px-4 ">
                 <img src="/images/DOF1.png" alt="">
                 <h1 class=" sm:text-3xl sm:text-center custom-blue-600 sm:mt-6 mb-4">Onboard in<br>
@@ -52,5 +52,9 @@ export default {
 
     color: #0A093D
 }
+.custom-blue-200{
+    color: #217BF4;
+}
+
 
 </style>

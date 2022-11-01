@@ -8,7 +8,7 @@
                 but it’s one more opportunity to go above and beyond, create engagement,<br>
                 and prove yourself worthy of being their primary provider.</p>
         </div>
-        <div class="mx-auto max-w-7xl grid grid-cols-2 sm:gap-x-8 sm:py-12 sm:px-96 bg-blue-white">
+        <div class="mx-auto max-w-7xl grid sm:grid-rows-2 lg:grid-cols-2 lg:grid-rows-1 sm:gap-x-8 sm:py-12 sm:px-96 bg-blue-white">
             <div class="col-span-1 flex flex-col justify-center items-center shadow-2xl sm:py-4 sm:px-4 ">
                 <h1 class="sm:font-semibold sm:text-sm sm:text-center custom-blue-200">E-Gurantorship
                 </h1>

@@ -1,7 +1,7 @@
 <template>
     <div class="bg-white mt-4">
         <div class="mx-auto max-w-7xl flex flex-col justify-center items-center">
-            <h2 class="custom-blue-200 my-4 font-semibold">TURN FIRST IMPRESSIOSN INTO OBSESIONS</h2>
+            <h2 class="custom-blue-200 my-4 font-semibold">TURN FIRST IMPRESSION INTO OBSESSIONS</h2>
             <h1 class="sm:font-semibold text-4xl sm:text-center custom-blue-900">Digital Onboarding Solution </h1>
             <p class=" sm:text-base custom-grey-dark text-center py-4">Neobanks and big tech have transformed what your customers expect. To keep up,<br>
                 financial institutions must provide a modern experience with <span class="font-semibold">fast, flawless</span><br>
