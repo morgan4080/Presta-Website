@@ -89,9 +89,6 @@ import {
 
 import {ref} from "vue";
 
-
-
-
 const showVideo = ref(false);
 
 const openDemoModal = ref(false);
