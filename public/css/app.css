@@ -5614,10 +5614,13 @@ select {
 		height: 100%;
 	}
 
+<<<<<<< HEAD
 	.lg\:h-screen {
 		height: 100vh;
 	}
 
+=======
+>>>>>>> v3
 	.lg\:min-h-0 {
 		min-height: 0px;
 	}

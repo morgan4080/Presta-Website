@@ -1,6 +1,6 @@
 <template>
     <div class="relative bg-white">
-        <main class="lg:relative lg:h-screen">
+        <main style="height: 34rem" class="lg:relative">
             <div class="mx-auto lg:h-full lg:flex lg:justify-start lg:items-center max-w-7xl w-full my-auto  text-center lg:text-left">
                 <div class="px-4 pt-24 md:pt-0 lg:flex-col lg:justify-start lg:items-center lg:w-1/2 sm:px-8">
                     <h1 class="text-4xl tracking-tight font-bold text-gray-900 sm:text-5xl sm:tracking-tight md:text-6xl md:tracking-tight lg:text-5xl lg:tracking-tight xl:text-6xl xl:tracking-tight">
@@ -51,13 +51,29 @@
 
             <DemoDialogue v-if="openDemoModal" />
         </main>
+        <ActiveMembers></ActiveMembers>
+        <Information></Information>
+        <MfiBenefits></MfiBenefits>
+        <SaccoBenefit></SaccoBenefit>
+        <OurServices></OurServices>
+        <HappyClients></HappyClients>
+        <LatestNews></LatestNews>
+        <SignLoanform></SignLoanform>
     </div>
 </template>
 
 <script setup>
 import { Link } from '@inertiajs/inertia-vue3'
 import YoutubeModal from '@/Components/YoutubeModal';
+import ActiveMembers from '@/Components/ActiveMembers';
 import DemoDialogue from '@/Components/DemoDialogue';
+import Information from '@/Components/Information';
+import MfiBenefits from '@/Components/MfiBenefits';
+import SaccoBenefit from '@/Components/SaccoBenefit';
+import OurServices from '@/Components/OurServices';
+import HappyClients from '@/Components/HappyClients';
+import LatestNews from '@/Components/LatestNews.vue';
+import SignLoanform from '@/Components/SignLoanform';
 import {
     BookmarkAltIcon,
     CalendarIcon,
@@ -69,10 +85,12 @@ import {
     ShieldCheckIcon,
     SupportIcon,
     ViewGridIcon,
-    XIcon,
 } from '@heroicons/vue/outline'
 
 import {ref} from "vue";
+
+
+
 
 const showVideo = ref(false);
 
@@ -149,9 +167,9 @@ const recentPosts = [
 
 </script>
 <style scoped>
-    @media (min-width: 1024px) {
-        .pik{
-            border-top-left-radius: 3.5rem;
-        }
+@media (min-width: 1024px) {
+    .pik{
+        border-top-left-radius: 3.5rem;
     }
+}
 </style>
