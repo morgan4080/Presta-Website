@@ -2,7 +2,7 @@
     <div class="bg-white mt-4">
         <div class="mx-auto max-w-7xl flex flex-col justify-center items-center">
             <h2 class="custom-blue-200 my-4 font-semibold">ENGAGEMENT MADE EASY</h2>
-            <h1 class="sm:font-semibold text-2xl sm:text-center custom-blue-900">Quickly and consistently gain<br>
+            <h1 class="sm:font-semibold text-2xl sm:text-center custom-blue-900">Quickly and consistently gain
                 primary relationships.
             </h1>
             <p class="  custom-grey-dark text-center py-4">A sleek account opening experience might get users to sign up, but building profitable primary relationships takes more. Make it easier for<br>

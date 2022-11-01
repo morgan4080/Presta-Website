@@ -5,7 +5,7 @@
             <h1 class="sm:font-semibold text-3xl sm:text-center custom-blue-900">Latest News</h1>
 
         </div>
-        <div class="mx-auto max-w-7xl grid grid-cols-3  sm:px-20 bg-white">
+        <div class="mx-auto max-w-7xl grid sm:grid-rows-3 lg:grid-cols-3 lg:grid-rows-1 sm:px-20 bg-white">
             <div class="col-span-1 flex flex-col justify-centre items-center  sm:py-4 sm:px-4 ">
                 <img src="/images/LN1.png" alt="">
 

@@ -6,7 +6,6 @@
                     <div class="flex justify-center items-center lg:w-0 lg:flex-1">
                         <Link :href="route('homepage')">
                             <span class="sr-only">Presta Capital</span>
-                            <img class="h-8 md:mr-4 lg:mr-6 w-auto sm:h-12" :src="checkPage() === '/' ? '/images/logos/landingHeader.svg' : '/images/logos/Group 18.svg' " alt="" />
                         </Link>
 
                         <PopoverGroup as="nav" class="hidden md:flex justify-center space-x-10">
@@ -69,9 +68,9 @@
                                 </transition>
                             </Popover>
 
-<!--                            <Link :href="route('contact')" :class="checkPage() === '/' ? 'nav-text' : 'text-white' "  class="text-base font-medium hover:text-gray-200">-->
-<!--                                Contact Us-->
-<!--                            </Link>-->
+                            <!--                            <Link :href="route('contact')" :class="checkPage() === '/' ? 'nav-text' : 'text-white' "  class="text-base font-medium hover:text-gray-200">-->
+                            <!--                                Contact Us-->
+                            <!--                            </Link>-->
                             <a href="https://presta.co.ke/kopesha" :class="checkPage() === '/' ? 'text-white' : 'text-white' "
                                class="-ml-2 whitespace-nowrap px-4 py-2 -mt-2 border border-transparent rounded-md shadow-sm text-base text-white hover:bg-blue-presta2 bg-blue-presta1 font-medium hover:text-white bg-white text-white">
                                 Sign In
@@ -96,7 +95,7 @@
                             <phone-icon class="flex-none w-5 h-5 text-white mr-1" aria-hidden="true" />
                             +254711082442
                         </a>
-                </div>
+                    </div>
                 </div>
 
                 <transition enter-active-class="duration-200 ease-out" enter-from-class="opacity-0 scale-95" enter-to-class="opacity-100 scale-100" leave-active-class="duration-100 ease-in" leave-from-class="opacity-100 scale-100" leave-to-class="opacity-0 scale-95">
@@ -159,29 +158,28 @@
 </template>
 
 <script>
-import { Popover, PopoverButton, PopoverGroup, PopoverPanel } from '@headlessui/vue'
+import {Popover, PopoverButton, PopoverGroup, PopoverPanel} from '@headlessui/vue'
 import {
     ChartBarIcon,
+    ChatAlt2Icon,
     CursorClickIcon,
-    DocumentReportIcon,
+    MailIcon,
     MenuIcon,
-    RefreshIcon,
+    PhoneIcon,
     ShieldCheckIcon,
     ViewGridIcon,
-    XIcon,
-    ChatAlt2Icon,
-    PhoneIcon,
-    MailIcon
+    XIcon
 } from '@heroicons/vue/outline'
-import { ChevronDownIcon } from '@heroicons/vue/solid'
-import { Link } from '@inertiajs/inertia-vue3'
+import {ChevronDownIcon} from '@heroicons/vue/solid'
+import {Link} from '@inertiajs/inertia-vue3'
+import {defineComponent, h, onMounted} from 'vue'
 
 const solutions = [
     {
-        name: 'Microfinance',
-        description: 'Get a better understanding of your customers financial needs.',
-        href: 'micro-finance',
-        icon: ChartBarIcon,
+        name: 'Enterprise',
+        description: "Your customers' data will be safe and secure.",
+        href: 'Enterprise',
+        icon: ViewGridIcon
     },
     {
         name: 'Saccos',
@@ -190,11 +188,19 @@ const solutions = [
         icon: CursorClickIcon,
     },
     {
-        name: 'Investment Groups',
+        name: 'Digital Onboarding',
+        description: 'Get a better understanding of your customers financial needs.',
+        href: 'Digital Onboarding',
+        icon: ChartBarIcon,
+    },
+
+    {
+        name: 'Loan Origination',
         description: "Your customers' data will be safe and secure.",
-        href: 'investment-groups',
+        href: 'LoanOrigination',
         icon: ShieldCheckIcon
     },
+
 ];
 
 const resources = [
@@ -209,8 +215,6 @@ const resources = [
         href: route('blogs.index'),
     },
 ];
-
-import {defineComponent, h, onMounted} from 'vue'
 
 const navigation = [
     {
@@ -270,8 +274,7 @@ const navigation = [
 ]
 
 const checkPage = () => {
-  let pth = window.location.pathname
-    return pth
+    return window.location.pathname
 }
 checkPage()
 onMounted(()=>{
@@ -289,7 +292,8 @@ export default {
         ChatAlt2Icon,
         PhoneIcon,
         MailIcon,
-        Link
+        Link,
+        ViewGridIcon
     },
     props: {
         incomingNavClass: {

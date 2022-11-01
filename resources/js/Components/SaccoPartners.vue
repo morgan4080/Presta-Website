@@ -103,9 +103,9 @@
 import {ref} from 'vue';
 const tabIndex = ref(0)
 const tabs = ref([
-    { name: "SACCO's", href: '#', current: false },
+    { name: "SACCO's", href: '#', current: true },
     { name: 'MFIs', href: '#', current: false },
-    { name: 'Other', href: '#', current: true },
+    { name: 'Other', href: '#', current: false },
 ])
 const selectMember = (param) => {
     console.log('param',param)
