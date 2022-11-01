@@ -1,8 +1,4 @@
 <style>
-.custom-blue-200{
-    color: #217BF4
-}
-
 .custom-blue-900 {
 
     color: #0A093D
@@ -13,7 +9,6 @@
 <template>
     <div class="my-8">
         <div class="mx-auto max-w-7xl flex flex-col justify-center items-center">
-            <h2 style="" class="custom-blue-200 py-2">Valuable Team</h2>
             <h1 class="text-2xl font-semibold pb-2 custom-blue-900" >Our Active Members</h1>
             <p class="text-center pb-2">Trusted by over 50 credit unions and 500,000+ members <br> across African regions</p>
         </div>
