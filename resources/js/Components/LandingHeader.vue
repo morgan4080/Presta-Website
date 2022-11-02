@@ -22,7 +22,7 @@
                 </div>
             </div>
             <div class="relative w-full h-80 sm:h-72 md:h-96 lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2 lg:h-full shadow-2xl">
-                <img class="absolute inset-0 h-full object-cover w-full object-centre" src="/images/landing1.png" alt="" />
+                <img class="absolute gginset-0 h-full object-cover w-full object-centre" src="/images/landing1.png" alt="" />
                 <div v-if="!showVideo" class="relative col-span-2 h-full flex justify-center items-center">
                     <svg width="84" @click="playVideo('play')" height="94" class="hover:scale-110 sm:scale-90 lg:scale-100" viewBox="0 0 84 94" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <g filter="url(#filter0_d_912_545)">
