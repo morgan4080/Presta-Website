@@ -1,11 +1,11 @@
 <template>
-   <div class="mx-auto max-w-7xl grid grid-cols-2 sm:gap-x-8 sm:py-32 sm:px-8 bg-blue-white">
-       <div class="col-span-1">
-           <img src="/images/SaccoBenefit.png" alt="business-woman" class="object-cover object-center group-hover:opacity-75 rounded-lg">
+   <div class="mx-auto max-w-9xl grid lg:grid-cols-2 lg:grid-rows-1 sm:grid-cols-1 sm:grid-rows-2  sm:py-8 sm:px-8 sm:gap-x-8 lg:gap-x-0 bg-white sm:mt:10 lg:mt-10 ">
+       <div class="col-span-1 lg:mx-auto sm:mr-0 sm:ml-20 sm: flex  justify-center items-centre mt-4 sm:mt-4">
+           <img src="/images/SaccoBenefit.png" alt="business-woman" class=" my-auto h-96 lg:w-full sm:w-3/4 object-cover object-center group-hover:opacity-75 rounded-2xl">
        </div>
 
-    <div class="col-span-1 flex-col justify-between">
-        <h2 class="text-2xl font-semibold pb-2 custom-blue-900">What Benefits do we have for SACCO'S ?</h2>
+    <div class="col-span-1 flex-col justify-between mr-12 ml-16 sm:ml-32">
+        <h2 class="text-2xl font-semibold py-2 sm:py-4 custom-blue-900 ">What Benefits do we have for SACCO'S ?</h2>
 
                 <div class="inline-flex  pb-1 custom-blue-600">
                     <svg class="-ml-4" width="19" height="14" viewBox="0 0 19 14" fill="none"  xmlns="http://www.w3.org/2000/svg">

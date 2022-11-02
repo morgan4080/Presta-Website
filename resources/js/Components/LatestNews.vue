@@ -33,7 +33,7 @@
                     <svg width="39" height="3" viewBox="0 0 39 3" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <line y1="1.18848" x2="39" y2="1.18848" stroke="#FFAF2E" stroke-width="2"/>
                     </svg>
-                    <h1 class="sm:text-center custom-blue-dark sm:mt-6 mb-4">How Can Lenders Accelerate Their Digital Transformation</h1>
+                    <a :href="www.g"> The Credit and Loan Collections Future. (Post COVID) </a>
                 </div>
 
                 <div class="flex justify-center items-center">

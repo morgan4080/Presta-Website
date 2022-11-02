@@ -2,7 +2,7 @@
     <div class="bg-gradient-to-r from-[#FFFFFF] to-[#D4E7FE] mt-4">
         <div class="mx-auto max-w-7xl flex flex-col justify-center items-center">
 
-             <h1 class="sm:font-normal text-2xl custom-blue-900">Enabling Businesses to <br><span class="sm:font-semibold flex flex-row justify-center">Thrive & Grow</span></h1>
+             <h1 class="sm:font-normal text-2xl custom-blue-900 mt-6">Enabling Businesses to <br><span class="sm:font-semibold flex flex-row justify-center">Thrive & Grow</span></h1>
              <p class="font-light sm:text-sm custom-grey text-center pb-2">We used our wide market research to bring you<br> carefully curated products that fit your SACCO/MFI</p>
         </div>
         <div class="mx-auto max-w-7xl grid  sm:grid-rows-2 lg:grid-cols-2 lg:grid-rows-1 sm:gap-x-8 sm:gap-y-8 sm:mt-10 sm:px-12 sm:py-12 mb-10 " >
@@ -46,7 +46,7 @@
                                 <path d="M16.3786 12.2048C16.3786 14.7063 14.3507 16.7342 11.8492 16.7342H8.00225C5.24082 16.7342 3.00224 14.4956 3.00224 11.7342V8.35772C3.00224 5.59629 5.24082 3.35771 8.00224 3.35771H12.8208C13.2189 3.35771 13.6007 3.19956 13.8822 2.91805C14.8279 1.9724 14.1581 0.355469 12.8208 0.355469H4.81654C2.15644 0.355469 0 2.51191 0 5.17201V14.7364C0 17.4978 2.23858 19.7364 5 19.7364H15.7461C17.7535 19.7364 19.3808 18.109 19.3808 16.1016V10.9505C19.3808 9.61309 17.7639 8.94334 16.8183 9.88901C16.5367 10.1705 16.3786 10.5523 16.3786 10.9505V12.2048Z" fill="#217BF4"/>
                                 <path d="M11.3817 13.2363C11.0263 13.2363 10.6815 13.0977 10.423 12.8445L5.9148 8.42913C5.37158 7.89704 5.36046 7.02327 5.88998 6.47741C6.41947 5.93151 7.28912 5.92046 7.83239 6.45247L11.128 9.68031C12.4477 7.79015 15.2004 4.46805 19.8856 1.45429C20.5247 1.04325 21.3741 1.23067 21.783 1.87253C22.1921 2.51451 22.0057 3.36807 21.3668 3.77907C15.0739 7.82695 12.6234 12.4488 12.5994 12.4951C12.3984 12.8817 12.0273 13.1502 11.5986 13.2191C11.5263 13.2307 11.4538 13.2363 11.3817 13.2363Z" fill="#217BF4"/>
                             </svg>
-                            <a href="Digital Onboarding">Digital Onboarding</a>
+                            <a href='solutions/Digital Onboarding'>Digital Onboarding</a>
                 </div>
                         <div class="inline-flex sm:pb-8">
                             <svg class="mr-16" width="22" height="20" viewBox="0 0 22 20" fill="none" xmlns="http://www.w3.org/2000/svg">

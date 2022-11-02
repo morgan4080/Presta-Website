@@ -1,6 +1,6 @@
 <template>
     <div class="relative bg-white">
-        <main style="height: 34rem" class="lg:relative">
+        <main style="height: 45rem" class="lg:relative">
             <div class="mx-auto lg:h-full lg:flex lg:justify-start lg:items-center max-w-7xl w-full my-auto  text-center lg:text-left">
                 <div class="px-4 pt-24 md:pt-0 lg:flex-col lg:justify-start lg:items-center lg:w-1/2 sm:px-8">
                     <h1 class="text-4xl tracking-tight font-bold text-gray-900 sm:text-5xl sm:tracking-tight md:text-6xl md:tracking-tight lg:text-5xl lg:tracking-tight xl:text-6xl xl:tracking-tight">
@@ -21,8 +21,8 @@
                     </div>
                 </div>
             </div>
-            <div class="relative w-full h-64 sm:h-72 md:h-96 lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2 lg:h-full">
-                <img class="absolute inset-0 pik w-full h-full object-cover" src="/images/landingHeader/img.jpg" alt="" />
+            <div class="relative w-full h-80 sm:h-72 md:h-96 lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2 lg:h-full shadow-2xl">
+                <img class="absolute inset-0 h-full object-cover w-full object-centre" src="/images/landing1.png" alt="" />
                 <div v-if="!showVideo" class="relative col-span-2 h-full flex justify-center items-center">
                     <svg width="84" @click="playVideo('play')" height="94" class="hover:scale-110 sm:scale-90 lg:scale-100" viewBox="0 0 84 94" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <g filter="url(#filter0_d_912_545)">
