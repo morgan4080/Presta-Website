@@ -1,7 +1,7 @@
 <template>
     <div class="bg-gradient-to-r from-[#FFFFFF] to-[#D4E7FE] mt-4">
         <div class="mx-auto max-w-7xl flex flex-col justify-center items-center">
-            <h1 class="sm:font-semibold text-4xl sm:text-center custom-blue-200">Benefits of Loan Origination</h1>
+            <h1 class="sm:font-semibold text-4xl sm:text-center custom-light-blue">Benefits of Loan Origination</h1>
         </div>
         <div class="mx-auto max-w-7xl grid grid-cols-4 sm:py-4 sm:px-20 bg-blue-white">
             <div class="col-span-1 flex flex-col justify-center items-center sm:py-4 sm:px-4 ">
@@ -29,9 +29,8 @@ export default {
 
 <style scoped>
 
-
-.custom-blue-200{
-    color: #217BF4
+.custom-light-blue {
+    color: #489AAB
 }
 
 </style>
