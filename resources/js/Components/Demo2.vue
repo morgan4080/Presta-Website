@@ -1,5 +1,6 @@
 <template>
-    <div class="mx-auto max-w-7xl grid grid-cols-3 sm:gap-x-8 sm:py-12 sm:px-12 custom-blue-bg mb-4">
+    <div class="custom-blue-bg">
+    <div class="mx-auto max-w-7xl grid grid-cols-3 sm:gap-x-8 sm:py-12 sm:px-12  mb-4">
         <div class="col-span-1 flex flex-col justify-center items-center  py-4">
             <p class="text-white sm:py-4">Great products<br>
                 designed for great<br>
@@ -27,7 +28,7 @@
         </div>
         <div class="col-span-1 flex flex-col justify-center sm:items-start py-4">
 
-            <h1 class="text-6xl sm:text-4xl text-white font-bold py-4">You Qualify for
+            <h1 class="md:text-6xl text-4xl text-white font-bold py-4">You Qualify for
                 an Exclusive Demo</h1>
 
             <button type="button" class=" items-center rounded-md border border-transparent custom-blue-btn px-6 py-2 text-sm font-medium text-white shadow-sm focus:outline-none focus:ring-2 focus:ring-offset-blue-prestaR focus:ring-offset-2">Redeem</button>
@@ -37,6 +38,7 @@
         <div class="flex col-span-1">
             <img src="/images/redlady.png" alt="lady in red">
         </div>
+    </div>
     </div>
 </template>
 

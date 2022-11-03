@@ -2,12 +2,12 @@
 
 
     <Head title="Presta Enterprise | Presta Capital" ><title></title></Head>
-
-    <NavigationHome :incomingNavClass="'bg-blue-presta4'"></NavigationHome>
+<div class=" bg-gradient-to-r from-[#FFFFFF] to-[#D4E7FE]">
+    <NavigationHome ></NavigationHome>
 
     <div class="relative custom-light-blue pt-24 px-4 sm:px-6 lg:px-8 lgkkk:pt-40">
-        <div class="mx-auto max-w-7xl grid grid-cols-2 bg-gradient-to-r from-[#FFFFFF] to-[#D4E7FE] sm:gap-x-12  sm:px-4" >
-            <div class="col-span-1  sm:mt-20 my-auto">
+        <div class="mx-auto max-w-9xl grid grid-cols-2 sm:gap-x-12  sm:px-4" >
+            <div class="col-span-1  sm:mt-20 my-auto ml-36">
                 <h2 class="text-lg custom-light-blue font-semibold sm:py-4">PRESTA ENTERPRISE</h2>
 
                 <h1 class="font-bold text-5xl tracking-wider text-sm:pb-4 custom-light-blue">Enabling Lending<br>
@@ -53,6 +53,7 @@
 
             </div>
         </div>
+    </div>
     </div>
 
     <OurClients></OurClients>

@@ -1,7 +1,8 @@
 <template>
-    <div class="mx-auto max-w-7xl grid grid-cols-2 bg-blue-prestaS sm:gap-x-12  sm:px-4" >
-        <div class="col-span-1 my-auto">
-            <h2 class="custom-blue-200 text-lg sm:py-4">SIGN LOAN FORMS</h2>
+    <div class="custom-sign hidden md:block">
+    <div class="px-8 grid h-80 grid-cols-2 sm:gap-x-12  sm:px-4" >
+        <div class="col-span-1 flex flex-col justify-center items-center space-y-2">
+            <h2 class="custom-light-blue text-lg sm:py-4">SIGN LOAN FORMS</h2>
             <h1 class="font-bold text-4xl custom-blue-900 sm:pb-4">Anywhere, Anytime</h1>
             <p class="custom-grey sm:mb-12">Who needs to physically sign loan forms<br> anymore? Our digital gurantorship app simplifies<br> the Loan Application Process for both Members<br> & Staff</p>
             <div class="inline-flex">
@@ -15,10 +16,11 @@
         </div>
 
 
-        <div class="col-span-1 sm:mx-auto sm:mb-0 sm:pb-0" >
-            <img src="/images/mobilemuckup.png" alt="iphone11 form">
+        <div class="col-span-1 sm:mx-auto sm:mb-0 sm:pb-0 flex items-end" >
+            <img class="max-h-64 w-60 mb-4" src="/images/mobilemuckup.png" alt="iphone11 form">
 
         </div>
+    </div>
     </div>
 </template>
 
@@ -29,9 +31,7 @@ export default {
 </script>
 
 <style scoped>
-.custom-blue-200 {
-    color: #217BF4
-}
+
 
 .custom-grey {
 
@@ -40,5 +40,11 @@ export default {
 .custom-blue-900 {
 
     color: #0A093D
+}
+.custom-light-blue {
+    color: #489AAB
+}
+.custom-sign {
+    background-color:#E5F0FD
 }
 </style>

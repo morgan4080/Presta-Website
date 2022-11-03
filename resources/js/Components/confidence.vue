@@ -1,7 +1,7 @@
 <template>
     <div class="bg-white mt-4">
         <div class="mx-auto max-w-7xl flex flex-col justify-center items-center">
-            <h2 class="custom-blue-200 my-4 font-semibold">OUR CUSTOMERS SEE REAL RESULTS</h2>
+            <h2 class="custom-light-blue my-4 font-semibold">OUR CUSTOMERS SEE REAL RESULTS</h2>
             <h1 class="sm:font-semibold text-4xl sm:text-center custom-blue-900">Move Forward With Confidence</h1>
             <p class="font-semibold sm:text-base custom-grey-dark text-center ">Which credit products would you like to deliver? </p>
             <p class=" sm:text-base custom-grey-dark text-center py-4">The platform incorporates a full portfolio of credit products – starting from quick loans for retail customers, through mortgage origination processes,
@@ -12,7 +12,7 @@
 
             <div class="mx-auto max-w-full grid  sm:grid-rows-3 sm:gap-y-4 md:grid-cols-3 md:grid-rows-1 gap-x-8 sm:px-20">
                 <div class="col-span-1 flex flex-col justify-centre items-center  sm:py-4 sm:px-4 shadow-2xl">
-                    <h1 class=" sm:text-2xl sm:text-center custom-blue-200 sm:mt-6 mb-4 ">Retail Loans</h1>
+                    <h1 class=" sm:text-2xl sm:text-center custom-light-blue sm:mt-6 mb-4 ">Retail Loans</h1>
                     <div class="grid grid-cols-2 ">
                         <div class="inline-flex  pb-1">
                             <svg width="19" height="20" viewBox="0 0 19 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -61,7 +61,7 @@
 
                 </div>
                 <div class="col-span-1 flex flex-col justify-center items-center  sm:px-4  shadow-2xl ">
-                    <h1 class="sm:text-2xl sm:text-center custom-blue-200 sm:mt-6 mb-4">Commercial Loans</h1>
+                    <h1 class="sm:text-2xl sm:text-center custom-light-blue sm:mt-6 mb-4">Commercial Loans</h1>
                     <div class="grid grid-cols-2 ">
                         <div class="inline-flex ">
                             <svg width="19" height="20" viewBox="0 0 19 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -123,7 +123,7 @@
                     </div>
                 </div>
                 <div class="col-span-1 flex flex-col justify-center items-center sm:px-4  shadow-2xl ">
-                    <h1 class=" sm:text-2xl sm:text-center custom-blue-200 sm:mt-6 mb-4 ">Mortgages</h1>
+                    <h1 class=" sm:text-2xl sm:text-center custom-light-blue sm:mt-6 mb-4 ">Mortgages</h1>
                     <div class="grid grid-cols-2">
                         <div class="inline-flex  pb-1">
                             <svg width="19" height="20" viewBox="0 0 19 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -187,12 +187,13 @@ export default {
 .custom-grey-dark{
     color:#656464;
 }
-.custom-blue-200{
-    color: #217BF4
-}
+
 .custom-blue-900 {
 
     color: #0A093D
+}
+.custom-light-blue {
+    color: #489AAB
 }
 
 </style>

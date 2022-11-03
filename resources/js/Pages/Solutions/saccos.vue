@@ -1,12 +1,12 @@
 <template>
 
     <Head title="Presta Sacco | Presta Capital" ><title></title></Head>
-
-    <NavigationHome :incomingNavClass="'bg-blue-presta4'"></NavigationHome>
+<div class="bg-gradient-to-r from-[#FFFFFF] to-[#D4E7FE] ">
+    <NavigationHome ></NavigationHome>
 
     <div class="relative custom-light-blue pt-24 px-4 sm:px-6 lg:px-8 lgkkk:pt-40">
         <div class="mx-auto max-w-7xl grid grid-cols-2 bg-gradient-to-r from-[#FFFFFF] to-[#D4E7FE] sm:gap-x-12  sm:px-4" >
-            <div class="col-span-1  sm:mt-20 my-auto">
+            <div class="col-span-1  sm:mt-20 my-aueto">
                 <h2 class="text-lg font-semibold custom-light-blue sm:py-4">PRESTA SACCO</h2>
 
                 <h1 class="font-bold text-5xl tracking-wider text-sm:pb-4 custom-light-blue"><span  class="custom-dark-bg">Win</span> Deposits,<span  class="custom-dark-bg"> Engage</span><br>
@@ -54,11 +54,11 @@
             </div>
         </div>
     </div>
-
+</div>
     <SaccoPartners></SaccoPartners>
     <Engagement></Engagement>
     <BorrowSacco></BorrowSacco>
-    <HappyClients2></HappyClients2>
+    <HappyClients></HappyClients>
     <OpportunityAwait></OpportunityAwait>
     <Demo2></Demo2>
     <SignLoanform></SignLoanform>
@@ -76,7 +76,7 @@ import NavigationHome from '@/Components/NavigationHome.vue';
 
 import Engagement from '@/Components/Engagement.vue';
 import BorrowSacco from '@/Components/BorrowSacco.vue';
-import HappyClients2 from '@/Components/HappyClients2.vue';
+import HappyClients from '@/Components/HappyClients.vue';
 import OpportunityAwait from '@/Components/OpportunityAwait.vue';
 import SignLoanform from "@/Components/SignLoanform";
 import Demo2 from '@/Components/Demo2.vue';

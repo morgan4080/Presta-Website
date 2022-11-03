@@ -1,7 +1,7 @@
 <template>
     <div class="bg-white mt-4">
         <div class="mx-auto max-w-7xl flex flex-col justify-center items-center">
-            <h2 class="custom-blue-200 my-4 font-semibold">TURN FIRST IMPRESSION INTO OBSESSIONS</h2>
+            <h2 class="custom-blue-600 my-4 font-semibold">TURN FIRST IMPRESSION INTO OBSESSIONS</h2>
             <h1 class="sm:font-semibold text-4xl sm:text-center custom-blue-900">Digital Onboarding Solution </h1>
             <p class=" sm:text-base custom-grey-dark text-center py-4">Neobanks and big tech have transformed what your customers expect. To keep up,<br>
                 financial institutions must provide a modern experience with <span class="font-semibold">fast, flawless</span><br>
@@ -15,9 +15,9 @@
             <div class="col-span-1 flex-col justify-between">
 
 
-                <div class="inline-flex  pb-1 custom-blue-600">
+                <div class="inline-flex  pb-1 ">
 
-                    <p class="font-bold my-4 tracking-wider text-3xl custom-blue-200">The Power of Digital Onboarding</p>
+                    <p class="font-bold my-4 tracking-wider text-3xl custom-blue-600">The Power of Digital Onboarding</p>
                 </div>
                 <p class="sm:py-4 custom-grey-p">We simplify the end-to-end digital customer onboarding in financial institutions, so you’ll: earn loyalty, increase conversion rates and lower operational costs.</p>
 
@@ -52,9 +52,7 @@ export default {
 .custom-grey-p{
     color:#727272;
 }
-.custom-blue-200{
-    color: #217BF4
-}
+
 .custom-blue-900 {
 
     color: #0A093D

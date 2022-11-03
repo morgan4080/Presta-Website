@@ -1,6 +1,6 @@
 <template>
-<div class="mx-auto max-w-9xl grid lg:grid-cols-2 lg:grid-rows-1 sm:grid-cols-1 sm:grid-rows-2  sm:py-8 sm:px-8 sm:gap-x-8 lg:gap-x-0 bg-gradient-to-r from-[#FFFFFF] to-[#D4E7FE]  sm:mt-10 ">
-    <div class="col-span-1 flex-col justify-centre items-center mx-auto lg:ml-32 mr-12 ml-16 lg:ml-0 sm:ml-32">
+<div class="mx-auto max-w-9xl grid md:grid-cols-2 md:grid-rows-1 sm:grid-cols-1 sm:grid-rows-2 py-8 px-8 gap-x-8 md:gap-x-0 bg-gradient-to-r from-[#FFFFFF] to-[#D4E7FE] mt-10 ">
+    <div class="col-span-1 order-2 md:order-1 flex-col justify-centre items-center mx-auto md:ml-32 mr-12 ml-16">
        <h2 class="text-2xl font-semibold pb-6 custom-blue-900 spacing-y-4">What Benefits do we have for <br> Microfinance Institutions ?</h2>
             <div>
                 <span class="inline-flex pb-1 custom-blue-600">
@@ -29,7 +29,7 @@
              <p class="pb-4">Customize the borrower journey with a “point-and-click” portal builder. You can launch the platform quickly and then optimize it over time.</p>
         </div>
     </div>
-    <div class="col-span-1 lg:mx-auto sm:mr-0 sm:ml-20 sm: flex  justify-center items-centre ">
+    <div class="col-span-1 order-1 md:order-2 md:mx-auto sm:mr-0 sm:ml-20 sm: flex  justify-center items-centre ">
         <img src="/images/MFI.png" alt="lady with laptop" class=" my-auto h-96 lg:w-full sm:w-3/4 object-cover object-center group-hover:opacity-75 rounded-2xl">
     </div>
 </div>

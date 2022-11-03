@@ -1,7 +1,7 @@
 <template>
     <div class="bg-white mt-4">
         <div class="mx-auto max-w-7xl flex flex-col justify-center items-center">
-            <h2 class="custom-blue-200 my-4 font-semibold">TRANSFORMING THE SME CUSTOMER EXPERIENCE </h2>
+            <h2 class="custom-light-blue my-4 font-semibold">TRANSFORMING THE SME CUSTOMER EXPERIENCE </h2>
             <h1 class="sm:font-semibold text-4xl sm:text-center custom-blue-900">Opening the Doors of Opportunity </h1>
             <p class=" sm:text-base custom-grey-dark text-center py-4">Master Loan Origination Challenges with Real Results that can make you ready for<br>
                 <span class="font-semibold">Today and the future </span>
@@ -13,7 +13,7 @@
             </div>
 
             <div class="col-span-1 flex-col justify-between my-auto">
-                <p class=" my-4 tracking-wider text-2xl sm:py-4 custom-blue-200">What’s in it for your <span class="font-semibold">Business ?</span></p>
+                <p class=" my-4 tracking-wider text-2xl sm:py-4 custom-light-blue">What’s in it for your <span class="font-semibold">Business ?</span></p>
                 <ol  class=" custom-grey-p font-semibold list-decimal list-inside">
                     <li class="sm:py-2">Grow Portfolio & Revenue Per Customer.</li>
                     <li class="sm:py-2">  Streamline Credit Operations.</li>
@@ -29,7 +29,7 @@
         </div>
         <div class="mx-auto max-w-7xl grid grid-cols-2 sm:gap-x-8 sm:px-8 bg-blue-white">
             <div class="col-span-1 flex-col justify-between my-auto">
-                <p class=" my-4 tracking-wider text-2xl sm:py-4 custom-blue-200">What’s in it for your <span class="font-semibold">Employees?</span></p>
+                <p class=" my-4 tracking-wider text-2xl sm:py-4 custom-light-blue">What’s in it for your <span class="font-semibold">Employees?</span></p>
                 <ol  class=" custom-grey-p font-semibold list-decimal list-inside">
                     <li class="sm:py-2">Automated flows – no time-consuming processes.</li>
                     <li class="sm:py-2">Paperless approach, with digitalized forms</li>
@@ -54,7 +54,7 @@
             </div>
 
             <div class="col-span-1 flex-col justify-between my-auto">
-                <p class=" my-4 tracking-wider text-2xl sm:py-4 custom-blue-200">What’s in it for your <span class="font-semibold">Customers?</span></p>
+                <p class=" my-4 tracking-wider text-2xl sm:py-4 custom-light-blue">What’s in it for your <span class="font-semibold">Customers?</span></p>
                 <ol  class=" custom-grey-p font-semibold list-decimal list-inside">
                     <li class="sm:py-2">Apply Anytime, Anywhere – multichannel approach.</li>
                     <li class="sm:py-2">Complete Digital Document Flow with Digital Approvals.</li>
@@ -85,11 +85,11 @@ export default {
 .custom-grey-p{
     color:#727272;
 }
-.custom-blue-200{
-    color: #217BF4
-}
 .custom-blue-900 {
 
     color: #0A093D
+}
+.custom-light-blue {
+    color: #489AAB
 }
 </style>

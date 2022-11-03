@@ -1,10 +1,10 @@
 <template>
     <Head title="Digital Onboarding | Presta Capital" ><title></title></Head>
-
-    <NavigationHome :incomingNavClass="'bg-blue-presta4'"></NavigationHome>
+<div class="bg-gradient-to-r from-[#FFFFFF] to-[#D4E7FE]">
+    <NavigationHome ></NavigationHome>
 
     <div class="relative custom-light-blue pt-24 px-4 sm:px-6 lg:px-8">
-        <div class="mx-auto max-w-7xl grid grid-cols-2 bg-gradient-to-r from-[#FFFFFF] to-[#D4E7FE] sm:gap-x-12  sm:px-4" >
+        <div class="mx-auto max-w-7xl grid grid-cols-2  sm:gap-x-12  sm:px-4" >
             <div class="col-span-1  sm:mt-20 my-auto">
                 <h2 class="text-lg custom-light-blue sm:py-4 font-semibold">DIGITAL ONBOARDING</h2>
 
@@ -52,6 +52,7 @@
             </div>
         </div>
     </div>
+</div>
 
     <OnboardingSolution></OnboardingSolution>
     <DOFeatures></DOFeatures>
