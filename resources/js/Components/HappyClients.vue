@@ -13,7 +13,7 @@
                 </div>
             </div>
         </div>
-        <div class="mx-auto max-w-7xl grid md:grid-cols-2 md:grid-rows-1 grid-cols-1 grid-rows-2 sm:gap-x-10 sm:px-12 sm:py-6 mb-10 " >
+        <div class="mx-auto max-w-7xl grid md:grid-cols-2 md:grid-rows-1 grid-cols-1 grid-rows-2 sm:gap-x-10 md:px-0 sm:py-6 mb-10 " >
             <div class="col-span-1 order-2 sm:ml-12">
                 <svg width="162" height="163" viewBox="0 0 162 163" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <g filter="url(#filter0_d_258_1889)">
@@ -33,26 +33,56 @@
                         </filter>
                     </defs>
                 </svg>
-                <p class="font- sm:text-lg italic custom-grey pb-8">As the Chairman of the SACCO, I have seen and felt the impact this product has made on our organization since our partnership. We have been able to increase our loan book over a remarkable period of time and improved our efficiency and scale to greater heights.</p>
-                <p>Bernard Rono</p>
+                <p v-if="tab === false" class="font- sm:text-lg italic custom-grey pb-8">"As the Chairman of the SACCO, I have seen and felt the impact this product has made on our organization since our partnership. We have been able to increase our loan book over a remarkable period of time and improved our efficiency and scale to greater heights."</p>
+                <p v-if="tab === true" class="font- sm:text-lg italic custom-grey pb-8">"With an interactive interface, the platform allows us to have a broad range of products for our different categories of clients and the various accounting and statistical tools allow us to confidently monitor our business performance, all this under one roof."</p>
 
-                <p class="font-light sm:text-sm custom-grey pb-2 ">Chairman, Ketepa SACCO</p>
+
+                <div class="flex justify-between items-end  my-auto mx-auto">
+                    <div>
+                        <p v-if="tab === false"  class=" md:text-lg">Bernard Rono</p>
+                        <p v-if="tab === false" class="font-light sm:text-sm custom-grey pb-2  md:text-base ">Chairman, Ketepa SACCO</p>
+                        <p v-if="tab === true"  class=" md:text-lg">Quentin Afande</p>
+                        <p v-if="tab === true" class="font-light sm:text-sm custom-grey pb-2  md:text-base ">Managing Director,  Feezy Mobile Credit</p>
+                    </div>
+
+
+                    <div>
+                        <button @click="tabClient()" >
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
+                            </svg>
+                        </button>
+                        <button @click="tabClient()">
+                            <svg  xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+                            </svg>
+                        </button>
+                    </div>
+
+                </div>
 
             </div>
 
 
             <div class="col-span-1 order-1 md:order-2 sm:mx-auto md:my-auto">
-                <img class="h-80" src="/images/BerneredKetepa%20(1).png" alt="ketepaceo">
+                <img v-if="tab===false" class="h-80" src="/images/BerneredKetepa%20(1).png" alt="ketepaceo">
+                <img v-if="tab===true" src="/images/Quentin-Feezy.png" alt="ketepamanager">
 
             </div>
+
         </div>
     </div>
 
 </template>
 
-<script>
-export default {
-    name: "HappyClients.vue"
+<script setup>
+
+import {ref} from "vue";
+
+const tab =ref(false)
+
+const tabClient = () => {
+  tab.value = !tab.value
 }
 </script>
 

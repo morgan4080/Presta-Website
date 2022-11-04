@@ -10,7 +10,7 @@
     <div class="my-8">
         <div class="mx-auto max-w-7xl flex flex-col justify-center items-center">
             <h1 class="text-2xl font-semibold pb-2 custom-blue-900" >Our Active Members</h1>
-            <p class="text-center pb-2">Trusted by over 50 credit unions and 500,000+ members <br> across African regions</p>
+            <p class="text-center md:text-lg pb-2">Trusted by over 50 credit unions and 500,000+ members <br> across African regions</p>
         </div>
         <div class=" mx-auto flex justify-center items-center">
             <div class="sm:hidden">

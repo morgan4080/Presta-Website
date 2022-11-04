@@ -5,7 +5,7 @@
             <h1 class="sm:font-semibold text-4xl sm:text-center custom-blue-900">Latest News</h1>
 
         </div>
-        <div class="mx-auto max-w-7xl grid sm:grid-rows-3 lg:grid-cols-3 lg:grid-rows-1 sm:px-20 bg-white">
+        <div class="mx-auto max-w-7xl grid sm:grid-rows-3 lg:grid-cols-3 lg:grid-rows-1 md:px-4 bg-white">
             <a href="/blogs/articles/the-credit-and-loan-collections-future.-(post-covid)" class="col-span-1 flex flex-col justify-centre items-center  sm:py-4 sm:px-4 ">
                 <img src="/images/LN1.png" alt="">
 
@@ -17,7 +17,7 @@
                     </h1>
                 </div>
                 <div class="flex justify-center items-center">
-                    <p class="font-light sm:text-xs custom-grey-dark text-center pr-2 custom-blue-200">2 minute read</p>
+                    <p class="font-light sm:text-xs custom-grey-dark text-center pr-2 custom-light-blue">2 minute read</p>
                     <svg width="10" height="8" viewBox="0 0 10 8" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M1.5625 4.18848H8.4375" stroke="#656464" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
                         <path d="M5.625 1.37598L8.4375 4.18848L5.625 7.00098" stroke="#656464" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -38,7 +38,7 @@
                     </h1>
                 </div>
                 <div class="flex justify-center items-center">
-                    <p class="font-light sm:text-xs custom-grey-dark text-center pr-2 custom-blue-200">2 minute read</p>
+                    <p class="font-light sm:text-xs custom-grey-dark text-center pr-2 custom-light-blue">2 minute read</p>
                     <svg width="10" height="8" viewBox="0 0 10 8" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M1.5625 4.18848H8.4375" stroke="#656464" stroke-width="1.2" stroke-linecap="round"
                               stroke-linejoin="round"/>
@@ -56,11 +56,11 @@
                         <line y1="1.18848" x2="39" y2="1.18848" stroke="#FFAF2E" stroke-width="2"/>
                     </svg>
 
-                    <h1 class="sm:text-center custom-blue-dark sm:mt-6 mb-4">Meeting Post-Covid Lending Demands
+                    <h1 class="sm:align-text-top custom-blue-dark sm:mt-6 mb-4">Meeting Post-Covid Lending Demands
                     </h1>
                 </div>
                 <div class="inline-flex justify-center items-center">
-                    <p class="font-light sm:text-xs custom-grey-dark text-center pr-2 custom-blue-200">2 minute read</p>
+                    <p class="font-light sm:text-xs custom-grey-dark text-center pr-2 custom-light-blue">2 minute read</p>
                     <svg class="inline-flex" width="10" height="8" viewBox="0 0 10 8" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M1.5625 4.18848H8.4375" stroke="#656464" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
                         <path d="M5.625 1.37598L8.4375 4.18848L5.625 7.00098" stroke="#656464" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>

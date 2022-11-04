@@ -1,7 +1,7 @@
 <template>
     <div class="relative">
         <div class="absolute inset-0 z-20">
-            <Popover :class="incomingNavClass" class="relative ">
+            <Popover  class="relative bg-transparent ">
                 <div class="max-w-8xl flex justify-between items-center px-4 py-6 sm:px-6 md:justify-start md:space-x-10 mx-auto">
                     <div class="flex justify-center items-center lg:w-0 lg:flex-1">
 
@@ -11,7 +11,7 @@
                         </Link>
 
 
-                        <PopoverGroup as="nav" class="hidden md:flex justify-center space-x-6">
+                        <PopoverGroup as="nav" class="hidden md:flex justify-center items-center space-x-6">
                             <svg class="my-auto"  width="141" height="41" viewBox="0 0 141 41" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M23.2174 0.00051553C27.1211 7.08468 31.0225 14.1699 34.9214 21.2562C35.5951 22.4791 36.1951 23.7421 36.9812 25.2844H31.0349C28.9285 21.5415 26.7857 17.8247 24.729 14.0561C22.1862 9.39321 19.717 4.6875 17.2151 -1.52588e-05L23.2174 0.00051553Z" fill="#27627E"/>
                                 <path d="M0 40.1251C6.11477 29.1836 12.0839 18.4471 18.3625 7.21614L21.2836 12.099C16.1109 21.3895 10.9506 30.5269 5.60694 40.1251" fill="#829DA9"/>
@@ -32,7 +32,7 @@
                             <Popover class="relative" v-slot="{ open }">
                                 <PopoverButton :class="[open ? 'text-white' : 'text-white',  'group bg-transparent rounded-md inline-flex items-center text-base font-medium hover:text-gray-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-presta0']">
                                     <span :class="checkPage() === '/' ? 'nav-text' : 'nav-text' ">Solutions</span>
-                                    <ChevronDownIcon :class="[open ? 'text-white' : 'text-white', checkPage() === '/' ? 'nav-text' : 'nav-text', 'ml-2 h-5 w-5 group-hover:text-white']" aria-hidden="true" />
+                                    <ChevronDownIcon :class="[open ? 'nav-text' : 'nav-text', 'ml-2 h-5 w-5 group-hover:text-gray-200']" aria-hidden="true" />
                                 </PopoverButton>
 
                                 <transition enter-active-class="transition ease-out duration-200" enter-from-class="opacity-0 translate-y-1" enter-to-class="opacity-100 translate-y-0" leave-active-class="transition ease-in duration-150" leave-from-class="opacity-100 translate-y-0" leave-to-class="opacity-0 translate-y-1">
@@ -63,8 +63,8 @@
 
                             <Popover class="relative" v-slot="{ open }">
                                 <PopoverButton :class="[open ? 'text-white' : 'text-white', 'group bg-transparent rounded-md inline-flex items-center text-base font-medium hover:text-gray-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-presta0']">
-                                    <span :class="checkPage() === '/' ? 'nav-text' : 'nav-text' " >Resources</span>
-                                    <ChevronDownIcon :class="[open ? 'nav-text' : 'nav-text', 'ml-2 h-5 w-5 group-hover:text-white']" aria-hidden="true" />
+                                    <span :class="checkPage() === '/' ? 'nav-text' : ' nav-text',' group-hover:nav-blue'" >Resources</span>
+                                    <ChevronDownIcon :class="[open ? 'nav-text' : 'nav-text', 'ml-2 h-5 w-5 group-hover:text-gray-200']" aria-hidden="true" />
                                 </PopoverButton>
 
                                 <transition enter-active-class="transition ease-out duration-200" enter-from-class="opacity-0 translate-y-1" enter-to-class="opacity-100 translate-y-0" leave-active-class="transition ease-in duration-150" leave-from-class="opacity-100 translate-y-0" leave-to-class="opacity-0 translate-y-1">
@@ -89,7 +89,7 @@
                             <!--                                Contact Us-->
                             <!--                            </Link>-->
                             <a href="https://presta.co.ke/kopesha" :class="checkPage() === '/' ? 'text-white' : 'text-white' "
-                               class="-ml-2 whitespace-nowrap px-4 py-2 -mt-2 border border-transparent rounded-md shadow-sm text-base text-white hover:bg-blue-presta2 bg-blue-presta1 font-medium hover:text-white bg-white text-white">
+                               class="-ml-2 whitespace-nowrap px-4 py-2  border border-transparent rounded-md shadow-sm text-base text-white hover:bg-blue-presta2 bg-blue-presta1 font-medium hover:text-white bg-white text-white">
                                 Sign In
                             </a>
                         </PopoverGroup>

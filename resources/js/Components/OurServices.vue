@@ -1,12 +1,12 @@
 <template>
-    <div class="bg-gradient-to-r from-[#FFFFFF] to-[#D4E7FE] mt-4">
+    <div class="bg-gradient-to-r from-[#E5F0FD] to-[#D4E7FE] mt-4">
         <div class="mx-auto max-w-7xl flex flex-col justify-center items-center">
-
-             <h1 class="sm:font-normal text-2xl custom-blue-900 mt-6">Enabling Businesses to <br><span class="sm:font-semibold flex flex-row justify-center">Thrive & Grow</span></h1>
-             <p class="font-light sm:text-sm custom-grey text-center pb-2">We used our wide market research to bring you<br> carefully curated products that fit your SACCO/MFI</p>
+             <h2 class="custom-light-blue md:mt-6">Our Services</h2>
+             <h1 class="sm:font-normal md:text-3xl custom-blue-900">Enabling Businesses to <br><span class="sm:font-semibold flex flex-row justify-center">Thrive & Grow</span></h1>
+             <p class="font-light text-sm md:text-lg custom-grey text-center pb-2">We used our wide market research to bring you<br> carefully curated products that fit your SACCO/MFI</p>
         </div>
-        <div class="mx-auto max-w-7xl grid  sm:grid-rows-2 lg:grid-cols-2 lg:grid-rows-1 md:gap-x-8 gap-y-8 sm:mt-10 sm:px-12 sm:py-12 mb-10 " >
-            <div class="col-span-1 mx-auto shadow-2xl rounded-md bg-white py-8 px-10">
+        <div class="mx-auto max-w-7xl grid  sm:grid-rows-2 lg:grid-cols-2 lg:grid-rows-1 md:gap-x-8 gap-y-8 sm:mt-10 sm:px-4 sm:py-12 mb-10 " >
+            <div class="md:col-span-1 mx-auto shadow-2xl rounded-md bg-white py-8 px-10">
                 <div class="inline-flex my-auto">
                     <svg width="106" height="107" viewBox="0 0 106 107" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <g filter="url(#filter0_d_274_1011)">
@@ -35,8 +35,8 @@
                     </svg>
 
                     <div class="my-4"  >
-                    <h1 class="custom-blue-900 font-semibold text-lg">PRESTA BUSINESS /ENTERPRISE</h1>
-                    <p class="font-light sm:text-sm custom-grey">Enabling Lending Businesses to thrive and grow.
+                    <h1 class="custom-blue-900 font-semibold text-xl">PRESTA MFI's</h1>
+                    <p class="font-light text custom-grey">Enabling Lending Businesses to thrive and grow.
                     </p>
                     </div>
                 </div>
@@ -96,7 +96,7 @@
                 </div>
             </div>
 
-            <div class="md:col-span-1 mx-auto">
+
                 <div class="md:col-span-1 mx-auto shadow-2xl rounded-md bg-white py-8 px-10">
                     <div class="flex my-auto">
                         <svg width="106" height="107" viewBox="0 0 106 107" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -192,7 +192,6 @@
 
         </div>
     </div>
-    </div>
 </template>
 
 <script>
@@ -211,6 +210,9 @@ export default {
 .custom-blue-900 {
 
     color: #0A093D
+}
+.custom-light-blue {
+    color: #489AAB
 }
 
 </style>

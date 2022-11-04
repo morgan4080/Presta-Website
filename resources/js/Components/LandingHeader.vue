@@ -2,7 +2,7 @@
     <div class="relative bg-white">
         <main style="height: 45rem" class="lg:relative">
             <div class="mx-auto lg:h-full lg:flex lg:justify-start lg:items-center max-w-7xl w-full my-auto  text-center lg:text-left">
-                <div class="px-4 pt-24 md:pt-0 lg:flex-col lg:justify-start lg:items-center lg:w-1/2 sm:px-8">
+                <div class="px-4 pt-24 md:pt-0 lg:flex-col lg:justify-start lg:items-center lg:w-1/2 ">
                     <h1 class="text-4xl tracking-tight font-bold text-gray-900 sm:text-5xl sm:tracking-tight md:text-6xl md:tracking-tight lg:text-5xl lg:tracking-tight xl:text-6xl xl:tracking-tight">
                         <span style="color: #489AAB" class="block xl:inline">Supercharge</span>
                         <span style="color:#27627E" class="block xl:inline"> Your</span>
