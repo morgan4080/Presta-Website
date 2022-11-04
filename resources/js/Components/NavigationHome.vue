@@ -1,22 +1,38 @@
 <template>
     <div class="relative">
         <div class="absolute inset-0 z-20">
-            <Popover :class="incomingNavClass" class="relative">
+            <Popover :class="incomingNavClass" class="relative ">
                 <div class="max-w-8xl flex justify-between items-center px-4 py-6 sm:px-6 md:justify-start md:space-x-10 mx-auto">
                     <div class="flex justify-center items-center lg:w-0 lg:flex-1">
+
+
                         <Link :href="route('homepage')">
                             <span class="sr-only">Presta Capital</span>
-                            <img class="h-8 md:mr-4 lg:mr-6 w-auto sm:h-12" :src="checkPage() === '/' ? '/images/logos/landingHeader.svg' : '/images/logos/Group 18.svg' " alt="" />
                         </Link>
 
-                        <PopoverGroup as="nav" class="hidden md:flex justify-center space-x-10">
-                            <Link :href="route('homepage')" :class="checkPage() === '/' ? 'nav-text' : 'text-white' "  class="text-base font-medium hover:text-gray-200">
+
+                        <PopoverGroup as="nav" class="hidden md:flex justify-center space-x-6">
+                            <svg class="my-auto"  width="141" height="41" viewBox="0 0 141 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M23.2174 0.00051553C27.1211 7.08468 31.0225 14.1699 34.9214 21.2562C35.5951 22.4791 36.1951 23.7421 36.9812 25.2844H31.0349C28.9285 21.5415 26.7857 17.8247 24.729 14.0561C22.1862 9.39321 19.717 4.6875 17.2151 -1.52588e-05L23.2174 0.00051553Z" fill="#27627E"/>
+                                <path d="M0 40.1251C6.11477 29.1836 12.0839 18.4471 18.3625 7.21614L21.2836 12.099C16.1109 21.3895 10.9506 30.5269 5.60694 40.1251" fill="#829DA9"/>
+                                <path d="M54.9995 27.6364L52.2447 32.5444H21.1467L23.7864 27.6364H54.9995Z" fill="#489AAB"/>
+                                <path d="M45.6594 25.2678H39.5134L27.033 2.80157H33.1478L45.6594 25.2678Z" fill="#27627E"/>
+                                <path d="M22.6414 14.7834L25.4992 19.8214C21.7837 26.4735 18.0138 33.3226 14.2144 40.1251H8.65405C13.3655 31.6208 17.8444 23.4375 22.6414 14.7834Z" fill="#829DA9"/>
+                                <path d="M19.375 35.4675H44.0539L41.4701 40.1235H16.9229L19.375 35.4675Z" fill="#489AAB"/>
+                                <path d="M61 8.47809C63.0424 8.13466 65.11 7.97574 67.1791 8.00299C70.1375 8.00299 72.2736 8.648 73.6872 9.87031C74.3889 10.4949 74.9475 11.2726 75.3226 12.1473C75.6978 13.022 75.8802 13.972 75.8566 14.9283C75.9005 15.8747 75.7569 16.8202 75.4347 17.7073C75.1126 18.5944 74.6185 19.4042 73.9829 20.0874C72.0503 21.8222 69.5391 22.7111 66.9824 22.5654C66.3211 22.5851 65.6598 22.5281 65.0108 22.3954V31.0516H61.001L61 8.47809ZM65.0098 19.1068C65.6535 19.2761 66.3178 19.3464 66.9814 19.3152C70.0084 19.3152 71.8458 17.7521 71.8458 15.1064C71.8458 12.5607 70.1366 11.2373 67.3426 11.2373C66.5598 11.2221 65.7775 11.2921 65.0088 11.4458L65.0098 19.1068Z" fill="#27627E"/>
+                                <path d="M77.9918 19.8447C77.9918 17.6044 77.9585 15.9746 77.8606 14.5158H81.3447L81.5091 17.6419H81.6101C81.9012 16.6586 82.4818 15.7935 83.2712 15.1669C84.0606 14.5403 85.0195 14.1835 86.0144 14.1459C86.335 14.1433 86.6549 14.1782 86.9679 14.25V18.1535C86.5667 18.0794 86.1596 18.0445 85.752 18.0493C84.8794 18.0263 84.029 18.3351 83.3624 18.9172C82.6959 19.4993 82.2597 20.3142 82.1368 21.2067C82.0679 21.6214 82.0341 22.0415 82.0359 22.4623V31.0497H77.9928L77.9918 19.8447Z" fill="#27627E"/>
+                                <path d="M91.432 23.9566C91.5329 26.9441 93.7658 28.2289 96.362 28.2289C97.8728 28.2505 99.3756 27.9977 100.802 27.4818L101.393 30.3328C99.6166 31.064 97.7169 31.4218 95.805 31.3853C90.6117 31.3853 87.5554 28.0925 87.5554 23.0355C87.5554 18.4506 90.2505 14.1417 95.3782 14.1417C100.572 14.1417 102.281 18.5547 102.281 22.1862C102.286 22.7774 102.242 23.3679 102.15 23.9514L91.432 23.9566ZM98.4658 21.0389C98.4991 19.5113 97.8412 16.9999 95.1462 16.9999C92.6479 16.9999 91.5965 19.3425 91.432 21.0389H98.4658Z" fill="#27627E"/>
+                                <path d="M104.549 27.1816C105.79 27.9277 107.189 28.3475 108.624 28.404C110.399 28.404 111.188 27.6235 111.188 26.5367C111.188 25.4165 110.531 24.8694 108.559 24.1275C105.436 23.0417 104.154 21.2755 104.154 19.3071C104.154 16.3894 106.488 14.1479 110.202 14.1479C111.683 14.1178 113.148 14.4554 114.475 15.1326L113.654 18.0503C112.621 17.4449 111.457 17.1181 110.269 17.1C108.823 17.1 108.034 17.8471 108.034 18.8652C108.034 19.9176 108.79 20.3927 110.828 21.1732C113.754 22.2257 115.066 23.7534 115.101 26.1969C115.101 29.2188 112.833 31.3904 108.593 31.3904C106.905 31.4224 105.234 31.0263 103.729 30.2368L104.549 27.1816Z" fill="#27627E"/>
+                                <path d="M122.232 10.2778V14.521H126.077V17.6471H122.232V24.9413C122.232 26.9775 122.757 27.9966 124.302 27.9966C124.833 28.0226 125.365 27.9654 125.88 27.8268L125.946 30.984C125.001 31.299 124.012 31.4481 123.02 31.4249C122.38 31.4604 121.74 31.3584 121.14 31.1252C120.54 30.892 119.994 30.5327 119.536 30.0702C118.649 29.1199 118.254 27.5922 118.254 25.4196V17.6471H115.986V14.521H118.254V11.4324L122.232 10.2778Z" fill="#27627E"/>
+                                <path d="M140.736 27.0796C140.709 28.4088 140.798 29.7377 141 31.0507H137.351L137.056 29.2178H136.955C136.383 29.9369 135.659 30.5101 134.838 30.8927C134.017 31.2753 133.122 31.457 132.222 31.4238C131.573 31.4629 130.924 31.3645 130.315 31.1346C129.705 30.9047 129.147 30.5482 128.676 30.087C128.205 29.6258 127.83 29.0698 127.575 28.4532C127.32 27.8367 127.19 27.1727 127.193 26.5022C127.193 22.3612 130.776 20.2229 136.691 20.2562V19.9843C136.691 18.8985 136.265 17.099 133.437 17.099C131.922 17.1013 130.436 17.5231 129.132 18.3202L128.343 15.6046C130.114 14.6035 132.109 14.1005 134.128 14.1459C139.255 14.1459 140.734 17.5064 140.734 21.1379L140.736 27.0796ZM136.792 22.9729C133.933 22.9385 131.205 23.5502 131.205 26.0615C131.177 26.3807 131.217 26.7023 131.323 27.0036C131.429 27.3049 131.597 27.5786 131.817 27.8053C132.036 28.0319 132.301 28.2059 132.593 28.3151C132.885 28.4243 133.196 28.4661 133.505 28.4373C134.2 28.4508 134.882 28.2385 135.454 27.8303C136.026 27.4222 136.46 26.8388 136.693 26.1626C136.776 25.8651 136.81 25.5556 136.794 25.2466L136.792 22.9729Z" fill="#27627E"/>
+                            </svg>
+                            <Link :href="route('homepage')" :class="checkPage() === '/' ? 'nav-text' : 'nav-text' "  class="text-base font-medium hover:text-gray-200">
                                 Home
                             </Link>
                             <Popover class="relative" v-slot="{ open }">
                                 <PopoverButton :class="[open ? 'text-white' : 'text-white',  'group bg-transparent rounded-md inline-flex items-center text-base font-medium hover:text-gray-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-presta0']">
-                                    <span :class="checkPage() === '/' ? 'nav-text' : 'text-white' ">Solutions</span>
-                                    <ChevronDownIcon :class="[open ? 'text-white' : 'text-white', checkPage() === '/' ? 'nav-text' : 'text-white', 'ml-2 h-5 w-5 group-hover:text-white']" aria-hidden="true" />
+                                    <span :class="checkPage() === '/' ? 'nav-text' : 'nav-text' ">Solutions</span>
+                                    <ChevronDownIcon :class="[open ? 'text-white' : 'text-white', checkPage() === '/' ? 'nav-text' : 'nav-text', 'ml-2 h-5 w-5 group-hover:text-white']" aria-hidden="true" />
                                 </PopoverButton>
 
                                 <transition enter-active-class="transition ease-out duration-200" enter-from-class="opacity-0 translate-y-1" enter-to-class="opacity-100 translate-y-0" leave-active-class="transition ease-in duration-150" leave-from-class="opacity-100 translate-y-0" leave-to-class="opacity-0 translate-y-1">
@@ -38,7 +54,7 @@
                                 </transition>
                             </Popover>
 
-                            <Link :href="route('pricing')" :class="checkPage() === '/' ? 'nav-text' : 'text-white' " class="text-base font-medium hover:text-gray-200">
+                            <Link :href="route('pricing')" :class="checkPage() === '/' ? 'nav-text' : 'nav-text' " class="text-base font-medium hover:text-gray-200">
                                 Pricing
                             </Link>
                             <Link href="#" class="text-base font-medium nav-text hover:text-gray-200 hidden">
@@ -47,7 +63,7 @@
 
                             <Popover class="relative" v-slot="{ open }">
                                 <PopoverButton :class="[open ? 'text-white' : 'text-white', 'group bg-transparent rounded-md inline-flex items-center text-base font-medium hover:text-gray-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-presta0']">
-                                    <span :class="checkPage() === '/' ? 'nav-text' : 'text-white' " >Resources</span>
+                                    <span :class="checkPage() === '/' ? 'nav-text' : 'nav-text' " >Resources</span>
                                     <ChevronDownIcon :class="[open ? 'nav-text' : 'nav-text', 'ml-2 h-5 w-5 group-hover:text-white']" aria-hidden="true" />
                                 </PopoverButton>
 
@@ -69,9 +85,9 @@
                                 </transition>
                             </Popover>
 
-<!--                            <Link :href="route('contact')" :class="checkPage() === '/' ? 'nav-text' : 'text-white' "  class="text-base font-medium hover:text-gray-200">-->
-<!--                                Contact Us-->
-<!--                            </Link>-->
+                            <!--                            <Link :href="route('contact')" :class="checkPage() === '/' ? 'nav-text' : 'text-white' "  class="text-base font-medium hover:text-gray-200">-->
+                            <!--                                Contact Us-->
+                            <!--                            </Link>-->
                             <a href="https://presta.co.ke/kopesha" :class="checkPage() === '/' ? 'text-white' : 'text-white' "
                                class="-ml-2 whitespace-nowrap px-4 py-2 -mt-2 border border-transparent rounded-md shadow-sm text-base text-white hover:bg-blue-presta2 bg-blue-presta1 font-medium hover:text-white bg-white text-white">
                                 Sign In
@@ -86,17 +102,17 @@
                     </div>
                     <div class="hidden md:flex justify-between items-center lg:w-0 lg:flex-1">
                         <div class="flex justify-center space-x-6 ml-12">
-                            <a v-for="item in navigation" :key="item.name" :href="item.href" target="_blank" class="text-white hover:text-gray-500">
+                            <a v-for="item in navigation" :key="item.name" :href="item.href" target="_blank" :class="checkPage() === '/' ? 'text-white' : 'nav-text' " class=" hover:text-gray-500">
                                 <span class="sr-only">{{ item.name }}</span>
                                 <component :is="item.icon" class="h-6 w-6" aria-hidden="true" />
                             </a>
                         </div>
 
-                        <a href="#" class="text-sm flex items-center font-medium text-white hover:text-gray-200 mr-8">
-                            <phone-icon class="flex-none w-5 h-5 text-white mr-1" aria-hidden="true" />
+                        <a href="#" :class="checkPage() === '/' ? 'text-white' : 'nav-text' " class="text-sm flex items-center font-medium text-white hover:text-gray-200 mr-8">
+                            <phone-icon  class="flex-none w-5 h-5  mr-1" aria-hidden="true" />
                             +254711082442
                         </a>
-                </div>
+                    </div>
                 </div>
 
                 <transition enter-active-class="duration-200 ease-out" enter-from-class="opacity-0 scale-95" enter-to-class="opacity-100 scale-100" leave-active-class="duration-100 ease-in" leave-from-class="opacity-100 scale-100" leave-to-class="opacity-0 scale-95">
@@ -159,29 +175,28 @@
 </template>
 
 <script>
-import { Popover, PopoverButton, PopoverGroup, PopoverPanel } from '@headlessui/vue'
+import {Popover, PopoverButton, PopoverGroup, PopoverPanel} from '@headlessui/vue'
 import {
     ChartBarIcon,
+    ChatAlt2Icon,
     CursorClickIcon,
-    DocumentReportIcon,
+    MailIcon,
     MenuIcon,
-    RefreshIcon,
+    PhoneIcon,
     ShieldCheckIcon,
     ViewGridIcon,
-    XIcon,
-    ChatAlt2Icon,
-    PhoneIcon,
-    MailIcon
+    XIcon
 } from '@heroicons/vue/outline'
-import { ChevronDownIcon } from '@heroicons/vue/solid'
-import { Link } from '@inertiajs/inertia-vue3'
+import {ChevronDownIcon} from '@heroicons/vue/solid'
+import {Link} from '@inertiajs/inertia-vue3'
+import {defineComponent, h, onMounted} from 'vue'
 
 const solutions = [
     {
-        name: 'Microfinance',
-        description: 'Get a better understanding of your customers financial needs.',
-        href: 'micro-finance',
-        icon: ChartBarIcon,
+        name: 'Enterprise',
+        description: "Your customers' data will be safe and secure.",
+        href: 'Enterprise',
+        icon: ViewGridIcon
     },
     {
         name: 'Saccos',
@@ -190,11 +205,19 @@ const solutions = [
         icon: CursorClickIcon,
     },
     {
-        name: 'Investment Groups',
+        name: 'Digital Onboarding',
+        description: 'Get a better understanding of your customers financial needs.',
+        href: 'Digital Onboarding',
+        icon: ChartBarIcon,
+    },
+
+    {
+        name: 'Loan Origination',
         description: "Your customers' data will be safe and secure.",
-        href: 'investment-groups',
+        href: 'LoanOrigination',
         icon: ShieldCheckIcon
     },
+
 ];
 
 const resources = [
@@ -209,8 +232,6 @@ const resources = [
         href: route('blogs.index'),
     },
 ];
-
-import {defineComponent, h, onMounted} from 'vue'
 
 const navigation = [
     {
@@ -270,8 +291,7 @@ const navigation = [
 ]
 
 const checkPage = () => {
-  let pth = window.location.pathname
-    return pth
+    return window.location.pathname
 }
 checkPage()
 onMounted(()=>{
@@ -289,7 +309,8 @@ export default {
         ChatAlt2Icon,
         PhoneIcon,
         MailIcon,
-        Link
+        Link,
+        ViewGridIcon
     },
     props: {
         incomingNavClass: {
