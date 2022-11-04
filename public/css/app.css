@@ -2274,9 +2274,6 @@ select {
 .justify-between {
 	justify-content: space-between;
 }
-.justify-items-start {
-	justify-items: start;
-}
 .gap-6 {
 	gap: 1.5rem;
 }
@@ -3011,18 +3008,6 @@ select {
 }
 .pt-16 {
 	padding-top: 4rem;
-}
-.pl-8 {
-	padding-left: 2rem;
-}
-.pl-20 {
-	padding-left: 5rem;
-}
-.pl-32 {
-	padding-left: 8rem;
-}
-.pl-36 {
-	padding-left: 9rem;
 }
 .text-left {
 	text-align: left;
@@ -4708,11 +4693,6 @@ select {
 		row-gap: 3rem;
 	}
 
-	.sm\:gap-x-12 {
-		-moz-column-gap: 3rem;
-		     column-gap: 3rem;
-	}
-
 	.sm\:gap-x-0 {
 		-moz-column-gap: 0px;
 		     column-gap: 0px;
@@ -4720,6 +4700,11 @@ select {
 
 	.sm\:gap-y-6 {
 		row-gap: 1.5rem;
+	}
+
+	.sm\:gap-x-12 {
+		-moz-column-gap: 3rem;
+		     column-gap: 3rem;
 	}
 
 	.sm\:space-y-0 > :not([hidden]) ~ :not([hidden]) {
@@ -4889,11 +4874,6 @@ select {
 	.sm\:py-20 {
 		padding-top: 5rem;
 		padding-bottom: 5rem;
-	}
-
-	.sm\:px-14 {
-		padding-left: 3.5rem;
-		padding-right: 3.5rem;
 	}
 
 	.sm\:pt-0 {
@@ -5130,12 +5110,12 @@ select {
 		margin-left: 1rem;
 	}
 
-	.md\:ml-2 {
-		margin-left: 0.5rem;
-	}
-
 	.md\:mt-6 {
 		margin-top: 1.5rem;
+	}
+
+	.md\:ml-2 {
+		margin-left: 0.5rem;
 	}
 
 	.md\:block {
@@ -5296,6 +5276,21 @@ select {
 		border-color: rgba(255, 255, 255, var(--tw-border-opacity));
 	}
 
+	.md\:px-0 {
+		padding-left: 0px;
+		padding-right: 0px;
+	}
+
+	.md\:py-16 {
+		padding-top: 4rem;
+		padding-bottom: 4rem;
+	}
+
+	.md\:px-4 {
+		padding-left: 1rem;
+		padding-right: 1rem;
+	}
+
 	.md\:py-4 {
 		padding-top: 1rem;
 		padding-bottom: 1rem;
@@ -5331,45 +5326,20 @@ select {
 		padding-right: 2rem;
 	}
 
-	.md\:px-4 {
-		padding-left: 1rem;
-		padding-right: 1rem;
-	}
-
-	.md\:py-16 {
-		padding-top: 4rem;
-		padding-bottom: 4rem;
-	}
-
-	.md\:px-0 {
-		padding-left: 0px;
-		padding-right: 0px;
-	}
-
-	.md\:py-2 {
-		padding-top: 0.5rem;
-		padding-bottom: 0.5rem;
-	}
-
 	.md\:pt-0 {
 		padding-top: 0px;
-	}
-
-	.md\:pb-12 {
-		padding-bottom: 3rem;
 	}
 
 	.md\:pl-36 {
 		padding-left: 9rem;
 	}
 
-	.md\:text-left {
-		text-align: left;
+	.md\:pb-12 {
+		padding-bottom: 3rem;
 	}
 
-	.md\:text-6xl {
-		font-size: 3.75rem;
-		line-height: 1;
+	.md\:text-left {
+		text-align: left;
 	}
 
 	.md\:text-lg {
@@ -5377,19 +5347,19 @@ select {
 		line-height: 1.75rem;
 	}
 
-	.md\:text-xl {
-		font-size: 1.25rem;
-		line-height: 1.75rem;
-	}
-
-	.md\:text-3xl {
-		font-size: 1.875rem;
-		line-height: 2.25rem;
+	.md\:text-6xl {
+		font-size: 3.75rem;
+		line-height: 1;
 	}
 
 	.md\:text-base {
 		font-size: 1rem;
 		line-height: 1.5rem;
+	}
+
+	.md\:text-3xl {
+		font-size: 1.875rem;
+		line-height: 2.25rem;
 	}
 
 	.md\:font-bold {
