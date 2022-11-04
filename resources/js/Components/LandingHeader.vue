@@ -1,8 +1,8 @@
 <template>
     <div class="relative bg-white">
-        <main class="lg:relative lg:h-screen">
+        <main style="height: 45rem" class="lg:relative">
             <div class="mx-auto lg:h-full lg:flex lg:justify-start lg:items-center max-w-7xl w-full my-auto  text-center lg:text-left">
-                <div class="px-4 pt-24 md:pt-0 lg:flex-col lg:justify-start lg:items-center lg:w-1/2 sm:px-8">
+                <div class="px-4 pt-24 md:pt-0 lg:flex-col lg:justify-start lg:items-center lg:w-1/2 ">
                     <h1 class="text-4xl tracking-tight font-bold text-gray-900 sm:text-5xl sm:tracking-tight md:text-6xl md:tracking-tight lg:text-5xl lg:tracking-tight xl:text-6xl xl:tracking-tight">
                         <span style="color: #489AAB" class="block xl:inline">Supercharge</span>
                         <span style="color:#27627E" class="block xl:inline"> Your</span>
@@ -21,8 +21,8 @@
                     </div>
                 </div>
             </div>
-            <div class="relative w-full h-64 sm:h-72 md:h-96 lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2 lg:h-full">
-                <img class="absolute inset-0 pik w-full h-full object-cover" src="/images/landingHeader/img.jpg" alt="" />
+            <div class="relative w-full h-80 sm:h-72 md:h-96 lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2 lg:h-full shadow-2xl">
+                <img class="absolute gginset-0 h-full object-cover w-full object-centre" src="/images/landing1.png" alt="" />
                 <div v-if="!showVideo" class="relative col-span-2 h-full flex justify-center items-center">
                     <svg width="84" @click="playVideo('play')" height="94" class="hover:scale-110 sm:scale-90 lg:scale-100" viewBox="0 0 84 94" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <g filter="url(#filter0_d_912_545)">
@@ -51,13 +51,29 @@
 
             <DemoDialogue v-if="openDemoModal" />
         </main>
+        <ActiveMembers></ActiveMembers>
+        <Information></Information>
+        <MfiBenefits></MfiBenefits>
+        <SaccoBenefit></SaccoBenefit>
+        <OurServices></OurServices>
+        <HappyClients></HappyClients>
+        <LatestNews></LatestNews>
+        <SignLoanform></SignLoanform>
     </div>
 </template>
 
 <script setup>
 import { Link } from '@inertiajs/inertia-vue3'
 import YoutubeModal from '@/Components/YoutubeModal';
+import ActiveMembers from '@/Components/ActiveMembers';
 import DemoDialogue from '@/Components/DemoDialogue';
+import Information from '@/Components/Information';
+import MfiBenefits from '@/Components/MfiBenefits';
+import SaccoBenefit from '@/Components/SaccoBenefit';
+import OurServices from '@/Components/OurServices';
+import HappyClients from '@/Components/HappyClients';
+import LatestNews from '@/Components/LatestNews.vue';
+import SignLoanform from '@/Components/SignLoanform';
 import {
     BookmarkAltIcon,
     CalendarIcon,
@@ -69,7 +85,6 @@ import {
     ShieldCheckIcon,
     SupportIcon,
     ViewGridIcon,
-    XIcon,
 } from '@heroicons/vue/outline'
 
 import {ref} from "vue";
@@ -149,9 +164,9 @@ const recentPosts = [
 
 </script>
 <style scoped>
-    @media (min-width: 1024px) {
-        .pik{
-            border-top-left-radius: 3.5rem;
-        }
+@media (min-width: 1024px) {
+    .pik{
+        border-top-left-radius: 3.5rem;
     }
+}
 </style>
