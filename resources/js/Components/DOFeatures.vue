@@ -1,7 +1,7 @@
 <template>
     <div class="bg-white mt-4 sm:mb-4">
         <div class="mx-auto max-w-7xl flex flex-col justify-center items-center">
-            <h1 class=" text-4xl sm:text-center custom-blue-600 mb-4">The 3 Key Features of<br>
+            <h1 class=" text-3xl sm:text-center custom-blue-600 mb-4">The 3 Key Features of<br>
                 <span class="sm:font-semibold custom-blue-900">Digital Onboarding</span>
             </h1>
         </div>

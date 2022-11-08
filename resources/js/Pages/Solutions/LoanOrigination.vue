@@ -13,7 +13,7 @@
                      <span class="custom-dark-bg">  Credit Quality </span>  & <span class="custom-dark-bg">TAT </span>
                 </h1>
 
-                <div class="sm:text-base custom-grey-dark" >
+                <div class="text-base md:text-lg custom-grey-dark" >
                     <p class="sm:my-4 ">Move forward with confidence with an end-to-end solution that Meets the Needs of Today's Lenders.</p>
 
                 </div>

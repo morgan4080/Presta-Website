@@ -23,8 +23,8 @@
             <div class="bg-white-500 mx-auto" >
                 <h2 style="" class="custom-blue-600 py-2">What's Presta</h2>
                 <h1 class="text-2xl font-semibold pb-2 custom-blue-900" >Why join Presta?</h1>
-                <p class="mb-2 text-lg">Recent surveys have indicated that small businesses recognise the need they have to connect with <br> consumer.</p>
-                <ul class="text-lg spacing-y-4">
+                <p class="mb-2 text-lg text-gray-500">Recent surveys have indicated that small businesses recognise the need they have to connect with <br> consumer.</p>
+                <ul class="text-lg spacing-y-4 text-gray-500">
                     <li>Groups</li>
                     <li>Messages</li>
                     <li>Share</li>

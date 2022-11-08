@@ -10,28 +10,28 @@
         </div>
         <div class="mx-auto max-w-7xl grid sm:grid-rows-4 lg:grid-cols-4 lg:grid-rows-1 sm:gap-x-8 sm:gap-y-8  sm:py-12 sm:px-20 bg-blue-white">
             <div class="col-span-1 flex flex-col justify-center items-center shadow-2xl sm:py-4 sm:px-4 ">
-                <h1 class="sm:font-semibold text-base md:text-lg sm:text-center custom-light-blue">Loan Origination
+                <h1 class="sm:font-semibold text-sm md:text-base  sm:text-center custom-light-blue">Loan Origination
                 </h1>
-                <p class=" text-base md:text-lg custom-grey-dark text-center pt-6 pb-8 sm:pb-2">Loan origination personalized and taylor-made specifically for you.</p>
-                <button  type="button" class=" mt-4 inline-flex items-center rounded-md border border-transparent bg-blue-presta2  px-8 py-2 text-sm font-medium text-white shadow-sm focus:outline-none focus:ring-2 focus:ring-offset-blue-prestaR focus:ring-offset-2">Continue</button>
+                <p class=" text-sm md:text-base  custom-grey-dark text-center pt-6 pb-12 ">Loan origination personalized and <br>taylor-made specifically <br> for you.</p>
+                <a href='LoanOrigination' class="inline-flex items-center rounded-md border border-transparent bg-blue-presta2  px-8 py-2 text-sm font-medium text-white shadow-sm focus:outline-none focus:ring-2 focus:ring-offset-blue-prestaR focus:ring-offset-2">Continue</a>
             </div>
             <div class="col-span-1 flex flex-col justify-center items-center shadow-2xl sm:py-4 sm:px-4 ">
-                <h1 class="sm:font-semibold text-base md:text-lg  sm:text-center custom-light-blue">Appraisal
+                <h1 class="sm:font-semibold text-sm md:text-base  sm:text-center custom-light-blue">Appraisal
                 </h1>
-                <p class=" text-base md:text-lg  custom-grey-dark text-center sm:pt-6 sm:pb-16">Appraisal services delivered at your convenience</p>
+                <p class=" text-sm md:text-base  custom-grey-dark text-center sm:pt-6 sm:pb-16">Appraisal services delivered at your convenience</p>
                 <button type="button" class="inline-flex items-center rounded-md border border-transparent bg-blue-presta2  px-8 py-2 text-sm font-medium text-white shadow-sm focus:outline-none focus:ring-2 focus:ring-offset-blue-prestaR focus:ring-offset-2">Continue</button>
             </div>
             <div class="col-span-1 flex flex-col justify-center items-center shadow-2xl sm:py-4 sm:px-4 ">
-                <h1 class="sm:font-semibold text-base md:text-lg  sm:text-center custom-light-blue">Loan Management
+                <h1 class="sm:font-semibold text-sm md:text-base  sm:text-center custom-light-blue">Loan Management
                 </h1>
-                <p class=" text-base md:text-lg  custom-grey-dark text-center pt-6 pb-12 ">Loan management delivered right at the comfort of your mobile device</p>
+                <p class=" text-sm md:text-base  custom-grey-dark text-center pt-6 pb-12 ">Loan management delivered right at the comfort of your mobile device</p>
                 <button type="button" class="inline-flex items-center rounded-md border border-transparent bg-blue-presta2  px-8 py-2 text-sm font-medium text-white shadow-sm focus:outline-none focus:ring-2 focus:ring-offset-blue-prestaR focus:ring-offset-2">Continue</button>
             </div>
             <div class="col-span-1 flex flex-col justify-center items-center shadow-2xl sm:py-4 sm:px-4 ">
-                <h1 class="sm:font-semibold text-base md:text-lg  sm:text-center custom-light-blue">Digital Onboarding
+                <h1 class="sm:font-semibold text-sm md:text-base  sm:text-center custom-light-blue">Digital Onboarding
                 </h1>
-                <p class=" text-base md:text-lg  custom-grey-dark text-center pt-6 sm:pb-12 ">We also offer Digital on-boarding for your businesses/ enterprise</p>
-                <button type="button" class="inline-flex items-center rounded-md border border-transparent bg-blue-presta2  px-8 py-2 text-sm font-medium text-white shadow-sm focus:outline-none focus:ring-2 focus:ring-offset-blue-prestaR focus:ring-offset-2">Continue</button>
+                <p class=" text-sm md:text-base  custom-grey-dark text-center pt-6 pb-12 ">We also offer Digital <br> on-boarding for<br> your <br> businesses/ enterprise</p>
+                <a href='Digital Onboarding' class="inline-flex items-center rounded-md border border-transparent bg-blue-presta2  px-8 py-2 text-sm font-medium text-white shadow-sm focus:outline-none focus:ring-2 focus:ring-offset-blue-prestaR focus:ring-offset-2">Continue</a>
             </div>
 
         </div>

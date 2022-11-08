@@ -9,24 +9,24 @@
                     <div class="grid grid-cols-2 gap-8 xl:col-span-4">
                         <div class="md:grid md:grid-cols-2 md:gap-8">
                             <div>
-                                <h3 class="text-base font-semibold text-white tracking-wider uppercase">
+                                <h3 class="text-base md:text-lg font-semibold text-white tracking-wider uppercase">
                                     For Business
                                 </h3>
                                 <ul role="list" class="mt-4 sm:text-sm space-y-4">
                                     <li v-for="item in navigation.Business" :key="item.name">
-                                        <Link :href="item.href" class="text-sm text-blue-200 hover:text-white">
+                                        <Link :href="item.href" class="text-base md:text-lg text-blue-200 hover:text-white">
                                             {{ item.name }}
                                         </Link>
                                     </li>
                                 </ul>
                             </div>
                             <div class="mt-12 md:mt-0">
-                                <h3 class="text-base font-semibold text-white tracking-wider uppercase">
+                                <h3 class="text-base md:text-lg font-semibold text-white tracking-wider uppercase">
                                     For SACCO
                                 </h3>
                                 <ul role="list" class="mt-4 sm:text-sm space-y-4">
                                     <li v-for="item in navigation.SACCO" :key="item.name">
-                                        <Link :href="item.href" class="text-sm text-blue-200 hover:text-white">
+                                        <Link :href="item.href" class="text-base md:text-lg text-blue-200 hover:text-white">
                                             {{ item.name }}
                                         </Link>
                                     </li>
@@ -35,19 +35,19 @@
                         </div>
                         <div class="md:grid md:grid-cols-2 md:gap-8">
                             <div>
-                                <h3 class="text-base font-semibold text-white tracking-wider uppercase">
+                                <h3 class="text-base md:text-lg font-semibold text-white tracking-wider uppercase">
                                     About Us
                                 </h3>
                                 <ul role="list" class="mt-4 sm:text-sm space-y-4">
                                     <li v-for="item in navigation.About" :key="item.name">
-                                        <Link :href="item.href" class="sm:text-sm text-blue-200 hover:text-white">
+                                        <Link :href="item.href" class="text-base md:text-lg text-blue-200 hover:text-white">
                                             {{ item.name }}
                                         </Link>
                                     </li>
                                 </ul>
                             </div>
                             <div class="mt-12 md:mt-0">
-                                <h3 class="text-base font-semibold text-white tracking-wider uppercase">
+                                <h3 class="text-base md:text-lg font-semibold text-white tracking-wider uppercase">
                                     Resources
                                 </h3>
                                 <ul role="list" class="mt-4 sm:text-sm space-y-4">
@@ -55,7 +55,7 @@
                                         <Link v-if="idx === 2" v-on:click="goTomaps(item.href)" class="text-sm underline text-blue-200 hover:text-white">
                                             {{ item.name }}
                                         </Link>
-                                        <Link v-else :href="item.href" class="text-sm text-blue-200 hover:text-white">
+                                        <Link v-else :href="item.href" class="text-base md:text-lg text-blue-200 hover:text-white">
                                             {{ item.name }}
                                         </Link>
                                     </li>
@@ -65,11 +65,11 @@
                     </div>
                     <div class="mt-12 xl:mt-0">
                         <div class="mt-4 sm:flex sm:flex-col sm:justify-start sm:max-w-md lg:mt-0">
-                            <h3 class="text-base font-semibold text-white tracking-wider sm:pb-6 ">
+                            <h3 class="text-base md:text-lg font-semibold text-white tracking-wider sm:pb-6 ">
                                 Stay Updated on Our New Products
                             </h3>
-                            <p class="text-sm tracking-wider text-blue-200 hover:text-white sm:pb-6 ">Subscribe to be the first one to know about updates. Enter your email</p>
-                            <p class="text-base tracking-wider text-blue-200 hover:text-white sm:pb-6 ">+254711082442</p>
+                            <p class="text-base md:text-lg tracking-wider text-blue-200 hover:text-white sm:pb-6 ">Subscribe to be the first one to know about updates. Enter your email</p>
+                            <p class="text-base md:text-lg tracking-wider text-blue-200 hover:text-white sm:pb-6 ">+254711082442</p>
                             <form class="mt-2 sm:flex flex-col sm:max-w-md">
                                 <label for="email-address" class="sr-only">Email address</label>
                                 <input type="email" name="email-address" id="email-address" autocomplete="email" required=""
@@ -121,7 +121,7 @@
 
 
                     </div>
-                    <p class="mt-8 text-base text-blue-200 font-semibold hover:text-white md:mt-0 md:order-1">
+                    <p class="mt-8 text-base md:text-lg text-blue-200 font-semibold hover:text-white md:mt-0 md:order-1">
                         &copy; Copyright Presta 2022.
                     </p>
 
@@ -139,27 +139,27 @@ import { Link } from '@inertiajs/inertia-vue3';
 
 const navigation = {
     Business: [
-        { name: 'Loan Management', href: '#' },
+        { name: 'Digital Onboarding', href: 'Digital Onboarding.vue' },
+        { name: 'Lead Generation', href:'#'  },
         { name: 'Loan Origination', href: 'LoanOrigination.vue' },
-        { name: 'Lead Generation', href: '#' },
-        { name: 'Accounting with ASSRA reports', href: '#' },
+        { name: 'Loan Management', href: '#' },
         { name: 'Customer Revenue Management', href: '#' },
         { name: 'Payroll', href: '#' },
     ],
     SACCO: [
-        { name: 'Digital Guarantorship ', href: '#' },
+        { name: 'Digital Onboarding', href: 'Digital Onboarding.vue' },
         { name: 'Loan Management', href: '#' },
-        { name: 'Online Registration' , href: '#'},
-        { name: 'Accounting with ASSRA Reports' , href: '#'},
+        { name: 'Digital Guarantorship' , href: '#'},
+        { name: 'Accounting with SASRA Reports' , href: '#'},
         { name: 'Customer Revenue Management' , href: '#'},
         { name: 'Savings Management' , href: '#'},
     ],
     About: [
-        { name: 'Our Dedicated Team', href: '#' },
+        { name: 'Our Dedicated Team', href: 'About.vue' },
 
     ],
     Resources: [
-        { name: 'Our Blogs', href: '#' },
+        { name: 'Our Blogs', href: '/blogs' },
         { name: 'Our Video Resources', href: '#' },
 
     ],

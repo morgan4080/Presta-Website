@@ -59,7 +59,7 @@
     <OurClients></OurClients>
     <ScaleLending></ScaleLending>
     <BorrowEnterprise></BorrowEnterprise>
-    <HappyClients2></HappyClients2>
+    <HappyClients></HappyClients>
     <OpportunityAwait></OpportunityAwait>
     <Demo2></Demo2>
     <SignLoanform></SignLoanform>
@@ -77,7 +77,7 @@ import NavigationHome from '@/Components/NavigationHome.vue';
 import OurClients from '@/Components/OurClients.vue';
 import ScaleLending from '@/Components/ScaleLending.vue';
 import BorrowEnterprise from '@/Components/BorrowEnterprise.vue';
-import HappyClients2 from '@/Components/HappyClients2.vue';
+import HappyClients from '@/Components/HappyClients.vue';
 import OpportunityAwait from '@/Components/OpportunityAwait.vue';
 import SignLoanform from "@/Components/SignLoanform";
 import Demo2 from '@/Components/Demo2.vue';

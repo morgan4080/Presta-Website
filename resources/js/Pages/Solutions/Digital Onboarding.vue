@@ -8,11 +8,11 @@
             <div class="col-span-1  sm:mt-20 my-auto">
                 <h2 class="text-lg custom-light-blue sm:py-4 font-semibold">DIGITAL ONBOARDING</h2>
 
-                <h1 class="font-bold text-5xl tracking-wider text-sm:pb-4 custom-light-blue">Turn<span class="custom-dark-bg"> First Impressions</span><br>
+                <h1 class="font-bold text-5xl tracking-wider text-sm pb-4 custom-light-blue">Turn<span class="custom-dark-bg"> First Impressions</span><br>
                     into <span class="custom-dark-bg"> Obsessions </span>
                     </h1>
 
-                <div class="sm:text-base custom-grey-dark" >
+                <div class="text-base md:text-lg custom-grey-dark" >
                     <p class="sm:my-4 ">When it comes to onboarding your customers, time is of the essence. That’s why we keep speed in mind, so you can welcome newcomers in 5 minutes or less.</p>
                         <br>
                         <span class="sm:mb-2">

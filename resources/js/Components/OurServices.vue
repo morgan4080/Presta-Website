@@ -40,7 +40,7 @@
                     </p>
                     </div>
                 </div>
-                    <div class=" custom-grey hidden md:block w-full flex flex-col justify-between  sm:text-sm ml-8">
+                    <div class=" custom-grey hidden md:block w-full flex flex-col justify-between text-base ml-8">
                         <div class=" flex sm:pb-8 hover:font-bold
                          hover:underline ">
                             <svg class="mr-16" width="22" height="20" viewBox="0 0 22 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -131,11 +131,11 @@
 
                         <div class="my-4"  >
                             <h1 class="custom-blue-900 font-semibold text-lg">PRESTA SACCO</h1>
-                            <p class="font-light sm:text-sm custom-grey">Win deposits, engage account holders and <br> increase profitability.
+                            <p class="font-light text-base custom-grey">Win deposits, engage account holders and <br> increase profitability.
                             </p>
                         </div>
                     </div>
-                    <div class="custom-grey hidden md:block flex flex-col justify-between sm:text-sm ml-8">
+                    <div class="custom-grey hidden md:block flex flex-col justify-between text-base ml-8">
                         <div class="inline-flex sm:pb-8 hover:font-bold hover:underline">
                             <svg  class="mr-16 " width="22" height="20" viewBox="0 0 22 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M16.3786 12.2048C16.3786 14.7063 14.3507 16.7342 11.8492 16.7342H8.00225C5.24082 16.7342 3.00224 14.4956 3.00224 11.7342V8.35772C3.00224 5.59629 5.24082 3.35771 8.00224 3.35771H12.8208C13.2189 3.35771 13.6007 3.19956 13.8822 2.91805V2.91805C14.8279 1.9724 14.1581 0.355469 12.8208 0.355469H4.81654C2.15644 0.355469 0 2.51191 0 5.17201V14.7364C0 17.4978 2.23858 19.7364 5 19.7364H15.7461C17.7535 19.7364 19.3808 18.109 19.3808 16.1016V10.9505C19.3808 9.61309 17.7639 8.94334 16.8183 9.88901V9.88901C16.5367 10.1705 16.3786 10.5523 16.3786 10.9505V12.2048Z" fill="#F35056"/>

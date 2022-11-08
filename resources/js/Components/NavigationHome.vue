@@ -1,6 +1,6 @@
 <template>
     <div class="relative">
-        <div class="absolute inset-0 z-20">
+        <div class="absolute inset-0 fixed top-0 z-20">
             <Popover  class="relative bg-transparent ">
                 <div class="max-w-8xl flex justify-between items-center px-4 py-6 sm:px-6 md:justify-start md:space-x-10 mx-auto">
                     <div class="flex justify-center items-center lg:w-0 lg:flex-1">
@@ -119,7 +119,7 @@
                     <PopoverPanel focus class="absolute top-0 inset-x-0 p-2 transition transform origin-top-right md:hidden">
                         <div class="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 bg-white divide-y-2 divide-gray-50">
                             <div class="pt-5 pb-6 px-5">
-                                <div class="flex items-center justify-between">
+                                <div class="flex items-center justify-between ">
                                     <Link :href="route('homepage')">
                                         <img class="h-8 w-auto" src="/images/logos/blue logo.svg" alt="Presta Capital" />
                                     </Link>
