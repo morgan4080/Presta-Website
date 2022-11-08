@@ -3587,6 +3587,12 @@ select {
 .hover\:bg-opacity-70:hover {
 	--tw-bg-opacity: 0.7;
 }
+.hover\:font-black:hover {
+	font-weight: 900;
+}
+.hover\:font-bold:hover {
+	font-weight: 700;
+}
 .hover\:text-gray-500:hover {
 	--tw-text-opacity: 1;
 	color: rgba(107, 114, 128, var(--tw-text-opacity));
@@ -5336,6 +5342,18 @@ select {
 
 	.md\:pb-12 {
 		padding-bottom: 3rem;
+	}
+
+	.md\:pt-12 {
+		padding-top: 3rem;
+	}
+
+	.md\:pt-16 {
+		padding-top: 4rem;
+	}
+
+	.md\:pt-24 {
+		padding-top: 6rem;
 	}
 
 	.md\:text-left {

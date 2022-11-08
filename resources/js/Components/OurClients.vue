@@ -3,7 +3,7 @@
             <div class="mx-auto max-w-7xl flex flex-col justify-center items-center">
                 <h2 style="" class="custom-light-blue py-2 font-semibold">OUR CLIENTS</h2>
                 <h1 class="text-2xl font-semibold custom-blue-900 pb-2" >Our Business Patners</h1>
-                <p class="text-center pb-2">Trusted by over 50 credit unions and 500,000+ members <br> across African regions</p>
+                <p class="text-center text-base md:text-lg  pb-2">Trusted by over 50 credit unions and 500,000+ members <br> across African regions</p>
             </div>
             <div class=" mx-auto flex justify-center items-center">
                 <div class="sm:hidden">
@@ -27,22 +27,22 @@
                         <a href="https://www.imarishasacco.co.ke/" target="_blank" class="col-span-1 flex flex-col border-b border-gray-100 p-6 text-center sm:border-0 sm:border-r">
                             <img src="/images/svg/imarisha.svg" style="height: 130px" alt="imarisha logo" >
                             <h2 class="text-lg font-bold tracking-tight text-gray-900 ">Imarisha SACCO</h2>
-                            <p class=" text-sm text-gray-500">www.imarishasacco.co.ke</p>
+                            <p class=" text-base text-gray-500">www.imarishasacco.co.ke</p>
                         </a>
                         <a href="https://www.onepaycredit.co.ke/" target="_blank" class="col-span-1 flex flex-col border-b border-gray-100 p-6 text-center sm:border-0 sm:border-r">
                             <img src="/images/svg/onepay.svg" style="height: 130px" alt="onepay logo" >
                             <h2 class="text-lg font-bold tracking-tight text-gray-900 ">One Pay SACCO</h2>
-                            <p class=" text-sm text-gray-500">www.onepay.co.ke</p>
+                            <p class=" text-base text-gray-500">www.onepay.co.ke</p>
                         </a>
                         <a href="https://www.batsacco.co.ke/" target="_blank" class="col-span-1 flex flex-col border-b border-gray-100 p-6 text-center sm:border-0 sm:border-r">
                             <img src="/images/svg/bat.svg" style="height: 130px" alt="bat logo" >
                             <h2 class="text-lg font-bold tracking-tight text-gray-900 ">B.A.T SACCO</h2>
-                            <p class=" text-sm text-gray-500">www.batsacco.co.ke</p>
+                            <p class=" text-base text-gray-500">www.batsacco.co.ke</p>
                         </a>
                         <a href="https://www.ketepasacco.com/" target="_blank" class="col-span-1 flex flex-col border-b border-gray-100 p-6 text-center sm:border-0 sm:border-r">
                             <img src="/images/svg/ketepa.svg" style="height: 130px" alt="ketepa logo" >
                             <h2 class="text-lg font-bold tracking-tight text-gray-900 ">Ketepa SACCO</h2>
-                            <p class=" text-sm text-gray-500">www.ketepasacco.co.ke</p>
+                            <p class=" text-base text-gray-500">www.ketepasacco.co.ke</p>
                         </a>
 
                     </div>
@@ -50,22 +50,22 @@
                         <div class="col-span-1 flex flex-col border-b border-gray-100 p-6 text-center sm:border-0 sm:border-r">
                             <img src="/images/svg/ketepa.svg" style="height: 130px" alt="ketepa logo" >
                             <h2 class="text-lg font-bold tracking-tight text-gray-900 ">Ketepa SACCO</h2>
-                            <p class=" text-sm text-gray-500">www.ketepasacco.co.ke</p>
+                            <p class=" text-base text-gray-500">www.ketepasacco.co.ke</p>
                         </div>
                         <div class="col-span-1 flex flex-col border-b border-gray-100 p-6 text-center sm:border-0 sm:border-r">
                             <img src="/images/svg/imarisha.svg" style="height: 130px" alt="imarisha logo" >
                             <h2 class="text-lg font-bold tracking-tight text-gray-900 ">Imarisha SACCO</h2>
-                            <p class=" text-sm text-gray-500">www.imarishasacco.co.ke</p>
+                            <p class=" text-base text-gray-500">www.imarishasacco.co.ke</p>
                         </div>
                         <div class="col-span-1 flex flex-col border-b border-gray-100 p-6 text-center sm:border-0 sm:border-r">
                             <img src="/images/svg/onepay.svg" style="height: 130px" alt="onepay logo" >
                             <h2 class="text-lg font-bold tracking-tight text-gray-900 ">One Pay SACCO</h2>
-                            <p class=" text-sm text-gray-500">www.onepay.co.ke</p>
+                            <p class=" text-base text-gray-500">www.onepay.co.ke</p>
                         </div>
                         <div class="col-span-1 flex flex-col border-b border-gray-100 p-6 text-center sm:border-0 sm:border-r">
                             <img src="/images/svg/bat.svg" style="height: 130px" alt="bat logo" >
                             <h2 class="text-lg font-bold tracking-tight text-gray-900 ">B.A.T SACCO</h2>
-                            <p class=" text-sm text-gray-500">www.batsacco.co.ke</p>
+                            <p class=" text-base text-gray-500">www.batsacco.co.ke</p>
                         </div>
 
                     </div>
@@ -73,22 +73,22 @@
                         <div class="col-span-1 flex flex-col border-b border-gray-100 p-6 text-center sm:border-0 sm:border-r">
                             <img src="/images/svg/onepay.svg" style="height: 130px" alt="onepay logo" >
                             <h2 class="text-lg font-bold tracking-tight text-gray-900 ">One Pay SACCO</h2>
-                            <p class=" text-sm text-gray-500">www.onepay.co.ke</p>
+                            <p class=" text-base text-gray-500">www.onepay.co.ke</p>
                         </div>
                         <div class="col-span-1 flex flex-col border-b border-gray-100 p-6 text-center sm:border-0 sm:border-r">
                             <img src="/images/svg/imarisha.svg" style="height: 130px" alt="imarisha logo" >
                             <h2 class="text-lg font-bold tracking-tight text-gray-900 ">Imarisha SACCO</h2>
-                            <p class=" text-sm text-gray-500">www.imarishasacco.co.ke</p>
+                            <p class=" text-base text-gray-500">www.imarishasacco.co.ke</p>
                         </div>
                         <div class="col-span-1 flex flex-col border-b border-gray-100 p-6 text-center sm:border-0 sm:border-r">
                             <img src="/images/svg/bat.svg" style="height: 130px" alt="bat logo" >
                             <h2 class="text-lg font-bold tracking-tight text-gray-900 ">B.A.T SACCO</h2>
-                            <p class=" text-sm text-gray-500">www.batsacco.co.ke</p>
+                            <p class=" text-base text-gray-500">www.batsacco.co.ke</p>
                         </div>
                         <div class="col-span-1 flex flex-col border-b border-gray-100 p-6 text-center sm:border-0 sm:border-r">
                             <img src="/images/svg/ketepa.svg" style="height: 130px" alt="ketepa logo" >
                             <h2 class="text-lg font-bold tracking-tight text-gray-900 ">Ketepa SACCO</h2>
-                            <p class=" text-sm text-gray-500">www.ketepasacco.co.ke</p>
+                            <p class=" text-base text-gray-500">www.ketepasacco.co.ke</p>
                         </div>
 
                     </div>

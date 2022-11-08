@@ -5,7 +5,7 @@
             <h1 class="sm:font-semibold text-2xl sm:text-center custom-blue-900">When your customers need a loan,<br>
                 they need it now.
                </h1>
-            <p class="sm:text-sm custom-grey-dark text-center py-4">Don’t make them wait and don’t put yourself at risk by rushing through manual or disparate processes.</p>
+            <p class="text-base md:text-lg  custom-grey-dark text-center py-4">Don’t make them wait and don’t put yourself at risk by rushing through manual or disparate processes.</p>
         </div>
         <div class="mx-auto max-w-7xl grid grid-cols-2 sm:gap-x-8 sm:py-12 sm:px-8 bg-blue-white">
             <div class="col-span-1 ">
@@ -19,20 +19,20 @@
 
                     <p class="font-bold my-4 tracking-wider"> IMPROVE MARGINS & OPERATIONAL EFFICIENCIES</p>
                 </div>
-                <p class="pb-2 sm:text-sm  custom-grey-p">Streamline your processes and decrease the friction that both your applicants and employees experience. Your lending business will become more efficient, reducing the time it takes to process and underwrite loans—increasing margins without touching rates or staff levels.
+                <p class="pb-2 text-base md:text-lg  custom-grey-p">Streamline your processes and decrease the friction that both your applicants and employees experience. Your lending business will become more efficient, reducing the time it takes to process and underwrite loans—increasing margins without touching rates or staff levels.
                 </p>
 
                 <div class=" inline-flex pb-1 custom-light-blue">
                     <p class="font-bold my-4 tracking-wider" > INCREASE SCALABILITY & REVENUE GROWTH</p>
                 </div>
-                <p class="pb-2 sm:text-sm custom-grey-p">Don’t let legacy technology limit your capacity. Use a flexible cloud-based solution to support virtually unlimited lending. With repeatable, automated loan processes, your business can handle application volumes of 3X your historic levels without adding staff or compromising lending standards.
+                <p class="pb-2 text-base md:text-lg custom-grey-p">Don’t let legacy technology limit your capacity. Use a flexible cloud-based solution to support virtually unlimited lending. With repeatable, automated loan processes, your business can handle application volumes of 3X your historic levels without adding staff or compromising lending standards.
                 </p>
 
 
                 <div class="inline-flex pb-1 custom-light-blue">
                     <p class="font-bold my-4 tracking-wider"> MITIGATE RISK</p>
                 </div>
-                <p class="pb-2 sm:text-sm  custom-grey-p">An inefficient lending process creates risk in the form of human error and integration failures. We remove the operational risk of data errors and the business risk of not collecting revenue due to those errors by supporting the entire lending process—from application to collections—all on a single platform.</p>
+                <p class="pb-2 text-base md:text-lg custom-grey-p">An inefficient lending process creates risk in the form of human error and integration failures. We remove the operational risk of data errors and the business risk of not collecting revenue due to those errors by supporting the entire lending process—from application to collections—all on a single platform.</p>
 
             </div>
 

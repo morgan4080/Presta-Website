@@ -4,17 +4,17 @@
 <div class="bg-gradient-to-r from-[#FFFFFF] to-[#D4E7FE] ">
     <NavigationHome ></NavigationHome>
 
-    <div class="relative custom-light-blue pt-24 px-4 sm:px-6 lg:px-8 lgkkk:pt-40">
+    <div class="relative custom-light-blue md:pt-24 px-4 sm:px-6 lg:px-8 lgkkk:pt-40">
         <div class="mx-auto max-w-7xl grid grid-cols-2 bg-gradient-to-r from-[#FFFFFF] to-[#D4E7FE] sm:gap-x-12  sm:px-4" >
             <div class="col-span-1  sm:mt-20 my-aueto">
-                <h2 class="text-lg font-semibold custom-light-blue sm:py-4">PRESTA SACCO</h2>
+                <h2 class="text-lg font-semibold custom-light-blue sm:pb-4">PRESTA SACCO</h2>
 
-                <h1 class="font-bold text-5xl tracking-wider text-sm:pb-4 custom-light-blue"><span  class="custom-dark-bg">Win</span> Deposits,<span  class="custom-dark-bg"> Engage</span><br>
+                <h1 class="font-bold text-5xl tracking-wider text-sm pb-4 custom-light-blue"><span  class="custom-dark-bg">Win</span> Deposits,<span  class="custom-dark-bg"> Engage</span><br>
                     Account Holders & <br>
                     <span  class="custom-dark-bg"> Increase </span> Profitability.</h1>
-                <p class="custom-light-blue font-bold text-base sm:mb-2">Grow your Credit Union, increase your efficiencies, and overcome the challenges of increasing Credit Union regulatory requirements & dividends.</p>
-                <div class="sm:text-sm custom-grey-dark" >
-                    <p class="sm:pb-4 ">Savvy financial services providers know that to build a strong relationship and become your users’ primary relationship, you need to become the place where they spend and save. To do that, give them a fast, simple, automated way to move their deposits and payments to your platform. </p>
+                <p class="custom-light-blue font-boldtext-base md:text-lg  sm:mb-2">Grow your Credit Union, increase your efficiencies, and overcome the challenges of increasing Credit Union regulatory requirements & dividends.</p>
+                <div class="text-base md:text-lg  custom-grey-dark" >
+                    <p class="sm:pb-4 ">Savy financial services providers know that to build a strong relationship and become your users’ primary relationship, you need to become the place where they spend and save. To do that, give them a fast, simple, automated way to move their deposits and payments to your platform. </p>
 
                     <p>
                         Presta Sacco makes it easy to engage with new, existing, and even idle accounts. Our automated solutions for mobile direct deposits and recurring payments can bring your users fully onboard—and turn you into their primary financial services provider.

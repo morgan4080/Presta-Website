@@ -15,7 +15,7 @@
         </div>
         <div class="mx-auto max-w-7xl grid md:grid-cols-2 md:grid-rows-1 grid-cols-1 grid-rows-2 sm:gap-x-10 md:px-0 sm:py-6 mb-10 " >
             <div class="col-span-1 order-2 sm:ml-12">
-                <svg width="162" height="163" viewBox="0 0 162 163" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg class="hidden md:block" width="162" height="163" viewBox="0 0 162 163" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <g filter="url(#filter0_d_258_1889)">
                         <path d="M92 56.1885C92 73.3093 78.1208 87.1885 61 87.1885C43.8792 87.1885 30 73.3093 30 56.1885C30 39.0676 43.8792 25.1885 61 25.1885C78.1208 25.1885 92 39.0676 92 56.1885Z" fill="#489AAB"/>
                     </g>

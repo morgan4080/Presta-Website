@@ -13,10 +13,10 @@
                 <h1 class="font-bold text-5xl tracking-wider text-sm:pb-4 custom-light-blue">Enabling Lending<br>
                     Businesses to<br>
                     <span class="custom-dark-bg"> thrive </span> and <span class="custom-dark-bg"> grow.</span></h1>
-                <p class="custom-light-blue font-bold text-base sm:mb-2">Generate new leads, Improve margins, increase revenue, streamline workflows, and close and fund loans seamlessly</p>
+                <p class="custom-light-blue font-bold  text-base md:text-lg sm:mb-2">Generate new leads, Improve margins, increase revenue, streamline workflows, and close and fund loans seamlessly</p>
                 <div class="sm:text-sm custom-grey-dark" >
-                    <p class="sm:mb-6 ">It’s time to replace the last century’s lending processes. Today’s borrowers expect quick and easy digital experiences—and lenders need the flexibility to deploy and modify lending applications quickly. Make borrowing simple and fast for your customers with automated processes that can approve, underwrite, and fund loans in minutes—and make life easier for your staff by minimizing the rekeying of data and avoiding manual handoffs of workstreams between departments.<br>
-                        <span class="sm:py-4">
+                    <p class="sm:mb-6 text-base md:text-lg">It’s time to replace the last century’s lending processes. Today’s borrowers expect quick and easy digital experiences—and lenders need the flexibility to deploy and modify lending applications quickly. Make borrowing simple and fast for your customers with automated processes that can approve, underwrite, and fund loans in minutes—and make life easier for your staff by minimizing the rekeying of data and avoiding manual handoffs of workstreams between departments.<br>
+                        <span class="sm:py-4 text-base md:text-lg ">
                     It’s time for your lending to move at the speed of business.
                 </span>
 
