@@ -8,9 +8,9 @@
     <div class="relative custom-light-blue pt-24 px-4 sm:px-6 lg:px-8 lgkkk:pt-40">
         <div class="mx-auto max-w-9xl grid grid-cols-2 sm:gap-x-12  sm:px-4" >
             <div class="col-span-1  sm:mt-20 my-auto ml-36">
-                <h2 class="text-lg custom-light-blue font-semibold sm:py-4">PRESTA ENTERPRISE</h2>
+                <h2 class="text-lg custom-light-blue font-semibold sm:pb-4">PRESTA ENTERPRISE</h2>
 
-                <h1 class="font-bold text-5xl tracking-wider text-sm:pb-4 custom-light-blue">Enabling Lending<br>
+                <h1 class="font-bold text-5xl tracking-wider pb-4 custom-light-blue">Enabling Lending<br>
                     Businesses to<br>
                     <span class="custom-dark-bg"> thrive </span> and <span class="custom-dark-bg"> grow.</span></h1>
                 <p class="custom-light-blue font-bold  text-base md:text-lg sm:mb-2">Generate new leads, Improve margins, increase revenue, streamline workflows, and close and fund loans seamlessly</p>

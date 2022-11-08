@@ -32,7 +32,9 @@
                 You Qualify for
                 an Exclusive Demo</h1>
 
-            <a @click="openDemoDialogue" href="#" class=" items-center rounded-md border border-transparent custom-blue-btn px-6 py-2 text-sm font-medium text-white shadow-sm focus:outline-none focus:ring-2 focus:ring-offset-blue-prestaR focus:ring-offset-2">Redeem</a>
+             <Link :href="route('demo')"
+                   class=" items-center rounded-md border border-transparent custom-blue-btn px-6 py-2 text-sm font-medium text-white shadow-sm focus:outline-none focus:ring-2 focus:ring-offset-blue-prestaR focus:ring-offset-2">
+                 Redeem </Link>
 
         </div>
 
@@ -41,12 +43,18 @@
         </div>
     </div>
     </div>
+    <DemoDialogue v-if="openDemoModal" />
 </template>
 
-<script>
-export default {
-    name: "demo2.vue"
+<script setup>
+import { Link } from '@inertiajs/inertia-vue3'
+import DemoDialogue from '@/Components/DemoDialogue';
+import {ref} from "vue";
+const openDemoModal = ref(false);
+const openDemoDialogue = () => {
+    openDemoModal.value = !openDemoModal.value;
 }
+
 </script>
 
 <style scoped>

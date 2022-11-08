@@ -9,7 +9,7 @@
             <div class="col-span-1  sm:mt-20 my-aueto">
                 <h2 class="text-lg font-semibold custom-light-blue sm:pb-4">PRESTA SACCO</h2>
 
-                <h1 class="font-bold text-5xl tracking-wider text-sm pb-4 custom-light-blue"><span  class="custom-dark-bg">Win</span> Deposits,<span  class="custom-dark-bg"> Engage</span><br>
+                <h1 class="font-bold text-5xl tracking-wider pb-4 custom-light-blue"><span  class="custom-dark-bg">Win</span> Deposits,<span  class="custom-dark-bg"> Engage</span><br>
                     Account Holders & <br>
                     <span  class="custom-dark-bg"> Increase </span> Profitability.</h1>
                 <p class="custom-light-blue font-boldtext-base md:text-lg  sm:mb-2">Grow your Credit Union, increase your efficiencies, and overcome the challenges of increasing Credit Union regulatory requirements & dividends.</p>
