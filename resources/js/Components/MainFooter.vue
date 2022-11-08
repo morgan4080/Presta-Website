@@ -146,7 +146,7 @@ const navigation = {
         { name: 'Privacy', href: '#' },
         { name: 'Terms', href: '#' },
     ],
-    social: [
+    social: [ //ww
         {
             name: 'Facebook',
             href: '#',
