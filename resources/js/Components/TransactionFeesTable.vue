@@ -121,18 +121,66 @@ const ratesBank = [
     { id: 11, value: '100,001 - 1,000,000', presta: '495', mpesa: '0', total: '495' },
 ];
 const ratesMpesa = [
-    { id: 1, value: '0 - 500', presta: '0', mpesa: '16', total: '16' },
-    { id: 2, value: '501 - 1,500', presta: '65', mpesa: '23', total: '88' },
-    { id: 3, value: '1,501 - 5,000', presta: '95', mpesa: '23', total: '118' },
-    { id: 4, value: '5,001 - 10,000', presta: '145', mpesa: '23', total: '168' },
-    { id: 5, value: '10,001 - 15,000', presta: '195', mpesa: '23', total: '218' },
-    { id: 6, value: '15,001 - 20,000', presta: '245', mpesa: '23', total: '268' },
-    { id: 7, value: '20,001 - 25,000', presta: '295', mpesa: '23', total: '318' },
-    { id: 8, value: '25,001 - 35,000', presta: '345', mpesa: '23', total: '368' },
-    { id: 9, value: '35,001 - 50,000', presta: '395', mpesa: '23', total: '418' },
-    { id: 10, value: '50,001 - 100,000', presta: '445', mpesa: '23', total: '468' },
-    { id: 11, value: '100,001 - 1,000,000', presta: '495', mpesa: '23', total: '518' },
-]
+	{ id: 1, value: "0 - 500", presta: "0", mpesa: "4", total: "4" },
+	{ id: 2, value: "501 - 1,500", presta: "65", mpesa: "4", total: "69" },
+	{ id: 3, value: "1,501 - 5,000", presta: "95", mpesa: "8", total: "103" },
+	{
+		id: 4,
+		value: "5,001 - 10,000",
+		presta: "145",
+		mpesa: "10",
+		total: "155",
+	},
+	{
+		id: 5,
+		value: "10,001 - 15,000",
+		presta: "195",
+		mpesa: "10",
+		total: "205",
+	},
+	{
+		id: 6,
+		value: "15,001 - 20,000",
+		presta: "245",
+		mpesa: "10",
+		total: "255",
+	},
+	{
+		id: 7,
+		value: "20,001 - 25,000",
+		presta: "295",
+		mpesa: "12",
+		total: "307",
+	},
+	{
+		id: 8,
+		value: "25,001 - 35,000",
+		presta: "345",
+		mpesa: "12",
+		total: "357",
+	},
+	{
+		id: 9,
+		value: "35,001 - 50,000",
+		presta: "395",
+		mpesa: "12",
+		total: "407",
+	},
+	{
+		id: 10,
+		value: "50,001 - 100,000",
+		presta: "445",
+		mpesa: "12",
+		total: "457",
+	},
+	{
+		id: 11,
+		value: "100,001 - 1,000,000",
+		presta: "495",
+		mpesa: "12",
+		total: "507",
+	},
+];
 
 export default {
     components: { TransitionRoot },
